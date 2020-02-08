@@ -8,10 +8,10 @@
  
 <?php
 
-include 'config.inc.php';
+//include 'config.inc.php';
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysql($servername, $username, $password);
 
 // Check connection
 if ($conn->connect_error) {
