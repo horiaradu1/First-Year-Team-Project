@@ -31,6 +31,7 @@ if(isset($_POST["name"], $_POST["password"]))
           FROM Users WHERE username = '".$name."'");
 
           echo $result1;
+        }
 //
 //         if(mysql_num_rows($result1) > 0 )
 //         {
