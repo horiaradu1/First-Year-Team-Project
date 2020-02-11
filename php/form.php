@@ -26,12 +26,12 @@ $username = $email = $lname = $fname = $password = $cpassword = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["username"])) {
-    $usernameErr = "Username is required";
+    $usernameErr = "* Username is required";
   } else {
     $username = test_input($_POST["username"]);
     // check if name only contains letters and numbers
     if (!preg_match("/^[a-zA-Z\d]+$/",$username)) {
-      $usernameErr = "Only letters and numbers are accepted.";
+      $usernameErr = "* Only letters and numbers are accepted.";
     }
     else {
       $usernameErr = '✓';
@@ -39,12 +39,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   
   if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
+    $emailErr = "* Email is required";
   } else {
     $email = test_input($_POST["email"]);
     // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format";
+      $emailErr = "* Invalid email format";
     }
     else {
       $emailErr = '✓';
@@ -52,36 +52,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (empty($_POST["fname"])) {
-    $fnameErr = "First name is required";
+    $fnameErr = "* First name is required";
   } else {
     $fname = test_input($_POST["fname"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z\s]+$/",$fname)) {
-      $fnameErr = "Only letters and white space allowed";
+      $fnameErr = "* Only letters and white space allowed";
     }
     else {
       $fnameErr = '✓';
     }
   }
   if (empty($_POST["lname"])) {
-    $lnameErr = "Last name is required";
+    $lnameErr = "* Last name is required";
   } else {
     $lname = test_input($_POST["lname"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z\s]+$/",$lname)) {
-      $lnameErr = "Only letters and white space allowed";
+      $lnameErr = "* Only letters and white space allowed";
     }
     else {
       $lnameErr = '✓';
     }
   }
   if (empty($_POST["password"])) {
-    $passwordErr = "Password is required";
+    $passwordErr = "* Password is required";
   } else {
     $password = test_input($_POST["password"]);
     // check if name only contains letters and numbers
-    if (!preg_match("/^[a-zA-Z0-9]+$/",$password)) {
-      $passwordErr = "Only letters and numbers allowed";
+    if (!preg_match("/^[a-zA-Z\d]+$/",$password)) {
+      $passwordErr = "* Only letters and numbers allowed";
     }
     else {
       $passwordErr = '✓';
@@ -92,20 +92,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $cpassword = test_input($_POST["cpassword"]);
     // check if name only contains letters and numbers
-    if (!preg_match("/^[a-zA-Z0-9]+$/",$cpassword)) {
-      $cpasswordErr = "Only letters and numbers allowed";
+    if (!preg_match("/^[a-zA-Z\d]+$/",$cpassword)) {
+      $cpasswordErr = "* Only letters and numbers allowed";
     }
     else {
       $cpasswordErr = '✓';
-    }
+    } 
   }
   if ($cpassword != $password) {
     $cpasswordErr = "Password does not match";
     $passwordErr = "Password does not match";
   }
   else if (strlen($password) < 6) {
-    $passwordErr = "Password must be at least 6 characters";
-    $cpasswordErr = "Password must be at least 6 characters";
+    $passwordErr = "* Password must be at least 6 characters";
+    $cpasswordErr = "* Password must be at least 6 characters";
   }
   if ($fnameErr == '✓' and $lnameErr == '✓' and $emailErr == '✓' and $usernameErr == '✓' and $passwordErr == '✓' and $cpasswordErr == '✓') {
         $sql = "INSERT INTO Users (Username, UserPassword, FirstName, Lastname, Email)
@@ -135,27 +135,27 @@ function test_input($data) {
 <p><span class="error">* required fields</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   First name: <input type="text" name="fname" value="<?php echo $fname;?>">
-  <span class="error">* <?php echo $fnameErr;?></span>
+  <span class="error"><?php echo $fnameErr;?></span>
   <br><br>
   Last name: <input type="text" name="lname" value="<?php echo $lname;?>">
-  <span class="error">* <?php echo $lnameErr;?></span>
+  <span class="error"><?php echo $lnameErr;?></span>
   <br><br>
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-  <span class="error">* <?php echo $emailErr;?></span>
+  <span class="error"><?php echo $emailErr;?></span>
   <br><br>
   Username: <input type="text" name="username" value="<?php echo $username;?>">
-  <span class="error">* <?php echo $usernameErr;?></span>
+  <span class="error"><?php echo $usernameErr;?></span>
   <br><br>
-  Passord: <input type="password" name="password" value="<?php echo $password;?>">
-  <span class="error">* <?php echo $passwordErr;?></span>
+  Password: <input type="password" name="password" value="<?php echo $password;?>">
+  <span class="error"><?php echo $passwordErr;?></span>
   <br><br>
   Confirm Password: <input type="password" name="cpassword" value="<?php echo $cpassword;?>">
-  <span class="error">* <?php echo $cpasswordErr;?></span>
+  <span class="error"><?php echo $cpasswordErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
 
-<?php
+<!-- <?php
 echo "<h2>Error Overview:</h2>";
 echo $usernameErr;
 echo "<br>";
@@ -168,7 +168,7 @@ echo "<br>";
 echo $passwordErr;
 echo "<br>";
 echo $cpasswordErr;
-?> 
+?> -->
 
 
 
