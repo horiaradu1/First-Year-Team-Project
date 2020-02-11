@@ -82,10 +82,10 @@ if(isset($_POST["name"], $_POST["password"]))
 <p><span class="error">* required fields</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   Username: <input type="text" name="username" value="<?php echo $username;?>">
-  <span class="error"><?php echo $usernameErr;?></span>
+  <span class="error"></span>
   <br><br>
   Password: <input type="password" name="password" value="<?php echo $password;?>">
-  <span class="error"><?php echo $passwordErr;?></span>
+  <span class="error"></span>
   <br><br>
   <input type="submit" name="login" value="Login">
 </form>
