@@ -1,5 +1,5 @@
 
-<!DOCTYPE HTML>  
+<!DOCTYPE HTML>
 <html>
 <title>Registration</title>
 <head>
@@ -7,7 +7,7 @@
 .error {color: #FF0000;}
 </style>
 </head>
-<body>  
+<body>
 
 <?php
 
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $usernameErr = '✓';
     }
   }
-  
+
   if (empty($_POST["email"])) {
     $emailErr = "* Email is required";
   } else {
@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     else {
       $cpasswordErr = '✓';
-    } 
+    }
   }
   if ($cpassword != $password) {
     $cpasswordErr = "Password does not match";
@@ -107,9 +107,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $passwordErr = "* Password must be at least 6 characters";
     $cpasswordErr = "* Password must be at least 6 characters";
   }
-  if ($fnameErr == '✓' and $lnameErr == '✓' and $emailErr == '✓' and $usernameErr == '✓' and $passwordErr == '✓' and $cpasswordErr == '✓') {
-        $sql = "INSERT INTO Users (Username, UserPassword, FirstName, Lastname, Email)
-    VALUES ('{$username}', '{$password}', '{$fname}', '{$lname}', '{$email}')";
+  if ($fnameErr == '✓' and $lnameErr == '✓'
+  and $emailErr == '✓' and $usernameErr == '✓'
+  and $passwordErr == '✓' and $cpasswordErr == '✓') {
+    //added by Pat
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO Users (
+          Username, UserPassword, FirstName, Lastname, Email)
+    VALUES ('{$username}', '{$hash}', '{$fname}', '{$lname}', '{$email}')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Successfully registered!";  // this script does not check for duplicate emails.
@@ -133,7 +138,7 @@ function test_input($data) {
 
 <h2>Registration form</h2>
 <p><span class="error">* required fields</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   First name: <input type="text" name="fname" value="<?php echo $fname;?>">
   <span class="error"><?php echo $fnameErr;?></span>
   <br><br>
@@ -152,7 +157,7 @@ function test_input($data) {
   Confirm Password: <input type="password" name="cpassword" value="<?php echo $cpassword;?>">
   <span class="error"><?php echo $cpasswordErr;?></span>
   <br><br>
-  <input type="submit" name="submit" value="Submit">  
+  <input type="submit" name="submit" value="Submit">
 </form>
 
 <!-- <?php
@@ -174,4 +179,3 @@ echo $cpasswordErr;
 
 </body>
 </html>
-
