@@ -19,8 +19,6 @@ $dbname = "2019_comp10120_y4";
 // Create connection
 $conn = new mysqli($servername, $getname, $password, $dbname);
 
-echo $conn;
-
 if(isset($_POST["name"], $_POST["password"]))
     {
 
