@@ -18,7 +18,7 @@ else{
 
 $sql = "SELECT Hash FROM Users";
 $result = mysqli_query($connection, $sql);
-
+$row = mysqli_fetch_array($result, )
 //
 // if ($result = mysqli_query($connection, $sql)){
 //   while ($row = mysqli_fetch_row($result)){
