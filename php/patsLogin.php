@@ -1,103 +1,71 @@
 
-<!DOCTYPE HTML>
+<?php  //Start the Session
+session_start();
+ require('connect.php');
+//3. If the form is submitted or not.
+//3.1 If the form is submitted
+if (isset($_POST['username']) and isset($_POST['password'])){
+//3.1.1 Assigning posted values to variables.
+$username = $_POST['username'];
+$password = $_POST['password'];
+//3.1.2 Checking the values are existing in the database or not
+$query = "SELECT * FROM `user` WHERE username='$username' and password='$password'";
+
+$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+$count = mysqli_num_rows($result);
+//3.1.2 If the posted values are equal to the database values, then session will be created for the user.
+if ($count == 1){
+$_SESSION['username'] = $username;
+}else{
+//3.1.3 If the login credentials doesn't match, he will be shown with an error message.
+$fmsg = "Invalid Login Credentials.";
+}
+}
+//3.1.4 if the user is logged in Greets the user with message
+if (isset($_SESSION['username'])){
+$username = $_SESSION['username'];
+echo "Hai " . $username . "
+";
+echo "This is the Members Area
+";
+echo "<a href='logout.php'>Logout</a>";
+
+}else{
+//3.2 When the user visits the page first time, simple login form will be displayed.
+?>
 <html>
-<title>Login</title>
 <head>
-<style>
-.error {color: #FF0000;}
-</style>
+	<title>User Login Using PHP & MySQL</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+
+<link rel="stylesheet" href="styles.css" >
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<?php
-
-$servername = "dbhost.cs.man.ac.uk";
-$getname = "g63968ef";
-$password = "database";
-$dbname = "2019_comp10120_y4";
-
-// Create connection
-$conn = new mysqli($servername, $getname, $password, $dbname);
-
-if(isset($_POST["name"], $_POST["password"]))
-    {
-
-        $name = $_POST["name"];
-        $password = $_POST["password"];
-
-        $result1 = mysql_query("SELECT password
-          FROM Users WHERE username = '".$name."'");
-
-          echo $result1;
-        }
-//
-//         if(mysql_num_rows($result1) > 0 )
-//         {
-//             $_SESSION["logged_in"] = true;
-//             $_SESSION["naam"] = $name;
-//         }
-//         else
-//         {
-//             echo 'The username or password are incorrect!';
-//         }
-// }
-//
-//         //////////////////////
-//         ///// ADDED BY PAT
-//         $password = md5(mysql_real_escape_string($_POST['password']));
-//
-//             $checklogin = mysql_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
-//
-//             if(mysql_num_rows($checklogin) == 1)
-//             {
-//                 $row = mysql_fetch_array($checklogin);
-//                 $email = $row['EmailAddress'];
-//
-//                 $_SESSION['Username'] = $username;
-//                 $_SESSION['EmailAddress'] = $email;
-//                 $_SESSION['LoggedIn'] = 1;
-//
-//                 echo "<h1>Success</h1>";
-//                 echo "<p>We are now redirecting you to the member area.</p>";
-//         ///////////////
-//         echo "<br>";
-//         echo $sql;
-//         echo "<br>";
-//         $search = $conn->query($sql);
-//     if ($search === TRUE) {
-//         echo "Successfully registered!";  // this script does not check for duplicate emails.
-//     } else {
-//         echo "Username already taken";
-//         //echo "Error: " . $sql . "<br>" . $conn->error;
-//     }
-//   }
-//   else {
-//     echo "Something is not correct.";
-//   }
-// }
-
-?>
-
-<h2>Login Page</h2>
-<p><span class="error">* required fields</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-  Username: <input type="text" name="username" value="<?php echo $username;?>">
-  <span class="error"></span>
-  <br><br>
-  Password: <input type="password" name="password" value="<?php echo $password;?>">
-  <span class="error"></span>
-  <br><br>
-  <input type="submit" name="login" value="Login">
-</form>
-
-<!-- <?php
-echo "<h2>Error Overview:</h2>";
-echo $username;
-echo "<br>";
-echo $password;
-?> -->
-
-
+<div class="container">
+      <form class="form-signin" method="POST">
+      <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
+        <h2 class="form-signin-heading">Please Login</h2>
+        <div class="input-group">
+	  <span class="input-group-addon" id="basic-addon1">@</span>
+	  <input type="text" name="username" class="form-control" placeholder="Username" required>
+	</div>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a>
+      </form>
+</div>
 
 </body>
+
 </html>
+<?php } ?>

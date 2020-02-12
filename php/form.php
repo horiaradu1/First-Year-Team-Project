@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //added by Pat
         $hash = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO Users (
-          Username, UserPassword, FirstName, Lastname, Email)
+          Username, Hash, FirstName, Lastname, Email)
     VALUES ('{$username}', '{$hash}', '{$fname}', '{$lname}', '{$email}')";
 
     if ($conn->query($sql) === TRUE) {
