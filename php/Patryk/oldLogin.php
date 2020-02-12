@@ -1,6 +1,7 @@
 
 <?php  //Start the Session
 session_start();
+<<<<<<< HEAD:php/patsLogin.php
  require('connect.php');
  $servername = "dbhost.cs.man.ac.uk";
  $getname = "g63968ef";
@@ -9,6 +10,14 @@ session_start();
 
  $conn =
   mysqli_connect($servername, $getname, $password, $dbname);
+=======
+
+
+ require('config.php');
+
+
+
+>>>>>>> 5301d9eb8c4e0385c6a5baf465b046ad3742d541:php/Patryk/oldLogin.php
 //3. If the form is submitted or not.
 //3.1 If the form is submitted
 if (isset($_POST['username']) and isset($_POST['password'])){
