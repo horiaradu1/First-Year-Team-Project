@@ -4,6 +4,7 @@
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form
+      $error = "";
 
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']);
@@ -18,7 +19,7 @@
       // If result matched $myusername and $mypassword, table row must be 1 row
 
       if($count == 1) {
-         session_register("myusername");
+         echo "loged in";
          $_SESSION['login_user'] = $myusername;
 
          header("location: welcome.php");
