@@ -19,6 +19,11 @@ else{
 $sql = "SELECT Hash FROM Users";
 
 if ($result = mysqli_query($connection, $sql)){
-  echo $result;
+  while ($row = mysqli_fetch_row($result)){
+    printf("%s(%s)\n", $row[0], $row[1]);
+  }
+  mysqli_free_result($result);
 }
+mysqli_close($con);
+
 ?>
