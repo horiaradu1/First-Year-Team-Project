@@ -7,7 +7,6 @@
       $error = "";
 
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
       $sql = "SELECT Hash FROM Users WHERE Username = '$myusername'";
       $result = mysqli_query($db,$sql);
@@ -60,7 +59,6 @@
 
                <form action = "" method = "post">
                   <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" value = " Submit "/><br />
                </form>
 
