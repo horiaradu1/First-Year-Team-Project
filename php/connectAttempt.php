@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
- <head>
- <title>Temperature Conversion Page</title>
- </head>
- <body>
- <h1>Temperature Conversion Page</h1>
- 
 <?php
 
 //include 'config.inc.php';
@@ -25,6 +17,3 @@ echo "Connected successfully";
 
 // database - password
  ?>
-  </body>
-</html>
-
