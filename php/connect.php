@@ -16,4 +16,9 @@ else{
   echo "Connected !!";
 }
 
+$sql = "SELECT Hash FROM Users";
+
+if ($result = mysqli_query($connection, $sql)){
+  echo $result;
+}
 ?>
