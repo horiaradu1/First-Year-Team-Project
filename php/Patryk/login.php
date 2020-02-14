@@ -8,23 +8,21 @@
 
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
 
-      $sql = "SELECT Hash FROM Users WHERE Username = '$myusername'";
+      $sql = "SELECT * FROM Users WHERE Username = '$myusername'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
 
-      $count = mysqli_num_rows($result);
+      if (!password_verify($_POST['password'], $row['Hash'])) {
+        die('Incorrect');
+      }
 
       // If result matched $myusername and $mypassword, table row must be 1 row
 
-      if($count == 1) {
          echo "loged in";
          $_SESSION['login_user'] = $myusername;
 
          header("location: welcome.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
    }
 ?>
 <html>
@@ -58,7 +56,8 @@
             <div style = "margin:30px">
 
                <form action = "" method = "post">
-                  <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
+                  <label>Username:</label><input type = "text" name = "username" class = "box"/><br /><br />
+                  <label>Password:</label><input type = "password" name = "password" class = "box"/><br /><br />
                   <input type = "submit" value = " Submit "/><br />
                </form>
 
