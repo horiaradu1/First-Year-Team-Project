@@ -1,93 +1,70 @@
-
-<!DOCTYPE HTML>  
-<html>
-<title>Login</title>
-<head>
-<style>
-.error {color: #FF0000;}
-</style>
-</head>
-<body>  
-
 <?php
+   include("config.php");
+   session_start();
 
-$servername = "dbhost.cs.man.ac.uk";
-$getname = "g63968ef";
-$password = "database";
-$dbname = "2019_comp10120_y4";
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form
+      $error = "";
 
-// Create connection
-$conn = new mysqli($servername, $getname, $password, $dbname);
+      $myusername = mysqli_real_escape_string($db,$_POST['username']);
 
+      $sql = "SELECT * FROM Users WHERE Username = '$myusername'";
+      $result = mysqli_query($db,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-// define variables and set to empty values
-$usernameErr = $passwordErr = "";
-$username = $password = '';
+      if (!password_verify($_POST['password'], $row['Hash'])) {
+        die('Incorrect password!!!');
+      }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["username"])) {
-    $usernameErr = "* Username is required";
-    } 
-    else {
-        $username = test_input($_POST["username"]);
-        $usernameErr = '✓';
-    }
-    
-  
-    if (empty($_POST["password"])) {
-    $passwordErr = "* Password is required";
-    } 
-    else {
-        $password = test_input($_POST["password"]);
-        $passwordErr = '✓';
-    }
-  
-  if ($usernameErr == '✓' and $passwordErr == '✓') {
-        $sql = "SELECT * FROM Users WHERE Username = '{$username}' and  UserPassword = '{$password}';";
-        echo "<br>";
-        echo $sql;
-        echo "<br>";
-        $search = $conn->query($sql);
-    if ($search === TRUE) {
-        echo "Successfully registered!";  // this script does not check for duplicate emails.
-    } else {
-        echo "Username already taken";
-        //echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-  }
-  else {
-    echo "Something is not correct.";
-  }
-}
+      // If result matched $myusername and $mypassword, table row must be 1 row
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
+         echo "loged in";
+         $_SESSION['login_user'] = $myusername;
+
+         header("location: welcome.php");
+   }
 ?>
+<html>
 
-<h2>Login Page</h2>
-<p><span class="error">* required fields</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Username: <input type="text" name="username" value="<?php echo $username;?>">
-  <span class="error"><?php echo $usernameErr;?></span>
-  <br><br>
-  Password: <input type="password" name="password" value="<?php echo $password;?>">
-  <span class="error"><?php echo $passwordErr;?></span>
-  <br><br>
-  <input type="submit" name="login" value="Login">  
-</form>
+   <head>
+      <title>Login Page</title>
 
-<!-- <?php
-echo "<h2>Error Overview:</h2>";
-echo $username;
-echo "<br>";
-echo $password;
-?> -->
+      <style type = "text/css">
+         body {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:14px;
+         }
+         label {
+            font-weight:bold;
+            width:100px;
+            font-size:14px;
+         }
+         .box {
+            border:#666666 solid 1px;
+         }
+      </style>
 
+   </head>
 
+   <body bgcolor = "#FFFFFF">
 
-</body>
+      <div align = "center">
+         <div style = "width:300px; border: solid 1px #333333; " align = "left">
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
+
+            <div style = "margin:30px">
+
+               <form action = "" method = "post">
+                  <label>Username:</label><input type = "text" name = "username" class = "box"/><br /><br />
+                  <label>Password:</label><input type = "password" name = "password" class = "box"/><br /><br />
+                  <input type = "submit" value = " Submit "/><br />
+               </form>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </body>
 </html>
