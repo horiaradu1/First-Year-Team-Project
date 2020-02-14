@@ -11,10 +11,9 @@
       $sql = "SELECT * FROM Users WHERE Username = '$myusername'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
 
       if (!password_verify($_POST['password'], $row['Hash'])) {
-        die('Incorrect');
+        die('Incorrect password!!!');
       }
 
       // If result matched $myusername and $mypassword, table row must be 1 row
