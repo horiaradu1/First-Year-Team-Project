@@ -13,7 +13,7 @@ from datetime import datetime
 def days_between(d1, d2):
     d1 = datetime.strptime(d1, "%Y-%m-%d")
     d2 = datetime.strptime(d2, "%Y-%m-%d")
-    return abs((d2 - d1).days)
+    return ((d2 - d1).days)
 
 try:
     connection = mysql.connector.connect(host='dbhost.cs.man.ac.uk',
@@ -45,28 +45,67 @@ try:
         sql_select_Query = f"select StartTime, EndTime from Events where EventID = {event}"
         #cursor = connection.cursor()
         cursor.execute(sql_select_Query)
-        events = cursor.fetchall()
-        print(events)
+        event = cursor.fetchall()
 
+        endNums = []
+        startNums = []
+
+        event = str(event)
+        event = event.replace("[(datetime.datetime(", "")
+        eventStartIndex = event.find(")")
+        eventEndIndex = event.find("(")
+        eventStart = event[:eventStartIndex]
+        eventEnd = event[eventEndIndex+1:]
+        eventEnd = eventEnd[:eventEnd.find(")")]
+        
+        print(eventStart)
+        print(eventEnd)
+
+        startNums = eventStart.rsplit(",")
+        for x in range(len(startNums)):
+            startNums[x] = startNums[x].strip()
+        endNums = eventEnd.rsplit(",")
+        for y in range(len(endNums)):
+            endNums[y] = endNums[y].strip()
+
+        stringStartDate = ""
+        stringEndDate = ""
+
+        startTime = int(startNums[3])# + "-" + startNums[4] ## for minutes
+        endTime = int(endNums[3])# + "-" + endNums[4] ## for minutes
+
+        for dateItem in range(3):
+            if dateItem > 0:
+                stringStartDate = stringStartDate + "-" + startNums[dateItem]
+                stringEndDate = stringEndDate + "-" + endNums[dateItem]
+            
+            else:
+                stringStartDate = stringStartDate + startNums[dateItem]
+                stringEndDate = stringEndDate + endNums[dateItem]
+
+
+        dateDifference = days_between(timeToday, stringStartDate)
+        if 0 <= dateDifference < 7:
+            if dateDifference != 0:
+                endTime += 24*dateDifference
+        
+        hoursBetween = endTime - startTime
+        if 0 <= dateDifference < 7:
+            variableTime = startTime
+            variableDate = dateDifference
+            for hours in range(hoursBetween):
+                if variableTime == 24:
+                    variableDate += 1
+                    variableTime = 0
+                try:
+                    superlist[variableDate][variableTime] += 1
+                    variableTime += 1
+                except:
+                    break
     print(superlist)
-    print(datetime.date(datetime.now()))
-    timeToday = timeToday.replace("-", ", ")
-    print(timeToday)
 
-
-
-    sql_select_Query = f"select StartTime, EndTime from Events where EventID = 1"
-    #cursor = connection.cursor()
-    cursor.execute(sql_select_Query)
-    event = cursor.fetchall()
-    event = str(event[0]).split(",")
-    start = event[0] + event[1] + event[2] + event[3] + event[4]
-    index = (start.find("2"))
-    start = start[19:28]
-    
-
-    print(days_between("2020-02-19", "2020-02-25"))
-    print(start)
+        
+           
 
 
 
