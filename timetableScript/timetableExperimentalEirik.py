@@ -2,7 +2,7 @@ import mysql.connector
 from mysql.connector import Error
 from datetime import datetime, date
 
-listOfUsernames = ["laura", "horia"]
+listOfPeople = ["laura", "horia"]
 listOfEvents = []
 timeToday = str(datetime.date(datetime.now()))
 superlist = [[0]*24, [0]*24, [0]*24, [0]*24, [0]*24, [0]*24, [0]*24]
@@ -25,84 +25,88 @@ try:
     cursor = connection.cursor()
     cursor.execute(sql_select_Query)
     hasEvent = cursor.fetchall()
-    print("Total number of rows in Users is: ", cursor.rowcount)
+    #print("Total number of rows in Users is: ", cursor.rowcount)
 
-    print("\nPrinting each users record")
-    for row in hasEvent:
-        print("Username = ", row[0], )
-        print("Event id = ", row[1])
-        # print("First Name  = ", row[2])
-        # print("Last Name  = ", row[3])
-        # print("Email  = ", row[4], "\n")
-        if row[0] in listOfUsernames:
-            listOfEvents.append(row[1])
-        
-    print(listOfEvents)
+    # #print("\nPrinting each users record")
+    # for row in hasEvent:
+    #     print("Username = ", row[0], )
+    #     print("Event id = ", row[1])
+    #     # print("First Name  = ", row[2])
+    #     # print("Last Name  = ", row[3])
+    #     # print("Email  = ", row[4], "\n")
+    #     if row[0] in listOfUsernames:
+    #         listOfEvents.append(row[1])
 
-    
 
-    for event in listOfEvents:
-        sql_select_Query = f"select StartTime, EndTime from Events where EventID = {event}"
-        #cursor = connection.cursor()
-        cursor.execute(sql_select_Query)
-        event = cursor.fetchall()
+    def createMeetingList(listOfUsernames):
+        for row in hasEvent:
+            if row[0] in listOfUsernames:
+                listOfEvents.append(row[1])
 
-        endNums = []
-        startNums = []
+        for event in listOfEvents:
+            sql_select_Query = f"select StartTime, EndTime from Events where EventID = {event}"
+            #cursor = connection.cursor()
+            cursor.execute(sql_select_Query)
+            event = cursor.fetchall()
 
-        event = str(event)
-        event = event.replace("[(datetime.datetime(", "")
-        eventStartIndex = event.find(")")
-        eventEndIndex = event.find("(")
-        eventStart = event[:eventStartIndex]
-        eventEnd = event[eventEndIndex+1:]
-        eventEnd = eventEnd[:eventEnd.find(")")]
-        
-        print(eventStart)
-        print(eventEnd)
+            endNums = []
+            startNums = []
 
-        startNums = eventStart.rsplit(",")
-        for x in range(len(startNums)):
-            startNums[x] = startNums[x].strip()
-        endNums = eventEnd.rsplit(",")
-        for y in range(len(endNums)):
-            endNums[y] = endNums[y].strip()
-
-        stringStartDate = ""
-        stringEndDate = ""
-
-        startTime = int(startNums[3])# + "-" + startNums[4] ## for minutes
-        endTime = int(endNums[3])# + "-" + endNums[4] ## for minutes
-
-        for dateItem in range(3):
-            if dateItem > 0:
-                stringStartDate = stringStartDate + "-" + startNums[dateItem]
-                stringEndDate = stringEndDate + "-" + endNums[dateItem]
+            event = str(event)
+            event = event.replace("[(datetime.datetime(", "")
+            eventStartIndex = event.find(")")
+            eventEndIndex = event.find("(")
+            eventStart = event[:eventStartIndex]
+            eventEnd = event[eventEndIndex+1:]
+            eventEnd = eventEnd[:eventEnd.find(")")]
             
-            else:
-                stringStartDate = stringStartDate + startNums[dateItem]
-                stringEndDate = stringEndDate + endNums[dateItem]
+            print(eventStart)
+            print(eventEnd)
+
+            startNums = eventStart.rsplit(",")
+            for x in range(len(startNums)):
+                startNums[x] = startNums[x].strip()
+            endNums = eventEnd.rsplit(",")
+            for y in range(len(endNums)):
+                endNums[y] = endNums[y].strip()
+
+            stringStartDate = ""
+            stringEndDate = ""
+
+            startTime = int(startNums[3])# + "-" + startNums[4] ## for minutes
+            endTime = int(endNums[3])# + "-" + endNums[4] ## for minutes
+
+            for dateItem in range(3):
+                if dateItem > 0:
+                    stringStartDate = stringStartDate + "-" + startNums[dateItem]
+                    stringEndDate = stringEndDate + "-" + endNums[dateItem]
+                
+                else:
+                    stringStartDate = stringStartDate + startNums[dateItem]
+                    stringEndDate = stringEndDate + endNums[dateItem]
 
 
-        dateDifference = days_between(timeToday, stringStartDate)
-        if 0 <= dateDifference < 7:
-            if dateDifference != 0:
-                endTime += 24*dateDifference
-        
-        hoursBetween = endTime - startTime
-        if 0 <= dateDifference < 7:
-            variableTime = startTime
-            variableDate = dateDifference
-            for hours in range(hoursBetween):
-                if variableTime == 24:
-                    variableDate += 1
-                    variableTime = 0
-                try:
-                    superlist[variableDate][variableTime] += 1
-                    variableTime += 1
-                except:
-                    break
-    print(superlist)
+            dateDifference = days_between(timeToday, stringStartDate)
+            if 0 <= dateDifference < 7:
+                if dateDifference != 0:
+                    endTime += 24*dateDifference
+            
+            hoursBetween = endTime - startTime
+            if 0 <= dateDifference < 7:
+                variableTime = startTime
+                variableDate = dateDifference
+                for hours in range(hoursBetween):
+                    if variableTime == 24:
+                        variableDate += 1
+                        variableTime = 0
+                    try:
+                        superlist[variableDate][variableTime] += 1
+                        variableTime += 1
+                    except:
+                        break
+        return superlist
+    
+    print(createMeetingList(listOfPeople))
 
         
            
