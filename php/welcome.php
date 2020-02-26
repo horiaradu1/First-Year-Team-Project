@@ -2,9 +2,9 @@
 
 <?php
 include("session.php");
-$sqlGetID = "SELECT EventID FROM HasEvent WHERE Username = $login_session";
-$resultID = mysqli_query($db,$sqlGetID);
-$sqlGetEvents = "SELECT * FROM Events WHERE EventID = $resultID";
+//$sqlGetID = "SELECT EventID FROM HasEvent WHERE Username = $login_session";
+//$resultID = mysqli_query($db,$sqlGetID);
+$sqlGetEvents = "SELECT * FROM Events WHERE EventID in (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
 $resultEvents = mysqli_query($db, $sqlEvents);
 
 $data_array = array();
