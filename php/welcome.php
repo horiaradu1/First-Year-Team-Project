@@ -22,14 +22,15 @@ while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
 
    <body>
       <h1>Welcome <?php echo $login_session; ?></h1>
-      <p id = "Events">I will display your events below.</p>
-      <script type = "text/javascript">
-      var htmlString = "<?php print_r($data_array); ?>"
+      <p id = "demo">Heyo, welcome to our page.</p>
+      <button onclick="myFunction()">Click to display events</button>
+
+      <script>
+      var b = "I want php code here";
+      function myFunction() {
+        document.getElementById("demo").innerHTML = b;
+      }
       </script>
-      <button type = "button"
-      onclick = htmlString>
-      Click to display events!
-      </button>
       <table>
           <thead>
               <tr>
