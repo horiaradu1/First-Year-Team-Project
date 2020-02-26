@@ -10,8 +10,6 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
-mysql_free_result($result);
-
 echo '<pre>';
 print_r($data_array);
 echo '</pre>';
