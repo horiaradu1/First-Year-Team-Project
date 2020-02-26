@@ -25,7 +25,7 @@ while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
       <p id = "Events">I will display your events here.</p>
       <button type = "button"
       onclick='document.getElementById("Events").innerHTML =
-      "Your events are: "+ <pre>;print_r($data_array);</pre>"'>
+      "Your events are: "+ "print_r($data_array);"'>
       Click to display events!
       </button>
       <table>
