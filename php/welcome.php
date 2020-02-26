@@ -10,7 +10,13 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
-print_r($data_array[0]);
+foreach ($data_array as $item) {
+    echo $item;
+}
+
+echo join(', ', $data_array);
+
+array_walk($data_array, create_function('$a', 'echo $a;'));
 ?>
 <html>
 
