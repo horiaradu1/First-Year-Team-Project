@@ -10,7 +10,7 @@ $index = 0;
 
 while($row = mysqli_fetch_assoc($result)){
   $myFuckingAwesomeArray[$index] = $row;
-  $index++
+  $index++;
 }
 
 echo $row[0]["EventsID"]
