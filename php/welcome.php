@@ -10,13 +10,9 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
-foreach ($data_array as $item) {
-    echo $item;
-}
-
-echo join(', ', $data_array);
-
-array_walk($data_array, create_function('$a', 'echo $a;'));
+$len=count($data_array);
+for ($i=0;$i<$len;$i++)
+   echo $data_array[$i];
 ?>
 <html>
 
@@ -37,15 +33,6 @@ array_walk($data_array, create_function('$a', 'echo $a;'));
                   <th>Event ID</th>
               </tr>
           </thead>
-          <tbody>
-              <!--Use a while loop to make a table row for every DB row-->
-              <?php while( $row = $sql->fetch()) : ?>
-              <tr>
-                  <!--Each table column is echoed in to a td cell-->
-                  <td><?php echo $row['EventID']; ?></td>
-              </tr>
-              <?php endwhile ?>
-          </tbody>
       </table>
       <h2><a href = "logout.php">Sign Out</a></h2>
    </body>
