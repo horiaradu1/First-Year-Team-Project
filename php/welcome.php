@@ -2,11 +2,14 @@
 
 <?php
 include("session.php");
-$sql = "SELECT EventID FROM HasEvent WHERE Username = $login_session";
-$result = mysqli_query($db,$sql);
+$sqlGetID = "SELECT EventID FROM HasEvent WHERE Username = $login_session";
+$resultID = mysqli_query($db,$sqlGetID);
+sqlGetEvents = "SELECT * FROM Events WHERE EventID = $resultID";
+$resultEvents = mysqli_query($db, $sqlEvents);
+
 $data_array = array();
 
-while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
