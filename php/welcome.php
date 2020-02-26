@@ -10,9 +10,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
-echo '<pre>';
 print_r($data_array[0]);
-echo '</pre>';
 ?>
 <html>
 
