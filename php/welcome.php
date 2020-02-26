@@ -10,9 +10,10 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
-$len=count($data_array);
-for ($i=0;$i<$len;$i++)
-   echo $data_array[$i];
+echo '<pre>';
+print_r($data_array);
+echo '</pre>';
+
 ?>
 <html>
 
