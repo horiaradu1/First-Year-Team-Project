@@ -1,5 +1,7 @@
 
+
 <?php
+include("session.php");
 $sql = "SELECT EventID FROM HasEvent WHERE Username = $_SESSION['login_user']";
 $result = mysqli_query($db,$sql);
 ?>
