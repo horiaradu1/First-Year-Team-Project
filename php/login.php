@@ -37,6 +37,7 @@
 				else{
 	         echo "loged in";
 	         $_SESSION['login_user'] = $myusername;
+					 $_SESSION['password_user'] = ['password'];
 
 	         header("location: welcome.php");
 				 }
