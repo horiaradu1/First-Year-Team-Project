@@ -4,6 +4,17 @@
 include("session.php");
 $sql = "SELECT EventID FROM HasEvent WHERE Username = $login_session";
 $result = mysqli_query($db,$sql);
+// soz for language
+$myFuckingAwesomeArray = array();
+$index = 0;
+
+while($row = mysqli_fetch_assoc($result)){
+  $myFuckingAwesomeArray[$index] = $row;
+  $index++
+}
+
+echo $row[0]["EventsID"]
+
 ?>
 <html>
 
