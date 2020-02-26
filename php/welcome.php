@@ -13,6 +13,10 @@ while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
+echo '<pre>';
+print_r($data_array);
+echo '</pre>';
+
 ?>
 <html>
 
@@ -26,7 +30,7 @@ while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
       <button onclick="myFunction()">Click to display events</button>
 
       <script>
-      var b = "I want php code here";
+      var b = "<php echo($data_array); ?>";
       function myFunction() {
         document.getElementById("demo").innerHTML = b;
       }
