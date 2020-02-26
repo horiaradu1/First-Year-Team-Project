@@ -11,7 +11,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 }
 
 echo '<pre>';
-print_r($data_array);
+print_r($data_array[0]);
 echo '</pre>';
 ?>
 <html>
