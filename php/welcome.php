@@ -4,7 +4,6 @@
 include("session.php");
 $sql = "SELECT EventID FROM HasEvent WHERE Username = $login_session";
 $result = mysqli_query($db,$sql);
-var htmlString="<?php echo $result; ?>";
 echo $result;
 ?>
 <html>
@@ -14,6 +13,8 @@ echo $result;
    </head>
 
    <body>
+
+      var htmlString="<?php echo $result; ?>";
       <h1>Welcome <?php echo $login_session; ?></h1>
       <p id = "Events">I will display your events here.</p>
       <button type = "button"
