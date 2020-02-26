@@ -22,10 +22,13 @@ while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
 
    <body>
       <h1>Welcome <?php echo $login_session; ?></h1>
-      <p id = "Events">I will display your events here.</p>
+      <p id = "Events">I will display your events below.</p>
+      <script type = "text/javascript">
+      var htmlString = "<?php print_r($data_array); ?>"
+      </script>
       <button type = "button"
       onclick='document.getElementById("Events").innerHTML =
-      "Your events are: "+ "<?php print_r($data_array); ?>"'>
+      "{htmlString}"'>
       Click to display events!
       </button>
       <table>
