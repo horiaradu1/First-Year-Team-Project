@@ -2,7 +2,7 @@
 
 <?php
 include("session.php");
-$sql = "SELECT EventID FROM HasEvent WHERE Username = $_SESSION['login_user']";
+$sql = "SELECT EventID FROM HasEvent WHERE Username = $login_session";
 $result = mysqli_query($db,$sql);
 ?>
 <html>
