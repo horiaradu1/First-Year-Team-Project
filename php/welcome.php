@@ -22,12 +22,17 @@ echo '</pre>';
 
    <head>
       <title>Welcome </title>
+      <style>
+        .hidden {
+          display: none;
+        }
+      </style>
    </head>
 
    <body>
       <h1>Welcome <?php echo $login_session; ?></h1>
       <p id = "demo">Heyo, welcome to our page.</p>
-      <table>
+      <table id="timetable" class="hidden">
         <?php foreach ($data_array as $val) { ?>
           <tr>
             <td><?php echo $val["Description"]; ?></td>
@@ -40,7 +45,8 @@ echo '</pre>';
       var b = JSON.parse('<?php echo json_encode($data_array); ?>');
       console.log(b);
       function myFunction() {
-        document.getElementById("demo").innerHTML = b;
+        document.getElementById("timetable").removeClass("hidden");
+        //document.getElementById("demo").innerHTML = b;
       }
       </script>
       <table>
