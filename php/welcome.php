@@ -45,7 +45,7 @@ echo '</pre>';
       var b = JSON.parse('<?php echo json_encode($data_array); ?>');
       console.log(b);
       function myFunction() {
-        document.getElementById("timetable").removeClass("hidden");
+        document.getElementById("timetable").classList.remove("hidden");
         //document.getElementById("demo").innerHTML = b;
       }
       </script>
