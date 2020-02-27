@@ -30,7 +30,8 @@ echo '</pre>';
       <button onclick="myFunction()">Click to display events</button>
 
       <script>
-      var b = "<php echo($data_array); ?>";
+      var b = JSON.parse('<?php echo json_encode($data_array); ?>');
+      console.log(b);
       function myFunction() {
         document.getElementById("demo").innerHTML = b;
       }
