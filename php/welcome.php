@@ -27,6 +27,13 @@ echo '</pre>';
    <body>
       <h1>Welcome <?php echo $login_session; ?></h1>
       <p id = "demo">Heyo, welcome to our page.</p>
+      <table>
+        <?php foreach ($data_array as $val) { ?>
+          <tr>
+            <td><?php echo $val["Description"]; ?></td>
+          </tr>
+        <?php } ?>
+      </table>
       <button onclick="myFunction()">Click to display events</button>
 
       <script>
