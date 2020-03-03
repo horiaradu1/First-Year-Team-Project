@@ -1,70 +1,107 @@
-<?php
-   include("config.php");
-   session_start();
 
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form
-      $error = "";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TIMEonTABLE-Login</title>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet" type = "text/css" href = "LoginPage.css">
+	<link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
+	<!-- <link rel = "icon" type = "image/png" href = "Logo.png"> -->
+	<style>
+	.message{
+	 color: #e3503b;
+	}
+	</style>
+</head>
+<body>
+	<?php
+	   include("config.php");
+	   session_start();
 
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
+	   if($_SERVER["REQUEST_METHOD"] == "POST") {
+	      // username and password sent from form
+	      $error = "";
 
-      $sql = "SELECT * FROM Users WHERE Username = '$myusername'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+	      $myusername = mysqli_real_escape_string($db,$_POST['username']);
 
-      if (!password_verify($_POST['password'], $row['Hash'])) {
-        die('Incorrect password!!!');
-      }
+	      $sql = "SELECT * FROM Users WHERE Username = '$myusername'";
+	      $result = mysqli_query($db,$sql);
+	      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-      // If result matched $myusername and $mypassword, table row must be 1 row
+	      if (!password_verify($_POST['password'], $row['Hash'])) {
+	        header("location: login_wrong.php");
+	      }
 
-         echo "loged in";
-         $_SESSION['login_user'] = $myusername;
+	      // If result matched $myusername and $mypassword, table row must be 1 row
+				else{
+	         echo "loged in";
+	         $_SESSION['login_user'] = $myusername;
 
-         header("location: welcome.php");
-   }
-?>
-<html>
+	         header("location: welcome.php");
+				 }
+	   }
+	?>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="contact-us-button-contain">
+				<div class="contact-us-button-wrap">
+					<div class="contact-us-button"></div>
+					<button class="contact-us">
+						Contact us
+					</button>
+				</div>
+			</div>
+			<div class="logo" >
+				<img src = "Logo.png">
+			</div>
+				<div class="wrap-login100">
+						<div class="put-it-here-to-include-padding">
+						<span class="login100-form-title p-b-26">
+							Login
+						</span>
+					  </div>
+						<form action = "" method = "post">
+						<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+							<input class="input100" type="text" name="username">
+							<span class="focus-input100" data-placeholder="Username"></span>
+						</div>
 
-   <head>
-      <title>Login Page</title>
+						<div class="wrap-input100 validate-input" data-validate="Enter password">
+							<input class="input100" type="password" name="password" >
+							<span class="focus-input100" data-placeholder="Password"></span>
+						</div>
 
-      <style type = "text/css">
-         body {
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:14px;
-         }
-         label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-         .box {
-            border:#666666 solid 1px;
-         }
-      </style>
+						<div class="container-login100-form-btn">
+							<div class="wrap-login100-form-btn">
+								<div class="login100-form-bgbtn"></div>
+								<button class="login100-form-btn">
+									Login
+								</button>
+							</div>
+						</div>
+						<div class="text-center p-t-115">
+							<span class="txt1">
+								Don’t have an account?
+							</span>
 
-   </head>
+							<a class="txt2" href="file:///home/q24360yk/StupidProject/RegistrationPage.html">
+								Sign Up
+							</a>
+						</div>
+						</form>
+			</div>
+		<div class="move-useless-text">
+			<span class="useless-text">
+				I can put whatever I want here Sorana!!!
+			</span>
+		</div>
+		</div>
+	</div>
 
-   <body bgcolor = "#FFFFFF">
 
-      <div align = "center">
-         <div style = "width:300px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
-
-            <div style = "margin:30px">
-
-               <form action = "" method = "post">
-                  <label>Username:</label><input type = "text" name = "username" class = "box"/><br /><br />
-                  <label>Password:</label><input type = "password" name = "password" class = "box"/><br /><br />
-                  <input type = "submit" value = " Submit "/><br />
-               </form>
-
-            </div>
-
-         </div>
-
-      </div>
-
-   </body>
+	<!-- <div id="dropDownSelect1"></div> -->
+  <!-- <script src = "bootstrap.js"> -->
+	<!-- <script src = "try.js"> -->
+</body>
 </html>
