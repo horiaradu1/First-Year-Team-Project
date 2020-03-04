@@ -37,7 +37,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
  // This part of code is responsible for selecting all possible courses
  $sqlGetLab = "SELECT DISTINCT lab  FROM CourseEvents";
- $resulLab = mysqli_query($db, $sqlGetLab);
+ $resultLab = mysqli_query($db, $sqlGetLab);
  $lab_array = array();
 
  while($c = mysqli_fetch_array($resultLab, MYSQLI_ASSOC)){
