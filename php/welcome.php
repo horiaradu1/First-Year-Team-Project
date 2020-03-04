@@ -1,8 +1,11 @@
 <?php
 include("session.php");
 
-if (isset($_POST["new_course"])) {
-  var_dump($_POST["new_course"]);
+if (isset($_POST["new_course"]) && isset($_POST["new_lab"])) {
+  $course = mysqli_real_escape_string($db, $_POST["new_course"]);
+  //var_dump($_POST["new_course"]);
+  $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
+VALUES ($login_session, '$course');";
 }
 
 // This part of code requests all events the user has.
@@ -71,7 +74,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <br>
       <br>
             <p><b>Course selector<b></p>
-      <form method=POST>
+      <form method=GET>
       <select id = "sel" name="new_course">
         <option>Select course</option>
         <?php foreach ($courses_array as $val) { ?>
@@ -79,7 +82,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <?php } ?>
 
       </select>
-      <button>Click to add to your timetable</button>
+      <button name="submit">Click to add to your timetable</button>
     </form>
 
       <script>
