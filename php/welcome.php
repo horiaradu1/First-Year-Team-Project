@@ -60,6 +60,9 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <?php } ?>
       </table>
       <select id = "sel">
+        <?php foreach ($courses_array as $val) { ?>
+            <option><?php echo $val["course"]; ?></option>
+        <?php } ?>
       </select>
       <button onclick="myFunction()">Click to display events</button>
 
@@ -70,15 +73,6 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       function myFunction() {
         document.getElementById("timetable").classList.remove("hidden");
       }
-
-
-      <?php foreach ($courses_array as $val) { ?>
-        <tr>
-          <td><?php echo $val["Description"]; ?></td>
-
-        </tr>
-      <?php } ?>
-
 
       $("p").hide()
       $(function() {
