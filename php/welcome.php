@@ -63,14 +63,22 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <?php } ?>
 
       </select>
-      <button onclick="myFunction()">Click to display events</button>
+      <button onclick="myFunction()">Click to display/hide events</button>
 
       <script>
       // turn it to json and encode from json
       var b = JSON.parse('<?php echo json_encode($data_array); ?>');
       console.log(b);
+      var myBool = true;
       function myFunction() {
+        if(myBool){
         document.getElementById("timetable").classList.remove("hidden");
+        myBool = false;
+        }
+        else{
+          document.getElementById("timetable").classList.add("hidden");
+          myBool = true;
+        }
       }
 
       // $("p").hide()
