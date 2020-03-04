@@ -1,6 +1,10 @@
 <?php
 include("session.php");
 
+if (isset($_POST["new_course"])) {
+  var_dump($_POST["new_course"]);
+}
+
 // This part of code requests all events the user has.
 $sqlGetEvents = "SELECT * FROM Events WHERE EventID in
   (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
@@ -67,20 +71,34 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <br>
       <br>
             <p><b>Course selector<b></p>
-
-      <select id = "sel">
-
+      <form method=POST>
+      <select id = "sel" name="new_course">
+        <option>Select course</option>
         <?php foreach ($courses_array as $val) { ?>
-            <option><?php echo $val["course"]; ?></option>
+            <option id = "dropdown" value="<?php echo $val["course"]; ?>"><?php echo $val["course"]; ?></option>
         <?php } ?>
 
-      </select><button onclick="addEvent()">Click to add to your timetable</button>
+      </select>
+      <button>Click to add to your timetable</button>
+    </form>
 
       <script>
+      function addEvent(){
+              var ddl = document.getElementById("dropdown");
+              var selectedValue = ddl.options[ddl.selectedIndex].value;
+         if (selectedValue == "Select course")
+        {
+         alert("Please select a card type");
+        }
+        else{
+
+        }
+      }
+
       // turn it to json and encode from json
       var b = JSON.parse('<?php echo json_encode($data_array); ?>');
 
-
+      // displaying/hiding events
       var myBool = true;
       function myFunction() {
         if(myBool){
@@ -92,24 +110,8 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
           myBool = true;
         }
       }
-
-      // $("p").hide()
-      // $(function() {
-      //     var data = [
-      //         {
-      //         "id": "1",
-      //         "name": "test1"},
-      //     {
-      //         "id": "2",
-      //         "name": "test2"}
-      //     ];
-      //     $.each(data, function(i, option) {
-      //         $('#sel').append($('<option/>').attr("value", option.id).text(option.name));
-      //     });
-      // })
-
       </script>
-
+      <br>
       <a href = "logout.php">Sign Out</a>
    </body>
 
