@@ -42,6 +42,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
    <body>
       <h1>Welcome <?php echo $login_session; ?></h1>
       <p id = "demo">Heyo! Welcome to our page.</p>
+<button onclick="myFunction()">Click to display/hide events</button>
 
       <table id="timetable" class="hidden">
 
@@ -51,15 +52,20 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
             <td><?php
             echo $val["Name"];
             echo ": ";
-            echo $val["Description"]; ?></td>
+            echo $val["Description"];
+            echo "\n\t";
+            echo "Starts at: ";
+            echo $val ["StartTime"];
+            echo "\n";
+            echo "Ends at: ";
+            echo $val ["EndtTime"]; ?></td>
           </tr>
         <?php } ?>
       </table>
 
-
-        <button onclick="myFunction()">Click to display/hide events</button>
-
       <br>
+      <br>
+            <p><b>Course selector<b></p>
 
       <select id = "sel">
 
@@ -67,11 +73,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
             <option><?php echo $val["course"]; ?></option>
         <?php } ?>
 
-      </select>
-
-
-      <p><b>Course selector<b></p>
-<button onclick="myFunction()">Click to add to your timetable</button>
+      </select><button onclick="myFunction()">Click to add to your timetable</button>
 
       <script>
       // turn it to json and encode from json
