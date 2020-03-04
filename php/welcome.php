@@ -3,17 +3,20 @@
 <?php
 include("session.php");
 
+// This part of code requests all events the user has.
 $sqlGetEvents = "SELECT * FROM Events WHERE EventID in
   (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
 $resultEvents = mysqli_query($db, $sqlGetEvents);
 
+// create an array
 $data_array = array();
 
+//
 while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
-//
+// This part of code is responsible for selecting all possible courses
 $sqlGetCourses = "SELECT DISTINCT course  FROM CourseEvents";
 
 $resultCourses = mysqli_query($db, $sqlGetCourses);
@@ -51,7 +54,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <!-- For loop to select description from event/. -->
         <?php foreach ($data_array as $val) { ?>
           <tr>
-            <td><?php echo $val["Description"]; ?></td>
+            <td><?php echo $val["course"]; ?></td>
 
           </tr>
         <?php } ?>
@@ -68,6 +71,13 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         document.getElementById("timetable").classList.remove("hidden");
       }
 
+
+      <?php foreach ($courses_array as $val) { ?>
+        <tr>
+          <td><?php echo $val["Description"]; ?></td>
+
+        </tr>
+      <?php } ?>
 
 
       $("p").hide()
