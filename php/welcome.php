@@ -1,6 +1,16 @@
 <?php
 include("session.php");
 
+if (isset($_POST["submit"])) {
+  $course = mysqli_real_escape_string($db, $_POST["new_course"]);
+  $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
+  //var_dump($_POST["new_course"]);
+  $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
+VALUES ($login_session, '$course', '$lab');";
+
+mysqli_query($db, $sqlAddCourse);
+}
+
 // This part of code requests all events the user has.
 $sqlGetEvents = "SELECT * FROM Events WHERE EventID in
   (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
@@ -26,6 +36,17 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
  // print_r($courses_array);
  // echo '</pre>';
 
+
+ // This part of code is responsible for selecting all possible courses
+ $sqlGetLab = "SELECT DISTINCT lab  FROM CourseEvents";
+ $resultLab = mysqli_query($db, $sqlGetLab);
+ $lab_array = array();
+
+ while($c = mysqli_fetch_array($resultLab, MYSQLI_ASSOC)){
+   array_push($lab_array, $c);
+ }
+
+
 ?>
 <html>
    <head>
@@ -42,6 +63,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
    <body>
       <h1>Welcome <?php echo $login_session; ?></h1>
       <p id = "demo">Heyo! Welcome to our page.</p>
+<button onclick="myFunction()">Click to display/hide events</button>
 
       <table id="timetable" class="hidden">
 
@@ -51,32 +73,56 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
             <td><?php
             echo $val["Name"];
             echo ": ";
-            echo $val["Description"]; ?></td>
+            echo $val["Description"];
+            echo "\n\t";
+            // echo "Starts at: ";
+            // echo $val ["StartTime"];
+            // echo "\n";
+            // echo "Ends at: ";
+            // echo $val ["EndTime"];
+             ?></td>
           </tr>
         <?php } ?>
       </table>
 
-
-        <button onclick="myFunction()">Click to display/hide events</button>
-
       <br>
-
-      <select id = "sel">
-
+      <br>
+            <p><b>Course selector<b></p>
+      <form method=POST>
+      <select id = "sel" name="new_course">
+        <option>Select course</option>
         <?php foreach ($courses_array as $val) { ?>
-            <option><?php echo $val["course"]; ?></option>
+            <option id = "dropdown" value="<?php echo $val["course"]; ?>"><?php echo $val["course"]; ?></option>
         <?php } ?>
 
       </select>
+      <select id = "sel2" name="new_lab">
+        <option>Select course</option>
+        <?php foreach ($lab_array as $val) { ?>
+            <option id = "dropdown2" value="<?php echo $val["lab"]; ?>"><?php echo $val["lab"]; ?></option>
+        <?php } ?>
 
-
-      <p><b>Course selector<b></p>
-<button onclick="myFunction()">Click to add to your timetable</button>
+      </select>
+      <button name="submit">Click to add to your timetable</button>
+    </form>
 
       <script>
+      function addEvent(){
+              var ddl = document.getElementById("dropdown");
+              var selectedValue = ddl.options[ddl.selectedIndex].value;
+         if (selectedValue == "Select course")
+        {
+         alert("Please select a card type");
+        }
+        else{
+
+        }
+      }
+
       // turn it to json and encode from json
       var b = JSON.parse('<?php echo json_encode($data_array); ?>');
-      console.log(b);
+
+      // displaying/hiding events
       var myBool = true;
       function myFunction() {
         if(myBool){
@@ -88,25 +134,9 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
           myBool = true;
         }
       }
-
-      // $("p").hide()
-      // $(function() {
-      //     var data = [
-      //         {
-      //         "id": "1",
-      //         "name": "test1"},
-      //     {
-      //         "id": "2",
-      //         "name": "test2"}
-      //     ];
-      //     $.each(data, function(i, option) {
-      //         $('#sel').append($('<option/>').attr("value", option.id).text(option.name));
-      //     });
-      // })
-
       </script>
-
-      <h2><a href = "logout.php">Sign Out</a></h2>
+      <br>
+      <a href = "logout.php">Sign Out</a>
    </body>
 
 </html>
