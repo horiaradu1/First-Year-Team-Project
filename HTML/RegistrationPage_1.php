@@ -222,7 +222,7 @@
 							Already have an account?
 						</span>
 
-						<a class="txt2" href="file:///home/q24360yk/StupidProject/LoginPage.html">
+						<a class="txt2" href="/php/login.php">
 							Login
 						</a>
 					</form>
