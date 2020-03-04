@@ -20,7 +20,10 @@ echo '</pre>';
 <html>
 
    <head>
-      <script src="jquery-3.4.1.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+
       <title>Welcome </title>
       <style>
         .hidden {
@@ -56,7 +59,7 @@ echo '</pre>';
 
 
 
-
+      $("p").hide()
       $(function() {
           var data = [
               {
