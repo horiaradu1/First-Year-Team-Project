@@ -436,17 +436,8 @@ textarea:-ms-input-placeholder { color: #adadad;}
 .wrap-login100-form-btn:hover .login100-form-bgbtn {
   left: 0;
 }
-.useless-text{
-	font-family: Ariel, Helvetica, sans-serif;
-	font-size: 14px;
-	color: #fff;
-}
-.move-useless-text{
-	position: relative;
-	top: 400px;
-	right: 600px;
-}
 .navbar {
+	font-family: Ariel, Helvetica, sans-serif;
 	font-weight: bold;
   overflow: hidden;
   background-color: #336fb2;
