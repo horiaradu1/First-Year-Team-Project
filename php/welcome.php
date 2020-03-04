@@ -7,6 +7,8 @@ if (isset($_POST["submit"])) {
   //var_dump($_POST["new_course"]);
   $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
 VALUES ($login_session, '$course', '$lab');";
+
+mysqli_query($db, $sqlAddCourse);
 }
 
 // This part of code requests all events the user has.
