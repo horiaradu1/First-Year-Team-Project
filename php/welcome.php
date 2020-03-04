@@ -58,7 +58,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
             echo $val ["StartTime"];
             echo "\n";
             echo "Ends at: ";
-            echo $val ["EndtTime"]; ?></td>
+            echo $val ["EndTime"]; ?></td>
           </tr>
         <?php } ?>
       </table>
