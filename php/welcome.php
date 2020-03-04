@@ -2,9 +2,8 @@
 
 <?php
 include("session.php");
-//$sqlGetID = "SELECT EventID FROM HasEvent WHERE Username = $login_session";
-//$resultID = mysqli_query($db,$sqlGetID);
-$sqlGetEvents = "SELECT * FROM Events WHERE EventID in (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
+$sqlGetEvents = "SELECT * FROM Events WHERE EventID in
+  (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
 $resultEvents = mysqli_query($db, $sqlGetEvents);
 
 $data_array = array();
@@ -42,6 +41,8 @@ echo '</pre>';
           </tr>
         <?php } ?>
       </table>
+      <select id = "sel">
+      </select>
       <button onclick="myFunction()">Click to display events</button>
 
       <script>
@@ -50,8 +51,29 @@ echo '</pre>';
       console.log(b);
       function myFunction() {
         document.getElementById("timetable").classList.remove("hidden");
-        //document.getElementById("demo").innerHTML = b;
       }
+
+
+
+
+      $(function() {
+          var data = [
+              {
+              "id": "1",
+              "name": "test1"},
+          {
+              "id": "2",
+              "name": "test2"}
+          ];
+          $.each(data, function(i, option) {
+              $('#sel').append($('<option/>').attr("value", option.id).text(option.name));
+          });
+      })
+
+
+
+
+
       </script>
       <table>
           <thead>
