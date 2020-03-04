@@ -20,6 +20,7 @@ echo '</pre>';
 <html>
 
    <head>
+      <script src="jquery-3.4.1.min.js"></script>
       <title>Welcome </title>
       <style>
         .hidden {
