@@ -1,5 +1,3 @@
-
-
 <?php
 include("session.php");
 
@@ -11,25 +9,22 @@ $resultEvents = mysqli_query($db, $sqlGetEvents);
 // create an array
 $data_array = array();
 
-//
 while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
 // This part of code is responsible for selecting all possible courses
 $sqlGetCourses = "SELECT DISTINCT course  FROM CourseEvents";
-
 $resultCourses = mysqli_query($db, $sqlGetCourses);
-
 $courses_array = array();
 
 while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
   array_push($courses_array, $c);
 }
 
- echo '<pre>';
- print_r($courses_array);
- echo '</pre>';
+ // echo '<pre>';
+ // print_r($courses_array);
+ // echo '</pre>';
 
 ?>
 <html>
@@ -55,7 +50,6 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <?php foreach ($data_array as $val) { ?>
           <tr>
             <td><?php echo $val["course"]; ?></td>
-
           </tr>
         <?php } ?>
       </table>
@@ -88,10 +82,6 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       //         $('#sel').append($('<option/>').attr("value", option.id).text(option.name));
       //     });
       // })
-
-
-
-
 
       </script>
       <table>
