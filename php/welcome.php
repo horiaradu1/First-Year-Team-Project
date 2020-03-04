@@ -31,8 +31,6 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
    <head>
      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-
-
       <title>Welcome </title>
       <style>
         .hidden {
@@ -43,7 +41,8 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
    <body>
       <h1>Welcome <?php echo $login_session; ?></h1>
-      <p id = "demo">Heyo, welcome to our page.</p>
+      <p id = "demo">Heyo! Welcome to our page.</p>
+
       <table id="timetable" class="hidden">
 
         <!-- For loop to select description from event/. -->
@@ -56,6 +55,12 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
           </tr>
         <?php } ?>
       </table>
+
+
+        <button onclick="myFunction()">Click to display/hide events</button>
+
+      <br>
+
       <select id = "sel">
 
         <?php foreach ($courses_array as $val) { ?>
@@ -63,7 +68,10 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <?php } ?>
 
       </select>
-      <button onclick="myFunction()">Click to display/hide events</button>
+
+
+      <p><b>Course selector<b></p>
+<button onclick="myFunction()">Click to add to your timetable</button>
 
       <script>
       // turn it to json and encode from json
@@ -97,13 +105,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       // })
 
       </script>
-      <table>
-          <thead>
-              <tr>
-                  <th>Event ID</th>
-              </tr>
-          </thead>
-      </table>
+
       <h2><a href = "logout.php">Sign Out</a></h2>
    </body>
 
