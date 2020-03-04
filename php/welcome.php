@@ -12,13 +12,13 @@ while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
-echo '<pre>';
-print_r($data_array);
-echo '</pre>';
+// echo '<pre>';
+// print_r($data_array);
+// echo '</pre>';
 
 ?>
 <html>
-
+crossorigin="anonymous">
    <head>
      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
