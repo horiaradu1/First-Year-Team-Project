@@ -1,11 +1,12 @@
 <?php
 include("session.php");
 
-if (isset($_POST["new_course"]) && isset($_POST["new_lab"])) {
+if (isset($_POST["submit"])) {
   $course = mysqli_real_escape_string($db, $_POST["new_course"]);
+  $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
   //var_dump($_POST["new_course"]);
   $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
-VALUES ($login_session, '$course');";
+VALUES ($login_session, '$course', '$lab');";
 }
 
 // This part of code requests all events the user has.
@@ -32,6 +33,17 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
  // echo '<pre>';
  // print_r($courses_array);
  // echo '</pre>';
+
+
+ // This part of code is responsible for selecting all possible courses
+ $sqlGetLab = "SELECT DISTINCT lab  FROM CourseEvents";
+ $resulLab = mysqli_query($db, $sqlGetLab);
+ $lab_array = array();
+
+ while($c = mysqli_fetch_array($resultLab, MYSQLI_ASSOC)){
+   array_push($lab_array, $c);
+ }
+
 
 ?>
 <html>
@@ -74,11 +86,18 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <br>
       <br>
             <p><b>Course selector<b></p>
-      <form method=GET>
+      <form method=POST>
       <select id = "sel" name="new_course">
         <option>Select course</option>
         <?php foreach ($courses_array as $val) { ?>
             <option id = "dropdown" value="<?php echo $val["course"]; ?>"><?php echo $val["course"]; ?></option>
+        <?php } ?>
+
+      </select>
+      <select id = "sel2" name="new_lab">
+        <option>Select course</option>
+        <?php foreach ($lab_array as $val) { ?>
+            <option id = "dropdown2" value="<?php echo $val["lab"]; ?>"><?php echo $val["lab"]; ?></option>
         <?php } ?>
 
       </select>
