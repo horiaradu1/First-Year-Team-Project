@@ -20,8 +20,8 @@ $resultCourses = mysqli_query($db, $sqlGetCourses);
 
 $courses_array = array();
 
-while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
-  array_push($courses_array, $row);
+while($c = mysqli_fetch_array($resultcourses, MYSQLI_ASSOC)){
+  array_push($courses_array, $c);
 }
 
  echo '<pre>';
