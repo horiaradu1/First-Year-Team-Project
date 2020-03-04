@@ -74,20 +74,20 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         document.getElementById("timetable").classList.remove("hidden");
       }
 
-      $("p").hide()
-      $(function() {
-          var data = [
-              {
-              "id": "1",
-              "name": "test1"},
-          {
-              "id": "2",
-              "name": "test2"}
-          ];
-          $.each(data, function(i, option) {
-              $('#sel').append($('<option/>').attr("value", option.id).text(option.name));
-          });
-      })
+      // $("p").hide()
+      // $(function() {
+      //     var data = [
+      //         {
+      //         "id": "1",
+      //         "name": "test1"},
+      //     {
+      //         "id": "2",
+      //         "name": "test2"}
+      //     ];
+      //     $.each(data, function(i, option) {
+      //         $('#sel').append($('<option/>').attr("value", option.id).text(option.name));
+      //     });
+      // })
 
 
 
