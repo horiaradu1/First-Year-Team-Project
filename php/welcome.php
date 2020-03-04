@@ -49,14 +49,19 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <!-- For loop to select description from event/. -->
         <?php foreach ($data_array as $val) { ?>
           <tr>
-            <td><?php echo $val["course"]; ?></td>
+            <td><?php
+            echo $val["Name"];
+            echo ": ";
+            echo $val["Description"]; ?></td>
           </tr>
         <?php } ?>
       </table>
       <select id = "sel">
+
         <?php foreach ($courses_array as $val) { ?>
             <option><?php echo $val["course"]; ?></option>
         <?php } ?>
+
       </select>
       <button onclick="myFunction()">Click to display events</button>
 
