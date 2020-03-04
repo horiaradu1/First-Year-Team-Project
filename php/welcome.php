@@ -2,6 +2,7 @@
 
 <?php
 include("session.php");
+
 $sqlGetEvents = "SELECT * FROM Events WHERE EventID in
   (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
 $resultEvents = mysqli_query($db, $sqlGetEvents);
@@ -12,13 +13,23 @@ while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 
-// echo '<pre>';
-// print_r($data_array);
-// echo '</pre>';
+//
+$sqlGetCourses = "SELECT DISTINCT course  FROM CourseEvents";
+
+$resultCourses = mysqli_query($db, $sqlGetCourses);
+
+$courses_array = array();
+
+while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
+  array_push($courses_array, $row);
+}
+
+ echo '<pre>';
+ print_r($courses_array);
+ echo '</pre>';
 
 ?>
 <html>
-crossorigin="anonymous">
    <head>
      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
