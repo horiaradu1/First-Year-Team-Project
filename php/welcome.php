@@ -54,11 +54,12 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
             echo ": ";
             echo $val["Description"];
             echo "\n\t";
-            echo "Starts at: ";
-            echo $val ["StartTime"];
-            echo "\n";
-            echo "Ends at: ";
-            echo $val ["EndTime"]; ?></td>
+            // echo "Starts at: ";
+            // echo $val ["StartTime"];
+            // echo "\n";
+            // echo "Ends at: ";
+            // echo $val ["EndTime"];
+             ?></td>
           </tr>
         <?php } ?>
       </table>
@@ -73,12 +74,13 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
             <option><?php echo $val["course"]; ?></option>
         <?php } ?>
 
-      </select><button onclick="myFunction()">Click to add to your timetable</button>
+      </select><button onclick="addEvent()">Click to add to your timetable</button>
 
       <script>
       // turn it to json and encode from json
       var b = JSON.parse('<?php echo json_encode($data_array); ?>');
-      console.log(b);
+
+
       var myBool = true;
       function myFunction() {
         if(myBool){
@@ -108,7 +110,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
       </script>
 
-      <h2><a href = "logout.php">Sign Out</a></h2>
+      <a href = "logout.php">Sign Out</a>
    </body>
 
 </html>
