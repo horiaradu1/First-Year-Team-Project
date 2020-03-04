@@ -20,7 +20,7 @@ $resultCourses = mysqli_query($db, $sqlGetCourses);
 
 $courses_array = array();
 
-while($c = mysqli_fetch_array($resultcourses, MYSQLI_ASSOC)){
+while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
   array_push($courses_array, $c);
 }
 
