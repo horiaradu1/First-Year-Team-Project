@@ -172,39 +172,39 @@
 					<!-- <p><span class="error">* required fields</span></p> -->
 					<form method ="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
           <div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="fname" value="<?php echo $fname;?>">
-						<span class="focus-input100" data-placeholder="First Name"></span>
+						<input class="input100" type="text" name="fname" placeholder="First Name" value="<?php echo $fname;?>">
+						<!-- <span class="focus-input100" data-placeholder="First Name"></span> -->
 						<span class="error"><?php echo $fnameErr;?></span>
 					</div>
 
           <div class="wrap-input100 validate-input">
-            <input class="input100" type="text" name="lname" value="<?php echo $lname;?>">
-            <span class="focus-input100" data-placeholder="Last Name"></span>
+            <input class="input100" type="text" name="lname" placeholder="Last Name" value="<?php echo $lname;?>">
+            <!-- <span class="focus-input100" data-placeholder="Last Name"></span> -->
 						<span class="error"><?php echo $lnameErr;?></span>
           </div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="username" value="<?php echo $username;?>">
-						<span class="focus-input100" data-placeholder="Username"></span>
+						<input class="input100" type="text" name="username" placeholder="Username" value="<?php echo $username;?>">
+						<!-- <span class="focus-input100" data-placeholder="Username"></span> -->
 						<span class="error"><?php echo $usernameErr;?></span>
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="email" value="<?php echo $email;?>">
-						<span class="focus-input100" data-placeholder="Email"></span>
+						<input class="input100" type="text" name="email" placeholder="Email" value="<?php echo $email;?>">
+						<!-- <span class="focus-input100" data-placeholder="Email"></span> -->
 						<span class="error"><?php echo $emailErr;?></span>
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="password" value="<?php echo $password;?>">
-						<span class="focus-input100" data-placeholder="Password"></span>
+						<input class="input100" type="password" name="password" placeholder="Password" value="<?php echo $password;?>">
+						<!-- <span class="focus-input100" data-placeholder="Password"></span> -->
 						<span class="error"><?php echo $passwordErr;?></span>
 					</div>
 
           <div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="cpassword">
+						<input class="input100" type="password" name="cpassword" placeholder="Confirm Password">
 						<!-- <value="<?php echo $cpassword;?>"> -->
-						<span class="focus-input100" data-placeholder="Confirm Password"></span>
+						<!-- <span class="focus-input100" data-placeholder="Confirm Password"></span> -->
 						<span class="error"><?php echo $cpasswordErr;?></span>
 					</div>
 

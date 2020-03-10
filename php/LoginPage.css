@@ -181,7 +181,7 @@ textarea::-webkit-input-placeholder { color: #adadad;}
 textarea:-moz-placeholder { color: #adadad;}
 textarea::-moz-placeholder { color: #adadad;}
 textarea:-ms-input-placeholder { color: #adadad;}
-.focus-input100 {
+/*.focus-input100 {
   position: absolute;
   display: block;
   width: 100%;
@@ -242,7 +242,7 @@ textarea:-ms-input-placeholder { color: #adadad;}
 
 .has-val.input100 + .focus-input100::before {
   width: 100%;
-}
+}*/
 .contact-us-button-contain{
 	display: -webkit-box;
 	display: -webkit-flex;
