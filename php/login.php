@@ -6,6 +6,7 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel = "stylesheet" type = "text/css" href = "LoginPage.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
 	<!-- <link rel = "icon" type = "image/png" href = "Logo.png"> -->
 	<style>
@@ -63,13 +64,13 @@
 					  </div>
 						<form action = "" method = "post">
 						<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-							<input class="input100" type="text" name="username">
-							<span class="focus-input100" data-placeholder="Username"></span>
+							<input class="input100" type="text" name="username" placeholder="Username">
+							<!-- <span class="focus-input100" data-placeholder="Username"></span> -->
 						</div>
 
 						<div class="wrap-input100 validate-input" data-validate="Enter password">
-							<input class="input100" type="password" name="password" >
-							<span class="focus-input100" data-placeholder="Password"></span>
+							<input class="input100" type="password" name="password" placeholder="Password">
+							<!-- <span class="focus-input100" data-placeholder="Password"></span> -->
 						</div>
 
 						<div class="container-login100-form-btn">

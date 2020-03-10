@@ -67,13 +67,13 @@
 					  </div>
 						<form action = "" method = "post">
 						<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-							<input class="input100" type="text" name="username">
-							<span class="focus-input100" data-placeholder="Username"></span>
+							<input class="input100" type="text" name="username" placeholder="Username">
+							<!-- <span class="focus-input100" data-placeholder="Username"></span> -->
 						</div>
 
 						<div class="wrap-input100 validate-input" data-validate="Enter password">
-							<input class="input100" type="password" name="password" >
-							<span class="focus-input100" data-placeholder="Password"></span>
+							<input class="input100" type="password" name="password" placeholder="Password">
+							<!-- <span class="focus-input100" data-placeholder="Password"></span> -->
 						</div>
 
             <span class = "error">Incorrect username/password.</span>
