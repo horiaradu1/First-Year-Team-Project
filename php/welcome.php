@@ -25,7 +25,7 @@ $sqlGetEvents = "SELECT * FROM Events
 $resultEvents = mysqli_query($db, $sqlGetEvents);
 
 $sqlGetCoursesEvents="SELECT * FROM CourseEvents
-  WHERE course in
+  WHERE Name in
   (SELECT course FROM HasCourse WHERE Username = $login_session)";
 $resultCoursesEvents = mysqli_query($db, $sqlGetCoursesEvents);
 
@@ -39,11 +39,9 @@ while($x = mysqli_fetch_array($resultCoursesEvents, MYSQLI_ASSOC)){
   array_push($data_array, $x);
 }
 
-  array_push($data_array, $x);
-
 
 // This part of code is responsible for selecting all possible courses
-$sqlGetCourses = "SELECT DISTINCT course  FROM CourseEvents";
+$sqlGetCourses = "SELECT DISTINCT Name  FROM CourseEvents";
 $resultCourses = mysqli_query($db, $sqlGetCourses);
 $courses_array = array();
 
@@ -108,6 +106,8 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <br>
             <p><b>Course selector<b></p>
       <form method=POST>
+
+
       <select id = "sel" name="new_course">
         <option>Select course</option>
         <?php foreach ($courses_array as $val) { ?>
@@ -115,6 +115,9 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <?php } ?>
 
       </select>
+
+
+
       <select id = "sel2" name="new_lab">
         <option>Select your lab</option>
         <?php foreach ($lab_array as $val) { ?>
