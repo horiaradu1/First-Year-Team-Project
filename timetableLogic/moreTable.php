@@ -50,11 +50,49 @@
     <div class="after">
       <a href="#" class="previous round">&#8250;</a>
     </div>
-    
-    <div class="timetable">
-      <?php include 'maintimetablePHP.php';?>
+      <div class="wrap-table100">
+        <div class="table100 ver1 m-b-110">
+          <table data-vertable="ver1.1">
+            <thead>
+              <tr class="row100 head">
+                <th class="column100 column1" data-column="column1"></th>
+                <th class="column100 column3" data-column="column3">Monday</th>
+                <th class="column100 column4" data-column="column4">Tuesday</th>
+                <th class="column100 column5" data-column="column5">Wednesday</th>
+                <th class="column100 column6" data-column="column6">Thursday</th>
+                <th class="column100 column7" data-column="column7">Friday</th>
+                <th class="column100 column8" data-column="column8">Saturday</th>
+                  <th class="column100 column2" data-column="column2">Sunday</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="scroll">
+            <table data-vertable="ver1" >
+            <tbody>
+              <?php
+                for ($i = 0; $i < 7; $i++) {
+                  for ($j = 0; $j < 24; $j++) {
+                    ?>
+                      <tr class="row100">
+                        <td class="column100 column1" data-column="column1"><?php echo ($time) ?></td>
+                        <td class="column100 column2" data-column="column2"><?php echo ($monday) ?></td>
+                        <td class="column100 column3" data-column="column3"><?php echo ($tuesday) ?></td>
+                        <td class="column100 column4" data-column="column4"><?php echo ($wednesday) ?></td>
+                        <td class="column100 column5" data-column="column5"><?php echo ($thursday) ?></td>
+                        <td class="column100 column6" data-column="column6"><?php echo ($friday) ?></td>
+                        <td class="column100 column7" data-column="column7"><?php echo ($saturday) ?></td>
+                        <td class="column100 column8" data-column="column8"><?php echo ($sunday) ?></td>
+                      </tr>
+                <?php
+                    }
+                 }
+                 ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </div>
     </div>
-
   </div>
 </body>
 </html>
