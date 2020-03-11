@@ -24,15 +24,19 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
         //echo $_POST['pickedDate']; /////////////
 
         $input = $_POST['item'];  
-        
+        // $attempts = array();
         $result = $conn->query("SELECT * FROM Users WHERE Username = '$input'"); // not injection proof
-    
         if (!$result) echo $conn->error;
 
         if($result->num_rows == 0) {
             
         } 
+        // else if (in_array($input, $attempts)) {
+        //     echo "Yo";
+        // }
+
         else {
+            // array_push($attempts, $input);
             $items[] = $_POST['item'];
         }
 
@@ -67,7 +71,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
             <?php endif; ?>
         </form>
 
-        <form action="/g34904ps/team/visualPlanner/timetablePHP.php" method=POST>
+        <form action="/g63968ef/deploymenttest/visualPlanner/timetablePHP.php" method=POST>
             <label for="sumbit">PLAN MEETING --> </label>
             <input type='hidden' name='items' value="<?php echo htmlentities(serialize($items)); ?>" />
             <input type="submit">

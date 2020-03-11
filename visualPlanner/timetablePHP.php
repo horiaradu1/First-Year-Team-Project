@@ -25,7 +25,7 @@ $listOfEvents = array();
 $dateToday = (date('Y-m-d'));
 $dateToday = new DateTime('today');
 // $dateToday = date('Y-m-d H:i:s');
-$timeToday = date('2020-02-20 11:00:00');
+$timeToday = date('2020-02-20');
 $planList = array();
 for ($week = 0; $week < 7; $week++) {
     array_push($planList, array());
@@ -126,7 +126,7 @@ createMeetingList($items);
 <body>
 
 <h1>Meeting Planner</h1>
-<p>*Percent = percent of people NOT available</p>
+<p>*Percent = percent of people available</p>
 <p>Date today: <?php print_r($dateToday->format('Y-m-d')) ?></p>
 
 
@@ -175,34 +175,40 @@ createMeetingList($items);
       for ($i = 0; $i < 24; $i++) {
          for ($j = 0; $j < 7; $j++) {
             $percentOccupied = ($planList[$j][$i]/sizeof($items)) * 100;
-            if ($percentOccupied <= 10) {
+            if ($percentOccupied == 0) {
+                ?>
+                <div>
+                   <div class="accent-free">All available</div>
+                 </div>
+                <?php }
+            else if ((0 < $percentOccupied) &($percentOccupied <= 10)) {
             ?>
             <div>
-               <div class="accent-0">Less than 10%</div>
+               <div class="accent-0">Over 90%</div>
              </div>
             <?php }
             else if ((10 < $percentOccupied) & ($percentOccupied <= 20)) { 
             ?>
             <div>
-               <div class="accent-1">10%-20%</div>
+               <div class="accent-1">80%-90%</div>
              </div>
             <?php }
             else if ((20 < $percentOccupied) & ($percentOccupied <= 30)){ 
                 ?>
                 <div>
-                   <div class="accent-2">20%-30%</div>
+                   <div class="accent-2">70%-80%</div>
                  </div>
                 <?php }
             else if ((30 < $percentOccupied) & ($percentOccupied <= 40)){ 
                 ?>
                 <div>
-                   <div class="accent-3">30%-40%</div>
+                   <div class="accent-3">60%-70%</div>
                  </div>
                 <?php }
             else if ((40 < $percentOccupied) & ($percentOccupied <= 50)){ 
                 ?>
                 <div>
-                   <div class="accent-4">40%-50%</div>
+                   <div class="accent-4">50%-60%</div>
                  </div>
                 <?php }
             else if ((50 < $percentOccupied) & ($percentOccupied <= 60)){ 
@@ -214,25 +220,25 @@ createMeetingList($items);
             else if ((60 < $percentOccupied) & ($percentOccupied <= 70)){ 
                 ?>
                 <div>
-                   <div class="accent-6 ">60%-70%</div>
+                   <div class="accent-6 ">40%-50%</div>
                  </div>
                 <?php }
             else if ((70 < $percentOccupied) & ($percentOccupied <= 80)){ 
                 ?>
                 <div>
-                   <div class="accent-7">70%-80%</div>
+                   <div class="accent-7">30%-40%</div>
                  </div>
                 <?php }
             else if ((80 < $percentOccupied) & ($percentOccupied <= 90)){ 
                 ?>
                 <div>
-                   <div class="accent-8">80%-90%</div>
+                   <div class="accent-8">20%-30%</div>
                  </div>
                 <?php }
             else { 
                 ?>
                 <div>
-                   <div class="accent-9">Over 90%</div>
+                   <div class="accent-9">Less than 10%</div>
                  </div>
                 <?php }
          }
