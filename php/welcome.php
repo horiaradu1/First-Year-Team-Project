@@ -15,7 +15,7 @@ mysqli_query($db, $sqlAddCourse);
 $sqlGetEvents = "SELECT * FROM Events
     WHERE EventID in
   (SELECT EventID FROM HasEvent WHERE Username = $login_session)
-  AND
+  UNION
   SELECT * FROM CourseEvents
   WHERE course in
   (SELECT course FROM HasCourse WHERE Username = $login_session)";
