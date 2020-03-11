@@ -50,9 +50,10 @@ img{
 .title{
   font-family: Ariel, Helvetica, sans-serif;
 	font-size: 40px;
+	color: #fff;
   align: center;
   position: relative;
-  bottom: 420px;
+  bottom: 120px;
   left: 650px;
 }
 .text{
@@ -62,7 +63,7 @@ img{
 .wrap-text{
   width: 1000px;
   position: relative;
-  bottom: 200px;
+  bottom: -50px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -101,6 +102,7 @@ img{
 .name{
   font-family: Ariel, Helvetica, sans-serif;
 	font-size: 30px;
+	font-weight: bold;
 }
 /*.name-wrap{
   position: relative;
@@ -141,36 +143,43 @@ img{
 }
 .photo_container1{
 	position: relative;
-	bottom: -200px;
-	right: 1400px;
+	top: 480px;
+	right: 1070px;
+	text-align: center;
 }
 .photo_container2{
 	position: relative;
-	bottom: -200px;
-	right: 1300px;
+	top: 480px;
+	right: 750px;
+	text-align: center;
 }
 .photo_container3{
 	position: relative;
-	bottom: -200px;
-	right: 1200px;
+	bottom: 20px;
+	left: 650px;
+	text-align: center;
 }
 .photo_container4{
 	position: relative;
-	bottom: -200px;
-	right: 1100px;
+	bottom: 20px;
+	left: 700px;
+	text-align: center;
 }
 .photo_container5{
 	position: relative;
-	bottom: -200px;
-	right: 1000px;
+	bottom: 20px;
+	right: 800px;
+	text-align: center;
 }
 .photo_container6{
 	position: relative;
-	bottom: -200px;
-	right: 900px;
+	bottom: 20px;
+	right: 460px;
+	text-align: center;
 }
 .photo_container7{
 	position: relative;
-	bottom: -200px;
-	right: 800px;
+	bottom: 20px;
+	left: 350px;
+	text-align: center;
 }
