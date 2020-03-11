@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 
-
+$title = "";
 $items = array();
 $result = "";
 if('POST' === $_SERVER['REQUEST_METHOD']) {
@@ -61,19 +61,31 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
                 <?php endforeach; ?>
             </ul>
         <?php endif; ?>
+        <!-- <form method="post">
+        <label for="title">Event Title: </label>
+        <input type="text" id="title" name="title"><br><br>
+        <input type="submit" name='sumbit' value="Set title<?php //error_reporting(E_ERROR);  
+                                                //try {$title = $_POST['title'];} 
+                                                //catch (Exception $e) {}?>">
+                                                <?php// echo "  Title: " . $title?></input>
+        </form>  -->
         <form method="post">
-            <input type="text" name="item" />
-            <input type="submit" value="Add user" />
+            <label for="title">Event Title: </label>
+            <input type="text" id="title" name="title" required value="<?php if (isset($_POST['title'])) echo $_POST['title']; ?>"><br><br>
+            <input type="text" name="item" required/>
+            <input type="submit" value="<?php error_reporting(E_ERROR);  
+                                                try {$title = $_POST['title'];} 
+                                                catch (Exception $e) {} ?>Add user" />
             <?php if($items): ?>
                 <?php foreach($items as $item): ?>
-                    <input type="hidden" name="items[]" value="<?php echo $item; ?>" />
+                    <input type="hidden" name="items[]" value="<?php echo $item;?>" />
                 <?php endforeach; ?>
             <?php endif; ?>
         </form>
 
-        <form action="/g63968ef/deploymenttest/visualPlanner/timetablePHP.php" method=POST>
+        <form action="/g63968ef/deploymenttest/visualPlanner/timetablePHP.php?title=<?php echo $title?>" method=post>
             <label for="sumbit">PLAN MEETING --> </label>
-            <input type='hidden' name='items' value="<?php echo htmlentities(serialize($items)); ?>" />
+            <input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />
             <input type="submit">
         </form>
     </body>
