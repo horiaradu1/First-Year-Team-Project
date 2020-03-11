@@ -10,7 +10,6 @@ body, html {
 h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
-
 p {
 	font-family: Ariel, Helvetica, sans-serif;
 	font-size: 14px;
@@ -40,11 +39,12 @@ img{
   height: 100%;
   top: 0;
   left: 0;
-  background: #0a24fb;
+  /*background: #0a24fb;
   background: -webkit-linear-gradient(right, #0a24fb, #4bddf0);
   background: -o-linear-gradient(right, #0a24fb, #4bddf0);
   background: -moz-linear-gradient(right, #0a24fb, #4bddf0);
-  background: linear-gradient(right, #0a24fb, #4bddf0);
+  background: linear-gradient(right, #0a24fb, #4bddf0);*/
+	background-image: url("sea8.jpg");
   pointer-events: none;
 }
 .title{
@@ -74,11 +74,11 @@ img{
   -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
 }
-.photo{
+/*.photo{
   position: relative;
   right: 900px;
   top: 200px;
-}
+}*/
 .text-wrapper{
   width: 200px;
   position: relative;
@@ -93,16 +93,84 @@ img{
   -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
 }
-.personal-txt{
+/*.personal-txt{
   position: relative;
   top: 400px;
   right: 1100px;
-}
+}*/
 .name{
   font-family: Ariel, Helvetica, sans-serif;
 	font-size: 30px;
 }
-.name-wrap{
+/*.name-wrap{
   position: relative;
   left: 40px;
+}*/
+
+.navbar {
+	font-family: Ariel, Helvetica, sans-serif;
+	font-weight: bold;
+  overflow: hidden;
+  background-color: #336fb2;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 2;
+	max-height: 50px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  /*float: left;*/
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #5a9de9;
+}
+.picture{
+	float:left;
+}
+.text100{
+	float: right;
+}
+.photo_container1{
+	position: relative;
+	bottom: -200px;
+	right: 1400px;
+}
+.photo_container2{
+	position: relative;
+	bottom: -200px;
+	right: 1300px;
+}
+.photo_container3{
+	position: relative;
+	bottom: -200px;
+	right: 1200px;
+}
+.photo_container4{
+	position: relative;
+	bottom: -200px;
+	right: 1100px;
+}
+.photo_container5{
+	position: relative;
+	bottom: -200px;
+	right: 1000px;
+}
+.photo_container6{
+	position: relative;
+	bottom: -200px;
+	right: 900px;
+}
+.photo_container7{
+	position: relative;
+	bottom: -200px;
+	right: 800px;
 }
