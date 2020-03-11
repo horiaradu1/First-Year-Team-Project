@@ -30,7 +30,14 @@
     </div>
     <div class="container-table100">
       <div class="week">
-        2 MAR - 8 MAR 2020
+        <?php 
+        $sMonth = date('F');
+        $eMonth = date('F',strtotime("+6 days"));
+        $sDay = date('d');
+        $eDay = date('d', strtotime("+6 days"));
+        
+        echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+        ?>
       </div>
       <div class="logo">
         <img src = "Logo.png">
