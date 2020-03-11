@@ -31,12 +31,12 @@
     <div class="container-table100">
       <div class="week">
         <?php 
-        $sMonth = date('F');
-        $eMonth = date('F',strtotime("+6 days"));
-        $sDay = date('d');
-        $eDay = date('d', strtotime("+6 days"));
-        
-        echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+          $sMonth = date('F',time()+( 1 - date('w'))*24*3600);
+          $eMonth = date('F',time()+( 7 - date('w'))*24*3600);
+          $sDay = date('d',time()+( 1 - date('w'))*24*3600); //date('d');
+          $eDay = date('d',time()+( 7 - date('w'))*24*3600);
+
+          echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
         ?>
       </div>
       <div class="logo">
