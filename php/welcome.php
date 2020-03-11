@@ -25,7 +25,7 @@ $sqlGetEvents = "SELECT * FROM Events
 $resultEvents = mysqli_query($db, $sqlGetEvents);
 
 $sqlGetCoursesEvents="SELECT * FROM CourseEvents
-  WHERE course in
+  WHERE Name in
   (SELECT course FROM HasCourse WHERE Username = $login_session)";
 $resultCoursesEvents = mysqli_query($db, $sqlGetCoursesEvents);
 
