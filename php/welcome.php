@@ -30,7 +30,7 @@ while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
 }
 while($x = mysqli_fetch_array($resultCoursesEvents, MYSQLI_ASSOC)){
   array_push($data_array, $x)
-}
+};
 
 
 // This part of code is responsible for selecting all possible courses
