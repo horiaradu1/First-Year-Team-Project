@@ -111,7 +111,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <select id = "sel" name="new_course">
         <option>Select course</option>
         <?php foreach ($courses_array as $val) { ?>
-            <option id = "dropdown" value="<?php echo $val["course"]; ?>"><?php echo $val["course"]; ?></option>
+            <option id = "dropdown" value="<?php echo $val["Name"]; ?>"><?php echo $val["Name"]; ?></option>
         <?php } ?>
 
       </select>
