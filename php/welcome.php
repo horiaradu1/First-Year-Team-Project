@@ -33,7 +33,7 @@ while($x = mysqli_fetch_array($resultCoursesEvents, MYSQLI_ASSOC)){
 }
 
   array_push($data_array, $x);
-}
+
 
 // This part of code is responsible for selecting all possible courses
 $sqlGetCourses = "SELECT DISTINCT course  FROM CourseEvents";
