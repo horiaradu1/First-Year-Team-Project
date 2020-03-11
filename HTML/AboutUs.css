@@ -1,0 +1,108 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body, html {
+	height: 100%;
+	font-family: Ariel, Helvetica, sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0px;
+}
+
+p {
+	font-family: Ariel, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+}
+img{
+  width: 200px;
+  height: : 400px;
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #0a24fb;
+  background: -webkit-linear-gradient(right, #0a24fb, #4bddf0);
+  background: -o-linear-gradient(right, #0a24fb, #4bddf0);
+  background: -moz-linear-gradient(right, #0a24fb, #4bddf0);
+  background: linear-gradient(right, #0a24fb, #4bddf0);
+  pointer-events: none;
+}
+.title{
+  font-family: Ariel, Helvetica, sans-serif;
+	font-size: 40px;
+  align: center;
+  position: relative;
+  bottom: 420px;
+  left: 650px;
+}
+.text{
+  font-family: Ariel, Helvetica, sans-serif;
+	font-size: 20px;
+}
+.wrap-text{
+  width: 1000px;
+  position: relative;
+  bottom: 200px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 35px 150px 25px 150px;
+
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.photo{
+  position: relative;
+  right: 900px;
+  top: 200px;
+}
+.text-wrapper{
+  width: 200px;
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 35px 150px 25px 25px;
+
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.personal-txt{
+  position: relative;
+  top: 400px;
+  right: 1100px;
+}
+.name{
+  font-family: Ariel, Helvetica, sans-serif;
+	font-size: 30px;
+}
+.name-wrap{
+  position: relative;
+  left: 40px;
+}
