@@ -14,12 +14,13 @@ mysqli_query($db, $sqlAddCourse);
 // This part of code requests all events and courses the user has. Timetable!
 $sqlGetEvents = "SELECT * FROM Events
     WHERE EventID in
-  (SELECT EventID FROM HasEvent WHERE Username = $login_session)
-  LEFT JOIN 
-  SELECT * FROM CourseEvents
+  (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
+$resultEvents = mysqli_query($db, $sqlGetEvents);
+
+$sqlGetCoursesEvents="SELECT * FROM CourseEvents
   WHERE course in
   (SELECT course FROM HasCourse WHERE Username = $login_session)";
-$resultEvents = mysqli_query($db, $sqlGetEvents);
+$resultCoursesEvents = mysqli_query($db, $sqlGetCoursesEvents);
 
 // create an array
 $data_array = array();
@@ -27,6 +28,10 @@ $data_array = array();
 while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
+while($x = mysqli_fetch_array($resultCoursesEvents, MYSQLI_ASSOC)){
+  array_push($data_array, $x)
+}
+
 
 // This part of code is responsible for selecting all possible courses
 $sqlGetCourses = "SELECT DISTINCT course  FROM CourseEvents";
