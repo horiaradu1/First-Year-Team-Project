@@ -14,7 +14,13 @@
 
   </head>
   <body>
-
+    <script>
+    AnyTime.picker( "field1",
+      { format: "%W, %M %D in the Year %z %E", firstDOW: 1 } );
+    $("#field2").AnyTime_picker(
+      { format: "%H:%i", labelTitle: "Hora",
+        labelHour: "Hora", labelMinute: "Minuto" } );
+    </script>
     English: <input type="text" id="field1" size="50"
                 value="Sunday, July 30th in the Year 1967 CE" /><br/>
     English: <input type="text" id="field2" value="12:34" />
