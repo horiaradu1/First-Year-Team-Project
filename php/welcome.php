@@ -24,6 +24,7 @@ $resultCoursesEvents = mysqli_query($db, $sqlGetCoursesEvents);
 
 // create an array
 $events_array = array();
+$data_array = array();
 
 while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
   array_push($events_array, $row);
