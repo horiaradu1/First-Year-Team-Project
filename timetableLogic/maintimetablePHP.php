@@ -174,73 +174,8 @@ createMeetingList($items);
   <?php
       for ($i = 0; $i < 24; $i++) {
          for ($j = 0; $j < 7; $j++) {
-            $percentOccupied = ($planList[$j][$i]/sizeof($items)) * 100;
-            if ($percentOccupied == 0) {
-                ?>
-                <div>
-                   <div class="accent-free">All available</div>
-                 </div>
-                <?php }
-            else if ((0 < $percentOccupied) &($percentOccupied <= 10)) {
-            ?>
-            <div>
-               <div class="accent-0">Over 90%</div>
-             </div>
-            <?php }
-            else if ((10 < $percentOccupied) & ($percentOccupied <= 20)) { 
-            ?>
-            <div>
-               <div class="accent-1">80%-90%</div>
-             </div>
-            <?php }
-            else if ((20 < $percentOccupied) & ($percentOccupied <= 30)){ 
-                ?>
-                <div>
-                   <div class="accent-2">70%-80%</div>
-                 </div>
-                <?php }
-            else if ((30 < $percentOccupied) & ($percentOccupied <= 40)){ 
-                ?>
-                <div>
-                   <div class="accent-3">60%-70%</div>
-                 </div>
-                <?php }
-            else if ((40 < $percentOccupied) & ($percentOccupied <= 50)){ 
-                ?>
-                <div>
-                   <div class="accent-4">50%-60%</div>
-                 </div>
-                <?php }
-            else if ((50 < $percentOccupied) & ($percentOccupied <= 60)){ 
-                ?>
-                <div>
-                   <div class="accent-5">50%-60%</div>
-                 </div>
-                <?php }
-            else if ((60 < $percentOccupied) & ($percentOccupied <= 70)){ 
-                ?>
-                <div>
-                   <div class="accent-6 ">40%-50%</div>
-                 </div>
-                <?php }
-            else if ((70 < $percentOccupied) & ($percentOccupied <= 80)){ 
-                ?>
-                <div>
-                   <div class="accent-7">30%-40%</div>
-                 </div>
-                <?php }
-            else if ((80 < $percentOccupied) & ($percentOccupied <= 90)){ 
-                ?>
-                <div>
-                   <div class="accent-8">20%-30%</div>
-                 </div>
-                <?php }
-            else { 
-                ?>
-                <div>
-                   <div class="accent-9">Less than 10%</div>
-                 </div>
-                <?php }
+            
+            
          }
       }
   ?>

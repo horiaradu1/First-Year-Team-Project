@@ -52,7 +52,7 @@
     </div>
     
     <div class="timetable">
-      <?php include 'timetablePHP.php';?>
+      <?php include 'maintimetablePHP.php';?>
     </div>
 
   </div>
