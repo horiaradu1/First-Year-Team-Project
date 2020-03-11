@@ -29,8 +29,8 @@ while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
   array_push($data_array, $row);
 }
 while($x = mysqli_fetch_array($resultCoursesEvents, MYSQLI_ASSOC)){
-  array_push($data_array, $x)
-};
+  array_push($data_array, $x);
+}
 
   array_push($data_array, $x);
 }
