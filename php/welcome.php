@@ -193,14 +193,11 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
               var ddl2 = document.getElementById("dropdown2");
               var selectedValue2 = ddl2.options[ddl2.selectedIndex].value;
 
-         if (selectedValue == "Select course" || selectedValue2 == "Select lab" )
-        {
-         alert("Please, dont be stupid");
-        }
+
       }
 
       // turn it to json and encode from json
-      //var b = JSON.parse('<?php echo json_encode($data_array); ?>');
+      var b = JSON.parse('<?php echo json_encode($data_array); ?>');
 
       // displaying/hiding events
       var myBool = true;
