@@ -207,7 +207,10 @@ iframe {
   /*border-bottom: 2px outset #9dadaf;*/
   margin-bottom: 37px;
 }
-
+.wrap-input100.three{
+	position: relative;
+	bottom: 70px;
+}
 .input100 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -389,7 +392,17 @@ textarea:-ms-input-placeholder { color: #adadad;}
   padding-top: 13px;
 	padding-bottom: 13px;
 }
-
+.container-login100-form-btn.send{
+	position: relative;
+	bottom: 45px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+.container-login100-form-btn.plus{
+	position: relative;
+	left: 165px;
+	bottom: 95px;
+}
 .wrap-login100-form-btn {
   width: 100%;
   display: block;
@@ -398,6 +411,9 @@ textarea:-ms-input-placeholder { color: #adadad;}
   border-radius: 25px;
   overflow: hidden;
   margin: 0 auto;
+}
+.wrap-login100-form-btn.plus{
+	width: 15%;
 }
 .login100-form-bgbtn {
   position: absolute;
