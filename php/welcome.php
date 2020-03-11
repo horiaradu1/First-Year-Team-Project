@@ -11,9 +11,14 @@ VALUES ($login_session, '$course', '$lab');";
 mysqli_query($db, $sqlAddCourse);
 }
 
-// This part of code requests all events the user has.
-$sqlGetEvents = "SELECT * FROM Events WHERE EventID in
-  (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
+// This part of code requests all events and courses the user has. Timetable!
+$sqlGetEvents = "SELECT * FROM Events
+    WHERE EventID in
+  (SELECT EventID FROM HasEvent WHERE Username = $login_session)
+  AND
+  SELECT * FROM CourseEvents
+  WHERE course in
+  (SELECT course FROM HasCourse WHERE Username = $login_session)";
 $resultEvents = mysqli_query($db, $sqlGetEvents);
 
 // create an array
@@ -97,7 +102,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
       </select>
       <select id = "sel2" name="new_lab">
-        <option>Select course</option>
+        <option>Select your lab</option>
         <?php foreach ($lab_array as $val) { ?>
             <option id = "dropdown2" value="<?php echo $val["lab"]; ?>"><?php echo $val["lab"]; ?></option>
         <?php } ?>
