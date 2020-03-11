@@ -159,7 +159,13 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
           myBool = true;
         }
       }
+      <p><b> Date and time </b></p>
+      <br>
       </script>
+      Date: <input type="text" id="field1" size="50"
+                  value="Sunday, July 30th in the Year 1967 CE" /><br/>
+      Time: <input type="text" id="field2" value="12:34" />
+      <br>
       <br>
       <a href = "logout.php">Sign Out</a>
    </body>
