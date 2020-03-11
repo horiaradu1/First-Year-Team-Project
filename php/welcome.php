@@ -190,8 +190,12 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       function addEvent(){
               var ddl = document.getElementById("dropdown");
               var selectedValue = ddl.options[ddl.selectedIndex].value;
-              var ddl2 = document.getElementById("dropdown2");
-              var selectedValue2 = ddl2.options[ddl2.selectedIndex].value;
+              if (selectedValue == "Select course")
+             {
+              alert("Please select a card type");
+             }
+             else{
+             }
 
 
       }
