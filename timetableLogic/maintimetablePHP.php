@@ -125,12 +125,6 @@ createMeetingList($items);
 </head>
 <body>
 
-<h1>Meeting Planner</h1>
-<p>*Percent = percent of people available</p>
-<p>Date today: <?php print_r($dateToday->format('Y-m-d')) ?></p>
-
-
-
 <div class="timetable">
   <div class="week-names"> 
       <!-- object gets modified directly by +1 day below -->
@@ -174,7 +168,7 @@ createMeetingList($items);
   <?php
       for ($i = 0; $i < 24; $i++) {
          for ($j = 0; $j < 7; $j++) {
-            
+            $percentOccupied = ($planList[$j][$i]/sizeof($items)) * 100;
             
          }
       }
