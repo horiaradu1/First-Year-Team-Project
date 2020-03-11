@@ -24,13 +24,14 @@ $resultCoursesEvents = mysqli_query($db, $sqlGetCoursesEvents);
 
 // create an array
 $data_array = array();
-$events_array = array();
 
 while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
   array_push($data_array, $row);
-  array_push($events_array, $row);
 }
 while($x = mysqli_fetch_array($resultCoursesEvents, MYSQLI_ASSOC)){
+  array_push($data_array, $x)
+};
+
   array_push($data_array, $x);
 }
 
@@ -80,27 +81,11 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
         <!-- For loop to select description from event/. -->
         <?php foreach ($data_array as $val) { ?>
-        <?php foreach ($events_array as $val) { ?>
           <tr>
             <td><?php
             echo $val["Name"];
             echo ": ";
             echo $val["Description"];
-            echo "\n\t";
-            // echo "Starts at: ";
-            // echo $val ["StartTime"];
-            // echo "\n";
-            // echo "Ends at: ";
-            // echo $val ["EndTime"];
-             ?></td>
-          </tr>
-        <?php } ?>
-        <?php foreach ($data_array as $val) { ?>
-          <tr>
-            <td><?php
-            echo $val["course"];
-            echo ": ";
-            echo $val["description"];
             echo "\n\t";
             // echo "Starts at: ";
             // echo $val ["StartTime"];
