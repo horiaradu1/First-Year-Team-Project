@@ -2,7 +2,6 @@
 include("session.php");
 
 
-
 // responsible for adding the courses from course selector
 if (isset($_POST["submit"])) {
 

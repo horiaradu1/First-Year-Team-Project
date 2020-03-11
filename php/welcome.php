@@ -1,9 +1,13 @@
 <?php
 include("session.php");
 
+// responsible for adding the courses from course selector
 if (isset($_POST["submit"])) {
+
   $course = mysqli_real_escape_string($db, $_POST["new_course"]);
+
   $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
+
   //var_dump($_POST["new_course"]);
   $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
 VALUES ($login_session, '$course', '$lab');";
@@ -11,7 +15,10 @@ VALUES ($login_session, '$course', '$lab');";
 mysqli_query($db, $sqlAddCourse);
 }
 
-// This part of code requests all events and courses the user has. Timetable!
+// ----------------TIMETABLE INFORMATION: ------------------
+
+// ---------------ALL EVENTS AND COURSES----------------
+// This part of code requests all events
 $sqlGetEvents = "SELECT * FROM Events
     WHERE EventID in
   (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
