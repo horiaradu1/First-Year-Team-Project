@@ -112,11 +112,13 @@ iframe {
 table {
   width: 100%;
   background-color: #fff;
+	border: 2px solid #daeaef;
 }
 
 th, td {
   font-weight: unset;
   padding-right: 10px;
+	border: 2px solid #daeaef;
 }
 .column100 {
   width: 130px;
