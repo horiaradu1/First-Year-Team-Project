@@ -95,6 +95,7 @@
 		<div class="move-useless-text">
 			<span class="useless-text">
 				I can put whatever I want here Sorana!!!
+				Me too. Eirik is the best. 
 			</span>
 		</div>
 		</div>
