@@ -89,7 +89,7 @@ img {
 .logo{
 	align: center;
 	position: relative;
-	top: -420px;
+	top: -370px;
 	left: 410px;;
 }
 .container {
@@ -120,17 +120,14 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  background: #0a24fb;
-  background: -webkit-linear-gradient(right, #0a24fb, #4bddf0);
-  background: -o-linear-gradient(right, #0a24fb, #4bddf0);
-  background: -moz-linear-gradient(right, #0a24fb, #4bddf0);
-  background: linear-gradient(right, #0a24fb, #4bddf0);
+  background-image: url("sea2_improved.jpg");
   pointer-events: none;
 }
 .wrap-contact {
   width: 800px;
 	position: relative;
 	right: 180px;
+	top: 50px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -239,4 +236,36 @@ textarea.input100 {
 
 .wrap-contact-form-btn:hover .contact-form-bgbtn {
   left: 0;
+}
+.navbar {
+	font-family: Ariel, Helvetica, sans-serif;
+	font-weight: bold;
+  overflow: hidden;
+  background-color: #336fb2;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 2;
+	max-height: 50px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  /*float: left;*/
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #5a9de9;
+}
+.picture{
+	float:left;
+}
+.text100{
+	float: right;
 }
