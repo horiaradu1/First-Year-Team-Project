@@ -5,7 +5,7 @@
 }
 img {
 	width: 400px;
-	height: : 200px;
+	height: 200px;
 }
 body, html {
   height: 100%;
@@ -59,7 +59,7 @@ ul, li {
   justify-content: center;
   align-items: center;
   padding: 15px;
-	background-image: url("timetable.jpg");
+	background-image: url("backgroundTimeOnTable.jpg");
 }
 /*.logo{
 
@@ -68,7 +68,8 @@ ul, li {
 	right: -350px;
 }*/
 .wrap-register {
-  width: 390px;
+  width: 20%;
+  min-width: 390px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
