@@ -4,9 +4,11 @@ include("session.php");
 // responsible for adding the courses from course selector
 if (isset($_POST["submit"])) {
 
-  $course = mysqli_real_escape_string($db, $_POST["new_course"]);
+  // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
 
-  $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
+  $course = $_POST["new_course"];
+  $lab = $_POST["new_lab"];
+  // $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
 
   //var_dump($_POST["new_course"]);
   $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
@@ -152,7 +154,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <!-- button which sends selected course and lab events to data base -->
       <button name="submit">Click to add to your timetable</button>
     </form>
-    
+
     <!-- JavaScript  -->
       <script>
       function addEvent(){
