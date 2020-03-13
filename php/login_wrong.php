@@ -34,7 +34,7 @@
 	      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
 	      if (!password_verify($_POST['password'], $row['hash'])) {
-	        header("location: RegistrationPage_1.php");
+	        header("location: login_wrong.php");
 	      }
 
 	      // If result matched $myusername and $mypassword, table row must be 1 row
