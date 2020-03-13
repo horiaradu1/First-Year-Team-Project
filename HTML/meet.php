@@ -116,7 +116,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 					  </div>
 
 						<div class="wrap-input100 validate-input" >
-							<input class="input100" type="text" name="title" placeholder="Title" id="title required value="<?php if (isset($_POST['title'])) echo $_POST['title']; ?>"><br><br>">
+							<input class="input100" type="text" name="title" placeholder="Title" id="title" required value="<?php if (isset($_POST['title'])) echo $_POST['title']; ?>"><br><br>">
 							<span class="focus-input100" placeholder="Title"></span>
 						</div>
             <div class="wrap-input100 validate-input" >
