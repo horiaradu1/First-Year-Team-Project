@@ -42,9 +42,9 @@
       <div class="logo">
         <img src = "Logo.png">
       </div>
-      <div class="btn-container" , align ="left">
+      <div class="btn-container" ,align ="left">
 				<div class="btn1">
-				<button class="btn">CREATE EVENT</button>
+				<button class="btn">ADD COURSE</button>
 			</div>
 			<div class="btn2">
 				<button class="btn">CREATE MEETING</button>
@@ -68,7 +68,7 @@
                 <th class="column100 column6" data-column="column6">Thursday</th>
                 <th class="column100 column7" data-column="column7">Friday</th>
                 <th class="column100 column8" data-column="column8">Saturday</th>
-                  <th class="column100 column2" data-column="column2">Sunday</th>
+                <th class="column100 column2" data-column="column2">Sunday</th>
               </tr>
             </thead>
           </table>
