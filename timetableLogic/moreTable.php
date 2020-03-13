@@ -125,9 +125,9 @@ error_reporting(E_ERROR);
                           $timeTillEventHours = $timeTillEvent%24;
                           $timeTillEventDays = $timeTillEvent/24;
 
-                          //if ($timeTillEventHours == i && $timeTillEventDays == j ){
+                          if ($timeTillEventHours == i && $timeTillEventDays == j ){
                             $event = $timeTillEvent;
-                          //}
+                          }
 
                           
                             
