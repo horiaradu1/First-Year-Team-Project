@@ -26,11 +26,11 @@
 
 	      $myusername = mysqli_real_escape_string($db,$_POST['username']);
 
-	      $sql = "SELECT * FROM Users WHERE Username = '$myusername'";
+	      $sql = "SELECT * FROM Users WHERE username = '$myusername'";
 	      $result = mysqli_query($db,$sql);
 	      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-	      if (!password_verify($_POST['password'], $row['Hash'])) {
+	      if (!password_verify($_POST['password'], $row['hash'])) {
 	        header("location: login_wrong.php");
 	      }
 
@@ -95,7 +95,7 @@
 		<div class="move-useless-text">
 			<span class="useless-text">
 				I can put whatever I want here Sorana!!!
-				Me too. Eirik is the best.
+				If Eirik has to say that he is the best, then he is not the best.
 			</span>
 		</div>
 		</div>
