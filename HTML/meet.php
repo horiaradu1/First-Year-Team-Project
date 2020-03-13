@@ -128,20 +128,20 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 								<div class="login100-form-bgbtn plus"></div>
 								<button class="login100-form-btn plus" input type="submit" value="<?php error_reporting(E_ERROR);  
                                                 try {$title = $_POST['title'];} 
-                                                catch (Exception $e) {} ?>Add user" >
+                                                catch (Exception $e) {} ?>">
 									+
 								</button>
 							</div>
 						</div>
-            <div class="wrap-input100 three">
+            <!-- <div class="wrap-input100 three">
               <input class="input100" type="text" name="location" placeholder="Location">
               <span class="focus-input100" placeholder="Location"></span>
-            </div>
+            </div> -->
 
 						<div class="container-login100-form-btn send">
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
-								<button class="login100-form-btn">
+								<button class="login100-form-btn" action="/g63968ef/deploymenttest/visualPlanner/timetablePHP.php?title=<?php echo $title?>" method=post>
 									Plan meeting
 								</button>
 							</div>
