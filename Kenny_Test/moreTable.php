@@ -44,7 +44,7 @@ include("session.php"); ?>
       <div class="logo">
         <img src = "Logo.png">
       </div>
-      <div class="btn-container" align="left">
+      <div class="btn-container" ,align="left">
 				<div class="btn1">
 				<button class="btn">CREATE EVENT</button>
 			</div>
