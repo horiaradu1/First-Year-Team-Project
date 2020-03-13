@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ERROR);
+//error_reporting(E_ERROR);
 
 ?>
 <!DOCTYPE html>
@@ -132,7 +132,7 @@ error_reporting(E_ERROR);
 
                           if ($timeTillEventHours == $i && $timeTillEventDays == $j ){
                             $event = "$event " . $row["name"];
-                            $classStyle = "column100 column2"; //INSERT STYLE FOR EVENT HERE
+                            //$classStyle = "column100 column2"; //INSERT STYLE FOR EVENT HERE
                             }
                           }
                         }
