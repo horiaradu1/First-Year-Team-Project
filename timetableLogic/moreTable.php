@@ -121,7 +121,7 @@ error_reporting(E_ERROR);
                         $sqlQuery = "SELECT startTime FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent = $conn->query($sqlQuery);
                         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
-                          echo ("Monday: " . $timeTillEvent . "<br>");
+                          echo ("Monday: " . $monday . "<br>");
                           echo ("Starting time of event: " . $row["startTime"] . "<br>");
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
                           echo ("Time untill event: " . $timeTillEvent . "<br>");
