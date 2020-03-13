@@ -41,12 +41,14 @@ include("session.php"); ?>
           echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
         ?>
       </div>
+
+      
       <div class="logo">
         <img src = "Logo.png">
       </div>
       <div class="btn-container" ,align="left">
 				<div class="btn1">
-				<button class="btn">CREATE EVENT</button>
+				<a class="btn" href="#popup1">CREATE EVENT</a>
 			</div>
 			<div class="btn2">
 				<button class="btn">CREATE MEETING</button>
