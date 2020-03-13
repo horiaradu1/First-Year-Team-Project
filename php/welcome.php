@@ -34,16 +34,16 @@ else
 // ---------------ALL EVENTS AND COURSES----------------
 // This part of code requests all events
 $sqlGetEvents = "SELECT * FROM Events
-    WHERE EventID in
-  (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
+    WHERE eventID in
+  (SELECT eventID FROM HasEvent WHERE username = $login_session)";
 
 // saving the result of the query (actual information) into a variable
 $resultEvents = mysqli_query($db, $sqlGetEvents);
 
 // Selecting all COURSES.
 $sqlGetCoursesEvents="SELECT * FROM CourseEvents
-  WHERE Name in
-  (SELECT course FROM HasCourse WHERE Username = $login_session)";
+  WHERE name in
+  (SELECT course FROM HasCourse WHERE username = $login_session)";
 
   // saving the result of that query to a variable
 $resultCoursesEvents = mysqli_query($db, $sqlGetCoursesEvents);
@@ -60,7 +60,7 @@ while($x = mysqli_fetch_array($resultCoursesEvents, MYSQLI_ASSOC)){
 
 // ----------------COURSES------------------
 // Selecting all different courses, save the result to an array (like above)
-$sqlGetCourses = "SELECT DISTINCT Name  FROM CourseEvents";
+$sqlGetCourses = "SELECT DISTINCT name  FROM CourseEvents";
 $resultCourses = mysqli_query($db, $sqlGetCourses);
 $courses_array = array();
 

@@ -33,7 +33,7 @@ else
 
 // ----------------COURSES------------------
 // Selecting all different courses, save the result to an array (like above)
-$sqlGetCourses = "SELECT DISTINCT Name  FROM CourseEvents";
+$sqlGetCourses = "SELECT DISTINCT name  FROM CourseEvents";
 $resultCourses = mysqli_query($db, $sqlGetCourses);
 $courses_array = array();
 
