@@ -95,53 +95,46 @@ function createTimeTable($username) {
                 for ($i = 0; $i < 24; $i++) { ?>
                   <tr class="row100">
                         <td class="column100 column1" data-column="column1"><?php echo ($i) ?></td>
-                      </tr>
+                      
                   <?php
                   for ($j = 0; $j < 7; $j++) {
                     $event = NULL;
 
                     ?>
-                    
+
                     <?php
                     if ($j = 0) {
                     ?>
-                        <tr class="row100">
                           <td class="column100 column2" data-column="column2"><?php echo ($event) ?></td>
                         </tr>
                     <?php 
                     }elseif ($j = 1){
                     ?>
-                        <tr class="row100">
                           <td class="column100 column3" data-column="column3"><?php echo ($event) ?></td>
                         </tr>
                     <?php
                     }elseif ($j = 2){
                     ?>
-                        <tr class="row100">
                           <td class="column100 column4" data-column="column4"><?php echo ($event) ?></td>
                         </tr>
                     <?php
                     }elseif ($j = 3){
                     ?>
-                        <tr class="row100">
                           <td class="column100 column5" data-column="column5"><?php echo ($event) ?></td>
                         </tr>
                     <?php
                     }elseif ($j = 4){
                     ?>
-                        <tr class="row100">
                           <td class="column100 column6" data-column="column6"><?php echo ($event) ?></td>
                         </tr>
                     <?php
                     }elseif ($j = 5){
                     ?>
-                        <tr class="row100">
                           <td class="column100 column7" data-column="column7"><?php echo ($event) ?></td>
                         </tr>
                     <?php
                     }elseif ($j = 6){
                     ?>
-                        <tr class="row100">
                           <td class="column100 column8" data-column="column8"><?php echo ($event) ?></td>
                         </tr>
 
