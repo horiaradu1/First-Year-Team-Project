@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ERROR);
+//error_reporting(E_ERROR);
 
 ?>
 <!DOCTYPE html>
@@ -108,19 +108,28 @@ error_reporting(E_ERROR);
                         <td class="column100 column1" data-column="column1"><?php echo ("$i:00 - $m:00") ?></td>
                   <?php
                     for ($j = 0; $j < 7; $j++) {
-                      $event = "SMTH";
+                      $event = NULL;
                       $listOfEventIDs = array();
+                      $listOfCourses = array();
+                      $listOfLabs = array();
 
                       $username = "laura"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
-                      $result = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
-                      foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
+                      $result1 = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
+                      foreach($result1->fetch_all(MYSQLI_ASSOC) as $row) {
                         array_push($listOfEventIDs, $row["eventID"]);
-                      }
+                        }
+
+                      $result2 = $conn->query("SELECT course, lab FROM HasCourse WHERE username = '" . $username . "';");
+                      foreach($result2->fetch_all(MYSQLI_ASSOC) as $row) {
+                        array_push($listOfCourses, $row["course"], $row["lab"]);
+                        //array_push($listOfLabs, $row["lab"]);
+                        }
+
                       foreach($listOfEventIDs as $ids) {
-                        $sqlQuery = "SELECT startTime, name FROM Events WHERE eventID = " . $ids;
-                        $fetchedEvent = $conn->query($sqlQuery);
-                        foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
+                        $sqlQuery1 = "SELECT startTime, name FROM Events WHERE eventID = " . $ids;
+                        $fetchedEvent1 = $conn->query($sqlQuery1);
+                        foreach($fetchedEvent1->fetch_all(MYSQLI_ASSOC) as $row) {
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
                           $timeTillEventHours = $timeTillEvent%24;
                           $timeTillEventDays = $timeTillEvent/24;
@@ -129,9 +138,25 @@ error_reporting(E_ERROR);
 
                           if ($timeTillEventHours == $i && $timeTillEventDays == $j ){
                             $event = "$event AND " . $row["name"];
+                            }
                           }
                         }
-                      }
+
+                      foreach($listOfCourses as $name and $lab) {
+                        $sqlQuery2 = "SELECT startTime, name FROM CourseEvents WHERE name = " . $name . " AND lab = " . $lab;
+                        $fetchedEvent2 = $conn->query($sqlQuery2);
+                        foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
+                          $timeTillEvent = hours_between($monday, $row["startTime"]);
+                          $timeTillEventHours = $timeTillEvent%24;
+                          $timeTillEventDays = $timeTillEvent/24;
+                          $timeTillEventHours = (int)$timeTillEventHours;
+                          $timeTillEventDays = (int)$timeTillEventDays;
+
+                          if ($timeTillEventHours == $i && $timeTillEventDays == $j ){
+                            $event = "$event AND " . $row["name"];
+                            }
+                          }
+                        }
                       
                     ?>
 
@@ -168,7 +193,9 @@ error_reporting(E_ERROR);
                 <?php } ?>
                     </tr>
                 <?php } 
+                
 //----------------------------------------------------------------------------------
+
                 ?>
             </tbody>
           </table>
