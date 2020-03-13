@@ -14,7 +14,48 @@
 
 </head>
 <?php
-include("session.php"); ?>
+include("session.php"); 
+$servername = "dbhost.cs.man.ac.uk";
+$username = "g63968ef";
+$password = "database";
+$dbname = "2019_comp10120_y4";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+$title = "";
+$items = array();
+$result = "";
+if('POST' === $_SERVER['REQUEST_METHOD']) {
+    if( ! empty($_POST['item'])) {
+
+        //echo $_POST['pickedDate']; /////////////
+
+        $input = $_POST['item'];  
+        // $attempts = array();
+        $result = $conn->query("SELECT * FROM Users WHERE Username = '$input'"); // not injection proof
+        if (!$result) echo $conn->error;
+
+        if($result->num_rows == 0) {
+            
+        } 
+        // else if (in_array($input, $attempts)) {
+        //     echo "Yo";
+        // }
+
+        else {
+            // array_push($attempts, $input);
+            $items[] = $_POST['item'];
+        }
+
+    }
+    if(isset($_POST['items']) && is_array($_POST['items'])) {
+        foreach($_POST['items'] as $item) {
+            $items[] = $item;
+        }
+    }
+}
+
+?>
 <body>
 	
 
@@ -66,7 +107,7 @@ include("session.php"); ?>
 				<img src = "Logo.png">
 			</div> -->
 
-				<div class="wrap-login100" style="background-image: backgroundTimeOnTable.jpg">
+				<div class="wrap-login100">
 					<form class="login100-form validate-form">
 						<div class="put-it-here-to-include-padding">
 						<span class="login100-form-title p-b-26">
@@ -75,17 +116,19 @@ include("session.php"); ?>
 					  </div>
 
 						<div class="wrap-input100 validate-input" >
-							<input class="input100" type="text" name="title" placeholder="Title">
+							<input class="input100" type="text" name="title" placeholder="Title" id="title required value="<?php if (isset($_POST['title'])) echo $_POST['title']; ?>"><br><br>">
 							<span class="focus-input100" placeholder="Title"></span>
 						</div>
             <div class="wrap-input100 validate-input" >
-							<input class="input100" type="text" name="participants" placeholder="Participants">
+							<input class="input100" type="text" name="participants" placeholder="Participants" required>
 							<span class="focus-input100" placeholder="Participants"></span>
 						</div>
 						<div class="container-login100-form-btn plus">
 							<div class="wrap-login100-form-btn plus">
 								<div class="login100-form-bgbtn plus"></div>
-								<button class="login100-form-btn plus">
+								<button class="login100-form-btn plus" input type="submit" value="<?php error_reporting(E_ERROR);  
+                                                try {$title = $_POST['title'];} 
+                                                catch (Exception $e) {} ?>Add user" >
 									+
 								</button>
 							</div>
@@ -99,7 +142,7 @@ include("session.php"); ?>
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
 								<button class="login100-form-btn">
-									Send invitations
+									Plan meeting
 								</button>
 							</div>
 						</div>
