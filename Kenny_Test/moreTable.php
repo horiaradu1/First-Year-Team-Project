@@ -9,28 +9,30 @@
 "https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
     type = "image/x-icon">
 </head>
+<?php
+include("session.php"); ?>
 <body>
   <div class="limiter">
     <div class="navbar">
       <div class = "picture">
-      <a href="moreTable.html">Home</a>
+      <a href="moreTable.php">Home</a>
     </div>
     <div class = "picture">
-      <a href="meet.html">Meeting</a>
+      <a href="meet.php">Meeting</a>
     </div>
   <div class="text100">
-      <a href="#news">Log out</a>
+        <a href = "logout.php">Sign Out</a>
     </div>
     <div class="text100">
-      <a href="ContactForm.html">Contact Us</a>
+      <a href="ContactForm.php">Contact Us</a>
     </div>
     <div class="text100">
-      <a href="AboutUs.html">About Us</a>
+      <a href="AboutUs.php">About Us</a>
     </div>
     </div>
     <div class="container-table100">
       <div class="week">
-        <?php 
+        <?php
           $sMonth = date('F',time()+( 1 - date('w'))*24*3600);
           $eMonth = date('F',time()+( 7 - date('w'))*24*3600);
           $sDay = date('d',time()+( 1 - date('w'))*24*3600); //date('d');
@@ -39,26 +41,13 @@
           echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
         ?>
       </div>
-
-      <!-- pop up window 1
-      <div id = "popup1" class = "overlay">
-		    <div class = "popup">
-			    <h2>Add course</h2>
-			    <a class="close" href="#">&times;</a>
-			    <div class = "content">Add code below.</div>
-		    </div>
-	    </div> -->
-
-
       <div class="logo">
         <img src = "Logo.png">
       </div>
-      <div class="btn-container" ,align ="left">
-
-			<div class="btn1">
-        <a class="btn" href = "#popup1">ADD COURSE</a>
+      <div class="btn-container" align="left">
+				<div class="btn1">
+				<button class="btn">CREATE EVENT</button>
 			</div>
-
 			<div class="btn2">
 				<button class="btn">CREATE MEETING</button>
 			</div>
@@ -81,7 +70,7 @@
                 <th class="column100 column6" data-column="column6">Thursday</th>
                 <th class="column100 column7" data-column="column7">Friday</th>
                 <th class="column100 column8" data-column="column8">Saturday</th>
-                <th class="column100 column2" data-column="column2">Sunday</th>
+                  <th class="column100 column2" data-column="column2">Sunday</th>
               </tr>
             </thead>
           </table>
