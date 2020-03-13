@@ -70,8 +70,31 @@
             <table data-vertable="ver1" >
             <tbody>
               <?php
+
+                $servername = "dbhost.cs.man.ac.uk";
+                $username = "g63968ef";
+                $password = "database";
+                $dbname = "2019_comp10120_y4";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);}
+                echo "Connected successfully";
+                              
                 for ($i = 0; $i < 7; $i++) {
                   for ($j = 0; $j < 24; $j++) {
+                    $monday = NULL
+                    $tuesday = NULL
+                    $wednesday = NULL
+                    $thursday = NULL
+                    $friday = NULL
+                    $saturday = NULL
+                    $sunday = NULL
+                    
+                    if 
                     ?>
                       <tr class="row100">
                         <td class="column100 column1" data-column="column1"><?php echo ($i) ?></td>
