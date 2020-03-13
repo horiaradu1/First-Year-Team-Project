@@ -38,7 +38,7 @@ else
 // This part of code requests all events
 $sqlGetEvents = "SELECT * FROM Events
     WHERE eventID in
-  (SELECT eventID FROM HasEvent WHERE username = $login_session)";
+  (SELECT eventID FROM HasEvent WHERE username = \"$login_session\")";
 
 // saving the result of the query (actual information) into a variable
 $resultEvents = mysqli_query($db, $sqlGetEvents);
@@ -46,7 +46,7 @@ $resultEvents = mysqli_query($db, $sqlGetEvents);
 // Selecting all COURSES.
 $sqlGetCoursesEvents="SELECT * FROM CourseEvents
   WHERE name in
-  (SELECT course FROM HasCourse WHERE username = $login_session)";
+  (SELECT course FROM HasCourse WHERE username = \"$login_session\")";
 
   // saving the result of that query to a variable
 $resultCoursesEvents = mysqli_query($db, $sqlGetCoursesEvents);
@@ -145,8 +145,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <select id = "sel" name="new_course">
         <option>Select course</option>
         <?php foreach ($courses_array as $val) { ?>
-            <option id = "dropdown" value="
-            <?php echo $val["name"]; ?>">
+            <option id = "dropdown" value="<?php echo $val["name"]; ?>">
             <?php echo $val["name"]; ?>
           </option>
         <?php } ?>
@@ -158,8 +157,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <select id = "sel2" name="new_lab">
         <option>Select your lab</option>
         <?php foreach ($lab_array as $val) { ?>
-            <option id = "dropdown2" value="
-            <?php echo $val["lab"]; ?>">
+            <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
             <?php echo $val["lab"]; ?>
             </option>
         <?php } ?>
