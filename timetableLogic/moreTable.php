@@ -1,6 +1,6 @@
 <?php
 
-//error_reporting(E_ERROR);
+error_reporting(E_ERROR);
 
 ?>
 <!DOCTYPE html>
@@ -113,17 +113,16 @@
                       $listOfCourses = array();
                       $listOfLabs = array();
 
-                      $username = "laura"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
+                      $username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
                       $result1 = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
                       foreach($result1->fetch_all(MYSQLI_ASSOC) as $row) {
                         array_push($listOfEventIDs, $row["eventID"]);
                         }
 
-                      $result2 = $conn->query("SELECT course, lab FROM HasCourse WHERE username = '" . $username . "';");
+                      $result2 = $conn->query("SELECT lab FROM HasCourse WHERE username = '" . $username . "';");
                       foreach($result2->fetch_all(MYSQLI_ASSOC) as $row) {
-                        array_push($listOfCourses["courses"], $row["course"]);
-                        array_push($listOfCourses["lab"], $row["lab"]);
+                        array_push($listOfCourses, $row["lab"]);
                         }
 
                       foreach($listOfEventIDs as $ids) {
@@ -143,9 +142,9 @@
                         }
 
                       foreach($listOfCourses as $ids) {
-                        $sqlQuery = ("SELECT startTime, name FROM CourseEvents WHERE name = '" . $ids["course"] . "' AND lab = '" . $ids["lab"] . "';");
-                        $fetchedEvent = $conn->query($sqlQuery);
-                        foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
+                        $sqlQuery2 = "SELECT startTime, name FROM CourseEvents WHERE lab = " . $ids;
+                        $fetchedEvent2 = $conn->query($sqlQuery2);
+                        foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
                           $timeTillEventHours = $timeTillEvent%24;
                           $timeTillEventDays = $timeTillEvent/24;
