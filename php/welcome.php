@@ -4,17 +4,28 @@ include("session.php");
 // responsible for adding the courses from course selector
 if (isset($_POST["submit"])) {
 
+echo "SENDING!!!!!!!!!";
   // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
 
   $course = $_POST["new_course"];
   $lab = $_POST["new_lab"];
+
+  echo $course;
+
+  echo $lab;
+
+
   // $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
 
   //var_dump($_POST["new_course"]);
   $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
-VALUES ($login_session, '$course', '$lab');";
+    VALUES ($login_session, $course, $lab);";
 
 mysqli_query($db, $sqlAddCourse);
+}
+else
+{
+  echo "NOT SENDING!";
 }
 
 
@@ -23,16 +34,16 @@ mysqli_query($db, $sqlAddCourse);
 // ---------------ALL EVENTS AND COURSES----------------
 // This part of code requests all events
 $sqlGetEvents = "SELECT * FROM Events
-    WHERE EventID in
-  (SELECT EventID FROM HasEvent WHERE Username = $login_session)";
+    WHERE eventID in
+  (SELECT eventID FROM HasEvent WHERE username = $login_session)";
 
 // saving the result of the query (actual information) into a variable
 $resultEvents = mysqli_query($db, $sqlGetEvents);
 
 // Selecting all COURSES.
 $sqlGetCoursesEvents="SELECT * FROM CourseEvents
-  WHERE Name in
-  (SELECT course FROM HasCourse WHERE Username = $login_session)";
+  WHERE name in
+  (SELECT course FROM HasCourse WHERE username = $login_session)";
 
   // saving the result of that query to a variable
 $resultCoursesEvents = mysqli_query($db, $sqlGetCoursesEvents);
@@ -49,7 +60,7 @@ while($x = mysqli_fetch_array($resultCoursesEvents, MYSQLI_ASSOC)){
 
 // ----------------COURSES------------------
 // Selecting all different courses, save the result to an array (like above)
-$sqlGetCourses = "SELECT DISTINCT Name  FROM CourseEvents";
+$sqlGetCourses = "SELECT DISTINCT name  FROM CourseEvents";
 $resultCourses = mysqli_query($db, $sqlGetCourses);
 $courses_array = array();
 
@@ -105,9 +116,9 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <?php foreach ($data_array as $val) { ?>
           <tr>
             <td><?php
-            echo $val["Name"];
+            echo $val["name"];
             echo ": ";
-            echo $val["Description"];
+            echo $val["description"];
             echo "\n\t";
       // as you can see we could get any information when needed
             // echo "Starts at: ";
@@ -132,8 +143,8 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <option>Select course</option>
         <?php foreach ($courses_array as $val) { ?>
             <option id = "dropdown" value="
-            <?php echo $val["Name"]; ?>">
-            <?php echo $val["Name"]; ?>
+            <?php echo $val["name"]; ?>">
+            <?php echo $val["name"]; ?>
           </option>
         <?php } ?>
 
@@ -186,6 +197,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       }
       </script>
       <br>
+       <a href="addCourse.php">Add your course!</a>
       <a href = "logout.php">Sign Out</a>
    </body>
 
