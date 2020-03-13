@@ -14,7 +14,7 @@ echo "SENDING!!!!!!!!!";
 
   echo $lab;
 
-  
+
   // $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
 
   //var_dump($_POST["new_course"]);
@@ -197,6 +197,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       }
       </script>
       <br>
+       <a href="addCourse.php">Add your course!</a>
       <a href = "logout.php">Sign Out</a>
    </body>
 
