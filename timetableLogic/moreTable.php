@@ -89,7 +89,7 @@ function createTimeTable($username) {
                     die("Connection failed: " . $conn->connect_error);}
 
                 $username = "laura";
-                $sql = "SELECT ALL FROM HasEvent WHERE username = " . $username;
+                $sql = "SELECT eventID FROM HasEvent WHERE username = " . $username;
                 $result = $conn->query($sql);
                 
                 for ($i = 0; $i < 24; $i++) {
@@ -100,10 +100,14 @@ function createTimeTable($username) {
                   $friday = NULL;
                   $saturday = NULL;
                   $sunday = NULL; 
+
+                  $row = mysqli_fetch_assoc($result);
+
+
                   ?>
                       <tr class="row100">
                         <td class="column100 column1" data-column="column1"><?php echo ($i) ?></td>
-                        <td class="column100 column2" data-column="column2"><?php echo ($monday) ?></td>
+                        <td class="column100 column2" data-column="column2"><?php echo ($row) ?></td>
                         <td class="column100 column3" data-column="column3"><?php echo ($tuesday) ?></td>
                         <td class="column100 column4" data-column="column4"><?php echo ($wednesday) ?></td>
                         <td class="column100 column5" data-column="column5"><?php echo ($thursday) ?></td>
