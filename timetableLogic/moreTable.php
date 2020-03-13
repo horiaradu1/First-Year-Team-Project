@@ -117,7 +117,7 @@ error_reporting(E_ERROR);
                       foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
                         array_push($listOfEventIDs, $row["eventID"]);
                       }
-                      echo ($listOfEventIDs);
+                      print_r($listOfEventIDs);
                       foreach($listOfEventIDs as $ids) {
                         $sqlQuery = "SELECT startTime FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent = $conn->query($sqlQuery);
