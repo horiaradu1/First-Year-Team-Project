@@ -100,10 +100,8 @@ error_reporting(E_ERROR);
                 
                 
 
-                $monday = date('Y-m-d',time()+( 1 - date('w'))*24*3600);
-                $monday->setTime(00);
-                echo $date->format('Y-m-d H:i:s') . "\n";
-                
+                //$monday = date('Y-m-d',time()+( 1 - date('w'))*24*3600);
+                $monday = date('2020-02-20 00:00:00');
                 for ($i = 0; $i < 24; $i++) { 
                      $m = $i+1; 
                      ?>
