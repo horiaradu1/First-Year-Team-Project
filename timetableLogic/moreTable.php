@@ -1,7 +1,7 @@
 <?php
-function createTimeTable($username) {
 
-}
+//error_reporting(E_ERROR);
+
 ?>
 <!DOCTYPE html>
 <html lan="en">
@@ -116,7 +116,7 @@ function createTimeTable($username) {
                         array_push($listOfEventIDs, $row["eventID"]);
                       }
 
-                      foreach($listOfeventIDs as $ids) {
+                      foreach($listOfEventIDs as $ids) {
                         $sqlQuery = "SELECT StartTime FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent = $conn->query($sqlQuery);
                         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
