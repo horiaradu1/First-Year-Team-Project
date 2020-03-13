@@ -21,7 +21,11 @@ echo "SENDING!!!!!!!!!";
   $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
     VALUES ($login_session, $course, $lab);";
 
+    echo $sqlAddCourse;
+
 mysqli_query($db, $sqlAddCourse);
+echo mysqli_query($db, $sqlAddCourse);
+
 }
 else
 {
