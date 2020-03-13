@@ -122,9 +122,10 @@ error_reporting(E_ERROR);
                         $fetchedEvent = $conn->query($sqlQuery);
                         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
+                          $timeTillEventHours = $timeTillEvent%24;
                           $timeTillEventDays = $timeTillEvent/24;
 
-                          if ($timeTillEvent == j && $timeTillEventDays == i ){
+                          if ($timeTillEventHours == i && $timeTillEventDays == j ){
                             $event = 10;
                           }
 
