@@ -18,7 +18,7 @@
        <!-- connect to the login -->
     </div>
   <div class="text100">
-      <a href="#news">Login</a>
+      <a href="#news">Sign out</a>
        <!-- connect to the login -->
     </div>
     <div class="text100">

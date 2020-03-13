@@ -17,7 +17,7 @@
 			<a href="meet.php">Meeting</a>
 		</div>
 	<div class="text100">
-			<a href="#news">Log out</a>
+			<a href="#news">Sign out</a>
 		</div>
 		<div class="text100">
 			<a href="ContactForm.php">Contact Us</a>
