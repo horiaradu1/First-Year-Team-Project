@@ -124,11 +124,16 @@
                         $sqlQuery1 = "SELECT startTime, endTime, name FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent1 = $conn->query($sqlQuery1);
                         foreach($fetchedEvent1->fetch_all(MYSQLI_ASSOC) as $row) {
-                          $timeTillEvent = hours_between($monday, $row["startTime"]);
-                          $timeTillEventHours = $timeTillEvent%24;
-                          $timeTillEventDays = $timeTillEvent/24;
-                          $timeTillEventHours = (int)$timeTillEventHours;
-                          $timeTillEventDays = (int)$timeTillEventDays;
+                          $timeTillEventStart = hours_between($monday, $row["startTime"]);
+                          $timeTillEventHoursStart = $timeTillEventStart%24;
+                          $timeTillEventDaysStart = $timeTillEventStart/24;
+                          $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
+                          $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
+                          $timeTillEventEnd = hours_between($monday, $row["endTime"]);
+                          $timeTillEventHoursEnd = $timeTillEventEnd%24;
+                          $timeTillEventDaysEnd = $timeTillEventEnd/24;
+                          $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
+                          $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
 
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd >= $i && $timeTillEventDaysEnd >= $j){
                             $event = "$event " . $row["name"];
