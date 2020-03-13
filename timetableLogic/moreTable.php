@@ -76,6 +76,8 @@ error_reporting(E_ERROR);
             <tbody>
               <?php
 
+//--------------------------------------------------------------------------------------------
+//Display Timetable of $username
 
               function hours_between($date1, $date2) {
                 $date1 = strtotime($date1);
@@ -98,10 +100,7 @@ error_reporting(E_ERROR);
                     die("Connection failed: " . $conn->connect_error);}
 
                 
-                
-
                 $monday = date('Y-m-d 00:00:00',time()+( 1 - date('w'))*24*3600);
-                //$monday = date('2020-03-09 00:00:00');
                 for ($i = 0; $i < 24; $i++) { 
                      $m = $i+1; 
                      ?>
@@ -109,10 +108,11 @@ error_reporting(E_ERROR);
                         <td class="column100 column1" data-column="column1"><?php echo ("$i:00 - $m:00") ?></td>
                   <?php
                     for ($j = 0; $j < 7; $j++) {
-                      $event = NULL;
-
-                      $username = "laura";
+                      $event = "SMTH";
                       $listOfEventIDs = array();
+
+                      $username = "laura"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
+
                       $result = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
                       foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
                         array_push($listOfEventIDs, $row["eventID"]);
@@ -121,23 +121,15 @@ error_reporting(E_ERROR);
                         $sqlQuery = "SELECT startTime, name FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent = $conn->query($sqlQuery);
                         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
-                          //echo ("Monday: " . $monday . "<br>");
-                          //echo ("Starting time of event: " . $row["startTime"] . "<br>");
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
-                          //echo ("Time untill event: " . $timeTillEvent . "<br>");
                           $timeTillEventHours = $timeTillEvent%24;
                           $timeTillEventDays = $timeTillEvent/24;
                           $timeTillEventHours = (int)$timeTillEventHours;
                           $timeTillEventDays = (int)$timeTillEventDays;
-                          //echo ("Days untill event: " . $timeTillEventDays . "<br>");
-                          //echo ("Hours untill event: " . $timeTillEventHours . "<br>");
-                          if ($timeTillEventHours == $i && $timeTillEventDays == $j ){
-                            $event = $row["name"];
-                          }
 
-                          
-                            
-                          
+                          if ($timeTillEventHours == $i && $timeTillEventDays == $j ){
+                            $event = "$event AND " . $row["name"];
+                          }
                         }
                       }
                       
@@ -175,7 +167,9 @@ error_reporting(E_ERROR);
 
                 <?php } ?>
                     </tr>
-                <?php } ?>
+                <?php } 
+//----------------------------------------------------------------------------------
+                ?>
             </tbody>
           </table>
         </div>
