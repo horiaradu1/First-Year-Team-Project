@@ -56,6 +56,7 @@ include("session.php"); ?>
 			  </div>
 		    </div>
 	    </div>
+      
       <div class="btn-container" ,align="left">
 				<div class="btn1">
 				<a class="btn" href="#popup1">CREATE EVENT</a>
