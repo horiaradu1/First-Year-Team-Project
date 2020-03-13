@@ -99,8 +99,8 @@ error_reporting(E_ERROR);
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);}
 
-                
                 $monday = date('Y-m-d 00:00:00',time()+( 1 - date('w'))*24*3600);
+
                 for ($i = 0; $i < 24; $i++) { 
                      $m = $i+1; 
                      ?>
@@ -111,7 +111,7 @@ error_reporting(E_ERROR);
                       $event = NULL;
                       $listOfEventIDs = array();
                       $listOfCourses = array();
-                      $colour = "column100 column2";
+                      $classStyle = "column100 column2"; //BASIC STYLE FOR EMPTY BOXES
 
                       $username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
@@ -121,7 +121,7 @@ error_reporting(E_ERROR);
                         }
 
                       foreach($listOfEventIDs as $ids) {
-                        $sqlQuery1 = "SELECT startTime, name FROM Events WHERE eventID = " . $ids;
+                        $sqlQuery1 = "SELECT startTime, endTime name FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent1 = $conn->query($sqlQuery1);
                         foreach($fetchedEvent1->fetch_all(MYSQLI_ASSOC) as $row) {
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
@@ -131,8 +131,8 @@ error_reporting(E_ERROR);
                           $timeTillEventDays = (int)$timeTillEventDays;
 
                           if ($timeTillEventHours == $i && $timeTillEventDays == $j ){
-                            $event = "$event AND " . $row["name"];
-                            $colour = "column100 pink";
+                            $event = "$event " . $row["name"];
+                            $classStyle = "column100 column2"; //INSERT STYLE FOR EVENT HERE
                             }
                           }
                         }
@@ -143,17 +143,23 @@ error_reporting(E_ERROR);
                         }
 
                       foreach($listOfCourses as $ids) {
-                        $sqlQuery2 = "SELECT startTime, name FROM CourseEvents WHERE lab = '" . $ids . "';";
+                        $sqlQuery2 = "SELECT startTime, endTime name FROM CourseEvents WHERE lab = '" . $ids . "';";
                         $fetchedEvent2 = $conn->query($sqlQuery2);
                         foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
-                          $timeTillEvent = hours_between($monday, $row["startTime"]);
-                          $timeTillEventHours = $timeTillEvent%24;
-                          $timeTillEventDays = $timeTillEvent/24;
-                          $timeTillEventHours = (int)$timeTillEventHours;
-                          $timeTillEventDays = (int)$timeTillEventDays;
+                          $timeTillEventStart = hours_between($monday, $row["startTime"]);
+                          $timeTillEventHoursStart = $timeTillEventStart%24;
+                          $timeTillEventDaysStart = $timeTillEventStart/24;
+                          $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
+                          $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
+                          $timeTillEventEnd = hours_between($monday, $row["endTime"]);
+                          $timeTillEventHoursEnd = $timeTillEventEnd%24;
+                          $timeTillEventDaysEnd = $timeTillEventEnd/24;
+                          $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
+                          $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
 
-                          if ($timeTillEventHours == $i && $timeTillEventDays == $j ){
+                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd >= $i && $timeTillEventDaysEnd >= $j){
                             $event = "$event " . $row["name"];
+                            //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
                             }
                           }
                         }
@@ -163,31 +169,31 @@ error_reporting(E_ERROR);
                     <?php
                     if ($j == 0) {
                     ?>
-                          <td class="<?php echo $colour ?>" data-column="column2"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column2"><?php echo ($event) ?></td>
                     <?php 
                     }elseif ($j == 1){
                     ?>
-                          <td class="<?php echo $colour ?>" data-column="column3"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column3"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 2){
                     ?>
-                          <td class="<?php echo $colour ?>" data-column="column4"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column4"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 3){
                     ?>
-                          <td class="<?php echo $colour ?>" data-column="column5"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column5"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 4){
                     ?>
-                          <td class="<?php echo $colour ?>" data-column="column6"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column6"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 5){
                     ?>
-                          <td class="<?php echo $colour ?>" data-column="column7"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column7"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 6){
                     ?>
-                          <td class="<?php echo $colour ?>" data-column="column8"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column8"><?php echo ($event) ?></td>
                     <?php } ?>
 
                 <?php } ?>
