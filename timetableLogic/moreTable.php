@@ -118,21 +118,21 @@ error_reporting(E_ERROR);
                         array_push($listOfEventIDs, $row["eventID"]);
                       }
                       foreach($listOfEventIDs as $ids) {
-                        $sqlQuery = "SELECT startTime FROM Events WHERE eventID = " . $ids;
+                        $sqlQuery = "SELECT startTime, name FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent = $conn->query($sqlQuery);
                         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
-                          echo ("Monday: " . $monday . "<br>");
-                          echo ("Starting time of event: " . $row["startTime"] . "<br>");
+                          //echo ("Monday: " . $monday . "<br>");
+                          //echo ("Starting time of event: " . $row["startTime"] . "<br>");
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
-                          echo ("Time untill event: " . $timeTillEvent . "<br>");
+                          //echo ("Time untill event: " . $timeTillEvent . "<br>");
                           $timeTillEventHours = $timeTillEvent%24;
                           $timeTillEventDays = $timeTillEvent/24;
                           $timeTillEventHours = (int)$timeTillEventHours;
                           $timeTillEventDays = (int)$timeTillEventDays;
-                          echo ("Days untill event: " . $timeTillEventDays . "<br>");
-                          echo ("Hours untill event: " . $timeTillEventHours . "<br>");
+                          //echo ("Days untill event: " . $timeTillEventDays . "<br>");
+                          //echo ("Hours untill event: " . $timeTillEventHours . "<br>");
                           if ($timeTillEventHours == $i && $timeTillEventDays == $j ){
-                            $event = $timeTillEvent;
+                            $event = $row["name"];
                           }
 
                           
