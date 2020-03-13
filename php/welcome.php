@@ -19,13 +19,12 @@ echo "SENDING!!!!!!!!!";
 
   //var_dump($_POST["new_course"]);
   $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
-    VALUES ($login_session, $course, $lab);";
+    VALUES (\"$login_session\", \"$course\", \"$lab\");";
 
     echo $sqlAddCourse;
 
-mysqli_query($db, $sqlAddCourse);
-echo mysqli_query($db, $sqlAddCourse);
-
+    $db->query($sqlAddCourse);
+    echo $db->error;
 }
 else
 {
