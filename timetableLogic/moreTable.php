@@ -75,6 +75,15 @@ function createTimeTable($username) {
             <table data-vertable="ver1" >
             <tbody>
               <?php
+
+
+              function hours_between($date1, $date2) {
+                $date1 = strtotime($date1);
+                $date2 = strtotime($date2);
+                $diff = $date2 - $date1;
+                $hoursBetween = $diff/3600;
+                return $hoursBetween;
+              }
                 
                 $servername = "dbhost.cs.man.ac.uk";
                 $username = "g63968ef";
@@ -91,6 +100,10 @@ function createTimeTable($username) {
                 $username = "laura";
                 $sqlEvents = "SELECT eventID FROM HasEvent WHERE username = " . $username;
                 $result = $conn->query($sqlEvents);
+                $listOfeventIDs = array();
+                foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
+                  array_push($listOfeventIDs, $row["eventID"]);
+                }
 
                 $monday = date('d',time()+( 1 - date('w'))*24*3600);
                 
@@ -102,21 +115,31 @@ function createTimeTable($username) {
                         <td class="column100 column1" data-column="column1"><?php echo ("$i:00 - $m:00") ?></td>
                       
                   <?php
-                  for ($j = 0; $j < 7; $j++) {
-                    $event = NULL;
-                    
-                    //select all events from a username from HasEvent
-                    //and then check if any of the event starts from $i, if yes $event becomes that events name
-                    //?? how to get the day
+                    for ($j = 0; $j < 7; $j++) {
+                      $event = NULL;
+                      
+                      //select all events from a username from HasEvent
+                      //and then check if any of the event starts from $i, if yes $event becomes that events name
+                      //?? how to get the day
 
-
-
+                      foreach($listOfeventIDs as $ids) {
+                        $sqlQuery = "SELECT StartTime FROM Events WHERE eventID = " . $ids;
+                        $fetchedEvent = $conn->query($sqlQuery);
+                        foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
+                          $timeTillEvent = hours_between($monday, $row["startTime"]);
+                          $timeTillEventDays = $timeTillEvent/24;
+                          if ($timeTillEventDays == 3) {
+                            $event = "HELLO";
+                          }
+                        }
+                      }
+                      
                     ?>
 
                     <?php
                     if ($j == 0) {
                     ?>
-                          <td class="column100 column2" data-column="column2"><?php echo ($monday) ?></td>
+                          <td class="column100 column2" data-column="column2"><?php echo ($event) ?></td>
                     <?php 
                     }elseif ($j == 1){
                     ?>
