@@ -16,6 +16,7 @@
 <?php
 include("session.php"); ?>
 <body>
+	<div style="background-image: backgroundTimeOnTable.jpg">
 
 	<div class="limiter">
 		<div class="navbar">
@@ -35,8 +36,8 @@ include("session.php"); ?>
       <a href="AboutUs.php">About Us</a>
     </div>
     </div>
-		<div class="container-login100">
-			<!-- <div class="btn-container" align="left"><
+		<!-- <div class="container-login100">
+			<div class="btn-container" align="left"><
 				<div class="btn1">
 				<button class="btn">RECEIVED INVITATIONS</button>
 			</div>
@@ -48,8 +49,8 @@ include("session.php"); ?>
 			</div>
 			<div class="btn4">
 				<button class="btn">PAST EVENTS</button>
-			</div> -->
 			</div>
+			</div> -->
 			<!-- <div class="contact-us-button-contain">
 				<div class="contact-us-button-wrap">
 					<div class="contact-us-button"></div>
