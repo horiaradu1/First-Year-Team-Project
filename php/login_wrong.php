@@ -64,6 +64,7 @@
 			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/AboutUs.php">About Us</a>
 		</div>
 		</div>
+		<div class="container-login100">
 
 			<div class="logo" >
 				<img src = "Logo.png">
