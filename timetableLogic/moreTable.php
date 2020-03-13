@@ -122,8 +122,8 @@
 
                       $result2 = $conn->query("SELECT course, lab FROM HasCourse WHERE username = '" . $username . "';");
                       foreach($result2->fetch_all(MYSQLI_ASSOC) as $row) {
-                        array_push($listOfCourses, $row["course"], $row["lab"]);
-                        //array_push($listOfLabs, $row["lab"]);
+                        array_push($listOfCourses["courses"], $row["course"]);
+                        array_push($listOfCourses["lab"], $row["lab"]);
                         }
 
                       foreach($listOfEventIDs as $ids) {
@@ -143,7 +143,7 @@
                         }
 
                       foreach($listOfCourses as $ids) {
-                        $sqlQuery = ("SELECT startTime, name FROM CourseEvents WHERE name = '" . $ids[0] . "' AND lab = '" . $ids[1] . "';");
+                        $sqlQuery = ("SELECT startTime, name FROM CourseEvents WHERE name = '" . $ids["course"] . "' AND lab = '" . $ids["lab"] . "';");
                         $fetchedEvent = $conn->query($sqlQuery);
                         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
