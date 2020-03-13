@@ -1,6 +1,6 @@
 <?php
 
-//error_reporting(E_ERROR);
+error_reporting(E_ERROR);
 
 ?>
 <!DOCTYPE html>
@@ -124,7 +124,7 @@
                           $timeTillEvent = hours_between($monday, $starttime);
                           $timeTillEventDays = $timeTillEvent/24;
 
-                            $event = ($timeTillEvent);
+                            $event = ($ids);
                             
                           
                         }
