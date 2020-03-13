@@ -142,7 +142,7 @@ error_reporting(E_ERROR);
                         }
 
                       foreach($listOfCourses as $ids) {
-                        $sqlQuery2 = "SELECT startTime, name FROM CourseEvents WHERE lab = " . $ids;
+                        $sqlQuery2 = "SELECT startTime, name FROM CourseEvents WHERE lab = '" . $ids . "';";
                         $fetchedEvent2 = $conn->query($sqlQuery2);
                         foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
