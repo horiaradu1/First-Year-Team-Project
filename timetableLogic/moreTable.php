@@ -1,7 +1,7 @@
 <?php
-function createTimeTable($username) {
 
-}
+error_reporting(E_ERROR);
+
 ?>
 <!DOCTYPE html>
 <html lan="en">
@@ -75,6 +75,15 @@ function createTimeTable($username) {
             <table data-vertable="ver1" >
             <tbody>
               <?php
+
+
+              function hours_between($date1, $date2) {
+                $date1 = strtotime($date1);
+                $date2 = strtotime($date2);
+                $diff = $date2 - $date1;
+                $hoursBetween = $diff/3600;
+                return $hoursBetween;
+              }
                 
                 $servername = "dbhost.cs.man.ac.uk";
                 $username = "g63968ef";
@@ -88,35 +97,46 @@ function createTimeTable($username) {
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);}
 
-                $username = "laura";
-                $sqlEvents = "SELECT eventID FROM HasEvent WHERE username = " . $username;
-                $result = $conn->query($sqlEvents);
+                
+                
 
                 $monday = date('d',time()+( 1 - date('w'))*24*3600);
                 
                 for ($i = 0; $i < 24; $i++) { 
                      $m = $i+1; 
                      ?>
-
                   <tr class="row100">
                         <td class="column100 column1" data-column="column1"><?php echo ("$i:00 - $m:00") ?></td>
-                      
                   <?php
-                  for ($j = 0; $j < 7; $j++) {
-                    $event = NULL;
-                    
-                    //select all events from a username from HasEvent
-                    //and then check if any of the event starts from $i, if yes $event becomes that events name
-                    //?? how to get the day
+                    for ($j = 0; $j < 7; $j++) {
+                      $event = NULL;
 
+                      $username = "laura";
+                      $listOfEventIDs = array();
+                      $result = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
+                      foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
+                        array_push($listOfEventIDs, $row["eventID"]);
+                      }
+                      print_r($listOfEventIDs);
+                      foreach($listOfEventIDs as $ids) {
+                        $sqlQuery = "SELECT startTime FROM Events WHERE eventID = " . $ids;
+                        $fetchedEvent = $conn->query($sqlQuery);
+                        foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
+                          $timeTillEvent = hours_between($monday, $row["startTime"]);
+                          $timeTillEventDays = $timeTillEvent/24;
 
-
+                            $event = $row["startTime"];
+                            
+                          
+                        }
+                      }
+                      
                     ?>
 
                     <?php
                     if ($j == 0) {
                     ?>
-                          <td class="column100 column2" data-column="column2"><?php echo ($monday) ?></td>
+                          <td class="column100 column2" data-column="column2"><?php echo ($event) ?></td>
                     <?php 
                     }elseif ($j == 1){
                     ?>
