@@ -89,26 +89,34 @@ function createTimeTable($username) {
                     die("Connection failed: " . $conn->connect_error);}
 
                 $username = "laura";
-                $sql = "SELECT eventID FROM HasEvent WHERE username = " . $username;
-                $result = $conn->query($sql);
+                $sqlEvents = "SELECT eventID FROM HasEvent WHERE username = " . $username;
+                $result = $conn->query($sqlEvents);
+
+                $monday = date('d',time()+( 1 - date('w'))*24*3600);
                 
                 for ($i = 0; $i < 24; $i++) { 
                      $m = $i+1; 
                      ?>
-                     
+
                   <tr class="row100">
                         <td class="column100 column1" data-column="column1"><?php echo ("$i:00 - $m:00") ?></td>
                       
                   <?php
                   for ($j = 0; $j < 7; $j++) {
                     $event = NULL;
+                    
+                    //select all events from a username from HasEvent
+                    //and then check if any of the event starts from $i, if yes $event becomes that events name
+                    //?? how to get the day
+
+
 
                     ?>
 
                     <?php
                     if ($j == 0) {
                     ?>
-                          <td class="column100 column2" data-column="column2"><?php echo ($event) ?></td>
+                          <td class="column100 column2" data-column="column2"><?php echo ($monday) ?></td>
                     <?php 
                     }elseif ($j == 1){
                     ?>
