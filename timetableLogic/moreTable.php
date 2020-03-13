@@ -117,7 +117,6 @@ error_reporting(E_ERROR);
                       foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
                         array_push($listOfEventIDs, $row["eventID"]);
                       }
-                      print_r($listOfEventIDs);
                       foreach($listOfEventIDs as $ids) {
                         $sqlQuery = "SELECT startTime FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent = $conn->query($sqlQuery);
@@ -125,7 +124,11 @@ error_reporting(E_ERROR);
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
                           $timeTillEventDays = $timeTillEvent/24;
 
-                            $event = $row["startTime"];
+                          if ($timeTillEvent == i && $timeTillEventDays == j ){
+                            $event = $ids;
+                          }
+
+                          
                             
                           
                         }
