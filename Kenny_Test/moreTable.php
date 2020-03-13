@@ -51,11 +51,10 @@ include("session.php"); ?>
 
       <div class="btn-container" ,align="left">
 				<div class="btn1">
-				<a class="btn" href="#" onclick = "show('popup1')">CREATE EVENT</a>
+				<a class="btn" href="#popup1">CREATE EVENT</a>
       </div>
       
       
-
 			<div class="btn2">
 				<button class="btn">CREATE MEETING</button>
 			</div>

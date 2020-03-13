@@ -63,7 +63,8 @@ ul, li {
 	align-items: center;
 	padding: 15px;
 	background-image: linear-gradient(to left, #93e9f4, #236bfa);
-	border-radius: 10px;
+  border-radius: 10px;
+  z-index: 0;
 }
 
 .overlay {
@@ -76,6 +77,7 @@ ul, li {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index: 9999;
 }
 .overlay:target {
   visibility: visible;
@@ -89,8 +91,8 @@ ul, li {
   border-radius: 5px;
   width: 80%;
   top: 50%;
-  
   position: relative;
+  z-index: 999;
 }
 
 .popup h2 {
@@ -187,7 +189,7 @@ ul, li {
   align-items: center;
   padding: 15px;
   /*background-image: linear-gradient(to right, #82C5D8, #248882);*/
-	background-image: url("sea3.jpg");
+  background-image: url("sea3.jpg");
 }
 .logo{
 	position: relative;
