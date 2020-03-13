@@ -103,31 +103,31 @@ function createTimeTable($username) {
                     ?>
 
                     <?php
-                    if ($j = 0) {
+                    if ($j == 0) {
                     ?>
                           <td class="column100 column2" data-column="column2"><?php echo ($event) ?></td>
                     <?php 
-                    }elseif ($j = 1){
+                    }elseif ($j == 1){
                     ?>
                           <td class="column100 column3" data-column="column3"><?php echo ($event) ?></td>
                     <?php
-                    }elseif ($j = 2){
+                    }elseif ($j == 2){
                     ?>
                           <td class="column100 column4" data-column="column4"><?php echo ($event) ?></td>
                     <?php
-                    }elseif ($j = 3){
+                    }elseif ($j == 3){
                     ?>
                           <td class="column100 column5" data-column="column5"><?php echo ($event) ?></td>
                     <?php
-                    }elseif ($j = 4){
+                    }elseif ($j == 4){
                     ?>
                           <td class="column100 column6" data-column="column6"><?php echo ($event) ?></td>
                     <?php
-                    }elseif ($j = 5){
+                    }elseif ($j == 5){
                     ?>
                           <td class="column100 column7" data-column="column7"><?php echo ($event) ?></td>
                     <?php
-                    }elseif ($j = 6){
+                    }elseif ($j == 6){
                     ?>
                           <td class="column100 column8" data-column="column8"><?php echo ($event) ?></td>
                     <?php } ?>
