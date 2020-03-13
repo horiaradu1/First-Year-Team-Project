@@ -10,7 +10,7 @@ echo "SENDING!!!!!!!!!";
   $course = $_POST["new_course"];
   $lab = $_POST["new_lab"];
 
-  echo $courses;
+  echo $course;
 
   echo $lab;
 
