@@ -101,7 +101,7 @@ error_reporting(E_ERROR);
                 
 
                 //$monday = date('Y-m-d',time()+( 1 - date('w'))*24*3600);
-                $monday = date('2020-02-20 00:00:00');
+                $monday = date('2020-03-09 00:00:00');
                 for ($i = 0; $i < 24; $i++) { 
                      $m = $i+1; 
                      ?>
@@ -128,9 +128,9 @@ error_reporting(E_ERROR);
                           $timeTillEventHours = $timeTillEvent%24;
                           $timeTillEventDays = $timeTillEvent/24;
 
-                          //if ($timeTillEventHours == i && $timeTillEventDays == j ){
+                          if ($timeTillEventHours == i && $timeTillEventDays == j ){
                             $event = $timeTillEvent;
-                          //}
+                          }
 
                           
                             
