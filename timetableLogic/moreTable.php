@@ -121,7 +121,7 @@
                         }
 
                       foreach($listOfEventIDs as $ids) {
-                        $sqlQuery1 = "SELECT startTime, endTime name FROM Events WHERE eventID = " . $ids;
+                        $sqlQuery1 = "SELECT startTime, endTime, name FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent1 = $conn->query($sqlQuery1);
                         foreach($fetchedEvent1->fetch_all(MYSQLI_ASSOC) as $row) {
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
@@ -143,7 +143,7 @@
                         }
 
                       foreach($listOfCourses as $ids) {
-                        $sqlQuery2 = "SELECT startTime, endTime name FROM CourseEvents WHERE lab = '" . $ids . "';";
+                        $sqlQuery2 = "SELECT startTime, endTime, name FROM CourseEvents WHERE lab = '" . $ids . "';";
                         $fetchedEvent2 = $conn->query($sqlQuery2);
                         foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
                           $timeTillEventStart = hours_between($monday, $row["startTime"]);
