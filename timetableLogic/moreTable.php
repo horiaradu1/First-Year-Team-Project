@@ -111,7 +111,7 @@ function createTimeTable($username) {
                     for ($j = 0; $j < 7; $j++) {
                       $event = NULL;
 
-                      $result = $conn->query("SELECT eventID FROM HasEvent WHERE username = " . $username);
+                      $result = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
                       foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
                         array_push($listOfEventIDs, $row["eventID"]);
                       }
