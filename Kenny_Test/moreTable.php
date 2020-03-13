@@ -42,10 +42,20 @@ include("session.php"); ?>
         ?>
       </div>
 
-      
+
       <div class="logo">
         <img src = "Logo.png">
       </div>
+
+      <div id = "popup1" class = "overlay">
+		    <div class = "popup">
+			    <h2>testing</h2>
+		      <a class="close" href="#">&times;</a>
+			  <div class = "content">
+			    See if it works.
+			  </div>
+		    </div>
+	    </div>
       <div class="btn-container" ,align="left">
 				<div class="btn1">
 				<a class="btn" href="#popup1">CREATE EVENT</a>
