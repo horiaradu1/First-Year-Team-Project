@@ -47,7 +47,18 @@ include("session.php"); ?>
         <img src = "Logo.png">
       </div>
 
-      <div id = "popup1" class = "overlay">
+      
+
+      <div class="btn-container" ,align="left">
+				<div class="btn1">
+				<a class="btn" href="#popup1">CREATE EVENT</a>
+			</div>
+			<div class="btn2">
+				<button class="btn">CREATE MEETING</button>
+			</div>
+    </div>
+    
+    <div id = "popup1" class = "overlay">
 		    <div class = "popup">
 			    <h2>testing</h2>
 		      <a class="close" href="#">&times;</a>
@@ -56,16 +67,8 @@ include("session.php"); ?>
 			  </div>
 		    </div>
 	    </div>
-      
-      <div class="btn-container" ,align="left">
-				<div class="btn1">
-				<a class="btn" href="#popup1">CREATE EVENT</a>
-			</div>
-			<div class="btn2">
-				<button class="btn">CREATE MEETING</button>
-			</div>
-			</div>
-      <div class="before">
+
+    <div class="before">
       <a href="#" class="previous round">&#8249;</a>
     </div>
     <div class="after">
@@ -83,7 +86,7 @@ include("session.php"); ?>
                 <th class="column100 column6" data-column="column6">Thursday</th>
                 <th class="column100 column7" data-column="column7">Friday</th>
                 <th class="column100 column8" data-column="column8">Saturday</th>
-                  <th class="column100 column2" data-column="column2">Sunday</th>
+                <th class="column100 column2" data-column="column2">Sunday</th>
               </tr>
             </thead>
           </table>
@@ -100,7 +103,6 @@ include("session.php"); ?>
                 <td class="column100 column7" data-column="column7"></td>
                 <td class="column100 column8" data-column="column8"></td>
               </tr>
-
               <tr class="row100">
                 <td class="column100 column1" data-column="column1">8:00</td>
                 <td class="column100 column2" data-column="column2"></td>
@@ -111,7 +113,6 @@ include("session.php"); ?>
                 <td class="column100 column7" data-column="column7"></td>
                 <td class="column100 column8" data-column="column8"></td>
               </tr>
-
               <tr class="row100">
                 <td class="column100 column1" data-column="column1">9:00</td>
                 <td class="column100 column2" data-column="column2"></td>
@@ -122,7 +123,6 @@ include("session.php"); ?>
                 <td class="column100 column7" data-column="column7"></td>
                 <td class="column100 column8" data-column="column8"></td>
               </tr>
-
               <tr class="row100">
                 <td class="column100 column1" data-column="column1">10:00</td>
                 <td class="column100 green" data-column="column2">COMP11212</td>
@@ -133,7 +133,6 @@ include("session.php"); ?>
                 <td class="column100 column7" data-column="column7"></td>
                 <td class="column100 darkblue" data-column="column8">Volleyball</td>
               </tr>
-
               <tr class="row100">
                 <td class="column100 column1" data-column="column1">11:00</td>
                 <td class="column100 red" data-column="column2">COMP11120</td>
@@ -144,7 +143,6 @@ include("session.php"); ?>
                 <td class="column100 column7" data-column="column7"></td>
                 <td class="column100 column8" data-column="column8"></td>
               </tr>
-
               <tr class="row100">
                 <td class="column100 column1" data-column="column1">12:00</td>
                 <td class="column100 purple" data-column="column2">COMP10120</td>
@@ -338,9 +336,9 @@ include("session.php"); ?>
                 <td class="column100 column8" data-column="column8">8:00 AM</td>
               </tr> -->
             </tbody>
-          </table>
+            </table>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   </div>
