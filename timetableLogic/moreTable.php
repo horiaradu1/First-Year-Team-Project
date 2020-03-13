@@ -120,11 +120,13 @@
                         $sqlQuery = "SELECT StartTime FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent = $conn->query($sqlQuery);
                         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
-                          $timeTillEvent = hours_between($monday, $row["startTime"]);
+                          $starttime = $row["startTime"];
+                          $timeTillEvent = hours_between($monday, $starttime);
                           $timeTillEventDays = $timeTillEvent/24;
-                          if ($timeTillEventDays == 3) {
-                            $event = "HELLO";
-                          }
+
+                            $event = ($timeTillEvent);
+                            
+                          
                         }
                       }
                       
