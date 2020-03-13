@@ -90,7 +90,7 @@ function createTimeTable($username) {
 
                 $username = "laura";
                 $sqlEvents = "SELECT eventID FROM HasEvent WHERE username = " . $username;
-                $result = $conn->query($sql);
+                $result = $conn->query($sqlEvents);
 
                 $monday = date('d',time()+( 1 - date('w'))*24*3600);
                 
@@ -116,7 +116,7 @@ function createTimeTable($username) {
                     <?php
                     if ($j == 0) {
                     ?>
-                          <td class="column100 column2" data-column="column2"><?php echo ($event) ?></td>
+                          <td class="column100 column2" data-column="column2"><?php echo ($monday) ?></td>
                     <?php 
                     }elseif ($j == 1){
                     ?>
