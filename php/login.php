@@ -13,6 +13,38 @@
 	.message{
 	 color: #e3503b;
 	}
+	.navbar {
+		font-family: Ariel, Helvetica, sans-serif;
+		font-weight: bold;
+	  overflow: hidden;
+	  background-color: #336fb2;
+	  position: fixed; /* Set the navbar to fixed position */
+	  top: 0; /* Position the navbar at the top of the page */
+	  width: 100%; /* Full width */
+	  z-index: 2;
+		max-height: 50px;
+	}
+
+	/* Links inside the navbar */
+	.navbar a {
+	  /*float: left;*/
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+
+	/* Change background on mouse-over */
+	.navbar a:hover {
+	  background: #5a9de9;
+	}
+	.picture{
+		float:left;
+	}
+	.text100{
+		float: right;
+	}
 	</style>
 </head>
 <body>
