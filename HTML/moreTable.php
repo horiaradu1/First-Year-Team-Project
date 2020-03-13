@@ -18,16 +18,16 @@ include("session.php"); ?>
       <a href="moreTable.php">Home</a>
     </div>
     <div class = "picture">
-      <a href="meet.html">Meeting</a>
+      <a href="meet.php">Meeting</a>
     </div>
   <div class="text100">
         <a href = "logout.php">Sign Out</a>
     </div>
     <div class="text100">
-      <a href="ContactForm.html">Contact Us</a>
+      <a href="ContactForm.php">Contact Us</a>
     </div>
     <div class="text100">
-      <a href="AboutUs.html">About Us</a>
+      <a href="AboutUs.php">About Us</a>
     </div>
     </div>
     <div class="container-table100">
