@@ -16,7 +16,7 @@
 <?php
 include("session.php"); ?>
 <body>
-	<div style="background-image: backgroundTimeOnTable.jpg">
+	
 
 	<div class="limiter">
 		<div class="navbar">
@@ -66,7 +66,7 @@ include("session.php"); ?>
 				<img src = "Logo.png">
 			</div> -->
 
-				<div class="wrap-login100">
+				<div class="wrap-login100" style="background-image: backgroundTimeOnTable.jpg">
 					<form class="login100-form validate-form">
 						<div class="put-it-here-to-include-padding">
 						<span class="login100-form-title p-b-26">
