@@ -86,13 +86,13 @@
                               
                 for ($i = 0; $i < 7; $i++) {
                   for ($j = 0; $j < 24; $j++) {
-                    $monday = ' ';
-                    $tuesday = ' ';
-                    $wednesday = ' ';
-                    $thursday = ' ';
-                    $friday = ' ';
-                    $saturday = ' ';
-                    $sunday = ' ';
+                    $monday = NULL;
+                    $tuesday = NULL;
+                    $wednesday = NULL;
+                    $thursday = NULL;
+                    $friday = NULL;
+                    $saturday = NULL;
+                    $sunday = NULL;
                     ?>
                       <tr class="row100">
                         <td class="column100 column1" data-column="column1"><?php echo ($i) ?></td>
