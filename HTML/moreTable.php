@@ -10,7 +10,7 @@
     type = "image/x-icon">
 </head>
 <?php
-include("php/session.php"); ?>
+include("session.php"); ?>
 <body>
   <div class="limiter">
     <div class="navbar">
