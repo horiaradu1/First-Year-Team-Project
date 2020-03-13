@@ -124,7 +124,7 @@ error_reporting(E_ERROR);
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
                           $timeTillEventDays = $timeTillEvent/24;
 
-                          if ($timeTillEvent == i && $timeTillEventDays == j ){
+                          if ($timeTillEvent == j && $timeTillEventDays == i ){
                             $event = 10;
                           }
 
