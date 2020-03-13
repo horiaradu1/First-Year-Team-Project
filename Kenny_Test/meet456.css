@@ -49,13 +49,14 @@ ul, li {
   margin: 0 auto;
 }
 .btn-container {
-  width: 20%;
-	top: 20px;
-  position: relative; 
-	/* display: -webkit-box;
+  width: 300px;
+	top: 0px;
+	left: -300px;
+	position: relative;
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
-	display: -ms-flexbox; */
+	display: -ms-flexbox;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -64,9 +65,61 @@ ul, li {
 	background-image: linear-gradient(to left, #93e9f4, #236bfa);
 	border-radius: 10px;
 }
-.left-align{
-  float: left;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
 }
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 80px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  top: 50%;
+  
+  position: relative;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+
+
+
+
 .btn1{
 	border-width:2px;
 	border-style:solid;
@@ -142,13 +195,13 @@ ul, li {
 	left: -605px;
 }
 .wrap-login100 {
-  width: 30%;
+  width: 390px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
   padding: 55px 55px 33px 55px;
   position: relative;
-	right: 0px;
+	right: 235px;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
@@ -209,10 +262,7 @@ iframe {
   /*border-bottom: 2px outset #9dadaf;*/
   margin-bottom: 37px;
 }
-.wrap-input100.three{
-	position: relative;
-	bottom: 70px;
-}
+
 .input100 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -394,17 +444,7 @@ textarea:-ms-input-placeholder { color: #adadad;}
   padding-top: 13px;
 	padding-bottom: 13px;
 }
-.container-login100-form-btn.send{
-	position: relative;
-	bottom: 45px;
-	padding-top: 1px;
-	padding-bottom: 1px;
-}
-.container-login100-form-btn.plus{
-	position: relative;
-	left: 165px;
-	bottom: 95px;
-}
+
 .wrap-login100-form-btn {
   width: 100%;
   display: block;
@@ -413,9 +453,6 @@ textarea:-ms-input-placeholder { color: #adadad;}
   border-radius: 25px;
   overflow: hidden;
   margin: 0 auto;
-}
-.wrap-login100-form-btn.plus{
-	width: 15%;
 }
 .login100-form-bgbtn {
   position: absolute;

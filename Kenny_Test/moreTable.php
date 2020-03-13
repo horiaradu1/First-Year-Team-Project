@@ -39,12 +39,21 @@
           echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
         ?>
       </div>
+      <div id = "popup1" class = "overlay">
+		    <div class = "popup">
+			  <h2>testing</h2>
+			  <a class="close" href="#">&times;</a>
+			  <div class = "content">
+			  See if it works.
+			  </div>
+		  </div>
+	  </div>	 
       <div class="logo">
         <img src = "Logo.png">
       </div>
       <div class="btn-container" ,align ="left">
 				<div class="btn1">
-				<button class="btn">ADD COURSE</button>
+        <a class="btn" href = "#popup1">ADD COURSE</a>
 			</div>
 			<div class="btn2">
 				<button class="btn">CREATE MEETING</button>
