@@ -11,7 +11,7 @@
    $login_session = $row['username'];
 
    if(!isset($_SESSION['login_user'])){
-      header("location:login.php");
+      header("location:https://web.cs.manchester.ac.uk/g34904ps/team/php/login.php");
       die();
    }
 ?>
