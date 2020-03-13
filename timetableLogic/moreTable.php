@@ -100,7 +100,7 @@ error_reporting(E_ERROR);
                 
                 
 
-                $monday = date('d',time()+( 1 - date('w'))*24*3600);
+                $monday = date('Y-m-d',time()+( 1 - date('w'))*24*3600);
                 
                 for ($i = 0; $i < 24; $i++) { 
                      $m = $i+1; 
@@ -121,7 +121,7 @@ error_reporting(E_ERROR);
                         $sqlQuery = "SELECT startTime FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent = $conn->query($sqlQuery);
                         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
-                          echo ("Monday: " . $timeTillEvent . "<br>");
+                          echo ("Monday: " . $monday . "<br>");
                           echo ("Starting time of event: " . $row["startTime"] . "<br>");
                           $timeTillEvent = hours_between($monday, $row["startTime"]);
                           echo ("Time untill event: " . $timeTillEvent . "<br>");
