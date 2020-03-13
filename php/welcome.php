@@ -4,17 +4,28 @@ include("session.php");
 // responsible for adding the courses from course selector
 if (isset($_POST["submit"])) {
 
+echo "SENDING!!!!!!!!!";
   // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
 
   $course = $_POST["new_course"];
   $lab = $_POST["new_lab"];
+
+  echo $courses;
+
+  echo $lab;
+
+  
   // $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
 
   //var_dump($_POST["new_course"]);
   $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
-VALUES ($login_session, '$course', '$lab');";
+    VALUES ($login_session, $course, $lab);";
 
 mysqli_query($db, $sqlAddCourse);
+}
+else
+{
+  echo "NOT SENDING!";
 }
 
 
