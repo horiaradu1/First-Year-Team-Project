@@ -50,8 +50,9 @@ ul, li {
 }
 .btn-container {
   width: 20%;
-	top: 20px;
+	top: 0px;
   position: relative; 
+
 	/* display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
