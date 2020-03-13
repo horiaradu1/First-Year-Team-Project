@@ -166,7 +166,7 @@
 	<div class="limiter">
 		<div class="navbar">
 			<div class = "picture">
-			<a href="moreTable.html">Home</a>
+			<a href="moreTable.php">Home</a>
 			 <!-- connect to the login -->
 		</div>
 		<div class = "picture">
