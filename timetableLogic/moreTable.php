@@ -94,7 +94,7 @@ function createTimeTable($username) {
                 
                 for ($i = 0; $i < 24; $i++) { ?>
                   <tr class="row100">
-                        <td class="column100 column1" data-column="column1"><?php echo ($i) ?></td>
+                        <td class="column100 column1" data-column="column1"><?php echo ("$i:00 - " . $i+1 . ":00") ?></td>
                       
                   <?php
                   for ($j = 0; $j < 7; $j++) {
