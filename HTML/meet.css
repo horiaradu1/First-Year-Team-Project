@@ -140,13 +140,13 @@ ul, li {
 	left: -605px;
 }
 .wrap-login100 {
-  width: 390px;
+  width: 20%;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
   padding: 55px 55px 33px 55px;
   position: relative;
-	right: 235px;
+	left: 40%;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
