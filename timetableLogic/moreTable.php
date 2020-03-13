@@ -132,7 +132,7 @@ error_reporting(E_ERROR);
 
                           if ($timeTillEventHours == $i && $timeTillEventDays == $j ){
                             $event = "$event AND " . $row["name"];
-                            $colour = "column100 blue";
+                            $colour = "column100 pink";
                             }
                           }
                         }
@@ -163,31 +163,31 @@ error_reporting(E_ERROR);
                     <?php
                     if ($j == 0) {
                     ?>
-                          <td class=<?php echo $colour ?> data-column="column2"><?php echo ($event) ?></td>
+                          <td class="<?php echo $colour ?>" data-column="column2"><?php echo ($event) ?></td>
                     <?php 
                     }elseif ($j == 1){
                     ?>
-                          <td class=<?php echo $colour ?> data-column="column3"><?php echo ($event) ?></td>
+                          <td class="<?php echo $colour ?>" data-column="column3"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 2){
                     ?>
-                          <td class=<?php echo $colour ?> data-column="column4"><?php echo ($event) ?></td>
+                          <td class="<?php echo $colour ?>" data-column="column4"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 3){
                     ?>
-                          <td class=<?php echo $colour ?> data-column="column5"><?php echo ($event) ?></td>
+                          <td class="<?php echo $colour ?>" data-column="column5"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 4){
                     ?>
-                          <td class=<?php echo $colour ?> data-column="column6"><?php echo ($event) ?></td>
+                          <td class="<?php echo $colour ?>" data-column="column6"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 5){
                     ?>
-                          <td class=<?php echo $colour ?> data-column="column7"><?php echo ($event) ?></td>
+                          <td class="<?php echo $colour ?>" data-column="column7"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 6){
                     ?>
-                          <td class=<?php echo $colour ?> data-column="column8"><?php echo ($event) ?></td>
+                          <td class="<?php echo $colour ?>" data-column="column8"><?php echo ($event) ?></td>
                     <?php } ?>
 
                 <?php } ?>
