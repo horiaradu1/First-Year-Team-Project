@@ -130,7 +130,7 @@
                           $timeTillEventHours = (int)$timeTillEventHours;
                           $timeTillEventDays = (int)$timeTillEventDays;
 
-                          if ($timeTillEventHours == $i && $timeTillEventDays == $j ){
+                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd >= $i && $timeTillEventDaysEnd >= $j){
                             $event = "$event " . $row["name"];
                             //$classStyle = "column100 column2"; //INSERT STYLE FOR EVENT HERE
                             }
