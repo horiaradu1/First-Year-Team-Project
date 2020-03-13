@@ -84,7 +84,7 @@
 			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/moreTable.php">Home</a>
 		</div>
 		<div class = "picture">
-			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/meet.html">Meeting</a>
+			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/meet.php">Meeting</a>
 		</div>
 	<div class="text100">
 				<a href = "https://web.cs.manchester.ac.uk/g34904ps/team/HTML/RegistrationPage_1.php">Register</a>
