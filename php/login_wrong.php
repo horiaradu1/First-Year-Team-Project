@@ -33,7 +33,7 @@
 	      $result = mysqli_query($db,$sql);
 	      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-	      if (!password_verify($_POST['password'], $row['Hash'])) {
+	      if (!password_verify($_POST['password'], $row['hash'])) {
 	        header("location: RegistrationPage_1.php");
 	      }
 
