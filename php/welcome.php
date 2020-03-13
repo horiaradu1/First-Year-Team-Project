@@ -143,8 +143,8 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <option>Select course</option>
         <?php foreach ($courses_array as $val) { ?>
             <option id = "dropdown" value="
-            <?php echo $val["Name"]; ?>">
-            <?php echo $val["Name"]; ?>
+            <?php echo $val["name"]; ?>">
+            <?php echo $val["name"]; ?>
           </option>
         <?php } ?>
 
