@@ -120,11 +120,6 @@ error_reporting(E_ERROR);
                         array_push($listOfEventIDs, $row["eventID"]);
                         }
 
-                      $result2 = $conn->query("SELECT lab FROM HasCourse WHERE username = '" . $username . "';");
-                      foreach($result2->fetch_all(MYSQLI_ASSOC) as $row) {
-                        array_push($listOfCourses, $row["lab"]);
-                        }
-
                       foreach($listOfEventIDs as $ids) {
                         $sqlQuery1 = "SELECT startTime, name FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent1 = $conn->query($sqlQuery1);
@@ -139,6 +134,11 @@ error_reporting(E_ERROR);
                             $event = "$event AND " . $row["name"];
                             }
                           }
+                        }
+
+                      $result2 = $conn->query("SELECT lab FROM HasCourse WHERE username = '" . $username . "';");
+                      foreach($result2->fetch_all(MYSQLI_ASSOC) as $row) {
+                        array_push($listOfCourses, $row["lab"]);
                         }
 
                       foreach($listOfCourses as $ids) {
