@@ -97,8 +97,8 @@ error_reporting(E_ERROR);
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);}
 
-                $username = "laura";
-                $listOfEventIDs = array();
+                
+                
 
                 $monday = date('d',time()+( 1 - date('w'))*24*3600);
                 
@@ -111,6 +111,8 @@ error_reporting(E_ERROR);
                     for ($j = 0; $j < 7; $j++) {
                       $event = NULL;
 
+                      $username = "laura";
+                      $listOfEventIDs = array();
                       $result = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
                       foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
                         array_push($listOfEventIDs, $row["eventID"]);
@@ -120,11 +122,10 @@ error_reporting(E_ERROR);
                         $sqlQuery = "SELECT startTime FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent = $conn->query($sqlQuery);
                         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
-                          $starttime = $row["startTime"];
-                          $timeTillEvent = hours_between($monday, $starttime);
+                          $timeTillEvent = hours_between($monday, $row["startTime"]);
                           $timeTillEventDays = $timeTillEvent/24;
 
-                            $event = $starttime;
+                            $event = $row["startTime"];
                             
                           
                         }
