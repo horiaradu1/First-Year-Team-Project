@@ -40,14 +40,14 @@
         ?>
       </div>
 
-      <!-- pop up window 1 -->
+      <!-- pop up window 1
       <div id = "popup1" class = "overlay">
 		    <div class = "popup">
 			    <h2>Add course</h2>
 			    <a class="close" href="#">&times;</a>
 			    <div class = "content">Add code below.</div>
 		    </div>
-	    </div>
+	    </div> -->
 
 
       <div class="logo">
