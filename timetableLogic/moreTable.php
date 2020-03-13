@@ -1,3 +1,8 @@
+<?php
+function createTimeTable($username) {
+
+}
+?>
 <!DOCTYPE html>
 <html lan="en">
 <head>
@@ -70,7 +75,7 @@
             <table data-vertable="ver1" >
             <tbody>
               <?php
-
+                
                 $servername = "dbhost.cs.man.ac.uk";
                 $username = "g63968ef";
                 $password = "database";
@@ -82,20 +87,22 @@
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);}
-                // echo "Connected successfully";
-                              
-                for ($i = 0; $i < 7; $i++) {
-                  for ($j = 0; $j < 24; $j++) {
-                    $monday = NULL;
-                    $tuesday = NULL;
-                    $wednesday = NULL;
-                    $thursday = NULL;
-                    $friday = NULL;
-                    $saturday = NULL;
-                    $sunday = NULL;
-                    ?>
+
+                $username = "laura";
+                $sql = "SELECT ALL FROM HasEvent WHERE username = " . $username;
+                $result = $conn->query($sql);
+                
+                for ($i = 0; $i < 24; $i++) {
+                  $monday = NULL;
+                  $tuesday = NULL;
+                  $wednesday = NULL;
+                  $thursday = NULL;
+                  $friday = NULL;
+                  $saturday = NULL;
+                  $sunday = NULL; 
+                  ?>
                       <tr class="row100">
-                        <td class="column100 column1" data-column="column1"><?php echo ($j) ?></td>
+                        <td class="column100 column1" data-column="column1"><?php echo ($i) ?></td>
                         <td class="column100 column2" data-column="column2"><?php echo ($monday) ?></td>
                         <td class="column100 column3" data-column="column3"><?php echo ($tuesday) ?></td>
                         <td class="column100 column4" data-column="column4"><?php echo ($wednesday) ?></td>
@@ -106,7 +113,6 @@
                       </tr>
                 <?php
                     }
-                 }
                  ?>
             </tbody>
           </table>
