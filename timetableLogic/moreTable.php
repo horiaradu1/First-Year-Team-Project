@@ -127,7 +127,8 @@ error_reporting(E_ERROR);
                           echo ("Time untill event: " . $timeTillEvent . "<br>");
                           $timeTillEventHours = $timeTillEvent%24;
                           $timeTillEventDays = $timeTillEvent/24;
-
+                          echo ("Days untill event: " . $timeTillEventDays . "<br>");
+                          echo ("Hours untill event: " . $timeTillEventHours . "<br>");
                           if ($timeTillEventHours == i && $timeTillEventDays == j ){
                             $event = $timeTillEvent;
                           }
