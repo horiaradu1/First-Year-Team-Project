@@ -349,9 +349,8 @@ a:hover {
 	left: 400px;
 }
 .btn-container {
-  width: 300px;
+  width: 20%;
 	top: 350px;
-	right: 1000px;
 	position: relative;
 	display: -webkit-box;
 	display: -webkit-flex;
