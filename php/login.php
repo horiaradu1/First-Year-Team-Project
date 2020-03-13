@@ -26,7 +26,7 @@
 
 	      $myusername = mysqli_real_escape_string($db,$_POST['username']);
 
-	      $sql = "SELECT * FROM Users WHERE Username = '$myusername'";
+	      $sql = "SELECT * FROM Users WHERE username = '$myusername'";
 	      $result = mysqli_query($db,$sql);
 	      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
@@ -95,7 +95,7 @@
 		<div class="move-useless-text">
 			<span class="useless-text">
 				I can put whatever I want here Sorana!!!
-				Me too. Eirik is the best. 
+				Me too. Eirik is the best.
 			</span>
 		</div>
 		</div>

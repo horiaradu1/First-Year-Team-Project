@@ -29,7 +29,7 @@
 
 	      $myusername = mysqli_real_escape_string($db,$_POST['username']);
 
-	      $sql = "SELECT * FROM Users WHERE Username = '$myusername'";
+	      $sql = "SELECT * FROM Users WHERE username = '$myusername'";
 	      $result = mysqli_query($db,$sql);
 	      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 

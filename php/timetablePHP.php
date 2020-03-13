@@ -37,10 +37,10 @@ function hours_between($date1, $date2) {
     $months = floor(($diff - $years * 365*60*60*24)  // get month diff
                                / (30*60*60*24));
     $days = floor(($diff - $years * 365*60*60*24 -  // get day diff
-             $months*30*60*60*24)/ (60*60*24)); 
+             $months*30*60*60*24)/ (60*60*24));
 
     $hours = floor(($diff - $years * 365*60*60*24  // get hour diff
-       - $months*30*60*60*24 - $days*60*60*24) 
+       - $months*30*60*60*24 - $days*60*60*24)
                                    / (60*60));
 
     $hoursBetween = $days * 24 + $hours;
@@ -54,24 +54,24 @@ function createMeetingList($listUsernames) {
 
     $result = $conn->query("SELECT * FROM HasEvent");
     foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
-        if (in_array($row["Username"], $listUsernames)) {
-            echo $row["Username"] . "<br>";
+        if (in_array($row["username"], $listUsernames)) {
+            echo $row["username"] . "<br>";
             array_push($listOfEvents, $row["EventID"]);
         }
     }
 
     foreach($listOfEvents as $event) {
-        $sqlQuery = "SELECT StartTime, EndTime FROM Events WHERE EventID = " . $event;
+        $sqlQuery = "SELECT startTime, endTime FROM Events WHERE EventID = " . $event;
         $fetchedEvent = $conn->query($sqlQuery);
         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
-            echo ("Start time: " . $row["StartTime"] . "<br>" . 
-                  "End time: " . $row["EndTime"] . "<br>");
-            echo "Hours between: " . hours_between($row["StartTime"], $row["EndTime"]) . "<br><br>";
+            echo ("Start time: " . $row["startTime"] . "<br>" .
+                  "End time: " . $row["endTime"] . "<br>");
+            echo "Hours between: " . hours_between($row["startTime"], $row["endTime"]) . "<br><br>";
 
-            $timeTillEvent = hours_between($timeToday, $row["StartTime"]);
+            $timeTillEvent = hours_between($timeToday, $row["startTime"]);
             $timeTillEventDays = $timeTillEvent/24;
-            $lengthEvent = hours_between($row["StartTime"], $row["EndTime"]);
-            
+            $lengthEvent = hours_between($row["StartTime"], $row["endTime"]);
+
 
             if ((0 <= $timeTillEventDays) && ($timeTillEventDays <= 7)) {
                 $day = intdiv($timeTillEvent, 24);
@@ -90,7 +90,7 @@ function createMeetingList($listUsernames) {
                     }
                 }
             }
-            
+
         }
     }
     foreach($planList[1] as $number) {
