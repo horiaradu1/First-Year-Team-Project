@@ -26,11 +26,11 @@
 
 	      $myusername = mysqli_real_escape_string($db,$_POST['username']);
 
-	      $sql = "SELECT * FROM Users WHERE username = '$myusername'";
+	      $sql = "SELECT * FROM Users WHERE Username = '$myusername'";
 	      $result = mysqli_query($db,$sql);
 	      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-	      if (!password_verify($_POST['password'], $row['hash'])) {
+	      if (!password_verify($_POST['password'], $row['Hash'])) {
 	        header("location: login_wrong.php");
 	      }
 
@@ -86,7 +86,7 @@
 								Don’t have an account?
 							</span>
 
-							<a class="txt2" href="/HTML/RegistrationPage_1.php">
+							<a class="txt2" href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/RegistrationPage_1.php">
 								Sign Up
 							</a>
 						</div>
