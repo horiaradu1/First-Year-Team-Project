@@ -107,7 +107,7 @@ function createTimeTable($username) {
                   ?>
                       <tr class="row100">
                         <td class="column100 column1" data-column="column1"><?php echo ($i) ?></td>
-                        <td class="column100 column2" data-column="column2"><?php echo ($row) ?></td>
+                        <td class="column100 column2" data-column="column2"><?php echo ($row["eventID"]) ?></td>
                         <td class="column100 column3" data-column="column3"><?php echo ($tuesday) ?></td>
                         <td class="column100 column4" data-column="column4"><?php echo ($wednesday) ?></td>
                         <td class="column100 column5" data-column="column5"><?php echo ($thursday) ?></td>
