@@ -64,15 +64,7 @@
 			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/AboutUs.php">About Us</a>
 		</div>
 		</div>
-		<div class="container-login100">
-			<div class="contact-us-button-contain">
-				<div class="contact-us-button-wrap">
-					<div class="contact-us-button"></div>
-					<button class="contact-us">
-						Contact us
-					</button>
-				</div>
-			</div>
+
 			<div class="logo" >
 				<img src = "Logo.png">
 			</div>
