@@ -39,6 +39,8 @@
           echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
         ?>
       </div>
+
+      <!-- pop up window 1 -->
       <div id = "popup1" class = "overlay">
 		    <div class = "popup">
 			  <h2>testing</h2>
@@ -46,15 +48,19 @@
 			  <div class = "content">
 			  See if it works.
 			  </div>
-		  </div>
-	  </div>	 
+		    </div>
+	    </div>
+
+
       <div class="logo">
         <img src = "Logo.png">
       </div>
       <div class="btn-container" ,align ="left">
-				<div class="btn1">
+
+			<div class="btn1">
         <a class="btn" href = "#popup1">ADD COURSE</a>
 			</div>
+
 			<div class="btn2">
 				<button class="btn">CREATE MEETING</button>
 			</div>
