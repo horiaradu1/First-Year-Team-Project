@@ -13,7 +13,7 @@
   <div class="limiter">
     <div class="navbar">
       <div class = "picture">
-      <a href="moreTable.html">Home</a>
+      <a href="moreTable.php">Home</a>
     </div>
     <div class = "picture">
       <a href="meet.html">Meeting</a>
@@ -30,7 +30,7 @@
     </div>
     <div class="container-table100">
       <div class="week">
-        <?php 
+        <?php
           $sMonth = date('F',time()+( 1 - date('w'))*24*3600);
           $eMonth = date('F',time()+( 7 - date('w'))*24*3600);
           $sDay = date('d',time()+( 1 - date('w'))*24*3600); //date('d');
