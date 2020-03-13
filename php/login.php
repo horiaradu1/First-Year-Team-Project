@@ -44,6 +44,23 @@
 	   }
 	?>
 	<div class="limiter">
+		<div class="navbar">
+			<div class = "picture">
+			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/moreTable.php">Home</a>
+		</div>
+		<div class = "picture">
+			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/meet.html">Meeting</a>
+		</div>
+	<div class="text100">
+				<a href = "https://web.cs.manchester.ac.uk/g34904ps/team/HTML/RegistrationPage_1.php">Register</a>
+		</div>
+		<div class="text100">
+			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/ContactForm.php">Contact Us</a>
+		</div>
+		<div class="text100">
+			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/AboutUs.php">About Us</a>
+		</div>
+		</div>
 		<div class="container-login100">
 			<div class="contact-us-button-contain">
 				<div class="contact-us-button-wrap">

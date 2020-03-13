@@ -22,10 +22,10 @@
        <!-- connect to the login -->
     </div>
     <div class="text100">
-      <a href="ContactForm.html">Contact Us</a>
+      <a href="ContactForm.php">Contact Us</a>
     </div>
     <div class="text100">
-      <a href="AboutUs.html">About Us</a>
+      <a href="AboutUs.php">About Us</a>
     </div>
     </div>
       <div class="container">
