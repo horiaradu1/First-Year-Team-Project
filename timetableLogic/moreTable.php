@@ -92,7 +92,8 @@ function createTimeTable($username) {
                 $sql = "SELECT eventID FROM HasEvent WHERE username = " . $username;
                 $result = $conn->query($sql);
                 
-                for ($i = 0; $i < 24; $i++) {
+                for ($i = 0; $i < 7; $i++) {
+                  for ($j = 0; $j < 24; $j++) {
                   $monday = NULL;
                   $tuesday = NULL;
                   $wednesday = NULL;
@@ -107,7 +108,7 @@ function createTimeTable($username) {
                   ?>
                       <tr class="row100">
                         <td class="column100 column1" data-column="column1"><?php echo ($i) ?></td>
-                        <td class="column100 column2" data-column="column2"><?php echo ($row["eventID"]) ?></td>
+                        <td class="column100 column1" data-column="column1"><?php echo ($monday) ?></td>
                         <td class="column100 column3" data-column="column3"><?php echo ($tuesday) ?></td>
                         <td class="column100 column4" data-column="column4"><?php echo ($wednesday) ?></td>
                         <td class="column100 column5" data-column="column5"><?php echo ($thursday) ?></td>
@@ -117,6 +118,7 @@ function createTimeTable($username) {
                       </tr>
                 <?php
                     }
+                  }
                  ?>
             </tbody>
           </table>
