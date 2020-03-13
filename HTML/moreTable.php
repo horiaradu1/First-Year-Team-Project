@@ -21,7 +21,7 @@ include("session.php"); ?>
       <a href="meet.html">Meeting</a>
     </div>
   <div class="text100">
-      <a href="#news">Log out</a>
+        <a href = "logout.php">Sign Out</a>
     </div>
     <div class="text100">
       <a href="ContactForm.html">Contact Us</a>
