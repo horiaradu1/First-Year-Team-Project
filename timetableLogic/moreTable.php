@@ -136,6 +136,8 @@
                           $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
 
                           if ($timeTillEventHoursStart >= $i && $timeTillEventDaysStart >= $j && $timeTillEventHoursEnd <= $i && $timeTillEventDaysEnd <= $j){
+                            //NEED TO IMPLEMENT A LONGER THAN AN HOUR EVENT
+                            //WITH THE EVENT START AND END IN IF STATEMENT
                             $event = "$event " . $row["name"];
                             //$classStyle = "column100 column2"; //INSERT STYLE FOR EVENT HERE
                             }
@@ -162,7 +164,7 @@
                           $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
                           $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
 
-                          if (($timeTillEventHoursStart == $i && $timeTillEventDaysStart == $j) || ($timeTillEventHoursStart >= $i && $timeTillEventDaysStart >= $j && $timeTillEventHoursEnd <= $i && $timeTillEventDaysEnd <= $j)){
+                          if ($timeTillEventHoursStart == $i && $timeTillEventDaysStart == $j){
                             $event = "$event " . $row["name"];
                             //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
                             }
