@@ -91,6 +91,8 @@ include("session.php"); ?>
                 return $hoursBetween;
               }
                 
+              include 'session.php';
+
                 $servername = "dbhost.cs.man.ac.uk";
                 $username = "g63968ef";
                 $password = "database";
@@ -105,8 +107,9 @@ include("session.php"); ?>
 
                 $monday = date('Y-m-d 00:00:00',time()+( 1 - date('w'))*24*3600);
 
-                $username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
+                //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
+                $username = $login_session;
 
                 for ($i = 0; $i < 24; $i++) { 
                      $m = $i+1; 
