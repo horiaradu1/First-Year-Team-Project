@@ -120,30 +120,6 @@
                         array_push($listOfEventIDs, $row["eventID"]);
                         }
 
-                      foreach($listOfEventIDs as $ids) {
-                        $sqlQuery1 = "SELECT startTime, endTime, name FROM Events WHERE eventID = " . $ids;
-                        $fetchedEvent1 = $conn->query($sqlQuery1);
-                        foreach($fetchedEvent1->fetch_all(MYSQLI_ASSOC) as $row) {
-                          $timeTillEventStart = hours_between($monday, $row["startTime"]);
-                          $timeTillEventHoursStart = $timeTillEventStart%24;
-                          $timeTillEventDaysStart = $timeTillEventStart/24;
-                          $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
-                          $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
-                          $timeTillEventEnd = hours_between($monday, $row["endTime"]);
-                          $timeTillEventHoursEnd = $timeTillEventEnd%24;
-                          $timeTillEventDaysEnd = $timeTillEventEnd/24;
-                          $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
-                          $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
-
-                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
-                            //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
-                            //WITH THE EVENT START AND END IN IF STATEMENT
-                            $event = "$event " . $row["name"];
-                            //$classStyle = "column100 column2"; //INSERT STYLE FOR EVENT HERE
-                            }
-                          }
-                        }
-
                       $result2 = $conn->query("SELECT lab FROM HasCourse WHERE username = '" . $username . "';");
                       foreach($result2->fetch_all(MYSQLI_ASSOC) as $row) {
                         array_push($listOfCourses, $row["lab"]);
@@ -167,6 +143,30 @@
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
                             $event = "$event " . $row["name"];
                             //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
+                            }
+                          }
+                        }
+
+                      foreach($listOfEventIDs as $ids) {
+                        $sqlQuery1 = "SELECT startTime, endTime, name FROM Events WHERE eventID = " . $ids;
+                        $fetchedEvent1 = $conn->query($sqlQuery1);
+                        foreach($fetchedEvent1->fetch_all(MYSQLI_ASSOC) as $row) {
+                          $timeTillEventStart = hours_between($monday, $row["startTime"]);
+                          $timeTillEventHoursStart = $timeTillEventStart%24;
+                          $timeTillEventDaysStart = $timeTillEventStart/24;
+                          $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
+                          $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
+                          $timeTillEventEnd = hours_between($monday, $row["endTime"]);
+                          $timeTillEventHoursEnd = $timeTillEventEnd%24;
+                          $timeTillEventDaysEnd = $timeTillEventEnd/24;
+                          $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
+                          $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
+
+                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
+                            //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
+                            //WITH THE EVENT START AND END IN IF STATEMENT
+                            $event = "$event " . $row["name"];
+                            //$classStyle = "column100 column2"; //INSERT STYLE FOR EVENT HERE
                             }
                           }
                         }
