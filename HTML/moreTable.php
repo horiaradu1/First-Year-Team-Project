@@ -149,8 +149,21 @@ include("session.php"); ?>
 
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
                             $event = "$event " . $row["name"];
-                            $classStyle = "column100 yellow";
-                            //MAKE A DIFFERENT COLOUR FOR EACH COURSE
+                            if ($row["name"] == "COMP11120"){
+                              $classStyle = "column100 green";
+                            }elseif ($row["name"] == "COMP11212"){
+                              $classStyle = "column100 red";
+                            }elseif ($row["name"] == "COMP13212"){
+                              $classStyle = "column100 blue";
+                            }elseif ($row["name"] == "COMP15212"){
+                              $classStyle = "column100 pink";
+                            }elseif ($row["name"] == "COMP16412"){
+                              $classStyle = "column100 purple";
+                            }elseif ($row["name"] == "COMP1PASS"){
+                              $classStyle = "column100 orange";
+                            }elseif ($row["name"] == "COMP10120"){
+                              $classStyle = "column100 bluegreen";
+                            }else $classStyle = "column100 darkblue";
                             //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
                             }
                           }
@@ -175,7 +188,7 @@ include("session.php"); ?>
                             //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
                             //WITH THE EVENT START AND END IN IF STATEMENT
                             $event = "$event " . $row["name"];
-                            $classStyle = "column100 blue";
+                            $classStyle = "column100 yellow";
                             }
                           }
                         }
