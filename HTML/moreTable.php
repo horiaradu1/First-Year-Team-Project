@@ -154,7 +154,7 @@ include("session.php"); ?>
                             if ($row["name"] == "COMP11120"){
                               $classStyle = "column100 green";
                             }elseif ($row["name"] == "COMP11212"){
-                              $classStyle = "column100.red";
+                              $classStyle = "column100 red";
                             }elseif ($row["name"] == "COMP13212"){
                               $classStyle = "column100 blue";
                             }elseif ($row["name"] == "COMP15212"){
