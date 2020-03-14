@@ -135,7 +135,7 @@
                           $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
                           $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
 
-                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd > $j){
+                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
                             //NEED TO IMPLEMENT A LONGER THAN AN HOUR EVENT
                             //WITH THE EVENT START AND END IN IF STATEMENT
                             $event = "$event " . $row["name"];
