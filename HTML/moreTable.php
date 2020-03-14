@@ -1,3 +1,4 @@
+<?php error_reporting(E_ERROR); ?>
 <!DOCTYPE html>
 <html lan="en">
 <head>
@@ -104,9 +105,9 @@ include("session.php"); ?>
 
                 $monday = date('Y-m-d 00:00:00',time()+( 1 - date('w'))*24*3600);
 
-                $username = mysqli_real_escape_string($db,$_POST['username']);
+                //$username = mysqli_real_escape_string($db,$_POST['username']);
 
-                //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
+                $username = "1"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
 
                 for ($i = 0; $i < 24; $i++) { 
