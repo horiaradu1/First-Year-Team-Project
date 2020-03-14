@@ -24,7 +24,7 @@ include("session.php"); ?>
        <!-- connect to the login -->
     </div>
     <div class="text100">
-        <a><?php echo($login_session) ?></a>
+        <a><?php echo("Hello " . $login_session) ?></a>
     </div>
     <div class="text100">
       <a href="ContactForm.php">Contact Us</a>

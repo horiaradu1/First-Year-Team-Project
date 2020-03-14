@@ -136,6 +136,7 @@ th, td {
 .column100.red{
   background-color: #cb1e13;
   font-weight: bold;
+  color: white;
 }
 .column100.yellow{
   background-color: #f4f129;

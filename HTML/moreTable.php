@@ -25,7 +25,7 @@ include("session.php"); ?>
         <a href = "logout.php">Sign Out</a>
     </div>
     <div class="text100">
-        <a><?php echo($login_session) ?></a>
+        <a><?php echo("Hello " . $login_session) ?></a>
     </div>
     <div class="text100">
       <a href="ContactForm.php">Contact Us</a>
@@ -154,7 +154,7 @@ include("session.php"); ?>
                             if ($row["name"] == "COMP11120"){
                               $classStyle = "column100 green";
                             }elseif ($row["name"] == "COMP11212"){
-                              $classStyle = "column100 red";
+                              $classStyle = "column100.red";
                             }elseif ($row["name"] == "COMP13212"){
                               $classStyle = "column100 blue";
                             }elseif ($row["name"] == "COMP15212"){
