@@ -103,8 +103,6 @@
 
                 $username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
-
-
                 for ($i = 0; $i < 24; $i++) { 
                      $m = $i+1; 
                      ?>
@@ -117,6 +115,7 @@
                       $listOfEventIDs = array();
                       $listOfCourses = array();
                       $classStyle = "column100 column2"; //BASIC STYLE FOR EMPTY BOXES
+
 
                       $result1 = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
                       foreach($result1->fetch_all(MYSQLI_ASSOC) as $row) {
