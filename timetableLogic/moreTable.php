@@ -100,20 +100,21 @@
                     die("Connection failed: " . $conn->connect_error);}
 
                 $monday = date('Y-m-d 00:00:00',time()+( 1 - date('w'))*24*3600);
+                $username = mysqli_real_escape_string($db,$_POST['username']);
+
 
                 for ($i = 0; $i < 24; $i++) { 
                      $m = $i+1; 
                      ?>
                   <tr class="row100">
                         <td class="column100 column1" data-column="column1"><?php echo ("$i:00 - $m:00") ?></td>
+                  
                   <?php
                     for ($j = 0; $j < 7; $j++) {
                       $event = NULL;
                       $listOfEventIDs = array();
                       $listOfCourses = array();
                       $classStyle = "column100 column2"; //BASIC STYLE FOR EMPTY BOXES
-
-                      $username = mysqli_real_escape_string($db,$_POST['username']);
 
                       //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
