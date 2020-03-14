@@ -24,7 +24,7 @@ include("session.php"); ?>
   <div class="text100">
         <a href = "logout.php">Sign Out</a>
     </div>
-    <div class="text100">
+    <div class="textuser">
         <label><?php echo($login_session) ?></label>
     </div>
     <div class="text100">
