@@ -7,6 +7,8 @@
   <link rel = "stylesheet" type = "text/css" href = "contactForm.css">
 	<link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
 </head>
+<?php
+include("session.php"); ?>
 <body>
   <div class="container-form">
 		<div class="navbar">
