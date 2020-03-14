@@ -30,6 +30,9 @@ include("session.php"); ?>
     <div class="text100">
       <a href="AboutUs.php">About Us</a>
     </div>
+    <div class="text100">
+        <a><?php echo($login_session) ?></a>
+    </div>
     </div>
     <div class="container-table100">
       <div class="week">
@@ -90,8 +93,6 @@ include("session.php"); ?>
                 $hoursBetween = $diff/3600;
                 return $hoursBetween;
               }
-                
-              include 'session.php';
 
                 $servername = "dbhost.cs.man.ac.uk";
                 $username = "g63968ef";
