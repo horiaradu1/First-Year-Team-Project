@@ -25,13 +25,13 @@ include("session.php"); ?>
         <a href = "logout.php">Sign Out</a>
     </div>
     <div class="text100">
+        <a><?php echo($login_session) ?></a>
+    </div>
+    <div class="text100">
       <a href="ContactForm.php">Contact Us</a>
     </div>
     <div class="text100">
       <a href="AboutUs.php">About Us</a>
-    </div>
-    <div class="text100">
-        <a><?php echo($login_session) ?></a>
     </div>
     </div>
     <div class="container-table100">
