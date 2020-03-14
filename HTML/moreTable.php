@@ -198,31 +198,31 @@ include("session.php"); ?>
                     <?php
                     if ($j == 0) {
                     ?>
-                          <td class="<?php echo $classStyle ?>" data-column="column2"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column2" color="white"><?php echo ($event) ?></td>
                     <?php 
                     }elseif ($j == 1){
                     ?>
-                          <td class="<?php echo $classStyle ?>" data-column="column3"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column3" color="white"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 2){
                     ?>
-                          <td class="<?php echo $classStyle ?>" data-column="column4"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column4" color="white"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 3){
                     ?>
-                          <td class="<?php echo $classStyle ?>" data-column="column5"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column5" color="white"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 4){
                     ?>
-                          <td class="<?php echo $classStyle ?>" data-column="column6"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column6" color="white"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 5){
                     ?>
-                          <td class="<?php echo $classStyle ?>" data-column="column7"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column7" color="white"><?php echo ($event) ?></td>
                     <?php
                     }elseif ($j == 6){
                     ?>
-                          <td class="<?php echo $classStyle ?>" data-column="column8"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column8" color="white"><?php echo ($event) ?></td>
                     <?php } ?>
 
                 <?php } ?>
