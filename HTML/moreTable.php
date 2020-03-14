@@ -107,7 +107,7 @@ include("session.php"); ?>
 
                 //$username = mysqli_real_escape_string($db,$_POST['username']);
 
-                $username = "1"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
+                $username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
 
                 for ($i = 0; $i < 24; $i++) { 
@@ -150,6 +150,7 @@ include("session.php"); ?>
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
                             $event = "$event " . $row["name"];
                             $classStyle = "column100 yellow";
+                            //MAKE A DIFFERENT COLOUR FOR EACH COURSE
                             //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
                             }
                           }
