@@ -77,253 +77,142 @@ include("session.php"); ?>
           <div class="scroll">
             <table data-vertable="ver1" >
             <tbody>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">7:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 column3" data-column="column3"></td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
+            <?php
 
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">8:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 column3" data-column="column3"></td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
+//--------------------------------------------------------------------------------------------
+//Display Timetable of $username
 
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">9:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 yellow" data-column="column3">COMP16412</td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
+              function hours_between($date1, $date2) {
+                $date1 = strtotime($date1);
+                $date2 = strtotime($date2);
+                $diff = $date2 - $date1;
+                $hoursBetween = $diff/3600;
+                return $hoursBetween;
+              }
+                
+                $servername = "dbhost.cs.man.ac.uk";
+                $username = "g63968ef";
+                $password = "database";
+                $dbname = "2019_comp10120_y4";
 
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">10:00</td>
-                <td class="column100 green" data-column="column2">COMP11212</td>
-                <td class="column100 pink" data-column="column3">COMP13212</td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 darkblue" data-column="column8">Volleyball</td>
-              </tr>
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
 
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">11:00</td>
-                <td class="column100 red" data-column="column2">COMP11120</td>
-                <td class="column100 green" data-column="column3">COMP11212</td>
-                <td class="column100 green" data-column="column4">COMP11212</td>
-                <td class="column100 red" data-column="column5">COMP11120</td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);}
 
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">12:00</td>
-                <td class="column100 purple" data-column="column2">COMP10120</td>
-                <td class="column100 column3" data-column="column3"></td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 pink" data-column="column5">COMP13212</td>
-                <td class="column100 blue" data-column="column6">COMP1TUT</td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">13:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 yellow" data-column="column3">COMP16412</td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 red" data-column="column6">COMP11120</td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">14:00</td>
-                <td class="column100 yellow" data-column="column2">COMP16412</td>
-                <td class="column100 yellow" data-column="column3">COMP16412</td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 orange" data-column="column5">COMP15212</td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">15:00</td>
-                <td class="column100 yellow" data-column="column2">COMP16412</td>
-                <td class="column100 purple" data-column="column3">COMP10120</td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 bluegreen" data-column="column7">Chinese</td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">16:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 orange" data-column="column3">COMP15212</td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 pink" data-column="column5">COMP13212</td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">17:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 column3" data-column="column3"></td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 pink" data-column="column5">COMP13212</td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">18:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 column3" data-column="column3"></td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">19:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 column3" data-column="column3"></td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
+                $monday = date('Y-m-d 00:00:00',time()+( 1 - date('w'))*24*3600);
 
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">20:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 column3" data-column="column3"></td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
+                for ($i = 0; $i < 24; $i++) { 
+                     $m = $i+1; 
+                     ?>
+                  <tr class="row100">
+                        <td class="column100 column1" data-column="column1"><?php echo ("$i:00 - $m:00") ?></td>
+                  <?php
+                    for ($j = 0; $j < 7; $j++) {
+                      $event = NULL;
+                      $listOfEventIDs = array();
+                      $listOfCourses = array();
+                      $classStyle = "column100 column2"; //BASIC STYLE FOR EMPTY BOXES
 
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">21:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 column3" data-column="column3"></td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">22:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 column3" data-column="column3"></td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">23:00</td>
-                <td class="column100 column2" data-column="column2"></td>
-                <td class="column100 column3" data-column="column3"></td>
-                <td class="column100 column4" data-column="column4"></td>
-                <td class="column100 column5" data-column="column5"></td>
-                <td class="column100 column6" data-column="column6"></td>
-                <td class="column100 column7" data-column="column7"></td>
-                <td class="column100 column8" data-column="column8"></td>
-              </tr>
-              <!-- <tr class="row100">
-                <td class="column100 column1" data-column="column1">00:00</td>
-                <td class="column100 column2" data-column="column2">8:00 AM</td>
-                <td class="column100 column3" data-column="column3">--</td>
-                <td class="column100 column4" data-column="column4">--</td>
-                <td class="column100 column5" data-column="column5">8:00 AM</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">5:00 PM</td>
-                <td class="column100 column8" data-column="column8">8:00 AM</td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">01:00</td>
-                <td class="column100 column2" data-column="column2">8:00 AM</td>
-                <td class="column100 column3" data-column="column3">--</td>
-                <td class="column100 column4" data-column="column4">--</td>
-                <td class="column100 column5" data-column="column5">8:00 AM</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">5:00 PM</td>
-                <td class="column100 column8" data-column="column8">8:00 AM</td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">02:00</td>
-                <td class="column100 column2" data-column="column2">8:00 AM</td>
-                <td class="column100 column3" data-column="column3">--</td>
-                <td class="column100 column4" data-column="column4">--</td>
-                <td class="column100 column5" data-column="column5">8:00 AM</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">5:00 PM</td>
-                <td class="column100 column8" data-column="column8">8:00 AM</td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">03:00</td>
-                <td class="column100 column2" data-column="column2">8:00 AM</td>
-                <td class="column100 column3" data-column="column3">--</td>
-                <td class="column100 column4" data-column="column4">--</td>
-                <td class="column100 column5" data-column="column5">8:00 AM</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">5:00 PM</td>
-                <td class="column100 column8" data-column="column8">8:00 AM</td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">04:00</td>
-                <td class="column100 column2" data-column="column2">8:00 AM</td>
-                <td class="column100 column3" data-column="column3">--</td>
-                <td class="column100 column4" data-column="column4">--</td>
-                <td class="column100 column5" data-column="column5">8:00 AM</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">5:00 PM</td>
-                <td class="column100 column8" data-column="column8">8:00 AM</td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">05:00</td>
-                <td class="column100 column2" data-column="column2">8:00 AM</td>
-                <td class="column100 column3" data-column="column3">--</td>
-                <td class="column100 column4" data-column="column4">--</td>
-                <td class="column100 column5" data-column="column5">8:00 AM</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">5:00 PM</td>
-                <td class="column100 column8" data-column="column8">8:00 AM</td>
-              </tr>
-              <tr class="row100">
-                <td class="column100 column1" data-column="column1">06:00</td>
-                <td class="column100 column2" data-column="column2">8:00 AM</td>
-                <td class="column100 column3" data-column="column3">--</td>
-                <td class="column100 column4" data-column="column4">--</td>
-                <td class="column100 column5" data-column="column5">8:00 AM</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">5:00 PM</td>
-                <td class="column100 column8" data-column="column8">8:00 AM</td>
-              </tr> -->
+                      $username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
+
+                      $result1 = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
+                      foreach($result1->fetch_all(MYSQLI_ASSOC) as $row) {
+                        array_push($listOfEventIDs, $row["eventID"]);
+                        }
+
+                      $result2 = $conn->query("SELECT lab FROM HasCourse WHERE username = '" . $username . "';");
+                      foreach($result2->fetch_all(MYSQLI_ASSOC) as $row) {
+                        array_push($listOfCourses, $row["lab"]);
+                        }
+
+                      foreach($listOfCourses as $ids) {
+                        $sqlQuery2 = "SELECT startTime, endTime, name FROM CourseEvents WHERE lab = '" . $ids . "';";
+                        $fetchedEvent2 = $conn->query($sqlQuery2);
+                        foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
+                          $timeTillEventStart = hours_between($monday, $row["startTime"]);
+                          $timeTillEventHoursStart = $timeTillEventStart%24;
+                          $timeTillEventDaysStart = $timeTillEventStart/24;
+                          $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
+                          $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
+                          $timeTillEventEnd = hours_between($monday, $row["endTime"]);
+                          $timeTillEventHoursEnd = $timeTillEventEnd%24;
+                          $timeTillEventDaysEnd = $timeTillEventEnd/24;
+                          $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
+                          $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
+
+                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
+                            $event = "$event " . $row["name"];
+                            //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
+                            }
+                          }
+                        }
+
+                      foreach($listOfEventIDs as $ids) {
+                        $sqlQuery1 = "SELECT startTime, endTime, name FROM Events WHERE eventID = " . $ids;
+                        $fetchedEvent1 = $conn->query($sqlQuery1);
+                        foreach($fetchedEvent1->fetch_all(MYSQLI_ASSOC) as $row) {
+                          $timeTillEventStart = hours_between($monday, $row["startTime"]);
+                          $timeTillEventHoursStart = $timeTillEventStart%24;
+                          $timeTillEventDaysStart = $timeTillEventStart/24;
+                          $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
+                          $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
+                          $timeTillEventEnd = hours_between($monday, $row["endTime"]);
+                          $timeTillEventHoursEnd = $timeTillEventEnd%24;
+                          $timeTillEventDaysEnd = $timeTillEventEnd/24;
+                          $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
+                          $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
+
+                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
+                            //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
+                            //WITH THE EVENT START AND END IN IF STATEMENT
+                            $event = "$event " . $row["name"];
+                            //$classStyle = "column100 column2"; //INSERT STYLE FOR EVENT HERE
+                            }
+                          }
+                        }
+                      
+                    ?>
+
+                    <?php
+                    if ($j == 0) {
+                    ?>
+                          <td class="<?php echo $classStyle ?>" data-column="column2"><?php echo ($event) ?></td>
+                    <?php 
+                    }elseif ($j == 1){
+                    ?>
+                          <td class="<?php echo $classStyle ?>" data-column="column3"><?php echo ($event) ?></td>
+                    <?php
+                    }elseif ($j == 2){
+                    ?>
+                          <td class="<?php echo $classStyle ?>" data-column="column4"><?php echo ($event) ?></td>
+                    <?php
+                    }elseif ($j == 3){
+                    ?>
+                          <td class="<?php echo $classStyle ?>" data-column="column5"><?php echo ($event) ?></td>
+                    <?php
+                    }elseif ($j == 4){
+                    ?>
+                          <td class="<?php echo $classStyle ?>" data-column="column6"><?php echo ($event) ?></td>
+                    <?php
+                    }elseif ($j == 5){
+                    ?>
+                          <td class="<?php echo $classStyle ?>" data-column="column7"><?php echo ($event) ?></td>
+                    <?php
+                    }elseif ($j == 6){
+                    ?>
+                          <td class="<?php echo $classStyle ?>" data-column="column8"><?php echo ($event) ?></td>
+                    <?php } ?>
+
+                <?php } ?>
+                    </tr>
+                <?php } 
+                
+//----------------------------------------------------------------------------------
+
+                ?>
             </tbody>
           </table>
         </div>
