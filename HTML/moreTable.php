@@ -145,7 +145,7 @@ include("session.php"); ?>
 
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
                             $event = "$event " . $row["name"];
-                            $classStyle = "column100 blue";
+                            $classStyle = "column100 yellow";
                             //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
                             }
                           }
@@ -170,7 +170,7 @@ include("session.php"); ?>
                             //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
                             //WITH THE EVENT START AND END IN IF STATEMENT
                             $event = "$event " . $row["name"];
-                            $classStyle = "column100 red";
+                            $classStyle = "column100 blue";
                             }
                           }
                         }

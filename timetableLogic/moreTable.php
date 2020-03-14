@@ -113,7 +113,9 @@
                       $listOfCourses = array();
                       $classStyle = "column100 column2"; //BASIC STYLE FOR EMPTY BOXES
 
-                      $username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
+                      $username = mysqli_real_escape_string($db,$_POST['username']);
+
+                      //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
                       $result1 = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
                       foreach($result1->fetch_all(MYSQLI_ASSOC) as $row) {
