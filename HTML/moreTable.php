@@ -145,6 +145,7 @@ include("session.php"); ?>
 
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
                             $event = "$event " . $row["name"];
+                            $classStyle = "column100 blue";
                             //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
                             }
                           }
