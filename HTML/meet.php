@@ -67,8 +67,11 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
     <div class = "picture">
       <a href="meet.php">Meeting</a>
     </div>
-  <div class="text100">
+    <div class="text100">
       <a href = "logout.php">Sign Out</a>
+	</div>
+	<div class="text100">
+        <a><?php echo($login_session) ?></a>
     </div>
     <div class="text100">
       <a href="ContactForm.php">Contact Us</a>
