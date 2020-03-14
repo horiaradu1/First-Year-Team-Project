@@ -170,7 +170,7 @@ include("session.php"); ?>
                             //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
                             //WITH THE EVENT START AND END IN IF STATEMENT
                             $event = "$event " . $row["name"];
-                            //$classStyle = "column100 column2"; //INSERT STYLE FOR EVENT HERE
+                            $classStyle = "column100 red";
                             }
                           }
                         }
