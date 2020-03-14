@@ -187,7 +187,7 @@ include("session.php"); ?>
                             //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
                             //WITH THE EVENT START AND END IN IF STATEMENT
                             $event = "$event " . $row["name"];
-                            $classStyle = "column100 yellow";
+                            $classStyle = "column100 yellow";//CHANGE COLOR OF ARBITRARY EVENT IF YOU WANT
                             }
                           }
                         }
