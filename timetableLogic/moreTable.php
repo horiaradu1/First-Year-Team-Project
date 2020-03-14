@@ -100,7 +100,9 @@
                     die("Connection failed: " . $conn->connect_error);}
 
                 $monday = date('Y-m-d 00:00:00',time()+( 1 - date('w'))*24*3600);
-                $username = mysqli_real_escape_string($db,$_POST['username']);
+
+                $username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
+
 
 
                 for ($i = 0; $i < 24; $i++) { 
@@ -115,8 +117,6 @@
                       $listOfEventIDs = array();
                       $listOfCourses = array();
                       $classStyle = "column100 column2"; //BASIC STYLE FOR EMPTY BOXES
-
-                      //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
                       $result1 = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
                       foreach($result1->fetch_all(MYSQLI_ASSOC) as $row) {
