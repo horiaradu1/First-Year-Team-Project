@@ -4,7 +4,7 @@
 	<title>TIMEonTABLE - Meetings</title>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel = "stylesheet" type = "text/css" href = "timetable.css"> -->
+  <link rel = "stylesheet" type = "text/css" href = "timetable.css">
 	<meta charset = "utf-8" />
         <!-- add icon link -->
         <link rel = "icon" href =
@@ -14,6 +14,7 @@
 
 </head>
 <body>
+<?php include("session.php"); ?>
 <div class="navbar">
       <div class = "picture">
       <a href="moreTable.php">Home</a>
