@@ -93,7 +93,7 @@
 			</div>
 		<div class="move-useless-text">
 			<span class="useless-text">
-				I can put whatever I want here Sorana!!!
+				Example text
 			</span>
 		</div>
 		</div>
