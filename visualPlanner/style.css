@@ -281,7 +281,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 20px;
 }
 .timetable .week-names > div {
   display: -webkit-box;
