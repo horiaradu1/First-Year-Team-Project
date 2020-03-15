@@ -136,7 +136,7 @@
 			</div>
 		<div class="move-useless-text">
 			<span class="useless-text">
-				TEXT
+				Example text
 			</span>
 		</div>
 		</div>
