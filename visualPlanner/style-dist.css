@@ -33,7 +33,7 @@ $accents: (
 html, body{
   margin: 0;
   font-family: 'Karla';
-  color: $cutty-sark;
+  color: white;
 }
 
 *{
