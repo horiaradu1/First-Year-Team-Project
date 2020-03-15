@@ -40,7 +40,6 @@
     </div>
 </body>
 <?php
-include("session.php"); 
 error_reporting(E_ERROR);
 
 $servername = "dbhost.cs.man.ac.uk";
