@@ -145,6 +145,7 @@ ul, li {
 .wrap-login100 {
   width: 20%;
   background: #fff;
+  min-width: 390px;
   border-radius: 10px;
   overflow: hidden;
   padding: 55px 55px 33px 55px;
