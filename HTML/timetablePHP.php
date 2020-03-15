@@ -40,9 +40,6 @@
     </div>
 </body>
 <br></br>
-<br></br>
-<br></br>
-<br></br>
 <?php
 error_reporting(E_ERROR);
 
