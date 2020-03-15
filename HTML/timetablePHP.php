@@ -253,7 +253,7 @@ $title = $_GET['title']; // output title
 $styleBoarder = "border-block-color: white; border-block-style: solid; border-right-color: white; border-left-color: white;"
 ?>
 
-<h1 style="position: center;"><?php echo $title ?></h1>
+<h1 class='title'><?php echo $title ?></h1>
 <p>&nbsp; *Percent = percent of people available</p>
 <!-- <p>&nbsp; Date today: <?php //print_r($dateToday->format('Y-m-d')) ?></p> -->
 

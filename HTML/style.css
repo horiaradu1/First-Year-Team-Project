@@ -3,7 +3,9 @@ html, body {
   font-family: 'Karla';
   color: white;
 }
-
+.title {
+  text-align: center;
+}
 * {
   box-sizing: border-box;
 }
