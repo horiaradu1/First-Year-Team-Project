@@ -274,7 +274,7 @@ html, body {
 }
 .timetable .weekend {
   background: #fbfbfc;
-  color: #87a1ad;
+  color: white;
 }
 .timetable .week-names {
   grid-area: week;
