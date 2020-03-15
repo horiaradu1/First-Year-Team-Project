@@ -161,12 +161,12 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
               <input class="input100" type="text" name="location" placeholder="Location">
               <span class="focus-input100" placeholder="Location"></span>
             </div> -->
-					<form action="/g63968ef/deploymenttest/visualPlanner/timetablePHP.php?title=<?php echo $_POST['title']?>" method=post>	
+					<form action="/g63968ef/deploymenttest/visualPlanner/timetablePHP.php?title=<?php if (isset($_POST['title'])) echo $_POST['title']; else echo "Undefined"?>" method=post>	
 					<input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />			
-						<div class="container-login100-form-btn send">
+						<div class="container-login100-form-btn <?php if (count($items) == 0) echo "disabled"; ?> send">
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
-								<button class="login100-form-btn" type="submit">
+								<button class="login100-form-btn" type="submit" <?php if (count($items) == 0) echo "disabled"?>>
 									Plan meeting
 								</button>
 							</div>
