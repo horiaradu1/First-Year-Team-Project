@@ -21,6 +21,22 @@ $password = "database";
 $dbname = "2019_comp10120_y4";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
+function inBase($string) {
+	global $conn, $items;
+	$result = $conn->query("SELECT * FROM Users WHERE Username = '$string'"); // not injection proof
+        if (!$result) echo $conn->error;
+
+        if($result->num_rows == 0) {
+            
+        } 
+
+        else {
+            array_push($items, $string);
+			//$items[] = $_POST['item'];
+			// $items[] = $string;
+        }
+
+    }
 
 $title = "";
 $items = array();
@@ -54,11 +70,8 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
         }
     }
 }
-
 ?>
 <body>
-	
-
 	<div class="limiter">
 		<div class="navbar">
       <div class = "picture">
@@ -67,11 +80,8 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
     <div class = "picture">
       <a href="meet.php">Meeting</a>
     </div>
-    <div class="text100">
+  <div class="text100">
       <a href = "logout.php">Sign Out</a>
-	</div>
-	<div class="text100">
-        <a><?php echo($login_session) ?></a>
     </div>
     <div class="text100">
       <a href="ContactForm.php">Contact Us</a>
@@ -111,44 +121,57 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 			</div> -->
 
 				<div class="wrap-login100">
-					<form class="login100-form validate-form">
+					<div class="login100-form validate-form">
 						<div class="put-it-here-to-include-padding">
 						<span class="login100-form-title p-b-26">
 							Meeting Planner
 						</span>
+						<ul>
+						<?php if($items): ?>
+							<?php foreach($items as $item): ?>
+								<li><?php echo $item ?></li>
+							<?php endforeach; ?>
+						<?php endif; ?>
+						</ul>
 					  </div>
-
-						<div class="wrap-input100 validate-input" >
-							<input class="input100" type="text" name="title" placeholder="Title" id="title" required value="<?php if (isset($_POST['title'])) echo $_POST['title']; ?>"><br><br>">
+						<form method="post">
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="text" name="title" placeholder="Title" id="title" value="<?php if (isset($_POST['title'])) echo $_POST['title']; ?>" required>
 							<span class="focus-input100" placeholder="Title"></span>
 						</div>
-            <div class="wrap-input100 validate-input" >
-							<input class="input100" type="text" name="participants" placeholder="Participants" required>
+            				<div class="wrap-input100 validate-input">
+							<input class="input100" type="text" name="item" id="item" placeholder="Participants">
 							<span class="focus-input100" placeholder="Participants"></span>
 						</div>
-						<div class="container-login100-form-btn plus">
+						<div class="container-login100-form-btn plus" >
 							<div class="wrap-login100-form-btn plus">
 								<div class="login100-form-bgbtn plus"></div>
-								<button class="login100-form-btn plus" input type="submit" value="<?php error_reporting(E_ERROR);  
-                                                try {$title = $_POST['title'];} 
-                                                catch (Exception $e) {} ?>">
+								<?php if($items): ?>
+									<?php foreach($items as $item): ?>
+										<input type="hidden" name="items[]" value="<?php echo $item;?>" />
+									<?php endforeach; ?>
+								<?php endif; ?>
+								<button class="login100-form-btn plus" type="submit">
 									+
 								</button>
 							</div>
 						</div>
+						</form>
             <!-- <div class="wrap-input100 three">
               <input class="input100" type="text" name="location" placeholder="Location">
               <span class="focus-input100" placeholder="Location"></span>
             </div> -->
-
+					<form action="/g63968ef/deploymenttest/visualPlanner/timetablePHP.php?title=<?php echo $_POST['title']?>" method=post>	
+					<input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />			
 						<div class="container-login100-form-btn send">
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
-								<button class="login100-form-btn" action="/g63968ef/deploymenttest/visualPlanner/timetablePHP.php?title=<?php echo $title?>" method=post>
+								<button class="login100-form-btn" type="submit">
 									Plan meeting
 								</button>
 							</div>
 						</div>
+					</form>
 
 						<!-- <div class="text-center p-t-115">
 							<span class="txt1">
@@ -159,7 +182,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 								Sign Up
 							</a> -->
 						</div>
-				</form>
+				</div>
 			</div>
 
 </div>
