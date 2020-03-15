@@ -67,7 +67,7 @@
 	      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
 	      if (!password_verify($_POST['password'], $row['hash'])) {
-	        header("location: login_wrong.php");
+	        header("location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/moreTable.php");
 	      }
 
 	      // If result matched $myusername and $mypassword, table row must be 1 row
