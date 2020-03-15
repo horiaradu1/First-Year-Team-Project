@@ -487,3 +487,11 @@ textarea:-ms-input-placeholder { color: #adadad;}
 .text100{
 	float: right;
 }
+
+.container-login100-form-btn.send.disabled {
+  opacity: 0.6;
+}
+
+.container-login100-form-btn.send.disabled button {
+  cursor: default !important;
+}
