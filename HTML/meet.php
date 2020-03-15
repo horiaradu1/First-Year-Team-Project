@@ -82,6 +82,9 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
     </div>
   <div class="text100">
       <a href = "logout.php">Sign Out</a>
+	</div>
+	<div class="text100">
+        <a><?php echo($login_session) ?></a>
     </div>
     <div class="text100">
       <a href="ContactForm.php">Contact Us</a>
@@ -161,7 +164,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
               <input class="input100" type="text" name="location" placeholder="Location">
               <span class="focus-input100" placeholder="Location"></span>
             </div> -->
-					<form action="/g63968ef/deploymenttest/visualPlanner/timetablePHP.php?title=<?php if (isset($_POST['title'])) echo $_POST['title']; else echo "Undefined"?>" method=post>	
+					<form action="/g34904ps/team/HTML/timetablePHP.php?title=<?php if (isset($_POST['title'])) echo $_POST['title']; else echo "Undefined"?>" method=post>	
 					<input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />			
 						<div class="container-login100-form-btn <?php if (count($items) == 0) echo "disabled"; ?> send">
 							<div class="wrap-login100-form-btn">
