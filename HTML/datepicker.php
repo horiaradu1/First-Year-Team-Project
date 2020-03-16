@@ -106,25 +106,3 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 </body>
 </html>
-
-
-
-
-
-<!doctype html>
-<html lang="en">
-<head>
-
-</head>
-<body>
-
-<p>Start: <input type="text" id="datepicker"></p>
-
-<form action="welcome.php">
-  <label for="duration">Duration in hours:</label>
-  <input type="text" id="duration" name="duration"><br><br>
-  <input type="submit" value="Submit">
-</form>
-
-</body>
-</html>
