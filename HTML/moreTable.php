@@ -57,7 +57,7 @@ include("session.php"); ?>
 				<button class="btn">CREATE EVENT</button>
 			</div>
 			<div class="btn2">
-				<button class="btn">CREATE MEETING</button>
+				<button onclick="window.location.href = '/g34904ps/team/HTML/meet.php';" class="btn">CREATE MEETING</button>
 			</div>
 			</div>
       <div class="before">
