@@ -16,11 +16,17 @@
   } );
   </script>
 
+<script>
+$(document).ready(function(){
+    $('#time').timepicker();
+});
+</script>
 
 </head>
 <body>
 
 <p>Start: <input type="text" id="datepicker"></p>
+<p>Duration: <input type="text" id="time"/></p>
 
 <form action="welcome.php">
   <label for="duration">Duration in hours:</label>
