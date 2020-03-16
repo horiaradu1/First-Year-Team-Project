@@ -19,7 +19,6 @@ p {
 }
 img{
   width: 10vw;
-  height: : 20vw;
 }
 .container{
   width: 100%;
@@ -80,6 +79,10 @@ img{
   right: 900px;
   top: 200px;
 }*/
+.photo {
+  border: 3px solid black;
+  border-radius: 3px;
+}
 .text-wrapper{
   width: 200px;
   position: relative;
