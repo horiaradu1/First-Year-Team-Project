@@ -10,11 +10,8 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
-  <!-- jQuery timepicker library -->
-  <link rel="stylesheet" href="jquery-timepicker/jquery.timepicker.min.css">
-  <script src="jquery-timepicker/jquery.timepicker.min.js"></script>
 
-  
+
 
   <script>
   $( function() {
