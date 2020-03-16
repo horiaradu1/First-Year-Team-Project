@@ -73,12 +73,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 					  </div>
 						<form method="post">
 						<div class="wrap-input100 validate-input">
-							<input class="input100" type="text" name="title" placeholder="Title" id="title" value="<?php if (isset($_POST['title'])) echo $_POST['title']; ?>" required>
-							<span class="focus-input100" placeholder="Title"></span>
+							<input class="input100" type="text" name="date" placeholder="Date" id="datepicker" required>
+							<span class="focus-input100" placeholder="date"></span>
 						</div>
             				<div class="wrap-input100 validate-input">
-							<input class="input100" type="text" name="item" id="item" placeholder="Participants">
-							<span class="focus-input100" placeholder="Participants"></span>
+							<input class="input100" type="text" name="item" id="duration" placeholder="Duration in hours">
+							<span class="focus-input100" placeholder="Duration "></span>
 						</div>
 						<div class="container-login100-form-btn plus" >
 							<div class="wrap-login100-form-btn plus">
@@ -90,7 +90,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 							</div>
 						</div>
 						</form>
-					<form action="/g34904ps/team/HTML/timetablePHP.php?title=<?php if (isset($_POST['title'])) echo $_POST['title']; else echo "Undefined"?>" method=post>
+					<form action="/g34904ps/team/HTML/timetablePHP.php?date=<?php if (isset($_POST['date'])) echo $_POST['date']; else echo "Undefined"?>" method=post>
 					<input type='hidden' name='items' />
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
