@@ -27,13 +27,6 @@
   <script>
   $( function() {
     $( "#startDate" ).datepicker();
-    $( "#endDate" ).datepicker();
-
-
-    $(document).ready(function(){
-    $('#startTime').timepicker();
-
-    $('#endTime').timepicker();
 });
 
   } );
