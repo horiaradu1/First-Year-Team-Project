@@ -9,9 +9,9 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-                              
-  <link rel="stylesheet" href="jquery-timepicker/jquery.timepicker.css">
-  <script src="jquery-timepicker/jquery.timepicker.min.js"></script>
+
+  <link rel="stylesheet" href="/jquery-timepicker/jquery.timepicker.css">
+  <script src="/jquery-timepicker/jquery.timepicker.min.js"></script>
 
 
   <script>
