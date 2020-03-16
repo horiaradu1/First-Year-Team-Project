@@ -21,16 +21,22 @@
   } );
   </script>
 
-<script>
-$(document).ready(function(){
-    $('#time').timepicker();
-});
-</script>
+
+  <script>
+  $( function() {
+    $( "#picker" ).datepicker();
+    $('endTime').timepicker(options);
+  } );
+  </script>
+
 
 </head>
 <body>
 
-<p>Start: <input type="text" id="datepicker"></p>
+<p>Start date: <input type="text" id="picker"></p>
+<p>Start time: <input type="text" id="startTime"/></p>
+
+<p>End date: <input type="text" id="datepicker"></p>
 <p>Start time: <input type="text" id="startTime"/></p>
 
 <form action="welcome.php">
