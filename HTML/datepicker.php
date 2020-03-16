@@ -16,6 +16,7 @@
 
   <script>
   $( function() {
+    $( "#picker" ).datepicker();
     $( "#datepicker" ).datepicker();
     $('startTime').timepicker(options);
   } );
@@ -24,7 +25,7 @@
 
   <script>
   $( function() {
-    $( "#picker" ).datepicker();
+
     $('endTime').timepicker(options);
   } );
   </script>
