@@ -1,8 +1,3 @@
-
-
-
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,46 +10,22 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
-
-  <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- jQuery timepicker library -->
-<link rel="stylesheet" href="jquery-timepicker/jquery.timepicker.min.css">
-<script src="jquery-timepicker/jquery.timepicker.min.js"></script>
-
-
   <script>
   $( function() {
     $( "#datepicker" ).datepicker();
-});
-
   } );
   </script>
+
 
 </head>
 <body>
 
-
-<!--  first line: -->
-<p>Start date: <input type="text" id="datepicker">
-  Start time: <input type="text" id = "startTime"> </p>
-
-<!-- Second line -->
-<p>End date: <input type="text" id="endDate">
-  End time: <input type="text" id = "endTime"></p>
-
+<p>Start: <input type="text" id="datepicker"></p>
 
 <form action="welcome.php">
-  <label for="name">Name of the event:</label>
-  <input type="text" id="name" name="name"><br>
-
-
-  <label for="name">Description:</label>
-  <input type="text" id="description" name="description"><br>
-
+  <label for="duration">Duration in hours:</label>
+  <input type="text" id="duration" name="duration"><br><br>
   <input type="submit" value="Submit">
-
 </form>
 
 </body>
