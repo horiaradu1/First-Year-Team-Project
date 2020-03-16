@@ -22,4 +22,5 @@ $hoursPassed = date('H'); // hours passed today (subtract later)
 $clickedTime = date('H-d-F', strtotime("+$hour hours, +$day days, -$hoursPassed hours"));
 
 echo "Hour, day, month: " . $clickedTime; //echo "day: " . $day . " hours: " . $hour;
+
 ?>
