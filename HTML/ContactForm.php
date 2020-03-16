@@ -19,7 +19,7 @@ include("session.php"); ?>
 			<a href="meet.php">Meeting</a>
 		</div>
 	<div class="text100">
-			<a href="#news">Sign out</a>
+			<a href="logout.php">Sign out</a>
     </div>
     <div class="text100">
         <a><?php echo($login_session) ?></a>

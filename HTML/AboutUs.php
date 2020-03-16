@@ -20,7 +20,7 @@ include("session.php"); ?>
        <!-- connect to the login -->
     </div>
   <div class="text100">
-      <a href="#news">Sign out</a>
+      <a href="logout.php">Sign out</a>
        <!-- connect to the login -->
     </div>
     <div class="text100">
