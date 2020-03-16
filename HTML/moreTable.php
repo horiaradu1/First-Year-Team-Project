@@ -41,10 +41,10 @@ include("session.php"); ?>
           try {
             $week = $_GET['week'];
           } catch (Exception $e) {}
-          $sMonth = date('F',time()+( 1 - date('w'))*24*3600);
-          $eMonth = date('F',time()+( 7 - date('w'))*24*3600);
-          $sDay = date('d',time()+( 1 - date('w'))*24*3600); //date('d');
-          $eDay = date('d',time()+( 7 - date('w'))*24*3600);
+          $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
+          $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
+          $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
+          $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
 
           echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
         ?>
