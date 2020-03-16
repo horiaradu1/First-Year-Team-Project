@@ -37,6 +37,10 @@ include("session.php"); ?>
     <div class="container-table100">
       <div class="week">
         <?php
+          $week = 0;
+          try {
+            $week = $_GET['week'];
+          }
           $sMonth = date('F',time()+( 1 - date('w'))*24*3600);
           $eMonth = date('F',time()+( 7 - date('w'))*24*3600);
           $sDay = date('d',time()+( 1 - date('w'))*24*3600); //date('d');
@@ -57,10 +61,10 @@ include("session.php"); ?>
 			</div>
 			</div>
       <div class="before">
-      <a href="#" class="previous round">&#8249;</a>
+      <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
     </div>
     <div class="after">
-      <a href="#" class="previous round">&#8250;</a>
+      <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week += 1; echo $week; ?> " class="previous round">&#8250;</a>
     </div>
       <div class="wrap-table100">
         <div class="table100 ver1 m-b-110">
