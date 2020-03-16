@@ -18,17 +18,14 @@
   $( function() {
     $( "#picker" ).datepicker();
     $( "#datepicker" ).datepicker();
+
+     // TIME PICKER DOESNT WORK!
     $('startTime').timepicker(options);
-  } );
-  </script>
-
-
-  <script>
-  $( function() {
-
     $('endTime').timepicker(options);
   } );
   </script>
+
+
 
 
 </head>
