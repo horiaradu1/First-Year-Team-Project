@@ -15,22 +15,41 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
+
+  <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- jQuery timepicker library -->
+<link rel="stylesheet" href="jquery-timepicker/jquery.timepicker.min.css">
+<script src="jquery-timepicker/jquery.timepicker.min.js"></script>
+
+
   <script>
   $( function() {
-    $( "#datepicker" ).datepicker();
+    $( "#startDate" ).datepicker();
+    $( "#endDate" ).datepicker();
+
+
+    $(document).ready(function(){
+    $('#startTime').timepicker();
+
+    $('#endTime').timepicker();
+});
+
   } );
   </script>
 
 </head>
 <body>
 
+
 <!--  first line: -->
-<p>Start date: <input type="text" id="datepicker">
-  Start time: <input type="text" id = "StartTime"> </p>
+<p>Start date: <input type="text" id="startDate">
+  Start time: <input type="text" id = "startTime"> </p>
 
 <!-- Second line -->
-<p>End date: <input type="text" id="datepicker">
-  End time: <input type="text" id = "EndTime"></p>
+<p>End date: <input type="text" id="endDate">
+  End time: <input type="text" id = "endTime"></p>
 
 
 <form action="welcome.php">
