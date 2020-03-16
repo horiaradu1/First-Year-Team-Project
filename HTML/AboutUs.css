@@ -81,8 +81,7 @@ img{
   top: 200px;
 }*/
 .photo {
-  border: solid black;
-  border-radius: 2px;
+  border-radius: 10px;
 }
 .text-wrapper{
   width: 200px;
