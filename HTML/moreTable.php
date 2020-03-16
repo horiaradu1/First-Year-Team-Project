@@ -37,7 +37,7 @@ include("session.php"); ?>
     <div class="container-table100">
       <div class="week">
         <?php
-          $week = 0;
+          //$week = 0;
           try {
             $week = $_GET['week'];
           } catch (Exception $e) {}
