@@ -36,7 +36,7 @@ $username = "g63968ef";
 $password = "database";
 $dbname = "2019_comp10120_y4";
 
-$conn = new mysqli($servername, $username, $password, $dbname
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 ?>
 <body>
