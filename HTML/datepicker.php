@@ -9,13 +9,15 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-
-
+                              
+  <link rel="stylesheet" href="jquery-timepicker/jquery.timepicker.css">
+  <script src="jquery-timepicker/jquery.timepicker.min.js"></script>
 
 
   <script>
   $( function() {
     $( "#datepicker" ).datepicker();
+    $('startTime').timepicker(options);
   } );
   </script>
 
@@ -29,11 +31,11 @@ $(document).ready(function(){
 <body>
 
 <p>Start: <input type="text" id="datepicker"></p>
-<p>Duration: <input type="text" id="time"/></p>
+<p>Start time: <input type="text" id="startTime"/></p>
 
 <form action="welcome.php">
   <label for="duration">Duration in hours:</label>
-  <input type="text" id="duration" name="duration"><br><br>
+  <input type="text" id="time" ><br><br>
   <input type="submit" value="Submit">
 </form>
 
