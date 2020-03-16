@@ -26,7 +26,7 @@
 
   <script>
   $( function() {
-    $( "#startDate" ).datepicker();
+    $( "#datepicker" ).datepicker();
 });
 
   } );
@@ -37,7 +37,7 @@
 
 
 <!--  first line: -->
-<p>Start date: <input type="text" id="startDate">
+<p>Start date: <input type="text" id="datepicker">
   Start time: <input type="text" id = "startTime"> </p>
 
 <!-- Second line -->
