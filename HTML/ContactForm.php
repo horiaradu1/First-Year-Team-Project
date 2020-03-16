@@ -40,17 +40,17 @@ include("session.php"); ?>
         <h3 style="text-align: center;">Contact us</h3>
       </span>
 
-      <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+      <div class="wrap-input100 validate-input" data-validate="Please enter your name" required>
         <input class="input100" type="text" name="name" placeholder="Full Name">
         <span class="focus-input100"></span>
       </div>
 
-      <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+      <div class="wrap-input100 validate-input" data-validate="Please enter your name" required>
         <input class="input100" type="text" name="name" placeholder="Email">
         <span class="focus-input100"></span>
       </div>
 
-      <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+      <div class="wrap-input100 validate-input" data-validate = "Please enter your message" required>
         <textarea class="input100" name="message" placeholder="Your Message"></textarea>
         <span class="focus-input100"></span>
       </div>
