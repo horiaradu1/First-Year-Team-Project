@@ -147,15 +147,13 @@ img{
 }
 .photo_container1{
 	position: relative;
-  /* top: 48%; */
-  bottom: 2%;
+  top: 48%;
 	right: 60%;
 	text-align: center;
 }
 .photo_container2{
 	position: relative;
-  /* top: 48%; */
-  bottom: 2%;
+  top: 48%;
 	right: 43%;
 	text-align: center;
 }
