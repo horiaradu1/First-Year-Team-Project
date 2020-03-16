@@ -109,8 +109,8 @@ include("session.php"); ?>
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);}
-
-                $monday = date('Y-m-d 00:00:00',time()+( 1 - date('w'))*24*3600);
+                
+                $monday = date('Y-m-d 00:00:00',time()+( 1+(7*$week) - date('w'))*24*3600);
 
                 //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
