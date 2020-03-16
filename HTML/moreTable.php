@@ -64,7 +64,7 @@ include("session.php"); ?>
       <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
     </div>
     <div class="after">
-      <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week = $week + 1; echo $week; ?> " class="previous round">&#8250;</a>
+      <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week += 1; echo $week; ?> " class="previous round">&#8250;</a>
     </div>
       <div class="wrap-table100">
         <div class="table100 ver1 m-b-110">
