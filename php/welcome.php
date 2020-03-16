@@ -4,7 +4,6 @@ include("session.php");
 // responsible for adding the courses from course selector
 if (isset($_POST["submit"])) {
 
-echo "SENDING!!!!!!!!!";
   // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
 
   $course = $_POST["new_course"];
@@ -26,10 +25,7 @@ echo "SENDING!!!!!!!!!";
     $db->query($sqlAddCourse);
     echo $db->error;
 }
-else
-{
-  echo "NOT SENDING!";
-}
+
 
 
 // ----------------TIMETABLE INFORMATION: ------------------
