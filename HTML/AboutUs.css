@@ -18,8 +18,8 @@ p {
 	margin: 0px;
 }
 img{
-  width: 200px;
-  height: : 400px;
+  width: 10vw;
+  height: : 20vw;
 }
 .container{
   width: 100%;
@@ -53,15 +53,15 @@ img{
 	color: #fff;
   align: center;
   position: relative;
-  bottom: 120px;
-  left: 650px;
+  bottom: 10%;
+  left: 35%;
 }
 .text{
   font-family: Ariel, Helvetica, sans-serif;
 	font-size: 20px;
 }
 .wrap-text{
-  width: 1000px;
+  width: 60%;
   position: relative;
   bottom: -50px;
   background: #fff;
@@ -143,43 +143,43 @@ img{
 }
 .photo_container1{
 	position: relative;
-	top: 480px;
-	right: 1070px;
+	top: 48%;
+	right: 60%;
 	text-align: center;
 }
 .photo_container2{
 	position: relative;
-	top: 480px;
-	right: 750px;
+	top: 48%;
+	right: 43%;
 	text-align: center;
 }
 .photo_container3{
 	position: relative;
-	bottom: 20px;
-	left: 650px;
+	bottom: 2%;
+	left: 35%;
 	text-align: center;
 }
 .photo_container4{
 	position: relative;
-	bottom: 20px;
-	left: 700px;
+	bottom: 2%;
+	left: 38%;
 	text-align: center;
 }
 .photo_container5{
 	position: relative;
-	bottom: 20px;
-	right: 800px;
+	bottom: 2%;
+	right: 42%;
 	text-align: center;
 }
 .photo_container6{
 	position: relative;
-	bottom: 20px;
-	right: 460px;
+	bottom: 2%;
+	right: 25%;
 	text-align: center;
 }
 .photo_container7{
 	position: relative;
-	bottom: 20px;
-	left: 350px;
+	bottom: 2%;
+	left: 20%;
 	text-align: center;
 }
