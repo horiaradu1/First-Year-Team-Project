@@ -44,8 +44,8 @@ include("session.php"); ?>
     </div>
 
     <div class="photo_container1">
-    <div class="photo">
-      <img src = "kenny2.jpg">
+    <div>
+      <img src = "kenny2.jpg" class="photo">
     </div>
     <div class = "personal-txt">
       <div class = "name-wrap">
@@ -62,7 +62,7 @@ include("session.php"); ?>
   </div>
 
   <div class="photo_container2">
-  <div class="photo">
+  <div>
     <img src = "yoana4.jpg" class="photo">
   </div>
   <div class = "personal-txt">
@@ -80,8 +80,8 @@ include("session.php"); ?>
 </div>
 
 <div class="photo_container3">
-<div class="photo">
-  <img src = "sorana5.jpg">
+<div>
+  <img src = "sorana5.jpg" class="photo">
 </div>
 <div class = "personal-txt">
   <div class = "name-wrap">
@@ -98,8 +98,8 @@ include("session.php"); ?>
 </div>
 
 <div class="photo_container4">
-<div class="photo">
-  <img src = "horia6.jpg">
+<div>
+  <img src = "horia6.jpg" class="photo">
 </div>
 <div class = "personal-txt">
   <div class = "name-wrap">
@@ -116,8 +116,8 @@ include("session.php"); ?>
 </div>
 
 <div class="photo_container5">
-<div class="photo">
-  <img src = "eirik1.jpg">
+<div>
+  <img src = "eirik1.jpg" class="photo">
 </div>
 <div class = "personal-txt">
   <div class = "name-wrap">
@@ -134,8 +134,8 @@ include("session.php"); ?>
 </div>
 
 <div class="photo_container6">
-<div class="photo">
-  <img src = "laura3.jpg">
+<div>
+  <img src = "laura3.jpg" class="photo">
 </div>
 <div class = "personal-txt">
   <div class = "name-wrap">
@@ -153,8 +153,8 @@ include("session.php"); ?>
 
 <div class="photo_container7">
 
-<div class="photo">
-  <img src = "patryk7.jpg">
+<div>
+  <img src = "patryk7.jpg" class="photo">
 </div>
 <div class = "personal-txt">
   <div class = "name-wrap">
