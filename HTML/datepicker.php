@@ -24,12 +24,25 @@
 </head>
 <body>
 
-<p>Start: <input type="text" id="datepicker"></p>
+<!--  first line: -->
+<p>Start date: <input type="text" id="datepicker">
+  Start time: <input type="text" id = "StartTime"> </p>
+
+<!-- Second line -->
+<p>End date: <input type="text" id="datepicker">
+  End time: <input type="text" id = "EndTime"></p>
+
 
 <form action="welcome.php">
-  <label for="duration">Duration in hours:</label>
-  <input type="text" id="duration" name="duration"><br><br>
+  <label for="name">Name of the event:</label>
+  <input type="text" id="name" name="name"><br>
+
+
+  <label for="name">Description:</label>
+  <input type="text" id="description" name="description"><br>
+
   <input type="submit" value="Submit">
+
 </form>
 
 </body>
