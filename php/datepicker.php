@@ -91,13 +91,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 						</div>
 						</form>
 					<form action="/g34904ps/team/HTML/timetablePHP.php?title=<?php if (isset($_POST['title'])) echo $_POST['title']; else echo "Undefined"?>" method=post>
-					<input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />
-						<div class="container-login100-form-btn <?php if (count($items) == 0) echo "disabled"; ?> send">
+					<input type='hidden' name='items' />
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
-								<button class="login100-form-btn" type="submit" <?php if (count($items) == 0) echo "disabled"?>>
-									Plan meeting
-								</button>
 							</div>
 						</div>
 					</form>
