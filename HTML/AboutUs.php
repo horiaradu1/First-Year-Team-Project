@@ -63,7 +63,7 @@ include("session.php"); ?>
 
   <div class="photo_container2">
   <div class="photo">
-    <img src = "yoana4.jpg">
+    <img src = "yoana4.jpg" class="photo">
   </div>
   <div class = "personal-txt">
     <div class = "name-wrap">
