@@ -4,8 +4,8 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css"> -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -70,13 +70,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 						<span class="login100-form-title p-b-26">
 							Add en event to the timetable
 						</span>
-						<ul>
-						<?php if($items): ?>
-							<?php foreach($items as $item): ?>
-								<li><?php echo $item ?></li>
-							<?php endforeach; ?>
-						<?php endif; ?>
-						</ul>
 					  </div>
 						<form method="post">
 						<div class="wrap-input100 validate-input">
@@ -90,11 +83,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 						<div class="container-login100-form-btn plus" >
 							<div class="wrap-login100-form-btn plus">
 								<div class="login100-form-bgbtn plus"></div>
-								<?php if($items): ?>
-									<?php foreach($items as $item): ?>
-										<input type="hidden" name="items[]" value="<?php echo $item;?>" />
-									<?php endforeach; ?>
-								<?php endif; ?>
+
 								<button class="login100-form-btn plus" type="submit">
 									+
 								</button>
