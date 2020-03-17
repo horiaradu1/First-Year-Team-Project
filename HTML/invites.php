@@ -30,7 +30,7 @@ $invites = array();
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'1'";
+$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'eirik'";
         $fetchedInvite = $conn->query($sqlQuery);
         if($fetchedInvite->num_rows == 0) {
           ?>
