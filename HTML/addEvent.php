@@ -4,20 +4,20 @@
 include("session.php");
 
 // responsible for adding the courses from course selector
-if (isset($_POST["submit"])) {
+if (isset($_POST["submitTT"])) {
 
   // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
+    //
+    // $name = $_POST["new_course"];
+    // $description = $_POST["new_lab"];
+  $start =$_POST["insert"];
+    // $end =$_POST[""];
 
-  $name = $_POST["new_course"];
-  $description = $_POST["new_lab"];
-  $start =$_POST[""];
-  $end =$_POST[""];
-
-
-  echo $name;
-  echo $description;
+    //
+    // echo $name;
+    // echo $description;
   echo $start;
-  echo $end;
+    // echo $end;
 
 
       // $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
