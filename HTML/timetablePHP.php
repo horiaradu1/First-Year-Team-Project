@@ -299,12 +299,14 @@ $styleBoarder = "border-block-color: white; border-block-style: solid; border-ri
   </div>
 
   <div class="content">
+      <form>
   <?php
       for ($i = 0; $i < 24; $i++) {
          for ($j = 0; $j < 7; $j++) {
             $percentOccupied = ($planList[$j][$i]/sizeof($items)) * 100;
             if ($percentOccupied == 0) {
                 ?>
+                <input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />
                 <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-free"> <font color="black"><h5>All available</h5></font></div>

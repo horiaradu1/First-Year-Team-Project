@@ -23,4 +23,11 @@ $clickedTime = date('H-d-F', strtotime("+$hour hours, +$day days, -$hoursPassed 
 
 echo "Hour, day, month: " . $clickedTime; //echo "day: " . $day . " hours: " . $hour;
 
+
+
+$items = array();
+if (isset($_POST["items"]))
+    $items = unserialize($_POST['items']);
+echo "Hello:   ";
+print_r($items);
 ?>
