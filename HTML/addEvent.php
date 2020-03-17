@@ -33,8 +33,8 @@ if (isset($_POST["submit"])) {
     echo $db->error;
 
     $sqlAssign = "INSERT into HasEvent
-    VALUES(\"$login_session\", \"$sqlID\")";
-    
+    username = $login_session AND eventID = $sqlID";
+
     $db->query($sqlAssign);
     echo $db->error;
 
