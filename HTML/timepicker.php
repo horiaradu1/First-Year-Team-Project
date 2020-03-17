@@ -23,7 +23,7 @@
   			</div>
   			<script>
   			$(function() {
-  				$('#basicExample').timepicker();
+  				$('#basicExample').timepicker({ 'timeFormat': 'H:i:s' });
   			});
   			</script>
   			<pre class="code rainbow" data-language="javascript"><span class="selector">$</span>(<span class="string">'#basicExample'</span>).<span class="function call">timepicker</span>();</pre>
