@@ -186,7 +186,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 
 	<div class = "wrap-text">
       <span class="text">
-		  <h5 style="text-align: center;">Participants:</h5>
+		  <h4 style="text-align: center;">Participants:</h4>
 		  <ul style="color: black;">
 		  <br></br>
 		<?php if($items): ?>
