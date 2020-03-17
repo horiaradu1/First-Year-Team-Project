@@ -4,20 +4,26 @@
 include("session.php");
 
 // responsible for adding the courses from course selector
-if (isset($_POST["submitTT"])) {
+if (isset($_POST["submit"])) {
 
   // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
-    //
-    // $name = $_POST["new_course"];
-    // $description = $_POST["new_lab"];
-  $start = $_POST["start"];
-    // $end =$_POST[""];
+
+  $name=$_POST["name"];
+  $description=$_POST["description"];
+  $startDate=$_POST["startDate"];
+  $startTime=$_POST["startTime"];
+  $endDate=$_POST["endDate"];
+  $endTime=$_POST["endTime"];
+
+
+  $start = $startTime.$startTime;
+  $end = $endDate.$endTime;
 
     //
-    // echo $name;
-    // echo $description;
+  echo $name;
+  echo $description;
   echo $start;
-    // echo $end;
+  echo $end;
 
 
       // $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
@@ -96,23 +102,6 @@ $(function() {
 
 <!-- Button to submit -->
 <button name="submit">Click to add to your timetable!</button>
-</form>
-
-
-<form method="POST" id="insert">
-
-<!-- type should be hidden -->
-<input name="start"/>
-
-<script>
-$('#insert').bind('submitTT', function(){
-                        var sDate = $('[name=startDate]').val();
-                        var sTime = $('[name=startTime]').val();
-                        $('[name=start]').val(sDate+'@'+sTime);
-                      });
-</script>
-
-<button name="submitTT">Click to test!</button>
 </form>
 
 </body>
