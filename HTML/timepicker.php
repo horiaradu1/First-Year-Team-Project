@@ -6,7 +6,7 @@
   	<title>Timepicker for jQuery – Demos and Documentation</title>
   	<meta name="description" content="A lightweight, customizable jQuery timepicker plugin inspired by Google Calendar. Add a user-friendly javascript timepicker dropdown to your app in minutes.">
   	<script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  	<script type="text/javascript" src="jquery-timepicker/jquery.timepicker.js"></script>
+  	<script type="text/javascript" src="jquery-timepicker/jquery.timepicker.min.js"></script>
   	<link rel="stylesheet" type="text/css" href="jquery-timepicker/jquery.timepicker.css">
 
   	<!-- <script type="text/javascript" src="lib/bootstrap-datepicker.js"></script>
