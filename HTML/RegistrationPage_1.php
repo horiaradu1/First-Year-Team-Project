@@ -184,7 +184,7 @@
 			<a href="AboutUs.php">About Us</a>
 		</div>
 		</div> -->
-		<div class="container-register">
+		<div class="container-login100">
 			<div class="logo" >
 				<img src = "Logo.png">
 			</div>
