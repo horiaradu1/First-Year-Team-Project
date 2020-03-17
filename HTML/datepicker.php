@@ -19,8 +19,8 @@
 
   <script>
   $( function() {
-    $( "#picker" ).datepicker();
-    $( "#datepicker" ).datepicker();
+    $( "#startDate" ).datepicker();
+    $( "#endDate" ).datepicker();
 
   } );
   </script>
@@ -31,24 +31,22 @@
 </head>
 <body>
 
-<p>Start date: <input type="text" id="picker"></p>
-<p>Start time: <input type="text" id="startTime"/></p>
+<p>From: <input type="text" id="startDate"><input type="text" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+<script>
+$(function() {
+  $('#startTime').timepicker({ 'timeFormat': 'H:i:s' });
+});
+</script>
 
-<p>End date: <input type="text" id="datepicker"></p>
-<p>Start time: <input type="text" id="startTime"/></p>
+<p>To: <input type="text" id="endDate"><input type="text" id="endTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+<script>
+$(function() {
+  $('#endTime').timepicker({ 'timeFormat': 'H:i:s' });
+});
+</script>
 
-<form action="welcome.php">
-  <label for="duration">Duration in hours:</label>
-  <input type="text" id="time" ><br><br>
-  <input type="submit" value="Submit">
-</form>
-
-
-
-
-<article>
+<!-- <article>
   <div class="demo">
-    <h2>Basic Example</h2>
     <p>
       <input id="basicExample" type="text" class="time ui-timepicker-input" autocomplete="off">
     </p>
@@ -58,8 +56,7 @@
     $('#basicExample').timepicker({ 'timeFormat': 'H:i:s' });
   });
   </script>
-  <pre class="code rainbow" data-language="javascript"><span class="selector">$</span>(<span class="string">'#basicExample'</span>).<span class="function call">timepicker</span>();</pre>
-</article>
+</article> -->
 
 
 
