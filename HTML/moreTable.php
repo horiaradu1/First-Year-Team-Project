@@ -60,7 +60,7 @@ include("session.php"); ?>
       </div>
       <div class="btn-container" align="left">
 				<div class="btn1">
-				<button <button onclick="window.location.href = '/g34904ps/team/HTML/datepicker.php';"class="btn">CREATE EVENT</button>
+				<button <button onclick="window.location.href = '/g34904ps/team/HTML/addEvent.php';"class="btn">CREATE EVENT</button>
 			</div>
 			<div class="btn2">
 				<button onclick="window.location.href = '/g34904ps/team/HTML/meet.php';" class="btn">CREATE MEETING</button>
