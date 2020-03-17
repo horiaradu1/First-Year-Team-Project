@@ -49,8 +49,8 @@ if (isset($_POST["submit"])) {
 <!-- script for enabling the datepicker -->
   <script>
   $( function() {
-    $( "#startDate" ).datepicker();
-    $( "#endDate" ).datepicker();
+    $( "#startDate" ).datepicker( "option", "altFormat", "yy-mm-dd" );
+    $( "#endDate" ).datepicker( "option", "altFormat", "yy-mm-dd" );
 
   } );
   </script>
@@ -83,6 +83,11 @@ $(function() {
 <!-- snip -->
 <script>
     var data = <?php echo json_encode("42", JSON_HEX_TAG); ?>; // Don't forget the extra semicolon!
+</script>
+
+
+<script type="text/javascript">
+    var js_variable = <?php echo json_encode($php_variable); ?>;
 </script>
 <!-- snip -->
 
