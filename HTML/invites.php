@@ -34,17 +34,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'1'";
         $fetchedInvite = $conn->query($sqlQuery);
-        if($result->num_rows == 0) {
+        if($fetchedInvite->num_rows == 0) {
           ?>
           <div class = "wrap-text">
           <span class="text">
               <h1 style="text-align: center;">You do not have any invites yet :O</h1>
-              <br></br>
-              <ul style="color: black; text-align:center;">
-            </ul>
             <div class="w3-section">
-      <button class="w3-button w3-green">Accept</button>
-      <button class="w3-button w3-red">Decline</button>
     </div>
     <?php
         } 
