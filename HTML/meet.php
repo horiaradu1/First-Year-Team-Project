@@ -14,9 +14,64 @@
 
 </head>
 <?php
-include("session.php"); ?>
-<body>
+include("session.php"); 
+$servername = "dbhost.cs.man.ac.uk";
+$username = "g63968ef";
+$password = "database";
+$dbname = "2019_comp10120_y4";
 
+$conn = new mysqli($servername, $username, $password, $dbname);
+function inBase($string) {
+	global $conn, $items;
+	$result = $conn->query("SELECT * FROM Users WHERE Username = '$string'"); // not injection proof
+        if (!$result) echo $conn->error;
+
+        if($result->num_rows == 0) {
+            
+        } 
+
+        else {
+            array_push($items, $string);
+			//$items[] = $_POST['item'];
+			// $items[] = $string;
+        }
+
+    }
+
+$title = "";
+$items = array();
+$result = "";
+if('POST' === $_SERVER['REQUEST_METHOD']) {
+    if( ! empty($_POST['item'])) {
+
+        //echo $_POST['pickedDate']; /////////////
+
+        $input = $_POST['item'];  
+        // $attempts = array();
+        $result = $conn->query("SELECT * FROM Users WHERE Username = '$input'"); // not injection proof
+        if (!$result) echo $conn->error;
+
+        if($result->num_rows == 0) {
+            
+        } 
+        // else if (in_array($input, $attempts)) {
+        //     echo "Yo";
+        // }
+
+        else {
+            // array_push($attempts, $input);
+            $items[] = $_POST['item'];
+        }
+
+    }
+    if(isset($_POST['items']) && is_array($_POST['items'])) {
+        foreach($_POST['items'] as $item) {
+            $items[] = $item;
+        }
+    }
+}
+?>
+<body>
 	<div class="limiter">
 		<div class="navbar">
       <div class = "picture">
@@ -27,6 +82,9 @@ include("session.php"); ?>
     </div>
   <div class="text100">
       <a href = "logout.php">Sign Out</a>
+	</div>
+	<div class="text100">
+        <a><?php echo($login_session) ?></a>
     </div>
     <div class="text100">
       <a href="ContactForm.php">Contact Us</a>
@@ -35,8 +93,8 @@ include("session.php"); ?>
       <a href="AboutUs.php">About Us</a>
     </div>
     </div>
-		<div class="container-login100">
-			<div class="btn-container" align="left">
+		<!-- <div class="container-login100">
+			<div class="btn-container" align="left"><
 				<div class="btn1">
 				<button class="btn">RECEIVED INVITATIONS</button>
 			</div>
@@ -49,7 +107,7 @@ include("session.php"); ?>
 			<div class="btn4">
 				<button class="btn">PAST EVENTS</button>
 			</div>
-			</div>
+			</div> -->
 			<!-- <div class="contact-us-button-contain">
 				<div class="contact-us-button-wrap">
 					<div class="contact-us-button"></div>
@@ -66,42 +124,57 @@ include("session.php"); ?>
 			</div> -->
 
 				<div class="wrap-login100">
-					<form class="login100-form validate-form">
+					<div class="login100-form validate-form">
 						<div class="put-it-here-to-include-padding">
 						<span class="login100-form-title p-b-26">
 							Meeting Planner
 						</span>
+						<ul>
+						<?php if($items): ?>
+							<?php foreach($items as $item): ?>
+								<li><?php echo $item ?></li>
+							<?php endforeach; ?>
+						<?php endif; ?>
+						</ul>
 					  </div>
-
-						<div class="wrap-input100 validate-input" >
-							<input class="input100" type="text" name="title" placeholder="Title">
+						<form method="post">
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="text" name="title" placeholder="Title" id="title" value="<?php if (isset($_POST['title'])) echo $_POST['title']; ?>" required>
 							<span class="focus-input100" placeholder="Title"></span>
 						</div>
-            <div class="wrap-input100 validate-input" >
-							<input class="input100" type="text" name="participants" placeholder="Participants">
+            				<div class="wrap-input100 validate-input">
+							<input class="input100" type="text" name="item" id="item" placeholder="Participants">
 							<span class="focus-input100" placeholder="Participants"></span>
 						</div>
-						<div class="container-login100-form-btn plus">
+						<div class="container-login100-form-btn plus" >
 							<div class="wrap-login100-form-btn plus">
 								<div class="login100-form-bgbtn plus"></div>
-								<button class="login100-form-btn plus">
+								<?php if($items): ?>
+									<?php foreach($items as $item): ?>
+										<input type="hidden" name="items[]" value="<?php echo $item;?>" />
+									<?php endforeach; ?>
+								<?php endif; ?>
+								<button class="login100-form-btn plus" type="submit">
 									+
 								</button>
 							</div>
 						</div>
-            <div class="wrap-input100 three">
+						</form>
+            <!-- <div class="wrap-input100 three">
               <input class="input100" type="text" name="location" placeholder="Location">
               <span class="focus-input100" placeholder="Location"></span>
-            </div>
-
-						<div class="container-login100-form-btn send">
+            </div> -->
+					<form action="/g34904ps/team/HTML/timetablePHP.php?title=<?php if (isset($_POST['title'])) echo $_POST['title']; else echo "Undefined"?>" method=post>	
+					<input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />			
+						<div class="container-login100-form-btn <?php if (count($items) == 0) echo "disabled"; ?> send">
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
-								<button class="login100-form-btn">
-									Send invitations
+								<button class="login100-form-btn" type="submit" <?php if (count($items) == 0) echo "disabled"?>>
+									Plan meeting
 								</button>
 							</div>
 						</div>
+					</form>
 
 						<!-- <div class="text-center p-t-115">
 							<span class="txt1">
@@ -112,7 +185,7 @@ include("session.php"); ?>
 								Sign Up
 							</a> -->
 						</div>
-				</form>
+				</div>
 			</div>
 
 </div>

@@ -91,7 +91,7 @@
 								Don’t have an account?
 							</span>
 
-							<a class="txt2" href="file:///home/q24360yk/StupidProject/RegistrationPage.html">
+							<a class="txt2" href="/HTML/RegistrationPage_1.php">
 								Sign Up
 							</a>
 						</div>
@@ -99,7 +99,7 @@
 			</div>
 		<div class="move-useless-text">
 			<span class="useless-text">
-				I can put whatever I want here Sorana!!!
+				Example text
 			</span>
 		</div>
 		</div>

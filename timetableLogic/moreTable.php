@@ -1,7 +1,7 @@
 <?php
-function createTimeTable($username) {
 
-}
+//error_reporting(E_ERROR);
+
 ?>
 <!DOCTYPE html>
 <html lan="en">
@@ -75,6 +75,17 @@ function createTimeTable($username) {
             <table data-vertable="ver1" >
             <tbody>
               <?php
+
+//--------------------------------------------------------------------------------------------
+//Display Timetable of $username
+
+              function hours_between($date1, $date2) {
+                $date1 = strtotime($date1);
+                $date2 = strtotime($date2);
+                $diff = $date2 - $date1;
+                $hoursBetween = $diff/3600;
+                return $hoursBetween;
+              }
                 
                 $servername = "dbhost.cs.man.ac.uk";
                 $username = "g63968ef";
@@ -88,53 +99,119 @@ function createTimeTable($username) {
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);}
 
-                $username = "laura";
-                $sql = "SELECT eventID FROM HasEvent WHERE username = " . $username;
-                $result = $conn->query($sql);
-                
-                for ($i = 0; $i < 24; $i++) { ?>
+                $monday = date('Y-m-d 00:00:00',time()+( 1 - date('w'))*24*3600);
+
+                $username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
+
+                for ($i = 0; $i < 24; $i++) { 
+                     $m = $i+1; 
+                     ?>
                   <tr class="row100">
-                        <td class="column100 column1" data-column="column1"><?php echo ($i) ?></td>
-                      
+                        <td class="column100 column1" data-column="column1"><?php echo ("$i:00 - $m:00") ?></td>
+                  
                   <?php
-                  for ($j = 0; $j < 7; $j++) {
-                    $event = NULL;
+                    for ($j = 0; $j < 7; $j++) {
+                      $event = NULL;
+                      $listOfEventIDs = array();
+                      $listOfCourses = array();
+                      $classStyle = "column100 column2"; //BASIC STYLE FOR EMPTY BOXES
 
+
+                      $result1 = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
+                      foreach($result1->fetch_all(MYSQLI_ASSOC) as $row) {
+                        array_push($listOfEventIDs, $row["eventID"]);
+                        }
+
+                      $result2 = $conn->query("SELECT lab FROM HasCourse WHERE username = '" . $username . "';");
+                      foreach($result2->fetch_all(MYSQLI_ASSOC) as $row) {
+                        array_push($listOfCourses, $row["lab"]);
+                        }
+
+                      foreach($listOfCourses as $ids) {
+                        $sqlQuery2 = "SELECT startTime, endTime, name FROM CourseEvents WHERE lab = '" . $ids . "';";
+                        $fetchedEvent2 = $conn->query($sqlQuery2);
+                        foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
+                          $timeTillEventStart = hours_between($monday, $row["startTime"]);
+                          $timeTillEventHoursStart = $timeTillEventStart%24;
+                          $timeTillEventDaysStart = $timeTillEventStart/24;
+                          $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
+                          $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
+                          $timeTillEventEnd = hours_between($monday, $row["endTime"]);
+                          $timeTillEventHoursEnd = $timeTillEventEnd%24;
+                          $timeTillEventDaysEnd = $timeTillEventEnd/24;
+                          $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
+                          $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
+
+                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
+                            $event = "$event " . $row["name"];
+                            //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
+                            }
+                          }
+                        }
+
+                      foreach($listOfEventIDs as $ids) {
+                        $sqlQuery1 = "SELECT startTime, endTime, name FROM Events WHERE eventID = " . $ids;
+                        $fetchedEvent1 = $conn->query($sqlQuery1);
+                        foreach($fetchedEvent1->fetch_all(MYSQLI_ASSOC) as $row) {
+                          $timeTillEventStart = hours_between($monday, $row["startTime"]);
+                          $timeTillEventHoursStart = $timeTillEventStart%24;
+                          $timeTillEventDaysStart = $timeTillEventStart/24;
+                          $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
+                          $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
+                          $timeTillEventEnd = hours_between($monday, $row["endTime"]);
+                          $timeTillEventHoursEnd = $timeTillEventEnd%24;
+                          $timeTillEventDaysEnd = $timeTillEventEnd/24;
+                          $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
+                          $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
+
+                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
+                            //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
+                            //WITH THE EVENT START AND END IN IF STATEMENT
+                            $event = "$event " . $row["name"];
+                            //$classStyle = "column100 column2"; //INSERT STYLE FOR EVENT HERE
+                            }
+                          }
+                        }
+                      
                     ?>
 
                     <?php
-                    if ($j = 0) {
+                    if ($j == 0) {
                     ?>
-                          <td class="column100 column2" data-column="column2"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column2"><?php echo ($event) ?></td>
                     <?php 
-                    }elseif ($j = 1){
+                    }elseif ($j == 1){
                     ?>
-                          <td class="column100 column3" data-column="column3"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column3"><?php echo ($event) ?></td>
                     <?php
-                    }elseif ($j = 2){
+                    }elseif ($j == 2){
                     ?>
-                          <td class="column100 column4" data-column="column4"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column4"><?php echo ($event) ?></td>
                     <?php
-                    }elseif ($j = 3){
+                    }elseif ($j == 3){
                     ?>
-                          <td class="column100 column5" data-column="column5"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column5"><?php echo ($event) ?></td>
                     <?php
-                    }elseif ($j = 4){
+                    }elseif ($j == 4){
                     ?>
-                          <td class="column100 column6" data-column="column6"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column6"><?php echo ($event) ?></td>
                     <?php
-                    }elseif ($j = 5){
+                    }elseif ($j == 5){
                     ?>
-                          <td class="column100 column7" data-column="column7"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column7"><?php echo ($event) ?></td>
                     <?php
-                    }elseif ($j = 6){
+                    }elseif ($j == 6){
                     ?>
-                          <td class="column100 column8" data-column="column8"><?php echo ($event) ?></td>
+                          <td class="<?php echo $classStyle ?>" data-column="column8"><?php echo ($event) ?></td>
                     <?php } ?>
 
                 <?php } ?>
                     </tr>
-                <?php } ?>
+                <?php } 
+                
+//----------------------------------------------------------------------------------
+
+                ?>
             </tbody>
           </table>
         </div>

@@ -7,6 +7,8 @@
   <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
 	<link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
 </head>
+<?php
+include("session.php"); ?>
 <body>
     <div class="navbar">
       <div class = "picture">
@@ -18,8 +20,11 @@
        <!-- connect to the login -->
     </div>
   <div class="text100">
-      <a href="#news">Login</a>
+      <a href="#news">Sign out</a>
        <!-- connect to the login -->
+    </div>
+    <div class="text100">
+        <a><?php echo($login_session) ?></a>
     </div>
     <div class="text100">
       <a href="ContactForm.php">Contact Us</a>

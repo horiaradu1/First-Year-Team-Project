@@ -130,31 +130,40 @@ th, td {
   padding-left: 42px;
 }
 .column100.green{
-	background-color: #27ad27;
+  background-color: #27ad27;
+  font-weight: bold;
 }
 .column100.red{
-	background-color: #cb1e13;
+  background-color: #cb1e13;
+  font-weight: bold;
 }
 .column100.yellow{
-	background-color: #f4f129;
+  background-color: #f4f129;
+  font-weight: bold;
 }
 .column100.blue{
-	background-color: #29ccf4;
+  background-color: #29ccf4;
+  font-weight: bold;
 }
 .column100.pink{
-	background-color: #f46fda;
+  background-color: #f46fda;
+  font-weight: bold;
 }
 .column100.purple{
-	background-color: #a518f5;
+  background-color: #a518f5;
+  font-weight: bold;
 }
 .column100.orange{
-	background-color: #f08a07;
+  background-color: #f08a07;
+  font-weight: bold;
 }
 .column100.bluegreen{
-	background-color: #1ff7ac;
+  background-color: #1ff7ac;
+  font-weight: bold;
 }
 .column100.darkblue{
-	background-color: #0a0ef5;
+  background-color: #0a0ef5;
+  font-weight: bold;
 }
 .row100.head th {
   padding-top: 24px;
@@ -166,6 +175,7 @@ th, td {
   padding-top: 18px;
   padding-bottom: 14px;
 }
+
 /*.row100head.head th {
   padding-top: 24px;
   padding-bottom: 20px;

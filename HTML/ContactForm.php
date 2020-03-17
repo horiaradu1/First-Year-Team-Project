@@ -7,6 +7,8 @@
   <link rel = "stylesheet" type = "text/css" href = "contactForm.css">
 	<link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
 </head>
+<?php
+include("session.php"); ?>
 <body>
   <div class="container-form">
 		<div class="navbar">
@@ -17,8 +19,11 @@
 			<a href="meet.php">Meeting</a>
 		</div>
 	<div class="text100">
-			<a href="#news">Log out</a>
-		</div>
+			<a href="#news">Sign out</a>
+    </div>
+    <div class="text100">
+        <a><?php echo($login_session) ?></a>
+    </div>
 		<div class="text100">
 			<a href="ContactForm.php">Contact Us</a>
 		</div>
