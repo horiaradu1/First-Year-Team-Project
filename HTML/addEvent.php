@@ -27,7 +27,7 @@ if (isset($_POST["submit"])) {
     echo $db->error;
 
 
-    $sqlAssign = "INSERT into HasEvent
+    $sqlAssign = "INSERT into HasEvent (username, eventID)
     VALUES(\"$login_session\", (SELECT MAX(eventID) FROM Events) )";
 
 
