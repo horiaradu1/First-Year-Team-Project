@@ -35,6 +35,14 @@
 </head>
 <body>
 
+<form method=POST>
+
+  <!-- selection box for all courses -->
+Name of the event: <input id = "name" name="name">
+
+Description: <input id = "desc" name="description">
+
+
 <p>From: <input type="text" id="startDate">
   <input type="text" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
 
@@ -64,13 +72,6 @@ $(function() {
 <!-- snip -->
 
 
-
-<form method=POST>
-
-  <!-- selection box for all courses -->
-Name of the event: <input id = "name" name="name">
-
-Description: <input id = "desc" name="description">
 <!-- button which sends selected course and lab events to data base -->
 <button name="submit">Click to add to your timetable!</button>
 </form>
