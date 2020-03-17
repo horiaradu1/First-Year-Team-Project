@@ -33,14 +33,21 @@ include("session.php"); ?>
     <div class="text100">
       <a href="AboutUs.php">About Us</a>
     </div>
+    <div class="text100">
+      <a href="invites.php">Inbox</a>
+    </div>
     </div>
     <div class="container-table100">
       <div class="week">
         <?php
-          $sMonth = date('F',time()+( 1 - date('w'))*24*3600);
-          $eMonth = date('F',time()+( 7 - date('w'))*24*3600);
-          $sDay = date('d',time()+( 1 - date('w'))*24*3600); //date('d');
-          $eDay = date('d',time()+( 7 - date('w'))*24*3600);
+          //$week = 0;
+          try {
+            $week = $_GET['week'];
+          } catch (Exception $e) {}
+          $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
+          $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
+          $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
+          $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
 
           echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
         ?>
@@ -53,14 +60,14 @@ include("session.php"); ?>
 				<button class="btn">CREATE EVENT</button>
 			</div>
 			<div class="btn2">
-				<button class="btn">CREATE MEETING</button>
+				<button onclick="window.location.href = '/g34904ps/team/HTML/meet.php';" class="btn">CREATE MEETING</button>
 			</div>
 			</div>
       <div class="before">
-      <a href="#" class="previous round">&#8249;</a>
+      <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
     </div>
     <div class="after">
-      <a href="#" class="previous round">&#8250;</a>
+      <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week += 2; echo $week; ?> " class="previous round">&#8250;</a>
     </div>
       <div class="wrap-table100">
         <div class="table100 ver1 m-b-110">
@@ -105,8 +112,8 @@ include("session.php"); ?>
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);}
-
-                $monday = date('Y-m-d 00:00:00',time()+( 1 - date('w'))*24*3600);
+                
+                $monday = date('Y-m-d 00:00:00',time()+( 1+(7*$week) - date('w'))*24*3600);
 
                 //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 

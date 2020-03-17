@@ -19,7 +19,7 @@ include("session.php"); ?>
 			<a href="meet.php">Meeting</a>
 		</div>
 	<div class="text100">
-			<a href="#news">Sign out</a>
+			<a href="logout.php">Sign out</a>
     </div>
     <div class="text100">
         <a><?php echo($login_session) ?></a>
@@ -30,6 +30,9 @@ include("session.php"); ?>
 		<div class="text100">
 			<a href="AboutUs.php">About Us</a>
 		</div>
+    <div class="text100">
+      <a href="invites.php">Inbox</a>
+    </div>
 		</div>
 		<div class="logo" >
 			<img src = "Logo.png">
@@ -41,17 +44,17 @@ include("session.php"); ?>
       </span>
 
       <div class="wrap-input100 validate-input" data-validate="Please enter your name">
-        <input class="input100" type="text" name="name" placeholder="Full Name">
+        <input class="input100" type="text" name="name" placeholder="Full Name"  required>
         <span class="focus-input100"></span>
       </div>
 
       <div class="wrap-input100 validate-input" data-validate="Please enter your name">
-        <input class="input100" type="text" name="name" placeholder="Email">
+        <input class="input100" type="text" name="email" placeholder="Email"  required>
         <span class="focus-input100"></span>
       </div>
 
       <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
-        <textarea class="input100" name="message" placeholder="Your Message"></textarea>
+        <textarea class="input100" name="message" placeholder="Your Message"  required></textarea>
         <span class="focus-input100"></span>
       </div>
 

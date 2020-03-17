@@ -120,7 +120,8 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url("sea2_improved.jpg");
+  background-image: url("backgroundTimeOnTable.jpg");
+  /* background-image: url("sea2_improved.jpg"); */
   pointer-events: none;
 }
 .wrap-contact {

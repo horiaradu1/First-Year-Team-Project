@@ -92,7 +92,10 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
     <div class="text100">
       <a href="AboutUs.php">About Us</a>
     </div>
+	<div class="text100">
+      <a href="invites.php">Inbox</a>
     </div>
+	</div>
 		<!-- <div class="container-login100">
 			<div class="btn-container" align="left"><
 				<div class="btn1">
@@ -129,13 +132,6 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 						<span class="login100-form-title p-b-26">
 							Meeting Planner
 						</span>
-						<ul>
-						<?php if($items): ?>
-							<?php foreach($items as $item): ?>
-								<li><?php echo $item ?></li>
-							<?php endforeach; ?>
-						<?php endif; ?>
-						</ul>
 					  </div>
 						<form method="post">
 						<div class="wrap-input100 validate-input">
@@ -175,6 +171,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 							</div>
 						</div>
 					</form>
+					
 
 						<!-- <div class="text-center p-t-115">
 							<span class="txt1">
@@ -189,6 +186,20 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 			</div>
 
 </div>
+
+	<div class = "wrap-text">
+      <span class="text">
+		  <h4 style="text-align: center;">Participants:</h4>
+		  <ul style="color: black;">
+		  <br></br>
+		<?php if($items): ?>
+			<?php foreach($items as $item): ?>
+				<li><?php echo "• " . $item ?></li>
+			<?php endforeach; ?>
+		<?php endif; ?>
+		</ul>
+      </span>
+    </div>
 
 
 	<!-- <div id="dropDownSelect1"></div> -->
