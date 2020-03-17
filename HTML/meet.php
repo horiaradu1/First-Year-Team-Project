@@ -197,7 +197,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 		  <ul>
 		<?php if($items): ?>
 			<?php foreach($items as $item): ?>
-				<li><?php echo $item ?></li>
+				<!-- <li><?php echo $item ?></li> -->
 			<?php endforeach; ?>
 		<?php endif; ?>
 		</ul>
