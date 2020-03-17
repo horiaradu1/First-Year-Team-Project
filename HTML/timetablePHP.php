@@ -250,13 +250,7 @@ createMeetingListCourses($items)
 
 <?php
 $title = $_GET['title']; // output title
-$styleBoarder = "border-block-color: white; border-block-style: solid; border-right-color: white; border-left-color: white;";
-$people = "[";
-foreach($items as $person) {
-    $people = $people . $person;
-}
-$people = $people . "]";
-echo $people;
+$styleBoarder = "border-block-color: white; border-block-style: solid; border-right-color: white; border-left-color: white;"
 ?>
 
 <h1 class='title'><?php echo $title ?></h1>
@@ -305,7 +299,6 @@ echo $people;
   </div>
 
   <div class="content">
-      <form>
   <?php
       for ($i = 0; $i < 24; $i++) {
          for ($j = 0; $j < 7; $j++) {
@@ -317,7 +310,6 @@ echo $people;
                    <div style="<?php echo $styleBoarder ?>" class="accent-free"> <font color="black"><h5>All available</h5></font></div>
                  </div>
             </a>
-            
                 <?php }
             else if ((0 < $percentOccupied) &($percentOccupied <= 10)) {
             ?>
