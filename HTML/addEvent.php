@@ -101,7 +101,8 @@ $(function() {
 
 <form method="POST" id="insert">
 
-<input type="hidden" name="start"/>
+<!-- type should be hidden -->
+<input name="start"/>
 
 <script>
 $('#insert').bind('submitTT', function(){
