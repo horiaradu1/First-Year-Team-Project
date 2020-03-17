@@ -75,7 +75,7 @@
 				 }
 	   }
 	?>
-	<div class="limiter">
+	<!-- <div class="limiter"> -->
 		<!-- <div class="navbar">
 			<div class = "picture">
 			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/moreTable.php">Home</a>
