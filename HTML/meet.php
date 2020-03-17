@@ -129,13 +129,6 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 						<span class="login100-form-title p-b-26">
 							Meeting Planner
 						</span>
-						<ul>
-						<?php if($items): ?>
-							<?php foreach($items as $item): ?>
-								<li><?php echo $item ?></li>
-							<?php endforeach; ?>
-						<?php endif; ?>
-						</ul>
 					  </div>
 						<form method="post">
 						<div class="wrap-input100 validate-input">
