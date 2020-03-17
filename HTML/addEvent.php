@@ -49,8 +49,8 @@ if (isset($_POST["submit"])) {
 <!-- script for enabling the datepicker -->
   <script>
   $( function() {
-    $( "#startDate" ).datepicker(altFormat: "yy-mm-dd");
-    $( "#endDate" ).datepicker(altFormat: "yy-mm-dd");
+    $( "#startDate" ).datepicker();
+    $( "#endDate" ).datepicker();
 
   } );
   </script>
