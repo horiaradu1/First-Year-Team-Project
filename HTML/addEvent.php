@@ -1,3 +1,7 @@
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -49,15 +53,28 @@ $(function() {
 </script>
 
 <!-- snip -->
-<script>
+<!-- <script>
     var data = <?php echo json_encode("42", JSON_HEX_TAG); ?>; // Don't forget the extra semicolon!
 </script>
 
 
 <script type="text/javascript">
     var js_variable = <?php echo json_encode($php_variable); ?>;
-</script>
+</script> -->
 <!-- snip -->
+
+
+
+<form method=POST>
+
+  <!-- selection box for all courses -->
+Name of the event: <input id = "name" name="name">
+
+Description: <input id = "desc" name="description">
+<!-- button which sends selected course and lab events to data base -->
+<button name="submit">Click to add to your timetable!</button>
+</form>
+
 
 </body>
 </html>
