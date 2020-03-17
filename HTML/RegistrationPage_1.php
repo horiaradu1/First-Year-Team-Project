@@ -163,28 +163,28 @@
 	}
 	?> -->
 
-	<div class="limiter">
+	<!-- <div class="limiter">
 		<div class="navbar">
 			<div class = "picture">
-			<a href="moreTable.php">Home</a>
+			<a href="moreTable.php">Home</a> -->
 			 <!-- connect to the login -->
-		</div>
+		<!-- </div>
 		<div class = "picture">
-			<a href="meet.php">Meeting</a>
+			<a href="meet.php">Meeting</a> -->
 			 <!-- connect to the login -->
-		</div>
+		<!-- </div>
 	<div class="text100">
-			<a href="#news">Login</a>
+			<a href="#news">Login</a> -->
 			 <!-- connect to the login -->
-		</div>
+		<!-- </div>
 		<div class="text100">
 			<a href="ContactForm.php">Contact Us</a>
 		</div>
 		<div class="text100">
 			<a href="AboutUs.php">About Us</a>
 		</div>
-		</div>
-		<div class="container-register">
+		</div> -->
+		<div class="container-login100">
 			<div class="logo" >
 				<img src = "Logo.png">
 			</div>

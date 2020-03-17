@@ -348,3 +348,25 @@ textarea:-ms-input-placeholder { color: #adadad;}
 .text100{
 	float: right;
 }
+
+.container-login100 {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-image: linear-gradient(to right, #4bddf0, #0a24fb);
+}
+
+.logo{
+	align: center;
+	position: relative;
+	top: -320px;
+	right: -160px;
+}
