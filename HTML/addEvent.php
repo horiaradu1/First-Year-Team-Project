@@ -1,3 +1,33 @@
+<?php
+include("session.php");
+
+// responsible for adding the courses from course selector
+if (isset($_POST["submit"])) {
+
+  // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
+
+  $course = $_POST["new_course"];
+  $lab = $_POST["new_lab"];
+
+  echo $course;
+
+  echo $lab;
+
+
+  // $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
+
+  //var_dump($_POST["new_course"]);
+  $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
+    VALUES (\"$login_session\", \"$course\", \"$lab\");";
+
+    echo $sqlAddCourse;
+
+    $db->query($sqlAddCourse);
+    echo $db->error;
+}
+// ------------ END OF PHP ----------------
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,7 +46,7 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-
+<!-- script for enabling the datepicker -->
   <script>
   $( function() {
     $( "#startDate" ).datepicker();
@@ -25,12 +55,14 @@
   } );
   </script>
 
-
-
-
+  <!-- end of head -->
 </head>
-<body>
 
+<!-- body -->
+<body>
+<h1> Add new event </h1>
+<p>Description: <input type="text" id="description"></p>
+<p>Name of the event:<input tpye="text" id="name"></p>
 <p>From: <input type="text" id="startDate">
   <input type="text" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
 
