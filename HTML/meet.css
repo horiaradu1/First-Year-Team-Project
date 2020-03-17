@@ -502,7 +502,8 @@ textarea:-ms-input-placeholder { color: #adadad;}
 	font-size: 20px;
 }
 .wrap-text{
-  width: 60%;
+  width: 20%;
+  left: 40%;
   position: relative;
   bottom: -50px;
   background: #fff;
