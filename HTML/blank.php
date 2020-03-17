@@ -31,5 +31,5 @@ echo $people;
 $items = array();
 if (isset($_POST["items"]))
     $items = unserialize($_POST['items']);
-echo $items;
+print_r($items);
 ?>
