@@ -13,7 +13,7 @@
 	<!-- <link rel = "icon" type = "image/png" href = "Logo.png"> -->
 
 </head>
-<body style="background-image: url("backgroundTimeOnTable.jpg");">
+<body>
 <?php include("session.php"); ?>
 <div class="navbar">
       <div class = "picture">
@@ -253,7 +253,6 @@ createMeetingListCourses($items)
 <?php
 $title = $_GET['title']; // output title
 $styleBoarder = "border-block-color: white; border-block-style: solid; border-right-color: white; border-left-color: white;";
-$styleBoarder = "border: 3px solid transparent";
 $people = "";
 foreach($items as $person) {
     if ($items[0] == $person) {
