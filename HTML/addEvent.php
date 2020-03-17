@@ -104,7 +104,7 @@ $(function() {
 <input type="hidden" name="start"/>
 
 <script>
-$('#insert').bind('submit', function(){
+$('#insert').bind('submitTT', function(){
                         var sDate = $('[name=startDate]').val();
                         var sTime = $('[name=startTime]').val();
                         $('[name=start]').val(sDate+'@'+sTime);
@@ -112,5 +112,7 @@ $('#insert').bind('submit', function(){
 </script>
 
 <button name="submitTT">Click to test!</button>
+</form>
+
 </body>
 </html>
