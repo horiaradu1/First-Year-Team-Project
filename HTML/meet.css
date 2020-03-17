@@ -499,7 +499,8 @@ textarea:-ms-input-placeholder { color: #adadad;}
 
 .text{
   font-family: Ariel, Helvetica, sans-serif;
-	font-size: 20px;
+  font-size: 20px;
+  color: #4557e8;
 }
 .wrap-text{
   width: 20%;
