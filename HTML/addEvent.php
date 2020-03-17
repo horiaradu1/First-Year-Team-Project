@@ -31,7 +31,9 @@
 </head>
 <body>
 
-<p>From: <input type="text" id="startDate"><input type="text" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+<p>From: <input type="text" id="startDate">
+  <input type="text" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+
 <script>
 $(function() {
   $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now' });
@@ -39,26 +41,18 @@ $(function() {
 </script>
 
 <p>To: <input type="text" id="endDate"><input type="text" id="endTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+
 <script>
 $(function() {
   $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now'});
 });
 </script>
 
-<!-- <article>
-  <div class="demo">
-    <p>
-      <input id="basicExample" type="text" class="time ui-timepicker-input" autocomplete="off">
-    </p>
-  </div>
-  <script>
-  $(function() {
-    $('#basicExample').timepicker({ 'timeFormat': 'H:i:s' });
-  });
-  </script>
-</article> -->
-
-
+<!-- snip -->
+<script>
+    var data = <?php echo json_encode("42", JSON_HEX_TAG); ?>; // Don't forget the extra semicolon!
+</script>
+<!-- snip -->
 
 </body>
 </html>
