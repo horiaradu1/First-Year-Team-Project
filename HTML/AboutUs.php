@@ -32,6 +32,9 @@ include("session.php"); ?>
     <div class="text100">
       <a href="AboutUs.php">About Us</a>
     </div>
+    <div class="text100">
+      <a href="invites.php">Inbox</a>
+    </div>
     </div>
       <div class="container">
     <span class="title">
