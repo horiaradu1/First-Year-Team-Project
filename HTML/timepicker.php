@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  	<section id="examples">
+
   		<article>
   			<div class="demo">
   				<h2>Basic Example</h2>

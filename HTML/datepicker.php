@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Create event</title>
+
+  
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -35,6 +37,26 @@
   <input type="text" id="time" ><br><br>
   <input type="submit" value="Submit">
 </form>
+
+
+
+
+<article>
+  <div class="demo">
+    <h2>Basic Example</h2>
+    <p>
+      <input id="basicExample" type="text" class="time ui-timepicker-input" autocomplete="off">
+    </p>
+  </div>
+  <script>
+  $(function() {
+    $('#basicExample').timepicker({ 'timeFormat': 'H:i:s' });
+  });
+  </script>
+  <pre class="code rainbow" data-language="javascript"><span class="selector">$</span>(<span class="string">'#basicExample'</span>).<span class="function call">timepicker</span>();</pre>
+</article>
+
+
 
 </body>
 </html>
