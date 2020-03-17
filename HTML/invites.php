@@ -32,7 +32,7 @@ $invites = array();
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'eirik'";
+$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'1'";
         $fetchedInvite = $conn->query($sqlQuery);
         foreach($fetchedInvite->fetch_all(MYSQLI_ASSOC) as $row) {
             $id = $row['eventID'];
