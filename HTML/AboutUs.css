@@ -43,7 +43,8 @@ img{
   background: -o-linear-gradient(right, #0a24fb, #4bddf0);
   background: -moz-linear-gradient(right, #0a24fb, #4bddf0);
   background: linear-gradient(right, #0a24fb, #4bddf0);*/
-	background-image: url("sea8.jpg");
+  /* background-image: url("sea8.jpg"); */
+  background-image: url("backgroundTimeOnTable.jpg");
   pointer-events: none;
 }
 .title{
