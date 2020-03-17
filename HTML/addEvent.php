@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
   $endTime=$_POST["endTime"];
 
 
-  $start = $startTime.$startTime;
+  $start = $startDate.$startTime;
   $end = $endDate.$endTime;
 
 
