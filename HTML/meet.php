@@ -193,12 +193,14 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 
 	<div class = "wrap-text">
       <span class="text">
-		  <h1>Participants:</h1>
-		  <?php if($items): ?>
+		  <h5>Participants:</h5>
+		  <ul>
+		<?php if($items): ?>
 			<?php foreach($items as $item): ?>
 				<li><?php echo $item ?></li>
 			<?php endforeach; ?>
 		<?php endif; ?>
+		</ul>
       </span>
     </div>
 
