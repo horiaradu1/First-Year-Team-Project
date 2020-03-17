@@ -32,7 +32,7 @@ $invites = array();
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'1'";
+$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
         $fetchedInvite = $conn->query($sqlQuery);
         if($fetchedInvite->num_rows == 0) {
           ?>
@@ -42,7 +42,7 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'1'";
           <br></br>
           <div class = "wrap-message">
           <span class="text">
-              <h1 style="text-align: center; font-style:bold;">You do not have any invites yet :O</h1>
+              <h1 style="text-align: center; font-style:bold; font-size: large;">You do not have any invites yet :O</h1>
             <div class="w3-section">
             
     </div>
