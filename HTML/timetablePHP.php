@@ -261,9 +261,6 @@ foreach($items as $person) {
     }
     
 }
-$people = $people;
-
-echo $people;
 ?>
 
 <h1 class='title'><?php echo $title ?></h1>
@@ -318,7 +315,7 @@ echo $people;
             $percentOccupied = ($planList[$j][$i]/sizeof($items)) * 100;
             if ($percentOccupied == 0) {
                 ?>
-                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?>" style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-free"> <font color="black"><h5>All available</h5></font></div>
                  </div>
@@ -326,7 +323,7 @@ echo $people;
                 <?php }
             else if ((0 < $percentOccupied) &($percentOccupied <= 10)) {
             ?>
-            <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+            <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?>" style="color: black;">
             <div>
                <div style="<?php echo $styleBoarder ?>" class="accent-0"><font color="black"><h5>Over 90%</h5></font></div>
              </div>
@@ -334,7 +331,7 @@ echo $people;
             <?php }
             else if ((10 < $percentOccupied) & ($percentOccupied <= 20)) { 
             ?>
-            <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+            <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?>" style="color: black;">
             <div>
                <div style="<?php echo $styleBoarder ?>" class="accent-1"><font color="black"><h5>80%-90%</h5></font></div>
              </div>
@@ -342,7 +339,7 @@ echo $people;
             <?php }
             else if ((20 < $percentOccupied) & ($percentOccupied <= 30)){ 
                 ?>
-                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?> style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-2"><font color="black"><h5>70%-80%</h5></font></div>
                  </div>
@@ -350,7 +347,7 @@ echo $people;
                 <?php }
             else if ((30 < $percentOccupied) & ($percentOccupied <= 40)){ 
                 ?>
-                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?>" style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-3"><font color="black"><h5>60%-70%</h5></font></div>
                  </div>
@@ -358,7 +355,7 @@ echo $people;
                 <?php }
             else if ((40 < $percentOccupied) & ($percentOccupied <= 50)){ 
                 ?>
-                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?>" style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-4"><font color="black"><h5>50%-60%</h5></font></div>
                  </div>
@@ -366,7 +363,7 @@ echo $people;
                 <?php }
             else if ((50 < $percentOccupied) & ($percentOccupied <= 60)){ 
                 ?>
-                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?>" style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-5"><font color="black"><h5>40%-50%</h5></font></div>
                  </div>
@@ -374,14 +371,14 @@ echo $people;
                 <?php }
             else if ((60 < $percentOccupied) & ($percentOccupied <= 70)){ 
                 ?>
-                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?>" style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-6 "><font color="black"><h5>30%-40%</h5></font></div>
                  </div>
                 <?php }
             else if ((70 < $percentOccupied) & ($percentOccupied <= 80)){ 
                 ?>
-                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?>" style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-7"><font color="black"><h5>20%-30%</h5></font></div>
                  </div>
@@ -389,7 +386,7 @@ echo $people;
                 <?php }
             else if ((80 < $percentOccupied) & ($percentOccupied <= 90)){ 
                 ?>
-                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?>" style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-8"><font color="black"><h5>10%-20%</h5></font></div>
                  </div>
@@ -397,7 +394,7 @@ echo $people;
                 <?php }
             else { 
                 ?>
-                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>&people=<?php echo $people;?>" style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-9"><font color="black"><h5>Less than 10%</h5></font></div>
                  </div>
