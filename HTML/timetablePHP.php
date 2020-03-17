@@ -250,7 +250,13 @@ createMeetingListCourses($items)
 
 <?php
 $title = $_GET['title']; // output title
-$styleBoarder = "border-block-color: white; border-block-style: solid; border-right-color: white; border-left-color: white;"
+$styleBoarder = "border-block-color: white; border-block-style: solid; border-right-color: white; border-left-color: white;";
+$people = "[";
+foreach($items as $person) {
+    $people = $people . $person;
+}
+$people = $people . "]";
+echo $people;
 ?>
 
 <h1 class='title'><?php echo $title ?></h1>
@@ -306,7 +312,7 @@ $styleBoarder = "border-block-color: white; border-block-style: solid; border-ri
             $percentOccupied = ($planList[$j][$i]/sizeof($items)) * 100;
             if ($percentOccupied == 0) {
                 ?>
-                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;" <input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />>
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;">
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-free"> <font color="black"><h5>All available</h5></font></div>
                  </div>
