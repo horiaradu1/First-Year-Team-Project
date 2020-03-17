@@ -34,31 +34,47 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'1'";
         $fetchedInvite = $conn->query($sqlQuery);
-        foreach($fetchedInvite->fetch_all(MYSQLI_ASSOC) as $row) {
-            $id = $row['eventID'];
-            $getQuery = "SELECT startTime, endTime, name, description FROM Events WHERE eventID = " . $id;
-            $fetchedEvent = $conn->query($getQuery);
-            $event = $fetchedEvent->fetch_row();
-            ?>
-            <div class = "wrap-text">
-            <span class="text">
-                <h4 style="text-align: center; text-decoration: underline;"><?php echo $event[2] ?></h4>
-                <h5 style="text-align: center; font-style: italic; color: #2B547E;"><?php echo $event[0] . " to " . $event[1]?></h5>
-                <br></br>
-                <ul style="color: black; text-align:center;">
-                
-                <?php echo $event[3] ?>
-      
-      
-              </ul>
-              <div class="w3-section">
-        <button class="w3-button w3-green">Accept</button>
-        <button class="w3-button w3-red">Decline</button>
-      </div>
-            </span>
-          </div>
-          <br></br>
-          <?php
+        if($result->num_rows == 0) {
+          ?>
+          <div class = "wrap-text">
+          <span class="text">
+              <h1 style="text-align: center;">You do not have any invites yet :O</h1>
+              <br></br>
+              <ul style="color: black; text-align:center;">
+            </ul>
+            <div class="w3-section">
+      <button class="w3-button w3-green">Accept</button>
+      <button class="w3-button w3-red">Decline</button>
+    </div>
+    <?php
+        } 
+        else {
+          foreach($fetchedInvite->fetch_all(MYSQLI_ASSOC) as $row) {
+              $id = $row['eventID'];
+              $getQuery = "SELECT startTime, endTime, name, description FROM Events WHERE eventID = " . $id;
+              $fetchedEvent = $conn->query($getQuery);
+              $event = $fetchedEvent->fetch_row();
+              ?>
+              <div class = "wrap-text">
+              <span class="text">
+                  <h4 style="text-align: center; text-decoration: underline;"><?php echo $event[2] ?></h4>
+                  <h5 style="text-align: center; font-style: italic; color: #2B547E;"><?php echo $event[0] . " to " . $event[1]?></h5>
+                  <br></br>
+                  <ul style="color: black; text-align:center;">
+                  
+                  <?php echo $event[3] ?>
+        
+        
+                </ul>
+                <div class="w3-section">
+          <button class="w3-button w3-green">Accept</button>
+          <button class="w3-button w3-red">Decline</button>
+        </div>
+              </span>
+            </div>
+            <br></br>
+            <?php
+          }
         }
 ?>
 <body>
