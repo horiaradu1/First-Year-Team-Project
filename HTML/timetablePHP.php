@@ -250,7 +250,19 @@ createMeetingListCourses($items)
 
 <?php
 $title = $_GET['title']; // output title
-$styleBoarder = "border-block-color: white; border-block-style: solid; border-right-color: white; border-left-color: white;"
+$styleBoarder = "border-block-color: white; border-block-style: solid; border-right-color: white; border-left-color: white;";
+$people = "";
+foreach($items as $person) {
+    if ($items[0] == $person) {
+        $people = $people . $person;
+    }
+    else {
+        $people = $people . "," . $person;
+    }
+    
+}
+$people = $people;
+echo $people;
 ?>
 
 <h1 class='title'><?php echo $title ?></h1>
