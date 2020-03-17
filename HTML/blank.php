@@ -27,4 +27,6 @@ echo "Hour, day, month: " . $clickedTime; //echo "day: " . $day . " hours: " . $
 
 $people = $_GET['people'];
 echo $people;
+print_r($people);
+echo $title;
 ?>

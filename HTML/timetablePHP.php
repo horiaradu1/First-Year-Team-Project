@@ -246,7 +246,6 @@ createMeetingListCourses($items)
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<br></br>
 
 <?php
 $title = $_GET['title']; // output title
