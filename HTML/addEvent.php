@@ -19,20 +19,20 @@ if (isset($_POST["submit"])) {
   $start = $startTime.$startTime;
   $end = $endDate.$endTime;
 
-    //
-  echo $name;
-  echo $description;
-  echo $start;
-  echo $end;
+
+  // echo $name;
+  // echo $description;
+  // echo $start;
+  // echo $end;
 
 
-      // $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
-      //   VALUES (\"$login_session\", \"$course\", \"$lab\");";
-      //
-      //   echo $sqlAddCourse;
-      //
-      //   $db->query($sqlAddCourse);
-      //   echo $db->error;
+  $sqlAddEvent= "INSERT INTO Events (startTime, endTime, name, description)
+    VALUES (\"$start\", \"$end\", \"$name\", \"$description\");";
+
+    echo $sqlAddEvent;
+
+    $db->query($sqlAddEvent);
+    echo $db->error;
 }
 ?>
 
