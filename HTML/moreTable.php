@@ -1,3 +1,6 @@
+<!--All of the HTML and css files were created using templates from colorlib, namely:
+    Login Form v2 - https://colorlib.com/wp/template/login-form-v2/
+    Contact Form v9 - https://colorlib.com/wp/template/contact-form-v9/-->
 <?php error_reporting(E_ERROR); ?>
 <!DOCTYPE html>
 <html lan="en">
@@ -112,15 +115,15 @@ include("session.php"); ?>
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);}
-                
+
                 $monday = date('Y-m-d 00:00:00',time()+( 1+(7*$week) - date('w'))*24*3600);
 
                 //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
                 $username = $login_session;
 
-                for ($i = 0; $i < 24; $i++) { 
-                     $m = $i+1; 
+                for ($i = 0; $i < 24; $i++) {
+                     $m = $i+1;
                      ?>
                   <tr class="row100">
                         <td class="column100 column1" data-column="column1"><?php echo ("$i:00 - $m:00") ?></td>
@@ -202,14 +205,14 @@ include("session.php"); ?>
                             }
                           }
                         }
-                      
+
                     ?>
 
                     <?php
                     if ($j == 0) {
                     ?>
                           <td class="<?php echo $classStyle ?>" data-column="column2"><?php echo ($event) ?></td>
-                    <?php 
+                    <?php
                     }elseif ($j == 1){
                     ?>
                           <td class="<?php echo $classStyle ?>" data-column="column3"><?php echo ($event) ?></td>
@@ -237,8 +240,8 @@ include("session.php"); ?>
 
                 <?php } ?>
                     </tr>
-                <?php } 
-                
+                <?php }
+
 //----------------------------------------------------------------------------------
 
                 ?>
