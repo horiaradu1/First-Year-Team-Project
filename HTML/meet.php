@@ -193,11 +193,11 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 
 	<div class = "wrap-text">
       <span class="text">
-		  <h5>Participants:</h5>
+		  <h5 style="text-align: center;">Participants:</h5>
 		  <ul>
 		<?php if($items): ?>
 			<?php foreach($items as $item): ?>
-				<!-- <li><?php echo $item ?></li> -->
+				<li><?php echo $item ?></li>
 			<?php endforeach; ?>
 		<?php endif; ?>
 		</ul>
