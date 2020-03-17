@@ -1,6 +1,34 @@
 
 
+<?php
+include("session.php");
 
+// responsible for adding the courses from course selector
+if (isset($_POST["submit"])) {
+
+  // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
+
+  $name = $_POST["new_course"];
+  $description = $_POST["new_lab"];
+  $start =$_POST[""];
+  $end =$_POST[""];
+
+
+  echo $name;
+  echo $description;
+  echo $start;
+  echo $end;
+
+
+      // $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
+      //   VALUES (\"$login_session\", \"$course\", \"$lab\");";
+      //
+      //   echo $sqlAddCourse;
+      //
+      //   $db->query($sqlAddCourse);
+      //   echo $db->error;
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -35,47 +63,54 @@
 </head>
 <body>
 
+
+
+
 <form method=POST>
 
-  <!-- selection box for all courses -->
+  <!-- Name input box-->
 Name of the event: <input id = "name" name="name">
-
+<!-- DESCRIPTION input box-->
 Description: <input id = "desc" name="description">
 
-
+<!-- Start datepicker input box-->
 <p>From: <input type="text" id="startDate">
   <input type="text" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
-
+<!-- function to assign this timepicker, and change the format to a desired one -->
 <script>
 $(function() {
   $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now' });
 });
 </script>
 
-<p>To: <input type="text" id="endDate"><input type="text" id="endTime" class="time ui-timepicker-input" autocomplete="off"/></p>
 
+<!-- End datepicker window box -->
+<p>To: <input type="text" id="endDate"><input type="text" id="endTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+<!-- the function -->
 <script>
 $(function() {
   $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now'});
 });
 </script>
 
-<!-- snip -->
-<!-- <script>
-    var data = <?php echo json_encode("42", JSON_HEX_TAG); ?>; // Don't forget the extra semicolon!
-</script>
 
-
-<script type="text/javascript">
-    var js_variable = <?php echo json_encode($php_variable); ?>;
-</script> -->
-<!-- snip -->
-
-
-<!-- button which sends selected course and lab events to data base -->
+<!-- Button to submit -->
 <button name="submit">Click to add to your timetable!</button>
 </form>
 
 
+<form method="POST" id="insert">
+
+<input type="hidden" name="start"/>
+
+<script>
+$('#insert').bind('submit', function(){
+                        var sDate = $('[name=startDate]').val();
+                        var sTime = $('[name=startTime]').val();
+                        $('[name=start]').val(sDate+'@'+sTime);
+                      });
+</script>
+
+<button name="submitTT">Click to test!</button>
 </body>
 </html>
