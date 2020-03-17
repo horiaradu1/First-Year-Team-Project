@@ -14,30 +14,6 @@
 	<!-- <link rel = "icon" type = "image/png" href = "Logo.png"> -->
 
 </head>
-<div class="limiter">
-		<div class="navbar">
-      <div class = "picture">
-      <a href="moreTable.php">Home</a>
-    </div>
-    <div class = "picture">
-      <a href="meet.php">Meeting</a>
-    </div>
-  <div class="text100">
-      <a href = "logout.php">Sign Out</a>
-	</div>
-	<div class="text100">
-        <a><?php echo($login_session) ?></a>
-    </div>
-    <div class="text100">
-      <a href="ContactForm.php">Contact Us</a>
-    </div>
-    <div class="text100">
-      <a href="AboutUs.php">About Us</a>
-    </div>
-    <div class="text100">
-      <a href="invites.php">Inbox</a>
-    </div>
-	</div>
 <?php
 include("session.php"); 
 $servername = "dbhost.cs.man.ac.uk";
@@ -95,7 +71,30 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'1'";
         }
 ?>
 <body>
-
+	<div class="limiter">
+		<div class="navbar">
+      <div class = "picture">
+      <a href="moreTable.php">Home</a>
+    </div>
+    <div class = "picture">
+      <a href="meet.php">Meeting</a>
+    </div>
+  <div class="text100">
+      <a href = "logout.php">Sign Out</a>
+	</div>
+	<div class="text100">
+        <a><?php echo($login_session) ?></a>
+    </div>
+    <div class="text100">
+      <a href="ContactForm.php">Contact Us</a>
+    </div>
+    <div class="text100">
+      <a href="AboutUs.php">About Us</a>
+    </div>
+    <div class="text100">
+      <a href="invites.php">Inbox</a>
+    </div>
+	</div>
 		<!-- <div class="container-login100">
 			<div class="btn-container" align="left"><
 				<div class="btn1">
