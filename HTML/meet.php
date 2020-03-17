@@ -93,11 +93,6 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
       <a href="AboutUs.php">About Us</a>
     </div>
 	</div>
-	<div class = "wrap-text">
-      <span class="text">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </span>
-    </div>
 		<!-- <div class="container-login100">
 			<div class="btn-container" align="left"><
 				<div class="btn1">
@@ -180,6 +175,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 							</div>
 						</div>
 					</form>
+					
 
 						<!-- <div class="text-center p-t-115">
 							<span class="txt1">
@@ -194,6 +190,12 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 			</div>
 
 </div>
+
+	<div class = "wrap-text">
+      <span class="text">
+		  Hello nerd
+      </span>
+    </div>
 
 
 	<!-- <div id="dropDownSelect1"></div> -->
