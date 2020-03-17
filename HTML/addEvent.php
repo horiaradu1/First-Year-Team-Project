@@ -10,7 +10,7 @@ if (isset($_POST["submitTT"])) {
     //
     // $name = $_POST["new_course"];
     // $description = $_POST["new_lab"];
-  $start =$_POST["insert"];
+  $start = $_POST["start"];
     // $end =$_POST[""];
 
     //
