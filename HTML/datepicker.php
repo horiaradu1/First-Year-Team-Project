@@ -34,14 +34,14 @@
 <p>From: <input type="text" id="startDate"><input type="text" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
 <script>
 $(function() {
-  $('#startTime').timepicker({ 'timeFormat': 'H:i:s' });
+  $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now' });
 });
 </script>
 
 <p>To: <input type="text" id="endDate"><input type="text" id="endTime" class="time ui-timepicker-input" autocomplete="off"/></p>
 <script>
 $(function() {
-  $('#endTime').timepicker({ 'timeFormat': 'H:i:s' });
+  $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now'});
 });
 </script>
 
