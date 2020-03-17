@@ -29,7 +29,7 @@ if (isset($_POST["submit"])) {
 
 
   $sqlAssign= "INSERT into HasEvent
-    VALUES(\"$login_session\", \"SELECT MAX(eventID) FROM Events\")";
+    VALUES(\"$login_session\", SELECT MAX(eventID) FROM Events)";
 
     $db->query($sqlAssign);
     echo $db->error;
