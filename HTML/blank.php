@@ -27,9 +27,4 @@ echo "Hour, day, month: " . $clickedTime; //echo "day: " . $day . " hours: " . $
 
 $people = $_GET['people'];
 echo $people;
-
-$items = array();
-if (isset($_POST["items"]))
-    $items = unserialize($_POST['items']);
-print_r($items);
 ?>
