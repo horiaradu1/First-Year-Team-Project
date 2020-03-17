@@ -14,6 +14,8 @@
 	<!-- <link rel = "icon" type = "image/png" href = "Logo.png"> -->
 
 </head>
+<br></br>
+<br></br>
 <?php
 include("session.php"); 
 $servername = "dbhost.cs.man.ac.uk";
@@ -30,11 +32,15 @@ $invites = array();
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'eirik'";
+$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'1'";
         $fetchedInvite = $conn->query($sqlQuery);
         if($fetchedInvite->num_rows == 0) {
           ?>
-          <div class = "wrap-text">
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <div class = "wrap-message">
           <span class="text">
               <h1 style="text-align: center;">You do not have any invites yet :O</h1>
             <div class="w3-section">
