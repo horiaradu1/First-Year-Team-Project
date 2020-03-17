@@ -306,12 +306,11 @@ $styleBoarder = "border-block-color: white; border-block-style: solid; border-ri
             $percentOccupied = ($planList[$j][$i]/sizeof($items)) * 100;
             if ($percentOccupied == 0) {
                 ?>
-                <form action="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;" method="post">
-                <input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />
+                <a href="/g63968ef/deploymenttest/visualPlanner/blank.php?day=<?php echo $j;?>&hour=<?php echo $i;?>&title=<?php echo $title;?>" style="color: black;" <input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />>
                 <div>
                    <div style="<?php echo $styleBoarder ?>" class="accent-free"> <font color="black"><h5>All available</h5></font></div>
                  </div>
-            </form>
+            </a>
             
                 <?php }
             else if ((0 < $percentOccupied) &($percentOccupied <= 10)) {
