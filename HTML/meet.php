@@ -193,7 +193,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 
 	<div class = "wrap-text">
       <span class="text">
-		  Hello nerd
+		  Added people: 
       </span>
     </div>
 

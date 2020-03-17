@@ -509,7 +509,7 @@ textarea:-ms-input-placeholder { color: #adadad;}
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  padding: 35px 150px 25px 150px;
+  padding: 35px 1px 25px 30px;
 
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
