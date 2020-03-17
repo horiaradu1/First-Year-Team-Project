@@ -70,8 +70,13 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
         
                 </ul>
                 <div class="w3-section">
-          <button class="w3-button w3-green">Accept</button>
-          <button class="w3-button w3-red">Decline</button>
+                <form action="">
+                <button class="w3-button w3-green">Accept</button>
+                </form>
+                <form action="">
+                <button class="w3-button w3-red">Decline</button>
+                </form>
+          
         </div>
               </span>
             </div>
