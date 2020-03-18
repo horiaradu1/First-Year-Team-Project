@@ -226,13 +226,23 @@ $fetchedInvite = $conn->query($sqlQuery);
 
 					<div class="wrap-input100 validate-input">
                     <input type="text"name="startTime" id="startTime" value="<?php echo $hour ?>" class="time ui-timepicker-input" autocomplete="off" required />
+                    <script>
+                    $(function() {
+                    $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
+                    });
+                    </script>
 						<!-- <span class="focus-input100" data-placeholder="Password"></span> -->
 				
 					</div>
 
           <div class="wrap-input100 validate-input">
           <input type="text" name="endTime" id="endTime" class="time ui-timepicker-input" autocomplete="off" required/>
-						<!-- <value="<?php echo $cpassword;?>"> -->
+          <script>
+            $(function() {
+            $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
+            });
+            </script>
+						<!-- <value="<?php //echo $cpassword;?>"> -->
 						<!-- <span class="focus-input100" data-placeholder="Confirm Password"></span> -->
 						
 					</div>
@@ -252,7 +262,11 @@ $fetchedInvite = $conn->query($sqlQuery);
 				<!-- </form> -->
 			</div>
 		</div>
-	</div>
-
+    </div>
+<script>
+$(function() {
+  $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
+});
+</script>
 </body>
 </html>
