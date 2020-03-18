@@ -11,6 +11,9 @@ body, html {
   height: 100%;
   font-family: Ariel, Helvetica, sans-serif;
 }
+body {
+    background-image: url("backgroundTimeOnTable.jpg");
+}
 a {
 	font-family: Ariel, Helvetica, sans-serif;
 	font-size: 14px;
@@ -59,7 +62,7 @@ ul, li {
   justify-content: center;
   align-items: center;
   padding: 15px;
-	background-image: url("backgroundTimeOnTable.jpg");
+  background-image: url("backgroundTimeOnTable.jpg");
 }
 /*.logo{
 
