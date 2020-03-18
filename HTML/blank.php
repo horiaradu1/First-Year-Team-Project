@@ -17,8 +17,6 @@ $title =  $_GET['title'];
 ?>
 <br></br>
 <?php
-
-$timediff = date('H')-$hour;
 $hoursPassed = date('H'); // hours passed today (subtract later)
 $clickedTime = date('Y-m-d', strtotime("+$hour hours, +$day days, -$hoursPassed hours"));
 
