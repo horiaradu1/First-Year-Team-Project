@@ -148,7 +148,7 @@ $(function() {
 
 
 <!-- Button to submit -->
-<button name="submit" onclick="window.location='/g34904ps/team/HTML/meet.php';">Plan meeting!</button>
+<button name="submit" onclick="window.location.href = '/g34904ps/team/HTML/meet.php'">Plan meeting!</button>
 </form>
 
 </body>
