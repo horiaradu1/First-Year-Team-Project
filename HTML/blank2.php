@@ -277,3 +277,37 @@
 
 </body>
 </html>
+
+
+<form method=POST>
+
+  <!-- Name input box-->
+Name of the event: <input id = "name" name="name" value="<?php echo $title ?>" required>
+<!-- DESCRIPTION input box-->
+Description: <input id = "desc" name="description" required>
+
+<!-- Start datepicker input box-->
+<p>From: <input type="text"name="startDate" id="startDate" value="<?php echo $clickedTime; ?>" required>
+  <input type="text"name="startTime" id="startTime" value="<?php echo $hour ?>" class="time ui-timepicker-input" autocomplete="off" required /></p>
+<!-- function to assign this timepicker, and change the format to a desired one -->
+<script>
+$(function() {
+  $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
+});
+</script>
+
+
+<!-- End datepicker window box -->
+<p>To: <input type="text"name="endDate" id="endDate" required>
+<input type="text" name="endTime" id="endTime" class="time ui-timepicker-input" autocomplete="off" required/></p>
+<!-- the function -->
+<script>
+$(function() {
+  $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
+});
+</script>
+
+
+<!-- Button to submit -->
+<button name="submit">Plan meeting!</button>
+</form>
