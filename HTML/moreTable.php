@@ -53,12 +53,9 @@ include("session.php"); ?>
           $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
 
           $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
-          $counter = 1;
-          while (1) {
+          $difference = 30 - count($thisWeek);
+          for ($i = 0; $i < $difference; $i++) {
             $thisWeek = $thisWeek . " ";
-            if (count($thisWeek) == 30) {
-              echo "yes";
-            }
           }
           echo $thisWeek;
         ?>
