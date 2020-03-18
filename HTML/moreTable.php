@@ -118,11 +118,10 @@ include("session.php"); ?>
 
                 //$monday = date('Y-m-d 00:00:00',time()+( 1+(7*$week) - date('w'))*24*3600);
                 //echo("Monday is " . $monday);
+                //OLD SCRIPT FOR MONDAY, KEEP HERE FOR BUG FIX
 
-
-$monday = date('Y-m-d 00:00:00',time()+( 1+(7*$week) - date('w')-7)*24*3600);
-
-echo("Monday is " . $monday);
+                $monday = date('Y-m-d 00:00:00',time()+( 1+(7*$week) - date('w')-7)*24*3600);
+                //echo("Monday is " . $monday);
 
                 //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
