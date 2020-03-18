@@ -156,6 +156,7 @@ include("session.php"); ?>
                   <?php
                     for ($j = 0; $j < 7; $j++) {
                       $event = NULL;
+                      $conflict = false;
                       $listOfEventIDs = array();
                       $listOfCourses = array();
                       $listOfLabs = array();
@@ -191,7 +192,14 @@ include("session.php"); ?>
                             $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
 
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
-                            $event = "$event + " . $row["name"] . " (" . $row["description"] . ") ";
+                            //$event = "$event" . $row["name"] . "\n (" . $row["description"] . ")";
+                            if ($event == NULL){
+                              $event = $row["name"] . "\n (" . $row["description"] . ")";
+                            }
+                            else {
+                              $event = "$event and" . $row["name"] . " ";
+                              $conflict = true;
+                            }
                             if ($row["name"] == "COMP11120"){
                               $classStyle = "column100 green";
                             }elseif ($row["name"] == "COMP11212"){
@@ -232,12 +240,22 @@ include("session.php"); ?>
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
                             //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
                             //WITH THE EVENT START AND END IN IF STATEMENT
-                            $event = "$event +" . $row["name"];
+                            if ($event == NULL){
+                              $event = $row["name"] . "\n (" . $row["description"] . ")";
+                            }
+                            else {
+                              $event = "$event and" . $row["name"] . " ";
+                              $conflict = true;
+                            }
                             $classStyle = "column100 yellow";//CHANGE COLOR OF ARBITRARY EVENT IF YOU WANT
                             }
                           }
                         }
 
+                        if ($conflict == true){
+                          $event = "$event " . " (CONFLICT)";
+                          $conflict = false;
+                        }
                     ?>
 
                     <?php
