@@ -88,7 +88,7 @@ Description: <input id = "desc" name="description">
 <!-- function to assign this timepicker, and change the format to a desired one -->
 <script>
 $(function() {
-  $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now' });
+  $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
 });
 </script>
 
@@ -98,7 +98,7 @@ $(function() {
 <!-- the function -->
 <script>
 $(function() {
-  $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now'});
+  $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
 });
 </script>
 
