@@ -66,7 +66,7 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
                 </ul>
                 <div class="w3-section">
                 <!-- <form action=""> -->
-                <input type=button onclick="sqlform.submit();" class="w3-button w3-red" value="Decline">
+                <input type=button onclick="sqlform.submit();" class="w3-button w3-green" value="Decline">
                 <!-- </form>
                 <form action=""> -->
                 <input type=button onclick="sqlform.submit();" class="w3-button w3-red" value="Decline">
