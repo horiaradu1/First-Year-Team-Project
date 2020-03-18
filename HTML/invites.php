@@ -61,6 +61,7 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
 
                 $sqlRemoveInvite= "DELETE FROM Inbox WHERE username = " . "'" . $login_session . "' " . "AND eventID = " . "'" . $id . "'";
                 $db->query($sqlRemoveInvite);
+                header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites.php");
                 
                 
               }
@@ -68,6 +69,7 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
               {
                 $sqlRemoveInvite= "DELETE FROM Inbox WHERE username = " . "'" . $login_session . "' " . "AND eventID = " . "'" . $id . "'";
                 $db->query($sqlRemoveInvite);
+                header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites.php");
               }
               else {
               ?>
