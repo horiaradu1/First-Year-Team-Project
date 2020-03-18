@@ -3,10 +3,9 @@
 <?php
 include("session.php");
 
-// responsible for adding the courses from course selector
+// responsible for adding the event
 if (isset($_POST["submit"])) {
 
-  // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
 
   $name=$_POST["name"];
   $description=$_POST["description"];
@@ -15,24 +14,28 @@ if (isset($_POST["submit"])) {
   $endDate=$_POST["endDate"];
   $endTime=$_POST["endTime"];
 
-
-  $start = $startTime.$startTime;
-  $end = $endDate.$endTime;
-
-
-  // echo $name;
-  // echo $description;
-  // echo $start;
-  // echo $end;
-
+  $space = " ";
+  $start = $startDate.$space.$startTime;
+  $end = $endDate.$space.$endTime;
 
   $sqlAddEvent= "INSERT INTO Events (startTime, endTime, name, description)
     VALUES (\"$start\", \"$end\", \"$name\", \"$description\");";
 
-    echo $sqlAddEvent;
+    //echo $sqlAddEvent;
 
     $db->query($sqlAddEvent);
     echo $db->error;
+
+
+    $sqlAssign = "INSERT into HasEvent (username, eventID)
+    VALUES(\"$login_session\", (SELECT MAX(eventID) FROM Events) )";
+
+
+    $db->query($sqlAssign);
+    echo $db->error;
+
+
+
 }
 ?>
 
