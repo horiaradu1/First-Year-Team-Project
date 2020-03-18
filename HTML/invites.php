@@ -55,7 +55,7 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
 
               if(@$_POST["sqlAccept"]==$id)
               {
-                $sqlAddEvent= "INSERT INTO HasEvents (username, eventID)
+                $sqlAddEvent= "INSERT INTO HasEvent (username, eventID)
                 VALUES (\"$login_session\", \"$id\");";
                 $db->query($sqlAddEvent);
 
