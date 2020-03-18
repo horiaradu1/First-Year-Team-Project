@@ -5,7 +5,7 @@ $eMonth = date('F',time()+( 7 - date('w'))*24*3600);
 $sDay = date('d',time()+( 1 - date('w'))*24*3600); 
 $eDay = date('d',time()+( 7 - date('w'))*24*3600);
 
-echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+//echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
 
 $day =  $_GET['day']; 
 
@@ -21,14 +21,14 @@ $timediff = date('H')-$hour;
 $hoursPassed = date('H'); // hours passed today (subtract later)
 $clickedTime = date('Y-m-d', strtotime("+$hour hours, +$day days, -$hoursPassed hours"));
 
-echo "Hour, day, month: " . $clickedTime; //echo "day: " . $day . " hours: " . $hour;
+//echo "Hour, day, month: " . $clickedTime; //echo "day: " . $day . " hours: " . $hour;
 
 
 
-$people = $_GET['people'];
+//$people = $_GET['people'];
 echo $people;
 $arrayPeople = explode(",", $people);
-print_r($arrayPeople);
+//print_r($arrayPeople);
 
 
 ?>
