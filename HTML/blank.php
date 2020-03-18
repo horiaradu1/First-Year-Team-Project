@@ -25,8 +25,8 @@ $clickedTime = date('Y-m-d', strtotime("+$hour hours, +$day days, -$hoursPassed 
 
 
 
-//$people = $_GET['people'];
-echo $people;
+$people = $_GET['people'];
+//echo $people;
 $arrayPeople = explode(",", $people);
 //print_r($arrayPeople);
 
