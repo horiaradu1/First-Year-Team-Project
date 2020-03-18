@@ -78,7 +78,7 @@ $sqlAssign = "INSERT into Inbox (username, eventID)
     echo $db->error;
 }
 
-header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/meet.php");
+header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.php");
 
 
 
