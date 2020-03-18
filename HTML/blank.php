@@ -214,11 +214,6 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 					</div>
 	
 					<div class="text-center p-t-115">
-					
-
-						<a class="txt2" href="https://web.cs.manchester.ac.uk/g34904ps/team/php/login.php">
-							Login
-						</a>
 					</form>
 					</div>
 				<!-- </form> -->
