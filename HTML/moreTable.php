@@ -174,7 +174,7 @@ include("session.php"); ?>
 
                       foreach($listOfCourses as $ids) {
                           foreach($listOfLabs as $lab) {
-                            $sqlQuery2 = ("SELECT startTime, endTime, name FROM CourseEvents WHERE name = '" . $ids . "' AND  lab = '" . $lab ."';");
+                            $sqlQuery2 = ("SELECT startTime, endTime, name, description FROM CourseEvents WHERE name = '" . $ids . "' AND  lab = '" . $lab ."';");
                             $fetchedEvent2 = $conn->query($sqlQuery2);
                           }
 
@@ -191,7 +191,7 @@ include("session.php"); ?>
                             $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
 
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
-                            $event = "$event " . $row["name"];
+                            $event = "$event + " . $row["name"] . " (" . $row["description"] . ") ";
                             if ($row["name"] == "COMP11120"){
                               $classStyle = "column100 green";
                             }elseif ($row["name"] == "COMP11212"){
@@ -232,7 +232,7 @@ include("session.php"); ?>
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
                             //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
                             //WITH THE EVENT START AND END IN IF STATEMENT
-                            $event = "$event " . $row["name"];
+                            $event = "$event +" . $row["name"];
                             $classStyle = "column100 yellow";//CHANGE COLOR OF ARBITRARY EVENT IF YOU WANT
                             }
                           }
