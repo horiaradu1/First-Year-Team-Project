@@ -192,17 +192,15 @@ $fetchedInvite = $conn->query($sqlQuery);
 				<!-- <form class="register-form validate-form"> -->
 					<div class="put-it-here-to-include-padding">
 					<span class="register-form-title p-b-26">
-						Details:
+						<?php echo $title ?>
 					</span>
 				  </div>
-					<!-- <p><span class="error">* required fields</span></p> -->
+			
 					<form method ="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-          <div class="wrap-input100 validate-input">
+          <!-- <div class="wrap-input100 validate-input">
           <p style="text-align: center;">Title: </p>
-          <input id = "name" name="name" value="<?php echo $title ?>" required>
-						<!-- <span class="focus-input100" data-placeholder="First Name"></span> -->
-						
-					</div>
+          <input id = "name" name="name" value="<?php //echo $title ?>" required>						
+					</div> -->
 
           <div class="wrap-input100 validate-input">
           <p style="text-align: center;">Description: </p>
