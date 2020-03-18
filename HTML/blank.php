@@ -108,8 +108,6 @@ if (isset($_POST["submit"])) {
 <body>
 
 
-
-
 <form method=POST>
 
   <!-- Name input box-->
@@ -118,7 +116,7 @@ Name of the event: <input id = "name" name="name" value="<?php echo $title?>">
 Description: <input id = "desc" name="description">
 
 <!-- Start datepicker input box-->
-<p>From: <input type="text"name="startDate" id="startDate">
+<p>From: <input type="text"name="startDate" id="startDate" value="<?php echo $clickedTime ?>">
   <input type="text"name="startTime" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
 <!-- function to assign this timepicker, and change the format to a desired one -->
 <script>
