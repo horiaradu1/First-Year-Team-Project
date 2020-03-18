@@ -43,17 +43,17 @@ include("session.php"); ?>
     <div class="container-table100">
       <div class="week">
         <?php
-          //$week = 0;
-          try {
-            $week = $_GET['week'];
-          } catch (Exception $e) {}
-          $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
-          $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
-          $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
-          $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
+          
+          // try {
+          //   $week = $_GET['week'];
+          // } catch (Exception $e) {}
+          // $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
+          // $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
+          // $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
+          // $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
 
-          $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
-          echo $thisWeek;
+          // $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+          // echo $thisWeek;
         ?>
       </div>
       <div class="logo">
