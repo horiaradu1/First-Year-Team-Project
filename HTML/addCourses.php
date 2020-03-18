@@ -108,13 +108,13 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
       <!-- Button which hides or unhides users timetable values -->
 
-      <!--
-<button onclick="myFunction()">Click to display/hide events</button>
 
-      <table id="timetable" class="hidden">
+<!-- <button onclick="myFunction()">Click to display/hide events</button> -->
+
+      <!-- <table id="timetable" class="hidden"> -->
 
         <!-- For loop to select description from event/. -->
-        <?php foreach ($data_array as $val) { ?>
+        <!-- <?php foreach ($data_array as $val) { ?>
           <tr>
             <td><?php
             echo $val["name"];
@@ -129,9 +129,9 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
             // echo $val ["EndTime"];
              ?></td>
           </tr>
-        <?php } ?>
-      </table>
--->
+        <?php } ?> -->
+      <!-- </table> -->
+
       <br>
       <br>
             <p><b>Course selector<b></p>
