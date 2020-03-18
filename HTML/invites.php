@@ -116,7 +116,7 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
       <a href="moreTable.php">Home</a>
     </div>
     <div class = "picture">
-      <a href="meet.php">Meeting</a>
+      <a href="meet.php">Meeting(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
     </div>
   <div class="text100">
       <a href = "logout.php">Sign Out</a>
