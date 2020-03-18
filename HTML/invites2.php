@@ -24,7 +24,8 @@ $password = "database";
 $dbname = "2019_comp10120_y4";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-
+$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+$fetchedInvite = $conn->query($sqlQuery);
 ?>
           <br></br>
           <br></br>
@@ -62,7 +63,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
       <a href="AboutUs.php">About Us</a>
     </div>
     <div class="text100">
-      <a href="invites.php">Inbox</a>
+      <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
     </div>
 	</div>
 		<!-- <div class="container-login100">

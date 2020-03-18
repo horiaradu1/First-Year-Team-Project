@@ -27,7 +27,7 @@ $invites = array();
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+        $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
         $fetchedInvite = $conn->query($sqlQuery);
         if($fetchedInvite->num_rows == 0) {
           ?>
@@ -116,7 +116,7 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
       <a href="moreTable.php">Home</a>
     </div>
     <div class = "picture">
-      <a href="meet.php">Meeting(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
+      <a href="meet.php">Meeting</a>
     </div>
   <div class="text100">
       <a href = "logout.php">Sign Out</a>
@@ -131,7 +131,7 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
       <a href="AboutUs.php">About Us</a>
     </div>
     <div class="text100">
-      <a href="invites.php">Inbox</a>
+      <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
     </div>
 	</div>
 		<!-- <div class="container-login100">
