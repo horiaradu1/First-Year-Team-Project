@@ -80,13 +80,12 @@ include("session.php"); ?>
 				<div class="btn1">
 				<button <button onclick="window.location.href = '/g34904ps/team/HTML/addEvent.php';"class="btn">CREATE EVENT</button>
 			</div>
-      <div class="btn-container" align="left">
-        <div class="btn3">
-        <button <button onclick="window.location.href = '/g34904ps/team/HTML/addCourses.php';"class="btn">Add a course</button>
-      </div>
 			<div class="btn2">
 				<button onclick="window.location.href = '/g34904ps/team/HTML/meet.php';" class="btn">CREATE MEETING</button>
 			</div>
+      <div class="btn3">
+        <button onclick="window.location.href = '/g34904ps/team/HTML/addCourses.php';" class="btn">ADD COURSE</button>
+      </div>
 			</div>
       <div class="before">
       <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
