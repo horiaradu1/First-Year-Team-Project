@@ -153,7 +153,43 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 
 </head>
 <body>
+<?php
+include("session.php"); 
+$servername = "dbhost.cs.man.ac.uk";
+$username = "g63968ef";
+$password = "database";
+$dbname = "2019_comp10120_y4";
 
+$conn = new mysqli($servername, $username, $password, $dbname);
+$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+$fetchedInvite = $conn->query($sqlQuery);
+?>
+<div class="navbar">
+      <div class = "picture">
+      <a href="moreTable.php">Home</a>
+       <!-- connect to the login -->
+    </div>
+    <div class = "picture">
+      <a href="meet.php">Meeting</a>
+       <!-- connect to the login -->
+    </div>
+  <div class="text100">
+      <a href="logout.php">Sign out</a>
+       <!-- connect to the login -->
+    </div>
+    <div class="text100">
+        <a><?php echo($login_session) ?></a>
+    </div>
+    <div class="text100">
+      <a href="ContactForm.php">Contact Us</a>
+    </div>
+    <div class="text100">
+      <a href="AboutUs.php">About Us</a>
+    </div>
+    <div class="text100">
+      <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
+    </div>
+    </div>
 
 <div class="container-login100">
 			<div class="wrap-register">
