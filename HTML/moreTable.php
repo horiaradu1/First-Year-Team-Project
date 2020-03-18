@@ -194,10 +194,10 @@ include("session.php"); ?>
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
                             //$event = "$event" . $row["name"] . "\n (" . $row["description"] . ")";
                             if ($event == NULL){
-                              $event = $row["name"] . "\n (" . $row["description"] . ")";
+                              $event = $row["name"] . "\n (" . $row["description"] . ") ";
                             }
                             else {
-                              $event = "$event and" . $row["name"] . " ";
+                              $event = "$event and" . $row["name"] . "\n (" . $row["description"] . ") ";
                               $conflict = true;
                             }
                             if ($row["name"] == "COMP11120"){
@@ -241,10 +241,10 @@ include("session.php"); ?>
                             //NEED TO IMPLEMENT A LONGER THAN A DAY EVENT
                             //WITH THE EVENT START AND END IN IF STATEMENT
                             if ($event == NULL){
-                              $event = $row["name"] . "\n (" . $row["description"] . ")";
+                              $event = $row["name"];
                             }
                             else {
-                              $event = "$event and" . $row["name"] . " ";
+                              $event = "$event and " . $row["name"] . " ";
                               $conflict = true;
                             }
                             $classStyle = "column100 yellow";//CHANGE COLOR OF ARBITRARY EVENT IF YOU WANT
