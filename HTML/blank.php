@@ -81,7 +81,6 @@ $sqlAssign = "INSERT into Inbox (username, eventID)
     $db->query($sqlAssign);
     echo $db->error;
 }
-echo "NEEEERD";
 header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.php");
 
 
@@ -197,7 +196,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 					</span>
 				  </div>
 					<!-- <p><span class="error">* required fields</span></p> -->
-					<form method ="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+					<form method ="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
           <div class="wrap-input100 validate-input">
           <input id = "name" name="name" value="<?php echo $title ?>" required>
 						<!-- <span class="focus-input100" data-placeholder="First Name"></span> -->
