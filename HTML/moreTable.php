@@ -57,7 +57,7 @@ include("session.php"); ?>
           while (1) {
             $thisWeek = $thisWeek . " ";
             if (count($thisWeek) == 30) {
-              break;
+              echo "yes";
             }
           }
           echo $thisWeek;
