@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR);
 
 $sMonth = date('F',time()+( 1 - date('w'))*24*3600);
 $eMonth = date('F',time()+( 7 - date('w'))*24*3600);
@@ -30,7 +31,6 @@ $people = $_GET['people'];
 $arrayPeople = explode(",", $people);
 //print_r($arrayPeople);
 
-error_reporting(E_ERROR);
 include("session.php");
 
 $servername = "dbhost.cs.man.ac.uk";
