@@ -10,7 +10,7 @@ $eDay = date('d',time()+( 7 - date('w'))*24*3600);
 $day =  $_GET['day']; 
 
 $hour = $_GET['hour']; 
-
+$hour = gmdate("H:i:s", $hour*3600);
 $title =  $_GET['title']; 
 
 ?>
