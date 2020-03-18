@@ -169,51 +169,50 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 					<!-- <p><span class="error">* required fields</span></p> -->
 					<form method ="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
           <div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="fname" placeholder="First Name" value="<?php echo $fname;?>">
+          <input id = "name" name="name" value="<?php echo $title ?>" required>
 						<!-- <span class="focus-input100" data-placeholder="First Name"></span> -->
-						<span class="error"><?php echo $fnameErr;?></span>
+						
 					</div>
 
           <div class="wrap-input100 validate-input">
-            <input class="input100" type="text" name="lname" placeholder="Last Name" value="<?php echo $lname;?>">
-            <!-- <span class="focus-input100" data-placeholder="Last Name"></span> -->
-						<span class="error"><?php echo $lnameErr;?></span>
+          <input id = "desc" name="description" required>            <!-- <span class="focus-input100" data-placeholder="Last Name"></span> -->
+						
           </div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="username" placeholder="Username" value="<?php echo $username;?>">
+                    <input type="text"name="startDate" id="startDate" value="<?php echo $clickedTime; ?>" required>
 						<!-- <span class="focus-input100" data-placeholder="Username"></span> -->
-						<span class="error"><?php echo $usernameErr;?></span>
+						
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="email" placeholder="Email" value="<?php echo $email;?>">
+                    <input type="text"name="endDate" id="endDate" required>
 						<!-- <span class="focus-input100" data-placeholder="Email"></span> -->
-						<span class="error"><?php echo $emailErr;?></span>
+						
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="password" placeholder="Password" value="<?php echo $password;?>">
+                    <input type="text"name="startTime" id="startTime" value="<?php echo $hour ?>" class="time ui-timepicker-input" autocomplete="off" required />
 						<!-- <span class="focus-input100" data-placeholder="Password"></span> -->
-						<span class="error"><?php echo $passwordErr;?></span>
+				
 					</div>
 
           <div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="cpassword" placeholder="Confirm Password">
+          <input type="text" name="endTime" id="endTime" class="time ui-timepicker-input" autocomplete="off" required/>
 						<!-- <value="<?php echo $cpassword;?>"> -->
 						<!-- <span class="focus-input100" data-placeholder="Confirm Password"></span> -->
-						<span class="error"><?php echo $cpasswordErr;?></span>
+						
 					</div>
 
 					<div class="container-register-form-btn">
 						<div class="wrap-register-form-btn">
 							<div class="register-form-bgbtn"></div>
 							<button class="register-form-btn">
-								Register
+								Create Meeting
 							</button>
 						</div>
 					</div>
-					<span class="message"><?php echo $final;?></span>
+					<span class="message"><?php echo $final;?></span> 
 					<div class="text-center p-t-115">
 						<span class="txt1">
 							Already have an account?
