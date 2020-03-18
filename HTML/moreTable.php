@@ -223,7 +223,6 @@ include("session.php"); ?>
                       
 
                       foreach($listOfEventIDs as $ids) {
-                        echo $ids;
                         $sqlQuery1 = "SELECT startTime, endTime, name FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent1 = $conn->query($sqlQuery1);
                         foreach($fetchedEvent1->fetch_all(MYSQLI_ASSOC) as $row) {
@@ -248,7 +247,9 @@ include("session.php"); ?>
                               $event = "$event and " . $row["name"] . " ";
                               $conflict = true;
                             }
-                            $classStyle = "column100 yellow";//CHANGE COLOR OF ARBITRARY EVENT IF YOU WANT
+                            $colorIndex = $ids%5;
+                            $listOfColors = array("Gray", "Lightblue", "lightgreen", "lightsalmon", "gold");
+                            $classStyle = "column100 " . $listOfColors[$colorIndex];//CHANGE COLOR OF ARBITRARY EVENT IF YOU WANT
                             }
                           }
                         }
