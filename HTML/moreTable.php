@@ -81,11 +81,11 @@ include("session.php"); ?>
 				<button <button onclick="window.location.href = '/g34904ps/team/HTML/addEvent.php';"class="btn">CREATE EVENT</button>
 			</div>
 			<div class="btn2">
-				<button onclick="window.location.href = '/g34904ps/team/HTML/meet.php';" class="btn">CREATE MEETING</button>
-			</div>
-      <div class="btn3">
         <button onclick="window.location.href = '/g34904ps/team/HTML/addCourses.php';" class="btn">ADD COURSE</button>
-      </div>
+			</div>
+      <!-- <div class="btn3">
+        <button onclick="window.location.href = '/g34904ps/team/HTML/addCourses.php';" class="btn">ADD COURSE</button>
+      </div> -->
 			</div>
       <div class="before">
       <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
@@ -247,8 +247,8 @@ include("session.php"); ?>
                               $event = "$event and " . $row["name"] . " ";
                               $conflict = true;
                             }
-                            $colorIndex = $ids%5;
-                            $listOfColors = array("gray", "lightblue", "lightgreen", "lightsalmon", "gold");
+                            $listOfColors = array("gray", "lightblue", "lightgreen", "lightsalmon", "gold"); // ADD COLORS HERE WITH CORROLATING CSS VALUE
+                            $colorIndex = $ids%count($listOfColors);
                             $classStyle = "column100 " . $listOfColors[$colorIndex];//CHANGE COLOR OF ARBITRARY EVENT IF YOU WANT
                             }
                           }
