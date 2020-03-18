@@ -198,9 +198,9 @@ $fetchedInvite = $conn->query($sqlQuery);
 			
 					<form method ="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
           <!-- <div class="wrap-input100 validate-input">
-          <p style="text-align: center;">Title: </p>
-          <input id = "name" name="name" value="<?php //echo $title ?>" required>						
-					</div> -->
+          <p style="text-align: center;">Title: </p> -->
+          <input id = "name" name="name" type="hidden" value="<?php echo $title ?>" required>						
+					<!-- </div> -->
 
           <div class="wrap-input100 validate-input">
           <p style="text-align: center;">Description: </p>
