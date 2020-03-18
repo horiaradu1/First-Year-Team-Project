@@ -31,13 +31,6 @@ $arrayPeople = explode(",", $people);
 //print_r($arrayPeople);
 
 
-?>
-
-
-
-
-
-<?php
 include("session.php");
 
 // responsible for adding the event
@@ -63,13 +56,27 @@ if (isset($_POST["submit"])) {
     $db->query($sqlAddEvent);
     echo $db->error;
 
-
+if (in_array($login_session, $arrayPeople)) {
     $sqlAssign = "INSERT into HasEvent (username, eventID)
     VALUES(\"$login_session\", (SELECT MAX(eventID) FROM Events) )";
 
 
     $db->query($sqlAssign);
     echo $db->error;
+
+    if (($key = array_search($login_session, $arrayPeople)) !== false) {
+        unset($arrayPeople[$key]);
+    }
+}
+
+foreach ($arrayPeople as $person) {
+$sqlAssign = "INSERT into Inbox (username, eventID)
+    VALUES(\"$person\", (SELECT MAX(eventID) FROM Events) )";
+
+
+    $db->query($sqlAssign);
+    echo $db->error;
+}
 
 
 
