@@ -113,7 +113,7 @@ if (isset($_POST["submit"])) {
 <form method=POST>
 
   <!-- Name input box-->
-Name of the event: <input id = "name" name="name">
+Name of the event: <input id = "name" name="name" value="<?php echo $title?>">
 <!-- DESCRIPTION input box-->
 Description: <input id = "desc" name="description">
 
