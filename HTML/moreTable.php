@@ -223,6 +223,7 @@ include("session.php"); ?>
                       
 
                       foreach($listOfEventIDs as $ids) {
+                        echo $ids;
                         $sqlQuery1 = "SELECT startTime, endTime, name FROM Events WHERE eventID = " . $ids;
                         $fetchedEvent1 = $conn->query($sqlQuery1);
                         foreach($fetchedEvent1->fetch_all(MYSQLI_ASSOC) as $row) {
