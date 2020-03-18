@@ -69,7 +69,7 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
                 <button class="w3-button w3-green">Accept</button>
                 <!-- </form>
                 <form action=""> -->
-                <form class="w3-button w3-red">Decline</form>
+                <form class="w3-button w3-red" method="post">Decline</form>
                 <!-- </form> -->
           
         </div>
