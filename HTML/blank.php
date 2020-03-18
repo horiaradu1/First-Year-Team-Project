@@ -35,6 +35,8 @@ print_r($arrayPeople);
 
 
 
+
+
 <?php
 include("session.php");
 
@@ -108,20 +110,22 @@ if (isset($_POST["submit"])) {
 <body>
 
 
+
+
 <form method=POST>
 
   <!-- Name input box-->
-Name of the event: <input id = "name" name="name" value="<?php echo $title?>">
+Name of the event: <input id = "name" name="name" value="<?php echo $title ?>">
 <!-- DESCRIPTION input box-->
 Description: <input id = "desc" name="description">
 
 <!-- Start datepicker input box-->
-<p>From: <input type="text"name="startDate" id="startDate" value="<?php echo $clickedTime ?>">
-  <input type="text"name="startTime" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+<p>From: <input type="text"name="startDate" id="startDate">
+  <input type="text"name="startTime" id="startTime" value="<?php echo $hour ?>" class="time ui-timepicker-input" autocomplete="off"/></p>
 <!-- function to assign this timepicker, and change the format to a desired one -->
 <script>
 $(function() {
-  $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now' });
+  $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
 });
 </script>
 
@@ -131,7 +135,7 @@ $(function() {
 <!-- the function -->
 <script>
 $(function() {
-  $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now'});
+  $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
 });
 </script>
 
