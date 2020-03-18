@@ -103,7 +103,7 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 "https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
         type = "image/x-icon">
 	<!-- <link rel = "icon" type = "image/png" href = "Logo.png"> -->
-	<style>
+	<!-- <style>
 	.error{
 	 color: #e3503b;
 	 font-family: Ariel, Helvetica, sans-serif;
@@ -124,7 +124,7 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 		top: -350px;
 		right: 550px;
 	}
-    </style>
+    </style> -->
     
     <?php ///////////////////////////// ?>
 
