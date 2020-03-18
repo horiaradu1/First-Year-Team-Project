@@ -70,7 +70,9 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
         }
     }
 }
-array_push($items, $login_session);
+if (count($items) == 0) {
+	array_push($items, $login_session);
+}
 ?>
 <body>
 	<div class="limiter">
