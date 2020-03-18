@@ -62,15 +62,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-//echo "Connected successfully" . "<br>";
 
 // initilizing variables and lists
 $listOfEvents = array();
 $listOfCourses = array();
 $dateToday = (date('Y-m-d'));
 $dateToday = new DateTime('today');
-// $dateToday = date('Y-m-d H:i:s');
-$timeToday = date('2020-02-20');
+$timeToday = date('Y-m-d');
+// $timeToday = date('2020-02-20');
 $planList = array();
 for ($week = 0; $week < 7; $week++) {
     array_push($planList, array());
@@ -78,9 +77,6 @@ for ($week = 0; $week < 7; $week++) {
         array_push($planList[$week], 0);
     }
 }
-
-//echo implode( ", ", $planList[0]);
-//echo $timeToday, "\n";
 
 function hours_between($date1, $date2) {
     $date1 = strtotime($date1);
@@ -96,12 +92,11 @@ function hours_between($date1, $date2) {
        - $months*30*60*60*24 - $days*60*60*24) 
                                    / (60*60));
 
-    $hoursBetween = $diff/3600; // this is not exactly accurate, having months will just push
-    return $hoursBetween;                                // force the dates out of range out of the range of the planner.
+    $hoursBetween = $diff/3600; 
+    return $hoursBetween;                                
 }
 
-
-
+// function adds the events of a person to an entered list
 function createMeetingList($listUsernames) {
     global $conn, $listOfPeople, $listOfEvents, $timeToday, $planList;
 
@@ -111,7 +106,6 @@ function createMeetingList($listUsernames) {
     $result = $conn->query("SELECT * FROM HasEvent");
     foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
         if (in_array($row["username"], $listUsernames)) {
-            // echo $row["Username"] . "<br>";
             array_push($listOfEvents, $row["eventID"]);
         }
     }
@@ -120,9 +114,6 @@ function createMeetingList($listUsernames) {
         $sqlQuery = "SELECT startTime, endTime FROM Events WHERE eventID = " . $event;
         $fetchedEvent = $conn->query($sqlQuery);
         foreach($fetchedEvent->fetch_all(MYSQLI_ASSOC) as $row) {
-            // echo ("Start time: " . $row["StartTime"] . "<br>" . 
-            //       "End time: " . $row["EndTime"] . "<br>");
-            // echo "Hours between: " . hours_between($row["StartTime"], $row["EndTime"]) . "<br><br>";
 
             $timeTillEvent = hours_between($timeToday, $row["startTime"]);
             $timeTillEventDays = $timeTillEvent/24;
@@ -132,7 +123,6 @@ function createMeetingList($listUsernames) {
             if ((0 <= $timeTillEventDays) && ($timeTillEventDays <= 7)) {
                 $day = intdiv($timeTillEvent, 24);
                 $hours = $timeTillEvent % 24;
-                //$hours = $hours - 6; // starting schedule from 6 am
                 for ($i = 0; $i < $lengthEvent; $i++) {
                     if ($day == 7) {
                         break;
@@ -154,15 +144,9 @@ function createMeetingList($listUsernames) {
             
         }
     }
-    // echo "Tomorrow: ";
-    // foreach($planList[1] as $number) {
-    //     echo $number;
-    // }
-
-    //print_r($planList);
 }
 
-////////////
+// function adds the course-events of a person to an entered list
 function createMeetingListCourses($listUsernames) {
     global $conn, $listOfPeople, $listOfCourses, $timeToday, $planList;
 
