@@ -49,20 +49,26 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
         else {
           foreach($fetchedInvite->fetch_all(MYSQLI_ASSOC) as $row) {
               $id = $row['eventID'];
+              $getQuery = "SELECT startTime, endTime, name, description FROM Events WHERE eventID = " . $id;
+              $fetchedEvent = $conn->query($getQuery);
+              $event = $fetchedEvent->fetch_row();
 
-              global $conn;
               if(@$_POST["sqlAccept"]==$id)
               {
-              echo "ACCEPTED";
+                $sqlAddEvent= "INSERT INTO HasEvents (username, eventID)
+                VALUES (\"$login_session\", \"$id\");";
+                $db->query($sqlAddEvent);
+
+                $sqlRemoveInvite= "DELETE FROM Inbox WHERE username = " . "'" . $login_session . "' " . "AND eventID = " . "'" . $id . "'";
+                $db->query($sqlRemoveInvite);
+                
+                
               }
               else if ((@$_POST["sqlDecline"]==$id))
               {
               echo "DECLINED";
               }
               else {
-              $getQuery = "SELECT startTime, endTime, name, description FROM Events WHERE eventID = " . $id;
-              $fetchedEvent = $conn->query($getQuery);
-              $event = $fetchedEvent->fetch_row();
               ?>
               <div class = "wrap-text">
               <span class="text">
