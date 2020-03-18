@@ -156,9 +156,6 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 
 
 <div class="container-login100">
-			<div class="logo" >
-				<img src = "Logo.png">
-			</div>
 			<div class="wrap-register">
 				<!-- <form class="register-form validate-form"> -->
 					<div class="put-it-here-to-include-padding">
