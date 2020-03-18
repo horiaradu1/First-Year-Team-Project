@@ -38,7 +38,7 @@ include("session.php"); ?>
           $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
           echo $thisWeek;
         ?>
-      
+
       </a>
     </div>
   <div class="text100">
@@ -60,7 +60,7 @@ include("session.php"); ?>
     <div class="container-table100">
       <!-- <div class="week"> -->
         <?php
-          
+
           // try {
           //   $week = $_GET['week'];
           // } catch (Exception $e) {}
@@ -80,6 +80,10 @@ include("session.php"); ?>
 				<div class="btn1">
 				<button <button onclick="window.location.href = '/g34904ps/team/HTML/addEvent.php';"class="btn">CREATE EVENT</button>
 			</div>
+      <div class="btn-container" align="left">
+        <div class="btn3">
+        <button <button onclick="window.location.href = '/g34904ps/team/HTML/addCourses.php';"class="btn">Add a course</button>
+      </div>
 			<div class="btn2">
 				<button onclick="window.location.href = '/g34904ps/team/HTML/meet.php';" class="btn">CREATE MEETING</button>
 			</div>
