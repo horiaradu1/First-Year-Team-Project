@@ -83,6 +83,9 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 
 
 }
+$conn = new mysqli($servername, $username, $password, $dbname);
+$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+$fetchedInvite = $conn->query($sqlQuery);
 ?>
 
 <!doctype html>
@@ -153,17 +156,7 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 
 </head>
 <body>
-<?php
-include("session.php"); 
-$servername = "dbhost.cs.man.ac.uk";
-$username = "g63968ef";
-$password = "database";
-$dbname = "2019_comp10120_y4";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
-$fetchedInvite = $conn->query($sqlQuery);
-?>
+    
 <div class="navbar">
       <div class = "picture">
       <a href="moreTable.php">Home</a>
