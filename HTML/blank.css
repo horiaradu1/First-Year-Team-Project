@@ -273,7 +273,7 @@ textarea:-ms-input-placeholder { color: #adadad;}
   z-index: -1;
   width: 300%;
   height: 100%;
-  /* background-image: linear-gradient(to right, #4bddf0, #0a24fb); */
+  background-image: linear-gradient(to right, #4bddf0, #0a24fb);
   top: 0;
   left: -100%;
 
