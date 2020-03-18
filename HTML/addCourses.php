@@ -117,10 +117,10 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <!-- <?php foreach ($data_array as $val) { ?>
           <tr>
             <td><?php
-            echo $val["name"];
-            echo ": ";
-            echo $val["description"];
-            echo "\n\t";
+            // echo $val["name"];
+            // echo ": ";
+            // echo $val["description"];
+            // echo "\n\t";
       // as you can see we could get any information when needed
             // echo "Starts at: ";
             // echo $val ["StartTime"];
