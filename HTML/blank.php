@@ -198,23 +198,27 @@ $fetchedInvite = $conn->query($sqlQuery);
 					<!-- <p><span class="error">* required fields</span></p> -->
 					<form method ="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
           <div class="wrap-input100 validate-input">
+          <p style="text-align: center;">Title: </p>
           <input id = "name" name="name" value="<?php echo $title ?>" required>
 						<!-- <span class="focus-input100" data-placeholder="First Name"></span> -->
 						
 					</div>
 
           <div class="wrap-input100 validate-input">
+          <p style="text-align: center;">Description: </p>
           <input id = "desc" name="description" required>            <!-- <span class="focus-input100" data-placeholder="Last Name"></span> -->
 						
           </div>
 
 					<div class="wrap-input100 validate-input">
+          <p style="text-align: center;">Start date: </p>
                     <input type="text"name="startDate" id="startDate" value="<?php echo $clickedTime; ?>" required>
 						<!-- <span class="focus-input100" data-placeholder="Username"></span> -->
 						
 					</div>
 
 					<div class="wrap-input100 validate-input">
+          <p style="text-align: center;">End date: </p>
                     <input type="text"name="endDate" id="endDate" required>
 						<!-- <span class="focus-input100" data-placeholder="Email"></span> -->
 						
@@ -233,6 +237,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 					</div>
 
           <div class="wrap-input100 validate-input">
+          <p style="text-align: center;">End time: </p>
           <input type="text" name="endTime" id="endTime" class="time ui-timepicker-input" autocomplete="off" required/>
           <script>
             $(function() {
