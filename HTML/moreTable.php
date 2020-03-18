@@ -54,9 +54,11 @@ include("session.php"); ?>
 
           $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
           $counter = 1;
-          while (count($thisWeek) <= 30) {
-            $thisWeek = $thisWeek . "-";
-            echo $thisWeek;
+          while (1) {
+            $thisWeek = $thisWeek . " ";
+            if (count($thisWeek) == 30) {
+              break;
+            }
           }
           echo $thisWeek;
         ?>
