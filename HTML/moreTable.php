@@ -53,10 +53,6 @@ include("session.php"); ?>
           $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
 
           $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
-          $difference = 30 - count($thisWeek);
-          for ($i = 0; $i < $difference; $i++) {
-            $thisWeek = $thisWeek . "&nbsp;";
-          }
           echo $thisWeek;
         ?>
       </div>
