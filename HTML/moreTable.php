@@ -55,7 +55,7 @@ include("session.php"); ?>
           $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
           $difference = 30 - count($thisWeek);
           for ($i = 0; $i < $difference; $i++) {
-            $thisWeek = $thisWeek + " ";
+            $thisWeek = $thisWeek . "&nbsp;";
           }
           echo $thisWeek;
         ?>
