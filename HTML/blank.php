@@ -141,7 +141,7 @@ $(function() {
 
 
 <!-- Button to submit -->
-<button name="submit">Click to add to your timetable!</button>
+<button name="submit">Plan meeting!</button>
 </form>
 
 </body>
