@@ -66,43 +66,9 @@ $fetchedInvite = $conn->query($sqlQuery);
       <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
     </div>
 	</div>
-		<!-- <div class="container-login100">
-			<div class="btn-container" align="left"><
-				<div class="btn1">
-				<button class="btn">RECEIVED INVITATIONS</button>
-			</div>
-			<div class="btn2">
-				<button class="btn">SENT INVITATIONS</button>
-			</div>
-			<div class="btn3">
-				<button class="btn">UPCOMING EVENTS</button>
-			</div>
-			<div class="btn4">
-				<button class="btn">PAST EVENTS</button>
-			</div>
-			</div> -->
-			<!-- <div class="contact-us-button-contain">
-				<div class="contact-us-button-wrap">
-					<div class="contact-us-button"></div>
-					<button class="contact-us">
-						Contact us
-					</button>
-				</div>
-			</div> -->
 				<div class="logo" align="left">
 					<img src = "Logo.png">
 				</div>
-			<!-- <div class="logo" align="left">
-				<img src = "Logo.png">
-			</div> -->
-
-				
-
 </div>
-
-
-	<!-- <div id="dropDownSelect1"></div> -->
-  <!-- <script src = "bootstrap.js"> -->
-	<!-- <script src = "try.js"> -->
 </body>
 </html>

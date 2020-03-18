@@ -67,9 +67,6 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
         }
     }
 }
-// if (count($items) == 0) { 
-// 	array_push($items, $login_session);  // automatically adds the logged in user
-// }
 ?>
 <body>
 	<div class="limiter">
