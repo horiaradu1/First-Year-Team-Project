@@ -56,7 +56,6 @@ if (isset($_POST["submit"])) {
   $sqlAddEvent= "INSERT INTO Events (startTime, endTime, name, description)
     VALUES (\"$start\", \"$end\", \"$name\", \"$description\");";
 
-    //echo $sqlAddEvent;
 
     $db->query($sqlAddEvent);
     echo $db->error;
@@ -82,7 +81,7 @@ $sqlAssign = "INSERT into Inbox (username, eventID)
     $db->query($sqlAssign);
     echo $db->error;
 }
-
+echo "NEEEERD";
 header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.php");
 
 
