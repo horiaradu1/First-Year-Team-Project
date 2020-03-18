@@ -128,7 +128,10 @@ th, td {
 
 .column100.column1 {
 	width: 10%;
-  padding-left: 42px;
+  padding-left: 25px;
+  font-size: larger;
+  font-style: inherit;
+  font-weight: revert;
 }
 .column100.green{
   background-color: #27ad27;
