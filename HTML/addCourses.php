@@ -9,9 +9,9 @@ if (isset($_POST["submit"])) {
   $course = $_POST["new_course"];
   $lab = $_POST["new_lab"];
 
-  echo $course;
-
-  echo $lab;
+  // echo $course;
+  //
+  // echo $lab;
 
 
   // $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
@@ -20,15 +20,16 @@ if (isset($_POST["submit"])) {
   $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
     VALUES (\"$login_session\", \"$course\", \"$lab\");";
 
-    echo $sqlAddCourse;
+    // echo $sqlAddCourse;
 
     $db->query($sqlAddCourse);
-    echo $db->error;
+    // echo $db->error;
 }
 
 
 
 // ----------------TIMETABLE INFORMATION: ------------------
+
 
 // ---------------ALL EVENTS AND COURSES----------------
 // This part of code requests all events
@@ -106,34 +107,6 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
       <p id = "demo">Heyo! Welcome to our page.</p>
 
-      <!-- Button which hides or unhides users timetable values -->
-
-
-<!-- <button onclick="myFunction()">Click to display/hide events</button> -->
-
-      <!-- <table id="timetable" class="hidden"> -->
-
-        <!-- For loop to select description from event/. -->
-        <!-- <?php foreach ($data_array as $val) { ?>
-          <tr>
-            <td><?php
-            // echo $val["name"];
-            // echo ": ";
-            // echo $val["description"];
-            // echo "\n\t";
-      // as you can see we could get any information when needed
-            // echo "Starts at: ";
-            // echo $val ["StartTime"];
-            // echo "\n";
-            // echo "Ends at: ";
-            // echo $val ["EndTime"];
-             ?></td>
-          </tr>
-        <?php } ?> -->
-      <!-- </table> -->
-
-      <br>
-      <br>
             <p><b>Course selector<b></p>
 
       <!-- input from the selection boxes below, sent by POST -->
