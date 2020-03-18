@@ -25,11 +25,6 @@ $dbname = "2019_comp10120_y4";
 
 $invites = array();
 
-
-
-
-
-
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
@@ -74,7 +69,7 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
                 <button class="w3-button w3-green">Accept</button>
                 <!-- </form>
                 <form action=""> -->
-                <button class="w3-button w3-red">Decline</button>
+                <form class="w3-button w3-red">Decline</form>
                 <!-- </form> -->
           
         </div>
