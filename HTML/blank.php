@@ -96,7 +96,7 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel = "stylesheet" type = "text/css" href = "RegistrationPage_1.css">
+  <link rel = "stylesheet" type = "text/css" href = "blank.css">
 	<meta charset = "utf-8" />
         <!-- add icon link -->
         <link rel = "icon" href =
@@ -163,7 +163,7 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 				<!-- <form class="register-form validate-form"> -->
 					<div class="put-it-here-to-include-padding">
 					<span class="register-form-title p-b-26">
-						Register
+						Details:
 					</span>
 				  </div>
 					<!-- <p><span class="error">* required fields</span></p> -->
