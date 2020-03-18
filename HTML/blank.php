@@ -11,7 +11,7 @@ $eDay = date('d',time()+( 7 - date('w'))*24*3600);
 $day =  $_GET['day']; 
 
 $hour = $_GET['hour']; 
-$hour = gmdate("H:i:s", $hour*3600);
+$hourToShow = gmdate("H:i:s", $hour*3600);
 $title =  $_GET['title']; 
 
 ?>
@@ -223,7 +223,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 					</div>
 
 					<div class="wrap-input100 validate-input">
-                    <input type="text"name="startTime" id="startTime" value="<?php echo $hour ?>" class="time ui-timepicker-input" autocomplete="off" required />
+                    <input type="text"name="startTime" id="startTime" value="<?php echo $hourToShow ?>" class="time ui-timepicker-input" autocomplete="off" required />
                     <script>
                     $(function() {
                     $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
