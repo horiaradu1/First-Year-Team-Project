@@ -58,7 +58,7 @@ include("session.php"); ?>
     </div>
     </div>
     <div class="container-table100">
-      <div class="week">
+      <!-- <div class="week"> -->
         <?php
           
           // try {
@@ -72,7 +72,7 @@ include("session.php"); ?>
           // $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
           // echo $thisWeek;
         ?>
-      </div>
+      <!-- </div> -->
       <div class="logo">
         <img src = "Logo.png">
       </div>

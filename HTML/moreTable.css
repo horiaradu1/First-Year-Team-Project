@@ -326,6 +326,7 @@ th, td {
 .date{
   float: left;
   margin-left: 40%;
+  font-weight:bold ;
 }
 .text100{
 	float: right;
