@@ -5,8 +5,6 @@ $eMonth = date('F',time()+( 7 - date('w'))*24*3600);
 $sDay = date('d',time()+( 1 - date('w'))*24*3600); 
 $eDay = date('d',time()+( 7 - date('w'))*24*3600);
 
-echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
-
 $day =  $_GET['day']; 
 
 $hour = $_GET['hour']; 
@@ -20,15 +18,8 @@ $title =  $_GET['title'];
 $timediff = date('H')-$hour;
 $hoursPassed = date('H'); // hours passed today (subtract later)
 $clickedTime = date('Y-m-d', strtotime("+$hour hours, +$day days, -$hoursPassed hours"));
-
-echo "Hour, day, month: " . $clickedTime; //echo "day: " . $day . " hours: " . $hour;
-
-
-
 $people = $_GET['people'];
-echo $people;
 $arrayPeople = explode(",", $people);
-print_r($arrayPeople);
 ?>
 
 
@@ -82,7 +73,9 @@ if (isset($_POST["submit"])) {
   <title>Create event</title>
 
   <!-- timepicker -->
-  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://ajax.google16 March - 22 March
+
+Hour, day, month: 2020-03-202,1,eirikArray ( [0] => 2 [1] => 1 [2] => eirik )apis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="jquery-timepicker/jquery.timepicker.min.js"></script>
   <link rel="stylesheet" type="text/css" href="jquery-timepicker/jquery.timepicker.css">
 
