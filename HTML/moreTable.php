@@ -248,7 +248,7 @@ include("session.php"); ?>
                               $conflict = true;
                             }
                             $colorIndex = $ids%5;
-                            $listOfColors = array("yellow", "yellow", "yellow", "yellow", "yellow");
+                            $listOfColors = array("gray", "lightblue", "lightgreen", "lightsalmon", "gold");
                             echo $listOfColors[$colorIndex];
                             $classStyle = "column100 " . $listOfColors[$colorIndex];//CHANGE COLOR OF ARBITRARY EVENT IF YOU WANT
                             }

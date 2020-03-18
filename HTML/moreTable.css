@@ -133,6 +133,26 @@ th, td {
   font-style: inherit;
   font-weight: revert;
 }
+.column100.gray{
+  background-color: gray;
+  font-weight: bold;
+}
+.column100.lightblue{
+  background-color: lightblue;
+  font-weight: bold;
+}
+.column100.lightgreen{
+  background-color: lightgreen;
+  font-weight: bold;
+}
+.column100.gold{
+  background-color: gold;
+  font-weight: bold;
+}
+.column100.lightsalmon{
+  background-color: lightsalmon;
+  font-weight: bold;
+}
 .column100.green{
   background-color: #27ad27;
   font-weight: bold;
