@@ -49,6 +49,17 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
         else {
           foreach($fetchedInvite->fetch_all(MYSQLI_ASSOC) as $row) {
               $id = $row['eventID'];
+
+              global $conn;
+              if(@$_POST["sqlAccept"]==$id)
+              {
+              echo "ACCEPTED";
+              }
+              else if ((@$_POST["sqlDecline"]==$id))
+              {
+              echo "DECLINED";
+              }
+              else {
               $getQuery = "SELECT startTime, endTime, name, description FROM Events WHERE eventID = " . $id;
               $fetchedEvent = $conn->query($getQuery);
               $event = $fetchedEvent->fetch_row();
@@ -86,6 +97,8 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
             <?php
           }
         }
+      }
+
 ?>
 <body>
 	<div class="limiter">
