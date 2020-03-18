@@ -66,7 +66,8 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
               }
               else if ((@$_POST["sqlDecline"]==$id))
               {
-              echo "DECLINED";
+                $sqlRemoveInvite= "DELETE FROM Inbox WHERE username = " . "'" . $login_session . "' " . "AND eventID = " . "'" . $id . "'";
+                $db->query($sqlRemoveInvite);
               }
               else {
               ?>
