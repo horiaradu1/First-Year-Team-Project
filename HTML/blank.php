@@ -155,7 +155,79 @@ header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.ph
 <body>
 
 
+<div class="container-login100">
+			<div class="logo" >
+				<img src = "Logo.png">
+			</div>
+			<div class="wrap-register">
+				<!-- <form class="register-form validate-form"> -->
+					<div class="put-it-here-to-include-padding">
+					<span class="register-form-title p-b-26">
+						Register
+					</span>
+				  </div>
+					<!-- <p><span class="error">* required fields</span></p> -->
+					<form method ="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+          <div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="fname" placeholder="First Name" value="<?php echo $fname;?>">
+						<!-- <span class="focus-input100" data-placeholder="First Name"></span> -->
+						<span class="error"><?php echo $fnameErr;?></span>
+					</div>
 
+          <div class="wrap-input100 validate-input">
+            <input class="input100" type="text" name="lname" placeholder="Last Name" value="<?php echo $lname;?>">
+            <!-- <span class="focus-input100" data-placeholder="Last Name"></span> -->
+						<span class="error"><?php echo $lnameErr;?></span>
+          </div>
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="username" placeholder="Username" value="<?php echo $username;?>">
+						<!-- <span class="focus-input100" data-placeholder="Username"></span> -->
+						<span class="error"><?php echo $usernameErr;?></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="email" placeholder="Email" value="<?php echo $email;?>">
+						<!-- <span class="focus-input100" data-placeholder="Email"></span> -->
+						<span class="error"><?php echo $emailErr;?></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="password" name="password" placeholder="Password" value="<?php echo $password;?>">
+						<!-- <span class="focus-input100" data-placeholder="Password"></span> -->
+						<span class="error"><?php echo $passwordErr;?></span>
+					</div>
+
+          <div class="wrap-input100 validate-input">
+						<input class="input100" type="password" name="cpassword" placeholder="Confirm Password">
+						<!-- <value="<?php echo $cpassword;?>"> -->
+						<!-- <span class="focus-input100" data-placeholder="Confirm Password"></span> -->
+						<span class="error"><?php echo $cpasswordErr;?></span>
+					</div>
+
+					<div class="container-register-form-btn">
+						<div class="wrap-register-form-btn">
+							<div class="register-form-bgbtn"></div>
+							<button class="register-form-btn">
+								Register
+							</button>
+						</div>
+					</div>
+					<span class="message"><?php echo $final;?></span>
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Already have an account?
+						</span>
+
+						<a class="txt2" href="https://web.cs.manchester.ac.uk/g34904ps/team/php/login.php">
+							Login
+						</a>
+					</form>
+					</div>
+				<!-- </form> -->
+			</div>
+		</div>
+	</div>
 
 <form method=POST>
 
