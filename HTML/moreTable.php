@@ -24,6 +24,23 @@ include("session.php"); ?>
     <div class = "picture">
       <a href="meet.php">Meeting</a>
     </div>
+    <div class = "date">
+      <a>
+      <?php
+          try {
+            $week = $_GET['week'];
+          } catch (Exception $e) {}
+          $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
+          $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
+          $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
+          $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
+
+          $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+          echo $thisWeek;
+        ?>
+      
+      </a>
+    </div>
   <div class="text100">
         <a href = "logout.php">Sign Out</a>
     </div>
@@ -41,20 +58,21 @@ include("session.php"); ?>
     </div>
     </div>
     <div class="container-table100">
-      <div class="week">
+      <!-- <div class="week"> -->
         <?php
-          //$week = 0;
-          try {
-            $week = $_GET['week'];
-          } catch (Exception $e) {}
-          $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
-          $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
-          $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
-          $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
+          
+          // try {
+          //   $week = $_GET['week'];
+          // } catch (Exception $e) {}
+          // $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
+          // $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
+          // $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
+          // $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
 
-          echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+          // $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+          // echo $thisWeek;
         ?>
-      </div>
+      <!-- </div> -->
       <div class="logo">
         <img src = "Logo.png">
       </div>
@@ -77,7 +95,7 @@ include("session.php"); ?>
           <table data-vertable="ver1.1">
             <thead>
               <tr class="row100 head">
-                <th class="column100 column1" data-column="column1"></th>
+                <th class="column100 column1" data-column="column1"><?php //echo $thisWeek; ?></th>
                 <th class="column100 column3" data-column="column3">Monday</th>
                 <th class="column100 column4" data-column="column4">Tuesday</th>
                 <th class="column100 column5" data-column="column5">Wednesday</th>
@@ -116,7 +134,12 @@ include("session.php"); ?>
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);}
 
-                $monday = date('Y-m-d 00:00:00',time()+( 1+(7*$week) - date('w'))*24*3600);
+                //$monday = date('Y-m-d 00:00:00',time()+( 1+(7*$week) - date('w'))*24*3600);
+                //echo("Monday is " . $monday);
+                //OLD SCRIPT FOR MONDAY, KEEP HERE FOR BUG FIX
+
+                $monday = date('Y-m-d 00:00:00',time()+( 1+(7*$week) - date('w')-7)*24*3600);
+                //echo("Monday is " . $monday);
 
                 //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
