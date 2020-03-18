@@ -30,8 +30,15 @@ $people = $_GET['people'];
 $arrayPeople = explode(",", $people);
 //print_r($arrayPeople);
 
-
+error_reporting(E_ERROR);
 include("session.php");
+
+$servername = "dbhost.cs.man.ac.uk";
+$username = "g63968ef";
+$password = "database";
+$dbname = "2019_comp10120_y4";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // responsible for adding the event
 if (isset($_POST["submit"])) {
