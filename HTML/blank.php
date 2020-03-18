@@ -246,7 +246,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 					<div class="container-register-form-btn">
 						<div class="wrap-register-form-btn">
 							<div class="register-form-bgbtn"></div>
-							<button class="register-form-btn" name="sumbit">
+							<button class="register-form-btn" name="submit">
 								Create Meeting
 							</button>
 						</div>
@@ -259,10 +259,5 @@ $fetchedInvite = $conn->query($sqlQuery);
 			</div>
 		</div>
     </div>
-<script>
-$(function() {
-  $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
-});
-</script>
 </body>
 </html>
