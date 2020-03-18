@@ -174,7 +174,7 @@ include("session.php"); ?>
 
                       foreach($listOfCourses as $ids) {
                         foreach($listOfLabs as $lab) {
-                          $sqlQuery2 = "SELECT startTime, endTime, name FROM CourseEvents WHERE name = " . $ids . " AND  lab = " . $lab;
+                          $sqlQuery2 = ("SELECT startTime, endTime, name FROM CourseEvents WHERE name = '" . $ids . "' AND  lab = '" . $lab ."';");
                           $fetchedEvent2 = $conn->query($sqlQuery2);
 
                           foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
