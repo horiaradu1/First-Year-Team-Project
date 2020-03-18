@@ -95,7 +95,7 @@ include("session.php"); ?>
           <table data-vertable="ver1.1">
             <thead>
               <tr class="row100 head">
-                <th class="column100 column1" data-column="column1"><?php echo $thisWeek; ?></th>
+                <th class="column100 column1" data-column="column1"><?php //echo $thisWeek; ?></th>
                 <th class="column100 column3" data-column="column3">Monday</th>
                 <th class="column100 column4" data-column="column4">Tuesday</th>
                 <th class="column100 column5" data-column="column5">Wednesday</th>
