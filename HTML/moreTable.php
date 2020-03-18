@@ -52,7 +52,11 @@ include("session.php"); ?>
           $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
           $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
 
-          echo ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+          $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+          $counter = 1;
+          while (count($thisWeek) < 30) {
+            $thisWeek = $thisWeek . " ";
+          }
         ?>
       </div>
       <div class="logo">
