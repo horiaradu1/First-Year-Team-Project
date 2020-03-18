@@ -221,6 +221,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 					</div>
 
 					<div class="wrap-input100 validate-input">
+            <p>Start time: </p>
                     <input type="text"name="startTime" id="startTime" value="<?php echo $hourToShow ?>" class="time ui-timepicker-input" autocomplete="off" required />
                     <script>
                     $(function() {
