@@ -158,6 +158,7 @@ include("session.php"); ?>
                       $event = NULL;
                       $listOfEventIDs = array();
                       $listOfCourses = array();
+                      $listOfLabs = array();
                       $classStyle = "column100 column2"; //BASIC STYLE FOR EMPTY BOXES
 
                       $result1 = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
@@ -165,25 +166,28 @@ include("session.php"); ?>
                         array_push($listOfEventIDs, $row["eventID"]);
                         }
 
-                      $result2 = $conn->query("SELECT lab FROM HasCourse WHERE username = '" . $username . "';");
+                      $result2 = $conn->query("SELECT course, lab FROM HasCourse WHERE username = '" . $username . "';");
                       foreach($result2->fetch_all(MYSQLI_ASSOC) as $row) {
-                        array_push($listOfCourses, $row["lab"]);
+                        array_push($listOfCourses, $row["course"]);
+                        array_push($listOfLabs, $row["lab"]);
                         }
 
                       foreach($listOfCourses as $ids) {
-                        $sqlQuery2 = "SELECT startTime, endTime, name FROM CourseEvents WHERE lab = '" . $ids . "';";
-                        $fetchedEvent2 = $conn->query($sqlQuery2);
-                        foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
-                          $timeTillEventStart = hours_between($monday, $row["startTime"]);
-                          $timeTillEventHoursStart = $timeTillEventStart%24;
-                          $timeTillEventDaysStart = $timeTillEventStart/24;
-                          $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
-                          $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
-                          $timeTillEventEnd = hours_between($monday, $row["endTime"]);
-                          $timeTillEventHoursEnd = $timeTillEventEnd%24;
-                          $timeTillEventDaysEnd = $timeTillEventEnd/24;
-                          $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
-                          $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
+                        foreach($listOfLabs as $lab) {
+                          $sqlQuery2 = "SELECT startTime, endTime, name FROM CourseEvents WHERE name = " . $ids . " AND  lab = " . $lab;
+                          $fetchedEvent2 = $conn->query($sqlQuery2);
+
+                          foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
+                            $timeTillEventStart = hours_between($monday, $row["startTime"]);
+                            $timeTillEventHoursStart = $timeTillEventStart%24;
+                            $timeTillEventDaysStart = $timeTillEventStart/24;
+                            $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
+                            $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
+                            $timeTillEventEnd = hours_between($monday, $row["endTime"]);
+                            $timeTillEventHoursEnd = $timeTillEventEnd%24;
+                            $timeTillEventDaysEnd = $timeTillEventEnd/24;
+                            $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
+                            $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
 
                           if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
                             $event = "$event " . $row["name"];
@@ -207,6 +211,7 @@ include("session.php"); ?>
                             }
                           }
                         }
+                      }
 
                       foreach($listOfEventIDs as $ids) {
                         $sqlQuery1 = "SELECT startTime, endTime, name FROM Events WHERE eventID = " . $ids;
