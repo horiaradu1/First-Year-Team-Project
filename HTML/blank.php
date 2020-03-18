@@ -248,7 +248,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 					<div class="container-register-form-btn">
 						<div class="wrap-register-form-btn">
 							<div class="register-form-bgbtn"></div>
-							<button class="register-form-btn">
+							<button class="register-form-btn" name="sumbit">
 								Create Meeting
 							</button>
 						</div>
