@@ -247,7 +247,7 @@ include("session.php"); ?>
                               $event = "$event and " . $row["name"] . " ";
                               $conflict = true;
                             }
-                            $listOfColors = array("gray", "lightblue", "lightgreen", "lightsalmon", "gold"); // ADD COLORS HERE WITH CORROLATING CSS VALUE
+                            $listOfColors = array("MediumSeaGreen", "lightblue", "lightgreen", "lightsalmon", "gold"); // ADD COLORS HERE WITH CORROLATING CSS VALUE
                             $colorIndex = $ids%count($listOfColors);
                             $classStyle = "column100 " . $listOfColors[$colorIndex];//CHANGE COLOR OF ARBITRARY EVENT IF YOU WANT
                             }
