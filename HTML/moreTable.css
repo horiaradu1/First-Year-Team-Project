@@ -322,6 +322,11 @@ th, td {
 .picture{
 	float: left;
 }
+
+.date{
+  float: left;
+  margin-left: 40%;
+}
 .text100{
 	float: right;
 }

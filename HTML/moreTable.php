@@ -24,7 +24,7 @@ include("session.php"); ?>
     <div class = "picture">
       <a href="meet.php">Meeting</a>
     </div>
-    <div class = "picture">
+    <div class = "date">
       <a>
       <?php
           try {
