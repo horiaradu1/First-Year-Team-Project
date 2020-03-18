@@ -117,7 +117,7 @@ include("session.php"); ?>
                     die("Connection failed: " . $conn->connect_error);}
 
                 $monday = date('Y-m-d 00:00:00',time()+( 1+(7*$week) - date('w'))*24*3600);
-                echo("Monday is " . $monday)
+                echo("Monday is " . $monday);
                 //$username = "horia"; // CHANGE USERNAME BASED ON WHO IS LOGGED IN
 
                 $username = $login_session;
