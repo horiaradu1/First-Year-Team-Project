@@ -70,6 +70,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
         }
     }
 }
+array_push($items, $login_session);
 ?>
 <body>
 	<div class="limiter">
@@ -165,7 +166,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 						<div class="container-login100-form-btn <?php if (count($items) == 0) echo "disabled"; ?> send">
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
-								<button class="login100-form-btn" type="submit" <?php if (count($items) == 0) echo "disabled"?>>
+								<button class="login100-form-btn" type="submit" <?php if (count($items) <= 1) echo "disabled"?>>
 									Plan meeting
 								</button>
 							</div>
