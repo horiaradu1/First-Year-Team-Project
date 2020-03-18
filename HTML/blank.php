@@ -78,6 +78,8 @@ $sqlAssign = "INSERT into Inbox (username, eventID)
     echo $db->error;
 }
 
+header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/meet.php");
+
 
 
 }
@@ -148,7 +150,7 @@ $(function() {
 
 
 <!-- Button to submit -->
-<button name="submit" onclick="window.location.href = '/g34904ps/team/HTML/meet.php'">Plan meeting!</button>
+<button name="submit">Plan meeting!</button>
 </form>
 
 </body>
