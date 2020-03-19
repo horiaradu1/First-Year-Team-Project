@@ -66,6 +66,17 @@ $fetchedInvite = $conn->query($sqlQuery);
       <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
     </div>
   </div>
+
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <h2>Here i am</h2>
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+      </div>
+    </div>
+  </div>
+
     <div class="container-table100">
       <!-- <div class="week"> -->
         <?php
@@ -85,16 +96,6 @@ $fetchedInvite = $conn->query($sqlQuery);
         <img src = "Logo.png">
       </div>
 
-      <div id="popup1" class="overlay">
-        <div class="popup">
-          <h2>Here i am</h2>
-          <a class="close" href="#">&times;</a>
-          <div class="content">
-          Thank to pop me out of that button, but now i'm done so you can close this window.
-          </div>
-        </div>
-      </div>
-
       <!-- LHS Button -->
       <div class="btn-container" ,align="left">
         <div class="btn1">
@@ -106,18 +107,16 @@ $fetchedInvite = $conn->query($sqlQuery);
 			  <div class="btn2">
           <button onclick="window.location.href = '/g34904ps/team/Kenny_Test/addCourses.php';" class="btn">ADD COURSE</button>
 			  </div>
-      <!-- <div class="btn3">
-        <button onclick="window.location.href = '/g34904ps/team/HTML/addCourses.php';" class="btn">ADD COURSE</button>
-      </div> -->
 			</div>
+
       <div class="before">
-      <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
-    </div>
+        <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
+      </div>
 
 
-    <div class="after">
-      <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week += 2; echo $week; ?> " class="previous round">&#8250;</a>
-    </div>
+      <div class="after">
+        <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week += 2; echo $week; ?> " class="previous round">&#8250;</a>
+      </div>
       <div class="wrap-table100">
         <div class="table100 ver1 m-b-110">
           <table data-vertable="ver1.1">
