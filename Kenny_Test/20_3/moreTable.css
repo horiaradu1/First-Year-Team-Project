@@ -118,9 +118,9 @@ body {
 h1 {
   text-align: center;
   font-family: Tahoma, Arial, sans-serif;
-  color: #5a9de9;
+  color: #154360;
   margin: 30px 0;
-  font-size: 55px;
+  font-size: 40px;
 }
 
 .box {
@@ -225,16 +225,16 @@ h1 {
   text-transform: uppercase;
   outline: 0;
   background: #5a9de9;
-  width: 100%;
+  width: 40%;
   border: 0;
   padding: 15px;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 18px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
   position: relative;
-  top: 50px;
+  top: 10px;
 }
 
 .form button:hover,.form button:active,.form button:focus {
@@ -243,8 +243,8 @@ h1 {
 
 label {
   display: block;
-  margin: 1.25em 0em 0em 0em;
-  font-size: 1.4em;
+  margin: 1em 0em 0em 0em;
+  font-size: 2em;
   color:#333;
 }
 
