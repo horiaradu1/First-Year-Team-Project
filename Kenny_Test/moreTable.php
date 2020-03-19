@@ -48,14 +48,13 @@ $fetchedInvite = $conn->query($sqlQuery);
           $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
           echo $thisWeek;
         ?>
-
       </a>
     </div>
-  <div class="text100">
-        <a href = "logout.php">Sign Out</a>
+    <div class="text100">
+      <a href = "logout.php">Sign Out</a>
     </div>
     <div class="text100">
-        <a><?php echo($login_session) ?></a>
+      <a><?php echo($login_session) ?></a>
     </div>
     <div class="text100">
       <a href="ContactForm.php">Contact Us</a>
@@ -66,11 +65,10 @@ $fetchedInvite = $conn->query($sqlQuery);
     <div class="text100">
       <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
     </div>
-    </div>
+  </div>
     <div class="container-table100">
       <!-- <div class="week"> -->
         <?php
-
           // try {
           //   $week = $_GET['week'];
           // } catch (Exception $e) {}
@@ -86,13 +84,28 @@ $fetchedInvite = $conn->query($sqlQuery);
       <div class="logo">
         <img src = "Logo.png">
       </div>
-      <div class="btn-container" align="left">
+      <!-- LHS Button -->
+
+      <div class="btn-container" ,align="left">
+
+      <div id="popup1" class="overlay">
+	      <div class="popup">
+		      <h2>Here i am</h2>
+		      <a class="close" href="#">&times;</a>
+		      <div class="content">
+			      Thank to pop me out of that button, but now i'm done so you can close this window.
+		      </div>
+	      </div>
+      </div>
+
+
+
 				<div class="btn1">
-				<button onclick="window.location.href = '/g34904ps/team/Kenny_Test/addEvent.php';"class="btn">CREATE EVENT</button>
-			</div>
-			<div class="btn2">
-        <button onclick="window.location.href = '/g34904ps/team/Kenny_Test/addCourses.php';" class="btn">ADD COURSE</button>
-			</div>
+          <a class="btn" href="#popup1" onclick="window.location.href = '/g34904ps/team/Kenny_Test/addEvent.php';">CREATE EVENT</a>
+			  </div>
+			  <div class="btn2">
+          <button onclick="window.location.href = '/g34904ps/team/Kenny_Test/addCourses.php';" class="btn">ADD COURSE</button>
+			  </div>
       <!-- <div class="btn3">
         <button onclick="window.location.href = '/g34904ps/team/HTML/addCourses.php';" class="btn">ADD COURSE</button>
       </div> -->
@@ -100,6 +113,8 @@ $fetchedInvite = $conn->query($sqlQuery);
       <div class="before">
       <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
     </div>
+
+
     <div class="after">
       <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week += 2; echo $week; ?> " class="previous round">&#8250;</a>
     </div>
