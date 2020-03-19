@@ -114,6 +114,7 @@ $fetchedInvite = $conn->query($sqlQuery);
             <a class="close" href="#">&times;</a>
             <div>123</div>
         </div>
+      </div> 
            
         <!-- JavaScript  -->
         <script>
