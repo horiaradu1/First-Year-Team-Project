@@ -87,7 +87,8 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 // ------------ END OF PHP ----------------
 ?>
 
-
+<!DOCTYPE html>
+<html lan="en">
 <html>
   <head>
   <meta charset = "UTF-8">
@@ -104,8 +105,8 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       .hidden {
         display: none;
       }
-    </style>
-  </head>
+      </style>
+   </head>
 
    <body>
        <!-- Welcomes the user, using it's username. -->
