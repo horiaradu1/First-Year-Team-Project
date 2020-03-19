@@ -193,13 +193,11 @@ $fetchedInvite = $conn->query($sqlQuery);
 
       <div id="popup1" class="overlay">
         <div class="popup form" style= "height: 460px;">
-          <!-- input from the selection boxes below, sent by POST -->
           <!-- selection box for all courses -->
           <h1><b>Course Selector</b></h1>
-
           <a class="close" href="#">&times;</a>
-          <label for="sel">Course: </label><br>
           <!-- Selector 1: -->
+          <label for="sel">Course: </label><br>
           <div class="custom-select">
             <select id = "sel" name="new_course">
               <option>Select course</option>
@@ -210,10 +208,8 @@ $fetchedInvite = $conn->query($sqlQuery);
               <?php } ?>
             </select>
           </div>
-
-          <div>
-            <label for="sel2">Lab Session: </label><br>
-          </div>
+          <!-- Selector 2: -->
+          <label for="sel2">Lab Session: </label><br>
           <div class="custom-select">
             <select id = "sel2" name="new_lab">
               <option>Select your lab</option>
@@ -224,14 +220,11 @@ $fetchedInvite = $conn->query($sqlQuery);
               <?php } ?>
             </select>
           </div>
-
           <!-- button which sends selected course and lab events to data base -->
           <button name="submit">Click to add to your timetable</button>
-        </div>
-      </div> 
-           
-        <!-- JavaScript  -->
-        <script>
+
+          <!-- JavaScript  -->
+          <script>
           function addEvent(){
                   var ddl = document.getElementById("dropdown");
                   var selectedValue = ddl.options[ddl.selectedIndex].value;
@@ -240,13 +233,10 @@ $fetchedInvite = $conn->query($sqlQuery);
             alert("Please select a card type");
             }
             else{
-
             }
           }
-
           // turn it to json and encode from json
           var b = JSON.parse('<?php echo json_encode($data_array); ?>');
-
           // displaying/hiding events
           var myBool = true;
           function myFunction() {
@@ -259,7 +249,11 @@ $fetchedInvite = $conn->query($sqlQuery);
               myBool = true;
             }
           }
-        </script>
+          </script>
+        </div>
+      </div> 
+           
+        
 
       <div class="before">
         <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
