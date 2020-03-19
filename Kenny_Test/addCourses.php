@@ -118,20 +118,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     <div class = "picture">
       <a href="meet.php">Meeting</a>
     </div>
-    <div class = "date">
-      <a><?php
-          try {
-            $week = $_GET['week'];
-          } catch (Exception $e) {}
-          $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
-          $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
-          $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
-          $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
-
-          $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
-          echo $thisWeek;
-        ?></a>
-    </div>
+    
     <div class="text100">
         <a href = "logout.php">Sign Out</a>
     </div>
