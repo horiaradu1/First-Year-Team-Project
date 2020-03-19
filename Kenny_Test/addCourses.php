@@ -127,9 +127,10 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     <div class="text100">
       <a href="AboutUs.php">About Us</a>
     </div>
-
     <!-- Welcomes the user, using it's username. -->
-    <div class="text100">Welcome <?php echo $login_session; ?></div>
+    <div class="text100">
+      <a> Welcome <?php echo $login_session; ?></a>
+    </div>
 
       <p><b>Course selector<b></p>
 
