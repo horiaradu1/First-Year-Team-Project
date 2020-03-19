@@ -107,10 +107,6 @@ $fetchedInvite = $conn->query($sqlQuery);
           <h1><b>Course Selector</b></h1>
           <!-- input from the selection boxes below, sent by POST -->
           <!-- selection box for all courses -->
-
-
-           
-            
           <a class="close" href="#">&times;</a>
           <label for="sel">Course: </label><br>
           <!-- Selector 1: -->
@@ -124,6 +120,24 @@ $fetchedInvite = $conn->query($sqlQuery);
               <?php } ?>
             </select>
           </div>
+
+          <div>
+            <label for="sel2">Lab Session: </label><br>
+          </div>
+
+          <div class="custom-select">
+            <select id = "sel2" name="new_lab">
+              <option>Select your lab</option>
+              <?php foreach ($lab_array as $val) { ?>
+              <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
+              <?php echo $val["lab"]; ?>
+              </option>
+              <?php } ?>
+            </select>
+          </div>
+
+          <!-- button which sends selected course and lab events to data base -->
+          <button name="submit">Click to add to your timetable</button>
         </div>
       </div> 
            
