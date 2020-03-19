@@ -84,31 +84,25 @@ $fetchedInvite = $conn->query($sqlQuery);
       <div class="logo">
         <img src = "Logo.png">
       </div>
+
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Here i am</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+          Thank to pop me out of that button, but now i'm done so you can close this window.
+          </div>
+        </div>
+      </div>
+
       <!-- LHS Button -->
-
       <div class="btn-container" ,align="left">
-
-      
         <div class="btn1">
           <a class="btn" href="#popup1">CREATE EVENT</a>
 			  </div>
-
-
 				<!-- <div class="btn1">
           <a class="btn" href="#popup1" onclick="window.location.href = '/g34904ps/team/Kenny_Test/addEvent.php';">CREATE EVENT</a>
 			  </div> -->
-
-        <div id="popup1" class="overlay">
-	      <div class="popup">
-		      <h2>Here i am</h2>
-		      <a class="close" href="#">&times;</a>
-		      <div class="content">
-			      Thank to pop me out of that button, but now i'm done so you can close this window.
-		      </div>
-	      </div>
-      </div>
-
-
 			  <div class="btn2">
           <button onclick="window.location.href = '/g34904ps/team/Kenny_Test/addCourses.php';" class="btn">ADD COURSE</button>
 			  </div>
