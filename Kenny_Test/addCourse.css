@@ -97,6 +97,13 @@ background-image: url("backgroundTimeOnTable.jpg");
   background: #5a9de9;
 }
 
+label {
+  display:block;
+  margin: 2em 1em .5em .75em;
+  font-size: 5em;
+  color:#333;
+}
+
 .container {
   position: relative;
   z-index: 1;
