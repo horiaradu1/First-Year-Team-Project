@@ -135,9 +135,9 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     <div class="container-table100">
       <div class="wrap-login100">
 				<div class="put-it-here-to-include-padding">
-          <span class="login100-form-title p-b-26">
+          
             <b>Course Selector</b>
-          </span>
+         
         </div>
 
         <div>
