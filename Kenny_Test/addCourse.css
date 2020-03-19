@@ -59,30 +59,12 @@ background-image: url("backgroundTimeOnTable.jpg");
 	float: right;
 }
 
-.container-table100 {
-    width: 100%;
-    min-height: 100vh;
-    background: #d1d1d1;
-  
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 33px 30px;
-    background-image: url("backgroundTimeOnTable.jpg");
-      /* background-image: url("sea6.jpg"); */
-    z-index: 9999;
-  }
   
   @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
   width: 360px;
-  padding: 8% 0 0;
+  padding: 4% 0 0;
   margin: auto;
 }
 .form {
@@ -91,7 +73,7 @@ background-image: url("backgroundTimeOnTable.jpg");
   background: #FFFFFF;
   max-width: 360px;
   margin: 0 auto 100px;
-  padding: 45px;
+  padding: 20px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
