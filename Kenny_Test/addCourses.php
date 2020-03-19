@@ -114,41 +114,44 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     <div class="navbar">
       <div class = "picture">
       <a href="moreTable.php">Home</a>
-    </div>
-    <div class = "picture">
-      <a href="meet.php">Meeting</a>
-    </div>
-    <div class="text100">
+      </div>
+      <div class = "picture">
+        <a href="meet.php">Meeting</a>
+      </div>
+      <div class="text100">
         <a href = "logout.php">Sign Out</a>
+      </div>
+      <div class="text100">
+        <a href="ContactForm.php">Contact Us</a>
+      </div>
+      <div class="text100">
+        <a href="AboutUs.php">About Us</a>
+      </div>
+      <!-- Welcomes the user, using it's username. -->
+      <div class="text100">
+        <a> Welcome <?php echo $login_session; ?></a>
+      </div>
     </div>
-    <div class="text100">
-      <a href="ContactForm.php">Contact Us</a>
-    </div>
-    <div class="text100">
-      <a href="AboutUs.php">About Us</a>
-    </div>
-    <!-- Welcomes the user, using it's username. -->
-    <div class="text100">
-      <a> Welcome <?php echo $login_session; ?></a>
-    </div>
-    </div>
+  </div>
 
-    <div class="login-page">
-      <div class="form">
-      <form class="register-form">
-        <input type="text" placeholder="name"/>
-        <input type="password" placeholder="password"/>
-        <input type="text" placeholder="email address"/>
-        <button>create</button>
-        <p class="message">Already registered? <a href="#">Sign In</a></p>
-      </form>
-      <form class="login-form">
-      <input type="text" placeholder="username"/>
+  <div class="login-page">
+    <div class="form">
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
       <input type="password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
-      </form>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form">
+    <input type="text" placeholder="username"/>
+    <input type="password" placeholder="password"/>
+    <button>login</button>
+    <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </form>
     </div>
+  </div>
+
   
 
     <!-- JavaScript  -->
