@@ -93,7 +93,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
   <head>
   <meta charset = "UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="moreTable.css">
+  <link rel="stylesheet" type="text/css" href="addCourse.css">
   <link rel = "icon" href =
 "https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
     type = "image/x-icon">
