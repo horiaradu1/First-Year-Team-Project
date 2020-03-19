@@ -139,7 +139,10 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <h1><b>Course Selector</b></h1>
       <!-- input from the selection boxes below, sent by POST -->
       <!-- selection box for all courses -->
+      <div>
       <label >Course: </label><br>
+      </div>
+      <!-- Selector 1: -->
       <div>
       <select id = "sel" name="new_course">
       <option>Select course</option>
@@ -152,8 +155,11 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       </div>
 
       <div>
-      <select id = "sel2" name="new_lab">
       <label>Lab Session: </label><br>
+      </div>
+      
+      <div>
+      <select id = "sel2" name="new_lab">
       <option>Select your lab</option>
       <?php foreach ($lab_array as $val) { ?>
       <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
