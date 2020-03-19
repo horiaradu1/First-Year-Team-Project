@@ -88,17 +88,20 @@ $fetchedInvite = $conn->query($sqlQuery);
         <img src = "Logo.png">
       </div>
 
-      <!-- LHS Button -->
-      <div class="btn-container" ,align="left">
-        <div id="popup1" class="overlay">
-          <div class="popup">
-            <h2>Here i am</h2>
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-            Thank to pop me out of that button, but now i'm done so you can close this window.
-            </div>
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Here i am</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+          Thank to pop me out of that button, but now i'm done so you can close this window.
           </div>
         </div>
+      </div>
+
+      <!-- LHS Button -->
+      <div class="btn-container" ,align="left">
+
+
         <div class="btn1">
           <a href="#popup1">CREATE EVENT</a>
 			  </div>
