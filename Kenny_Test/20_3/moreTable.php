@@ -103,13 +103,78 @@ $fetchedInvite = $conn->query($sqlQuery);
 
       <div id="popup1" class="overlay">
         <div class="popup">
-          <h2>Here i am</h2>
+          <div class="login-page">
+            <div class="form">
+              <h1><b>Course Selector</b></h1>
+              <!-- input from the selection boxes below, sent by POST -->
+              <!-- selection box for all courses -->
+              <label for="sel">Course: </label><br>
+              <!-- Selector 1: -->
+              <div class="custom-select">
+                <select id = "sel" name="new_course">
+                  <option>Select course</option>
+                  <?php foreach ($courses_array as $val) { ?>
+                      <option id = "dropdown" value="<?php echo $val["name"]; ?>">
+                      <?php echo $val["name"]; ?>
+                    </option>
+                  <?php } ?>
+                </select>
+              </div>
           <a class="close" href="#">&times;</a>
-          <div class="content">
-          Thank to pop me out of that button, but now i'm done so you can close this window.
-          </div>
         </div>
       </div>
+
+
+      <!-- JavaScript  -->
+      <script>
+        function addEvent(){
+                var ddl = document.getElementById("dropdown");
+                var selectedValue = ddl.options[ddl.selectedIndex].value;
+          if (selectedValue == "Select course")
+          {
+          alert("Please select a card type");
+          }
+          else{
+
+          }
+        }
+
+        // turn it to json and encode from json
+        var b = JSON.parse('<?php echo json_encode($data_array); ?>');
+
+        // displaying/hiding events
+        var myBool = true;
+        function myFunction() {
+          if(myBool){
+          document.getElementById("timetable").classList.remove("hidden");
+          myBool = false;
+          }
+          else{
+            document.getElementById("timetable").classList.add("hidden");
+            myBool = true;
+          }
+        }
+      </script>
+
+                    
+
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

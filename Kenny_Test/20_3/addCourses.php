@@ -110,7 +110,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
   <body>
   <!-- NAV BAR -->
-  <div class="limiter">
+  <!-- <div class="limiter">
     <div class="navbar">
       <div class = "picture">
       <a href="moreTable.php">Home</a>
@@ -132,7 +132,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         <a> Welcome <?php echo $login_session; ?></a>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="login-page">
     <div class="form">
