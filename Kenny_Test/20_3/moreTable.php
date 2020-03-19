@@ -109,19 +109,7 @@ $fetchedInvite = $conn->query($sqlQuery);
             <!-- selection box for all courses -->
 
 
-            <!-- <label for="sel">Course: </label><br>
-            <!-- Selector 1: -->
-            <div class="custom-select">
-              <select id = "sel" name="new_course">
-                <option>Select course</option>
-                <?php foreach ($courses_array as $val) { ?>
-                  <option id = "dropdown" value="<?php echo $val["name"]; ?>">
-                    <?php echo $val["name"]; ?>
-                  </option>
-                <?php } ?>
-              </select>
-            </div> -->
-
+           
             
             <a class="close" href="#">&times;</a>
           <!-- </div> -->
