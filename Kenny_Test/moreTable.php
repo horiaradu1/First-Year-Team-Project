@@ -13,6 +13,7 @@
 "https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
     type = "image/x-icon">
 </head>
+
 <?php
 include("session.php"); 
 $servername = "dbhost.cs.man.ac.uk";

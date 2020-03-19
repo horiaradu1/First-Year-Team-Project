@@ -132,35 +132,52 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <a> Welcome <?php echo $login_session; ?></a>
     </div>
 
-      <p><b>Course selector<b></p>
+    <div class="container-table100">
+      <div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<div class="put-it-here-to-include-padding">
+						<span class="login100-form-title p-b-26">
+							<b>Course Selector</b>
+						</span>
+					</div>
 
-      <!-- input from the selection boxes below, sent by POST -->
-      <form method=POST>
-
-        <!-- selection box for all courses -->
-      <select id = "sel" name="new_course">
-        <option>Select course</option>
-        <?php foreach ($courses_array as $val) { ?>
-            <option id = "dropdown" value="<?php echo $val["name"]; ?>">
-            <?php echo $val["name"]; ?>
-          </option>
-        <?php } ?>
-
-      </select>
-
-
-
-      <select id = "sel2" name="new_lab">
-        <option>Select your lab</option>
-        <?php foreach ($lab_array as $val) { ?>
-            <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
-            <?php echo $val["lab"]; ?>
+					<!-- input from the selection boxes below, sent by POST -->
+          <form method=POST>
+          <!-- selection box for all courses -->
+          <select id = "sel" name="new_course">
+          <option>Select course</option>
+          <?php foreach ($courses_array as $val) { ?>
+              <option id = "dropdown" value="<?php echo $val["name"]; ?>">
+              <?php echo $val["name"]; ?>
             </option>
-        <?php } ?>
+          <?php } ?>
+          </select>
 
-      </select>
+          <select id = "sel2" name="new_lab">
+          <option>Select your lab</option>
+          <?php foreach ($lab_array as $val) { ?>
+          <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
+          <?php echo $val["lab"]; ?>
+          </option>
+          <?php } ?>
+          </select>
+
+
+						<div class="container-login100-form-btn">
+							<div class="wrap-login100-form-btn">
+								<div class="login100-form-bgbtn"></div>
+								<button name="submit">Click to add to your timetable</button>
+							</div>
+						</div>
+
+
+      
+
+
+
+     
       <!-- button which sends selected course and lab events to data base -->
-      <button name="submit">Click to add to your timetable</button>
+      
     </form>
 
     <!-- JavaScript  -->
