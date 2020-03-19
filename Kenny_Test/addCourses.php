@@ -158,6 +158,11 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       </option>
       <?php } ?>
       </select>
+
+      <!-- button which sends selected course and lab events to data base -->
+      <button name="submit">Click to add to your timetable</button>
+      </form>
+
     </div>
       </div>
   </div>
