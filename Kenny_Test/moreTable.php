@@ -88,10 +88,10 @@ $fetchedInvite = $conn->query($sqlQuery);
       </div>
       <div class="btn-container" align="left">
 				<div class="btn1">
-				<button <button onclick="window.location.href = '/g34904ps/team/HTML/addEvent.php';"class="btn">CREATE EVENT</button>
+				<button onclick="window.location.href = '/g34904ps/team/Kenny_Test/addEvent.php';"class="btn">CREATE EVENT</button>
 			</div>
 			<div class="btn2">
-        <button onclick="window.location.href = '/g34904ps/team/HTML/addCourses.php';" class="btn">ADD COURSE</button>
+        <button onclick="window.location.href = '/g34904ps/team/Kenny_Test/addCourses.php';" class="btn">ADD COURSE</button>
 			</div>
       <!-- <div class="btn3">
         <button onclick="window.location.href = '/g34904ps/team/HTML/addCourses.php';" class="btn">ADD COURSE</button>
