@@ -109,6 +109,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
    </head>
 
   <body>
+  <!-- NAV BAR -->
   <div class="limiter">
     <div class="navbar">
       <div class = "picture">
@@ -146,7 +147,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     <div class="text100">
       <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
     </div>
-    
+
        <!-- Welcomes the user, using it's username. -->
       <h1>Welcome <?php echo $login_session; ?></h1>
 

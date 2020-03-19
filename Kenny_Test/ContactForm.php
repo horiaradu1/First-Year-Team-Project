@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TIMEonTABLE - Contact form</title>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet" type = "text/css" href = "contactForm.css">
+	<link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
+</head>
+<?php
+include("session.php"); 
+$servername = "dbhost.cs.man.ac.uk";
+$username = "g63968ef";
+$password = "database";
+$dbname = "2019_comp10120_y4";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+$fetchedInvite = $conn->query($sqlQuery);
+?>
+
+<body>
+  <div class="container-form">
+		<div class="navbar">
+			<div class = "picture">
+			<a href="moreTable.php">Home</a>
+		</div>
+		<div class = "picture">
+			<a href="meet.php">Meeting</a>
+		</div>
+	<div class="text100">
+			<a href="logout.php">Sign out</a>
+    </div>
+    <div class="text100">
+        <a><?php echo($login_session) ?></a>
+    </div>
+		<div class="text100">
+			<a href="ContactForm.php">Contact Us</a>
+		</div>
+		<div class="text100">
+			<a href="AboutUs.php">About Us</a>
+		</div>
+    <div class="text100">
+      <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
+    </div>
+		</div>
+		<div class="logo" >
+			<img src = "Logo.png">
+		</div>
+    <div class="wrap-contact">
+      <form class="form">
+      <span class="form-title">
+        <h3 style="text-align: center;">Contact us</h3>
+      </span>
+
+      <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+        <input class="input100" type="text" name="name" placeholder="Full Name"  required>
+        <span class="focus-input100"></span>
+      </div>
+
+      <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+        <input class="input100" type="text" name="email" placeholder="Email"  required>
+        <span class="focus-input100"></span>
+      </div>
+
+      <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+        <textarea class="input100" name="message" placeholder="Your Message"  required></textarea>
+        <span class="focus-input100"></span>
+      </div>
+
+      <div class="container-contact100-form-btn">
+				<div class="wrap-contact-form-btn">
+					<div class="contact-form-bgbtn"></div>
+        <button class="contact100-form-btn">
+          Send Email
+        </button>
+      </div>
+    </form>
+    </div>
+  </div>
+
+</html>
