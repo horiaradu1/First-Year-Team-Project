@@ -158,7 +158,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <label for="sel2">Lab Session: </label><br>
       </div>
 
-      <div class="custom-select" style="width: 200px;>
+      <div class="custom-select" style="width: 200px;">
         <select id = "sel2" name="new_lab">
           <option>Select your lab</option>
           <?php foreach ($lab_array as $val) { ?>
