@@ -248,7 +248,11 @@ label {
   color:#333;
 }
 
-
+/* selector */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
 
 
 /*//////////////////////////////////////////////////////////////////
