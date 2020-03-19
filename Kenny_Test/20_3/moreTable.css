@@ -9,8 +9,8 @@ body, html {
 	font-family: sans-serif;
 }
 img{
-	width: 300px;
-	height: 150px;
+	width: 16vw;
+	height: 8vw;
 }
 /* ------------------------------------ */
 a {
@@ -74,6 +74,79 @@ iframe {
 }
 
 
+
+/*//////////////////////////////////////////////////////////////////
+[ Table ]*/
+.logo{
+	position: relative;
+	right: 38%;
+}
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-table100 {
+  width: 100%;
+  min-height: 100vh;
+  background: #d1d1d1;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+  background-image: url("backgroundTimeOnTable.jpg");
+	/* background-image: url("sea6.jpg"); */
+}
+
+.wrap-table100 {
+  width: 70%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
+}
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -84,24 +157,20 @@ iframe {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
-  z-index: 9999;
 }
-
-
 .overlay:target {
   visibility: visible;
   opacity: 1;
 }
 
 .popup {
-  margin: 80px auto;
+  margin: 70px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 80%;
-  top: 50%;
-  
+  width: 30%;
   position: relative;
+  transition: all 5s ease-in-out;
 }
 
 .popup h2 {
@@ -127,38 +196,14 @@ iframe {
   overflow: auto;
 }
 
-/*//////////////////////////////////////////////////////////////////
-[ Table ]*/
-.logo{
-	position: relative;
-	right: 700px;
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
 }
-.limiter {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.container-table100 {
-  width: 100%;
-  min-height: 100vh;
-  background: #d1d1d1;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 33px 30px;
-	background-image: url("sea6.jpg");
-}
-
-.wrap-table100 {
-  width: 1300px;
-}
-
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/
 table {
@@ -173,40 +218,72 @@ th, td {
 	border: 2px solid #daeaef;
 }
 .column100 {
-  width: 130px;
+	width: 13%;
   padding-left: 25px;
 }
 
 .column100.column1 {
-  width: 100px;
-  padding-left: 42px;
+	width: 10%;
+  padding-left: 25px;
+  font-size: larger;
+  font-style: inherit;
+  font-weight: revert;
+}
+.column100.MediumSeaGreen{
+  background-color: MediumSeaGreen;
+  font-weight: bold;
+}
+.column100.lightblue{
+  background-color: lightblue;
+  font-weight: bold;
+}
+.column100.lightgreen{
+  background-color: lightgreen;
+  font-weight: bold;
+}
+.column100.gold{
+  background-color: gold;
+  font-weight: bold;
+}
+.column100.lightsalmon{
+  background-color: lightsalmon;
+  font-weight: bold;
 }
 .column100.green{
-	background-color: #27ad27;
+  background-color: #27ad27;
+  font-weight: bold;
 }
 .column100.red{
-	background-color: #cb1e13;
+  background-color: #cb1e13;
+  font-weight: bold;
 }
 .column100.yellow{
-	background-color: #f4f129;
+  background-color: #f4f129;
+  font-weight: bold;
 }
 .column100.blue{
-	background-color: #29ccf4;
+  background-color: #29ccf4;
+  font-weight: bold;
 }
 .column100.pink{
-	background-color: #f46fda;
+  background-color: #f46fda;
+  font-weight: bold;
 }
 .column100.purple{
-	background-color: #a518f5;
+  background-color: #a518f5;
+  font-weight: bold;
 }
 .column100.orange{
-	background-color: #f08a07;
+  background-color: #f08a07;
+  font-weight: bold;
 }
 .column100.bluegreen{
-	background-color: #1ff7ac;
+  background-color: #1ff7ac;
+  font-weight: bold;
 }
 .column100.darkblue{
-	background-color: #0a0ef5;
+  background-color: #0a0ef5;
+  font-weight: bold;
 }
 .row100.head th {
   padding-top: 24px;
@@ -218,6 +295,7 @@ th, td {
   padding-top: 18px;
   padding-bottom: 14px;
 }
+
 /*.row100head.head th {
   padding-top: 24px;
   padding-bottom: 20px;
@@ -240,7 +318,7 @@ th, td {
 .table100{
 	position: relative;
 	bottom: 100px;
-	left: 200px;
+	left: 15%;
 }
 .table100.ver1 td {
   font-family: Ariel, Helvetica, sans-serif
@@ -363,6 +441,11 @@ th, td {
 .picture{
 	float: left;
 }
+
+.date{
+  float: left;
+  margin-left: 35%;
+}
 .text100{
 	float: right;
 }
@@ -392,18 +475,18 @@ a:hover {
 }
 .before{
 	position: relative;
-	top: 100px;
-	right: 920px;
+	top: 5vw;
+	right: 50%;
 }
 .after{
 	position: relative;
-	top: 100px;
-	left: 400px;
+	top: 5vw;
+	left: 23%;
 }
 .btn-container {
-  width: 300px;
-	top: 350px;
-	right: 1000px;
+	width: 15%;
+	top: 20vw;
+	right: 54%;
 	position: relative;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -463,7 +546,7 @@ a:hover {
 }*/
 .week{
 	position: relative;
-	left: 550px;
+	left: 30%;
 	bottom: 5px;
 	text-align: center;
 	color: #fff;
