@@ -135,34 +135,30 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     <div class="container-table100">
       <div class="wrap-login100">
 				<div class="put-it-here-to-include-padding">
-          
             <b>Course Selector</b>
-         
         </div>
 
         <div>
-        <!-- input from the selection boxes below, sent by POST -->
-        <form method=POST>
-        <!-- selection box for all courses -->
-        <select id = "sel" name="new_course">
-        <option>Select course</option>
-        <?php foreach ($courses_array as $val) { ?>
-            <option id = "dropdown" value="<?php echo $val["name"]; ?>">
-            <?php echo $val["name"]; ?>
+          <!-- input from the selection boxes below, sent by POST -->
+          <form method=POST>
+          <!-- selection box for all courses -->
+          <select id = "sel" name="new_course">
+          <option>Select course</option>
+          <?php foreach ($courses_array as $val) { ?>
+              <option id = "dropdown" value="<?php echo $val["name"]; ?>">
+              <?php echo $val["name"]; ?>
+            </option>
+          <?php } ?>
+          </select>
+
+          <select id = "sel2" name="new_lab">
+          <option>Select your lab</option>
+          <?php foreach ($lab_array as $val) { ?>
+          <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
+          <?php echo $val["lab"]; ?>
           </option>
-        <?php } ?>
-        </select>
-        </div>
-
-        <div>
-        <select id = "sel2" name="new_lab">
-        <option>Select your lab</option>
-        <?php foreach ($lab_array as $val) { ?>
-        <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
-        <?php echo $val["lab"]; ?>
-        </option>
-        <?php } ?>
-        </select>
+          <?php } ?>
+          </select>
         </div>
 
 
@@ -173,6 +169,9 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
             <button name="submit">Click to add to your timetable</button>
           </div>
         </div>
+      </div>
+    </div>
+  </div>  
 
 
       
