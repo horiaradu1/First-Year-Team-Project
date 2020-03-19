@@ -100,13 +100,13 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
   <!-- include jquery in this document -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-   <title>Welcome </title>
+  <title>Welcome </title>
     <style>
       .hidden {
         display: none;
       }
       </style>
-   </head>
+  </head>
 
   <body>
   <!-- NAV BAR -->
@@ -133,25 +133,8 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     </div>
 
     <div class="container-table100">
-      <div class="wrap-login100">
-				<div class="put-it-here-to-include-padding">
             <b>Course Selector</b>
-        </div>
-
-        
-
-
-        <div class="container-login100-form-btn">
-          <div class="wrap-login100-form-btn">
-            <div class="login100-form-bgbtn"></div>
-            <!-- button which sends selected course and lab events to data base -->
-            <button name="submit">Click to add to your timetable</button>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>  
-
 
       
 
