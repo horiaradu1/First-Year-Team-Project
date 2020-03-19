@@ -137,9 +137,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
   <div class="login-page">
     <div class="form">
     <h1><b>Course Selector</b></h1>
-    <div>
       <!-- input from the selection boxes below, sent by POST -->
-      <form method=POST>
       <!-- selection box for all courses -->
       <div>
       <select id = "sel" name="new_course">
@@ -150,7 +148,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
           <?php echo $val["name"]; ?>
         </option>
       <?php } ?>
-      </select></div>
+      </select>
 
       <div>
       <select id = "sel2" name="new_lab">
@@ -164,8 +162,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       </select></div>
 
       <!-- button which sends selected course and lab events to data base -->
-      <button name="submit">Click to add to your timetable</button>
-      </form>
+      <button name="submit">Click to add to your timetable</button>s
 
     </div>
       </div>
