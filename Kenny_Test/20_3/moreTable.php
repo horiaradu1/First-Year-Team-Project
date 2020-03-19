@@ -102,7 +102,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 			</div>
 
       <div id="popup1" class="overlay">
-        <div class="popup form" style= "height: 420px;">
+        <div class="popup form" style= "height: 460px;">
 ">
 
           <!-- input from the selection boxes below, sent by POST -->
