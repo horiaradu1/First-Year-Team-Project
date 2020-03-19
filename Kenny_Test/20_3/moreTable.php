@@ -103,7 +103,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 
       <div id="popup1" class="overlay">
         <div class="popup">
-          <div class="login-page">
+          <!-- <div class="login-page"> -->
             <h1><b>Course Selector</b></h1>
             <!-- input from the selection boxes below, sent by POST -->
             <!-- selection box for all courses -->
@@ -120,7 +120,7 @@ $fetchedInvite = $conn->query($sqlQuery);
               </select>
             </div>
             <a class="close" href="#">&times;</a>
-          </div>
+          <!-- </div> -->
         </div>
            
         <!-- JavaScript  -->
