@@ -131,6 +131,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     <div class="text100">
       <a> Welcome <?php echo $login_session; ?></a>
     </div>
+    </div>
 
     <div class="login-page">
       <div class="form">
@@ -148,7 +149,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <p class="message">Not registered? <a href="#">Create an account</a></p>
       </form>
     </div>
-  </div>
+  
 
     <!-- JavaScript  -->
       <script>
