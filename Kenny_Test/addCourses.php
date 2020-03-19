@@ -135,6 +135,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
   </div>
 
   <div class="login-page">
+    <div class="form">
     <h><b>Course Selector</b></h>
     <div>
       <!-- input from the selection boxes below, sent by POST -->
@@ -158,6 +159,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       <?php } ?>
       </select>
     </div>
+      </div>
   </div>
 
   
