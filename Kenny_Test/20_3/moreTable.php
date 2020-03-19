@@ -181,9 +181,9 @@ $fetchedInvite = $conn->query($sqlQuery);
       <!-- LHS Button -->
       <div class="btn-container" ,align="left">
         <div class="btn1">
-          <a href="#popup1">CREATE EVENT</a>
+          <a href="#popup1">CREATE COURSE</a>
 			  </div>
-				<!-- <div class="btn1">
+				<!-- <div class="btn2">
           <a class="btn" href="#popup1" onclick="window.location.href = '/g34904ps/team/Kenny_Test/addEvent.php';">CREATE EVENT</a>
 			  </div> -->
 			  <!-- <div class="btn2">
