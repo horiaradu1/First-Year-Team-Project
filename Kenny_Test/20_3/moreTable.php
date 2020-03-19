@@ -107,7 +107,9 @@ $fetchedInvite = $conn->query($sqlQuery);
             <h1><b>Course Selector</b></h1>
             <!-- input from the selection boxes below, sent by POST -->
             <!-- selection box for all courses -->
-            <label for="sel">Course: </label><br>
+
+
+            <!-- <label for="sel">Course: </label><br>
             <!-- Selector 1: -->
             <div class="custom-select">
               <select id = "sel" name="new_course">
@@ -118,7 +120,9 @@ $fetchedInvite = $conn->query($sqlQuery);
                   </option>
                 <?php } ?>
               </select>
-            </div>
+            </div> -->
+
+            
             <a class="close" href="#">&times;</a>
           <!-- </div> -->
         </div>
@@ -154,34 +158,9 @@ $fetchedInvite = $conn->query($sqlQuery);
           }
         </script>
 
-
-
-                    
-
-                        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <div class="before">
         <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
       </div>
-
 
       <div class="after">
         <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week += 2; echo $week; ?> " class="previous round">&#8250;</a>
