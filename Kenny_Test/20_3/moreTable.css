@@ -157,6 +157,7 @@ h1 {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index: 9999;
 }
 .overlay:target {
   visibility: visible;
@@ -164,13 +165,13 @@ h1 {
 }
 
 .popup {
-  margin: 70px auto;
+  margin: 80px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
   width: 30%;
   position: relative;
-  transition: all 5s ease-in-out;
+  top: 50%;
 }
 
 .popup h2 {
