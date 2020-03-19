@@ -118,12 +118,8 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     <div class = "picture">
       <a href="meet.php">Meeting</a>
     </div>
-    
     <div class="text100">
         <a href = "logout.php">Sign Out</a>
-    </div>
-    <div class="text100">
-        <a><?php echo($login_session) ?></a>
     </div>
     <div class="text100">
       <a href="ContactForm.php">Contact Us</a>
@@ -131,16 +127,11 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     <div class="text100">
       <a href="AboutUs.php">About Us</a>
     </div>
-    <div class="text100">
-      <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
-    </div>
 
-       <!-- Welcomes the user, using it's username. -->
-      <h1>Welcome <?php echo $login_session; ?></h1>
+    <!-- Welcomes the user, using it's username. -->
+    <div class="text100">Welcome <?php echo $login_session; ?></div>
 
-      <p id = "demo">Heyo! Welcome to our page.</p>
-
-            <p><b>Course selector<b></p>
+      <p><b>Course selector<b></p>
 
       <!-- input from the selection boxes below, sent by POST -->
       <form method=POST>
