@@ -99,8 +99,8 @@ background-image: url("backgroundTimeOnTable.jpg");
 
 label {
   display:block;
-  margin: 2em 1em .5em .75em;
-  font-size: 2em;
+  margin: 1em 0em 0em 0em;
+  font-size: 1.25em;
   color:#333;
 }
 
