@@ -103,10 +103,11 @@ $fetchedInvite = $conn->query($sqlQuery);
 
       <div id="popup1" class="overlay">
         <div class="popup form">
-          <!-- <div class="login-page"> -->
-          <h1><b>Course Selector</b></h1>
+
           <!-- input from the selection boxes below, sent by POST -->
           <!-- selection box for all courses -->
+          <h1><b>Course Selector</b></h1>
+          
           <a class="close" href="#">&times;</a>
           <label for="sel">Course: </label><br>
           <!-- Selector 1: -->
@@ -124,7 +125,6 @@ $fetchedInvite = $conn->query($sqlQuery);
           <div>
             <label for="sel2">Lab Session: </label><br>
           </div>
-
           <div class="custom-select">
             <select id = "sel2" name="new_lab">
               <option>Select your lab</option>
