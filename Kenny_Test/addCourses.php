@@ -134,41 +134,45 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
     <div class="container-table100">
       <div class="wrap-login100">
-				<form class="login100-form validate-form">
-					<div class="put-it-here-to-include-padding">
-						<span class="login100-form-title p-b-26">
-							<b>Course Selector</b>
-						</span>
-					</div>
+				<div class="put-it-here-to-include-padding">
+          <span class="login100-form-title p-b-26">
+            <b>Course Selector</b>
+          </span>
+        </div>
 
-					<!-- input from the selection boxes below, sent by POST -->
-          <form method=POST>
-          <!-- selection box for all courses -->
-          <select id = "sel" name="new_course">
-          <option>Select course</option>
-          <?php foreach ($courses_array as $val) { ?>
-              <option id = "dropdown" value="<?php echo $val["name"]; ?>">
-              <?php echo $val["name"]; ?>
-            </option>
-          <?php } ?>
-          </select>
-
-          <select id = "sel2" name="new_lab">
-          <option>Select your lab</option>
-          <?php foreach ($lab_array as $val) { ?>
-          <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
-          <?php echo $val["lab"]; ?>
+        <div>
+        <!-- input from the selection boxes below, sent by POST -->
+        <form method=POST>
+        <!-- selection box for all courses -->
+        <select id = "sel" name="new_course">
+        <option>Select course</option>
+        <?php foreach ($courses_array as $val) { ?>
+            <option id = "dropdown" value="<?php echo $val["name"]; ?>">
+            <?php echo $val["name"]; ?>
           </option>
-          <?php } ?>
-          </select>
+        <?php } ?>
+        </select>
+        </div>
+
+        <div>
+        <select id = "sel2" name="new_lab">
+        <option>Select your lab</option>
+        <?php foreach ($lab_array as $val) { ?>
+        <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
+        <?php echo $val["lab"]; ?>
+        </option>
+        <?php } ?>
+        </select>
+        </div>
 
 
-						<div class="container-login100-form-btn">
-							<div class="wrap-login100-form-btn">
-								<div class="login100-form-bgbtn"></div>
-								<button name="submit">Click to add to your timetable</button>
-							</div>
-						</div>
+        <div class="container-login100-form-btn">
+          <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <!-- button which sends selected course and lab events to data base -->
+            <button name="submit">Click to add to your timetable</button>
+          </div>
+        </div>
 
 
       
@@ -176,9 +180,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
 
      
-      <!-- button which sends selected course and lab events to data base -->
       
-    </form>
 
     <!-- JavaScript  -->
       <script>
@@ -210,8 +212,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
         }
       }
       </script>
-      <br>
-      <a href = "logout.php">Sign Out</a>
+
    </body>
 
 </html>
