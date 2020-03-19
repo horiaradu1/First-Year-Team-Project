@@ -104,15 +104,26 @@ $fetchedInvite = $conn->query($sqlQuery);
       <div id="popup1" class="overlay">
         <div class="popup">
           <!-- <div class="login-page"> -->
-            <h1><b>Course Selector</b></h1>
-            <!-- input from the selection boxes below, sent by POST -->
-            <!-- selection box for all courses -->
+          <h1><b>Course Selector</b></h1>
+          <!-- input from the selection boxes below, sent by POST -->
+          <!-- selection box for all courses -->
 
 
            
             
-            <a class="close" href="#">&times;</a>
-            <div>123</div>
+          <a class="close" href="#">&times;</a>
+          <label for="sel">Course: </label><br>
+          <!-- Selector 1: -->
+          <div class="custom-select">
+            <select id = "sel" name="new_course">
+              <option>Select course</option>
+              <?php foreach ($courses_array as $val) { ?>
+                  <option id = "dropdown" value="<?php echo $val["name"]; ?>">
+                  <?php echo $val["name"]; ?>
+                </option>
+              <?php } ?>
+            </select>
+          </div>
         </div>
       </div> 
            
