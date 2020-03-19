@@ -108,7 +108,45 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
       </style>
    </head>
 
-   <body>
+  <body>
+  <div class="limiter">
+    <div class="navbar">
+      <div class = "picture">
+      <a href="moreTable.php">Home</a>
+    </div>
+    <div class = "picture">
+      <a href="meet.php">Meeting</a>
+    </div>
+    <div class = "date">
+      <a><?php
+          try {
+            $week = $_GET['week'];
+          } catch (Exception $e) {}
+          $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
+          $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
+          $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
+          $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
+
+          $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+          echo $thisWeek;
+        ?></a>
+    </div>
+    <div class="text100">
+        <a href = "logout.php">Sign Out</a>
+    </div>
+    <div class="text100">
+        <a><?php echo($login_session) ?></a>
+    </div>
+    <div class="text100">
+      <a href="ContactForm.php">Contact Us</a>
+    </div>
+    <div class="text100">
+      <a href="AboutUs.php">About Us</a>
+    </div>
+    <div class="text100">
+      <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
+    </div>
+    
        <!-- Welcomes the user, using it's username. -->
       <h1>Welcome <?php echo $login_session; ?></h1>
 
