@@ -303,10 +303,12 @@ label {
   border: 0;
   padding: 15px;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 18px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+  position: relative;
+  top: 20px;
 }
 .form2 button:hover,.form button:active,.form button:focus {
   background: #042233;

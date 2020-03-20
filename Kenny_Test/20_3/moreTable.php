@@ -264,7 +264,7 @@ $fetchedInvite = $conn->query($sqlQuery);
             </select>
           </div>
           <!-- button which sends selected course and lab events to data base -->
-          <button name="submit">Click to add to your timetable</button>
+          <button name="submit">Summit</button>
 
           <!-- JavaScript  -->
           <script>
@@ -334,7 +334,7 @@ $fetchedInvite = $conn->query($sqlQuery);
             </script>
 
             <!-- Button to submit -->
-            <button name="submit">Click to add to your timetable!</button>
+            <button name="submit">Summit</button>
           </form>
         </div>
       </div>
