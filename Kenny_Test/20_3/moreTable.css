@@ -209,18 +209,12 @@ h1 {
   }
 }
 
-
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-}
-.form {
+.form1 {
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-.form button {
+.form1 button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -237,7 +231,7 @@ h1 {
   top: 40px;
 }
 
-.form button:hover,.form button:active,.form button:focus {
+.form1 button:hover,.form button:active,.form button:focus {
   background: #5a9de9;
 }
 
