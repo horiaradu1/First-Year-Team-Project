@@ -47,7 +47,8 @@ if (isset($_POST["submit"])) {
   <title>Create event</title>
 
   <!-- timepicker -->
-  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="jquery-timepicker/jquery.timepicker.min.js"></script>
   <link rel="stylesheet" type="text/css" href="jquery-timepicker/jquery.timepicker.css">
 
@@ -83,9 +84,9 @@ Description: <input id = "desc" name="description">
   <input type="text"name="startTime" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
 <!-- function to assign this timepicker, and change the format to a desired one -->
 <script>
-  $(function() {
-    $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
-  });
+$(function() {
+  $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
+});
 </script>
 
 
