@@ -314,6 +314,7 @@ label {
 
 .ui-datepicker { z-index:9999 !important}
 
+.ui-timepicker { z-index:9999 !important}
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/
 table {
