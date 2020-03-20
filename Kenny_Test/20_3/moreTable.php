@@ -313,7 +313,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 
             <!-- Start datepicker input box-->
             <p>From: 
-              <input type="text" name="startDate" id="startDate" placeholder="START DATE" class="hasDatepicker">
+              <input type="text" name="startDate" id="startDate" placeholder="START DATE">
               <input type="text" name="startTime" id="startTime" placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
             </p>
             <!-- function to assign this timepicker, and change the format to a desired one -->
