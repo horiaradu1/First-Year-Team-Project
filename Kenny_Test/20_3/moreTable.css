@@ -160,7 +160,7 @@ h1 {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
-  z-index: 9999;
+  z-index: 90;
 }
 .overlay:target {
   visibility: visible;
