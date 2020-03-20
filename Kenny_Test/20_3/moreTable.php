@@ -307,14 +307,14 @@ $fetchedInvite = $conn->query($sqlQuery);
           <form method=POST>
             <!-- Name input box-->
             Name of the event: 
-            <input id = "name" name="name">
-            <input type="text" placeholder="name">
-
+            <input type="text" placeholder="name" id = "name" name="name">
             <!-- DESCRIPTION input box-->
-            Description: <input id = "desc" name="description">
+            Description: <input type="text" placeholder="name" id = "desc" name="description">
+
             <!-- Start datepicker input box-->
             <p>From: <input type="text"name="startDate" id="startDate">
             <input type="text"name="startTime" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+            
             <!-- function to assign this timepicker, and change the format to a desired one -->
             <script>
             $(function() {
