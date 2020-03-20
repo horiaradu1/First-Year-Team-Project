@@ -133,7 +133,8 @@ if (isset($_POST["submit"])) {
 
   <!-- add from addEvent -->
   <!-- timepicker -->
-  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="jquery-timepicker/jquery.timepicker.min.js"></script>
   <link rel="stylesheet" type="text/css" href="jquery-timepicker/jquery.timepicker.css">
 
@@ -312,8 +313,8 @@ $fetchedInvite = $conn->query($sqlQuery);
 
             <!-- Start datepicker input box-->
             <p>From: 
-              <input type="text" name="startDate" id="startDate" placeholder="START DATE">
-              <input type="text" name="startTime" id="startTime"  placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
+              <input type="text" name="startDate" id="startDate" placeholder="START DATE" class="hasDatepicker">
+              <input type="text" name="startTime" id="startTime" placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
             </p>
             <!-- function to assign this timepicker, and change the format to a desired one -->
             <script>
@@ -323,8 +324,9 @@ $fetchedInvite = $conn->query($sqlQuery);
             </script>
 
             <!-- End datepicker window box -->
-            <p>To: <input type="text"name="endDate" id="endDate"  placeholder="END DATE">
-              <input type="text" name="endTime" id="endTime"  placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
+            <p>To: 
+              <input type="text" name="endDate" id="endDate" placeholder="END DATE">
+              <input type="text" name="endTime" id="endTime" placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
             </p>
             <!-- the function -->
             <script>
