@@ -235,7 +235,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 
       <!-- POPUP1 -->
       <div id="popup1" class="overlay">
-        <div class="popup1 form1" style= "height: 460px;">
+        <div class="popup1 form1" style= "height: 520px;">
           <!-- selection box for all courses -->
           <h1><b>Course Selector</b></h1>
           <a class="close" href="#">&times;</a>
