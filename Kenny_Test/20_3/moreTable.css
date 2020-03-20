@@ -175,6 +175,7 @@ h1 {
   width: 70%;
   position: relative;
   top: 15%;
+
 }
 
 .popup h2 {
@@ -209,12 +210,12 @@ h1 {
   }
 }
 
-.form1 {
+.form111 {
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-.form1 button {
+.form111 button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -231,7 +232,7 @@ h1 {
   top: 40px;
 }
 
-.form1 button:hover,.form button:active,.form button:focus {
+.form111 button:hover,.form button:active,.form button:focus {
   background: #5a9de9;
 }
 
