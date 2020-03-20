@@ -62,14 +62,10 @@ if (isset($_POST["submit"])) {
   $( function() {
     $( "#startDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
     $( "#endDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
-
   } );
   </script>
-
-
-
-
 </head>
+
 <body>
 
 

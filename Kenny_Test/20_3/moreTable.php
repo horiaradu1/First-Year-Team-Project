@@ -316,15 +316,6 @@ $fetchedInvite = $conn->query($sqlQuery);
             </p>
             <!-- function to assign this timepicker, and change the format to a desired one -->
             <script>
-            $('#timepicker').datetimepicker({ 
-              beforeShow:function(input) { 
-                $(input).css({ 
-                  "position": "relative", 
-                  "z-index": 999999 
-                }); 
-              } 
-            });
-            
             $(function() {
               $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
             });
@@ -339,15 +330,6 @@ $fetchedInvite = $conn->query($sqlQuery);
             <script>
             $(function() {
               $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
-            });
-
-            $('#timepicker').datetimepicker({ 
-              beforeShow:function(input) { 
-                $(input).css({ 
-                  "position": "relative", 
-                  "z-index": 999999 
-                }); 
-              } 
             });
             </script>
 
