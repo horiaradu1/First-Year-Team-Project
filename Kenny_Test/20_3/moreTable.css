@@ -314,6 +314,9 @@ label {
 
 .high-z-index { z-index: 99; }
 
+.ui-timepicker-container{ 
+  z-index:1151 !important; 
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/

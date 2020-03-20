@@ -1,3 +1,5 @@
+
+
 <?php
 include("session.php");
 
@@ -31,9 +33,11 @@ if (isset($_POST["submit"])) {
 
     $db->query($sqlAssign);
     echo $db->error;
+
+
+
 }
 ?>
-
 
 <!doctype html>
 <html lang="en">

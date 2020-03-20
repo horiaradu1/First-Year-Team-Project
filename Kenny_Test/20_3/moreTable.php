@@ -89,7 +89,6 @@ include("session.php");
 // responsible for adding the event
 if (isset($_POST["submit"])) {
 
-
   $name=$_POST["name"];
   $description=$_POST["description"];
   $startDate=$_POST["startDate"];
@@ -162,7 +161,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
 $fetchedInvite = $conn->query($sqlQuery);
 ?>
-
 
 <body>
   <div class="limiter">
@@ -313,8 +311,8 @@ $fetchedInvite = $conn->query($sqlQuery);
 
             <!-- Start datepicker input box-->
             <p>From: 
-              <input class="high-z-index" type="text" name="startDate" id="startDate" placeholder="START DATE">
-              <input style="high-z-index" type="text" name="startTime" id="startTime" placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
+              <input type="text" name="startDate" id="startDate" placeholder="START DATE">
+              <input type="text" name="startTime" id="startTime" placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
             </p>
             <!-- function to assign this timepicker, and change the format to a desired one -->
             <script>
@@ -325,8 +323,8 @@ $fetchedInvite = $conn->query($sqlQuery);
 
             <!-- End datepicker window box -->
             <p>To: 
-              <input style="high-z-index" type="text" name="endDate" id="endDate" placeholder="END DATE">
-              <input style="high-z-index" type="text" name="endTime" id="endTime" placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
+              <input type="text" name="endDate" id="endDate" placeholder="END DATE">
+              <input type="text" name="endTime" id="endTime" placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
             </p>
             <!-- the function -->
             <script>
