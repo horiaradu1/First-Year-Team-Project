@@ -324,6 +324,7 @@ $fetchedInvite = $conn->query($sqlQuery);
                 }); 
               } 
             });
+            
             $(function() {
               $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
             });
@@ -338,6 +339,15 @@ $fetchedInvite = $conn->query($sqlQuery);
             <script>
             $(function() {
               $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
+            });
+
+            $('#timepicker').datetimepicker({ 
+              beforeShow:function(input) { 
+                $(input).css({ 
+                  "position": "relative", 
+                  "z-index": 999999 
+                }); 
+              } 
             });
             </script>
 
