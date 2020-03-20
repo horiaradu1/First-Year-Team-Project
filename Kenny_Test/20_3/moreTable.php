@@ -313,8 +313,8 @@ $fetchedInvite = $conn->query($sqlQuery);
 
             <!-- Start datepicker input box-->
             <p>From: 
-              <input type="text" name="startDate" id="startDate" placeholder="START DATE">
-              <input type="text" name="startTime" id="startTime" placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
+              <input style="z-index:99;" type="text" name="startDate" id="startDate" placeholder="START DATE">
+              <input style="z-index:99;" type="text" name="startTime" id="startTime" placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
             </p>
             <!-- function to assign this timepicker, and change the format to a desired one -->
             <script>
@@ -325,8 +325,8 @@ $fetchedInvite = $conn->query($sqlQuery);
 
             <!-- End datepicker window box -->
             <p>To: 
-              <input type="text" name="endDate" id="endDate" placeholder="END DATE">
-              <input type="text" name="endTime" id="endTime" placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
+              <input style="z-index:99;" type="text" name="endDate" id="endDate" placeholder="END DATE">
+              <input style="z-index:99;" type="text" name="endTime" id="endTime" placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
             </p>
             <!-- the function -->
             <script>
