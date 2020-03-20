@@ -194,7 +194,7 @@ h1 {
   color: #333;
 }
 .popup1 .close:hover {
-  color: #06D85F;
+  color: #333;
 }
 .popup1 .content {
   max-height: 50%;
@@ -269,7 +269,8 @@ label {
   color: #333;
 }
 .popup2 .close:hover {
-  color: #06D85F;
+  color: #333
+  ;
 }
 
 .form2 {
@@ -311,8 +312,9 @@ label {
   background: #042233;
 }
 
-
-
+.ui-datepicker {
+  z-index: 9999px;
+}
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/
 table {
