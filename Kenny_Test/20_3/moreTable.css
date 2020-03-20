@@ -167,7 +167,7 @@ h1 {
   opacity: 1;
 }
 
-.popup {
+.popup1 {
   margin: 80px auto;
   padding: 20px;
   background: #fff;
@@ -178,12 +178,12 @@ h1 {
 
 }
 
-.popup h2 {
+.popup1 h2 {
   margin-top: 0;
   color: #333;
   font-family: Tahoma, Arial, sans-serif;
 }
-.popup .close {
+.popup1 .close {
   position: absolute;
   top: 20px;
   right: 30px;
@@ -193,10 +193,10 @@ h1 {
   text-decoration: none;
   color: #333;
 }
-.popup .close:hover {
+.popup1 .close:hover {
   color: #06D85F;
 }
-.popup .content {
+.popup1 .content {
   max-height: 50%;
   overflow: auto;
 }
@@ -205,7 +205,7 @@ h1 {
   .box{
     width: 70%;
   }
-  .popup{
+  .popup1{
     width: 70%;
   }
 }
@@ -215,7 +215,7 @@ h1 {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-.form111 button {
+.popup1 button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -232,7 +232,7 @@ h1 {
   top: 40px;
 }
 
-.form111 button:hover,.form button:active,.form button:focus {
+.popup1 button:hover,.form button:active,.form button:focus {
   background: #5a9de9;
 }
 
