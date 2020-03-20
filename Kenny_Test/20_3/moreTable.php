@@ -240,7 +240,7 @@ $fetchedInvite = $conn->query($sqlQuery);
           <h1><b>Course Selector</b></h1>
           <a class="close" href="#">&times;</a>
           <!-- Selector 1: -->
-          <label for="sel">Course: </label><br>
+          <div><label for="sel">Course: </label><br></div>
           <div class="custom-select">
             <select id = "sel" name="new_course">
               <option selected>Select course</option>
@@ -252,7 +252,7 @@ $fetchedInvite = $conn->query($sqlQuery);
             </select>
           </div>
           <!-- Selector 2: -->
-          <label for="sel2">Lab Session: </label><br>
+          <div><label for="sel2">Lab Session: </label><br></div>
           <div class="custom-select">
             <select id = "sel2" name="new_lab">
               <option>Select your lab</option>
