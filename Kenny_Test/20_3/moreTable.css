@@ -312,16 +312,7 @@ label {
   background: #042233;
 }
 
-.high-z-index { z-index: 99; }
-
-.ui-timepicker-container{ 
-  z-index:1151 !important; 
-}
-
-.ui-datepicker-container{ 
-  z-index:1151 !important; 
-}
-
+.ui-datepicker { z-index:9999 !important}
 
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/
