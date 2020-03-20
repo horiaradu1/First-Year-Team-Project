@@ -243,7 +243,7 @@ $fetchedInvite = $conn->query($sqlQuery);
           <label for="sel">Course: </label><br>
           <div class="custom-select">
             <select id = "sel" name="new_course">
-              <option>Select course</option>
+              <option selected>Select course</option>
               <?php foreach ($courses_array as $val) { ?>
                   <option id = "dropdown" value="<?php echo $val["name"]; ?>">
                   <?php echo $val["name"]; ?>
