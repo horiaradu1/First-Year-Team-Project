@@ -130,6 +130,24 @@ if (isset($_POST["submit"])) {
   <link rel = "icon" href =
 "https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
     type = "image/x-icon">
+
+  <!-- add from addEvent -->
+  <!-- timepicker -->
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery-timepicker/jquery.timepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery-timepicker/jquery.timepicker.css">
+
+  <!-- date picker -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+  $( function() {
+    $( "#startDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
+    $( "#endDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
+  } );
+  </script>
 </head>
 
 <?php

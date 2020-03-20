@@ -31,9 +31,6 @@ if (isset($_POST["submit"])) {
 
     $db->query($sqlAssign);
     echo $db->error;
-
-
-
 }
 ?>
 
