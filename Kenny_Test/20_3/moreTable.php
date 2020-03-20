@@ -299,7 +299,7 @@ $fetchedInvite = $conn->query($sqlQuery);
     
       <!-- POPUP2 -->
       <div id="popup2" class="overlay">
-        <div class="popup2 form2" style= "height: 460px;">
+        <div class="popup2 form2" style= "height: 660px;">
           <!-- selection box for all courses -->
           <h1><b>Add Event</b></h1>
           <a class="close" href="#">&times;</a>
@@ -311,17 +311,21 @@ $fetchedInvite = $conn->query($sqlQuery);
             <input type="text" placeholder="DESCRIPTION" id = "desc" name="description"/>
 
             <!-- Start datepicker input box-->
-            <p>From: <input type="text" name="startDate" id="startDate" placeholder="START DATE">
-            <input type="text" name="startTime" id="startTime"  placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/></p>
+            <p>From: 
+              <input type="text" name="startDate" id="startDate" placeholder="START DATE">
+              <input type="text" name="startTime" id="startTime"  placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
+            </p>
             <!-- function to assign this timepicker, and change the format to a desired one -->
             <script>
             $(function() {
               $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
             });
             </script>
+
             <!-- End datepicker window box -->
             <p>To: <input type="text"name="endDate" id="endDate"  placeholder="END DATE">
-            <input type="text" name="endTime" id="endTime"  placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/></p>
+              <input type="text" name="endTime" id="endTime"  placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
+            </p>
             <!-- the function -->
             <script>
             $(function() {
