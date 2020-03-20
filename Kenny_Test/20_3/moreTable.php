@@ -306,7 +306,10 @@ $fetchedInvite = $conn->query($sqlQuery);
 
           <form method=POST>
             <!-- Name input box-->
-            Name of the event: <input id = "name" name="name">
+            Name of the event: 
+            <input id = "name" name="name">
+            <input type="text" placeholder="name">
+
             <!-- DESCRIPTION input box-->
             Description: <input id = "desc" name="description">
             <!-- Start datepicker input box-->
