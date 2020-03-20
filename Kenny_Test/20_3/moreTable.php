@@ -260,6 +260,36 @@ $fetchedInvite = $conn->query($sqlQuery);
           <!-- selection box for all courses -->
           <h1><b>Add Event</b></h1>
           <a class="close" href="#">&times;</a>
+
+          <form method=POST>
+
+          <!-- Name input box-->
+          Name of the event: <input id = "name" name="name">
+          <!-- DESCRIPTION input box-->
+          Description: <input id = "desc" name="description">
+
+          <!-- Start datepicker input box-->
+          <p>From: <input type="text"name="startDate" id="startDate">
+          <input type="text"name="startTime" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+
+          <!-- function to assign this timepicker, and change the format to a desired one -->
+          <script>
+          $(function() {
+            $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
+          });
+          </script>
+          <!-- End datepicker window box -->
+          <p>To: <input type="text"name="endDate" id="endDate"><input type="text" name="endTime" id="endTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+          <!-- the function -->
+          <script>
+          $(function() {
+            $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
+          });
+          </script>
+
+          <!-- Button to submit -->
+          <button name="submit">Click to add to your timetable!</button>
+          </form>
         </div>
       </div>
 
