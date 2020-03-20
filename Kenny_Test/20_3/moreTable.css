@@ -172,7 +172,7 @@ h1 {
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 70%;
+  width: 500px;
   position: relative;
   top: 15%;
 }
@@ -315,7 +315,7 @@ label {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 480px;
+  max-width: 500px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
