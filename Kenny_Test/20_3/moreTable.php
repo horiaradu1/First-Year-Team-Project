@@ -191,6 +191,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 			  </div> -->
 			</div>
 
+      <!-- POPUP1 -->
       <div id="popup1" class="overlay">
         <div class="popup form" style= "height: 460px;">
           <!-- selection box for all courses -->
@@ -252,8 +253,16 @@ $fetchedInvite = $conn->query($sqlQuery);
           </script>
         </div>
       </div> 
-           
-        
+    
+      <!-- POPUP2 -->
+      <div id="popup2" class="overlay">
+        <div class="popup form" style= "height: 460px;">
+          <!-- selection box for all courses -->
+          <h1><b>Add Event</b></h1>
+          <a class="close" href="#">&times;</a>
+        </div>
+      </div>
+
 
       <div class="before">
         <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
