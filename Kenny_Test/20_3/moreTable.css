@@ -175,7 +175,6 @@ h1 {
   width: 70%;
   position: relative;
   top: 15%;
-
 }
 
 .popup1 h2 {
@@ -301,7 +300,7 @@ label {
   background: #154360;
   width: 100%;
   border: 0;
-  padding: 15px;
+  padding: 16px;
   color: #FFFFFF;
   font-size: 18px;
   -webkit-transition: all 0.3 ease;

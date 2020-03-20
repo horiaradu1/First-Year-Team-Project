@@ -310,7 +310,7 @@ $fetchedInvite = $conn->query($sqlQuery);
             <input type="text" placeholder="DESCRIPTION" id = "desc" name="description"/>
 
             <!-- Start datepicker input box-->
-            <p>From: 
+            <p style="font-size:18px;">From: 
               <input type="text" name="startDate" id="startDate" placeholder="START DATE">
               <input type="text" name="startTime" id="startTime" placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
             </p>
@@ -322,7 +322,7 @@ $fetchedInvite = $conn->query($sqlQuery);
             </script>
 
             <!-- End datepicker window box -->
-            <p>To: 
+            <p style="font-size:18px;">To: 
               <input type="text" name="endDate" id="endDate" placeholder="END DATE">
               <input type="text" name="endTime" id="endTime" placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
             </p>
