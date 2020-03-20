@@ -83,9 +83,9 @@ Description: <input id = "desc" name="description">
   <input type="text"name="startTime" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
 <!-- function to assign this timepicker, and change the format to a desired one -->
 <script>
-$(function() {
-  $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
-});
+  $(function() {
+    $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
+  });
 </script>
 
 
