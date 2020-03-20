@@ -1,21 +1,15 @@
 <?php
 include("session.php");
-
 // responsible for adding the courses from course selector
 if (isset($_POST["submit"])) {
 
   // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
-
   $course = $_POST["new_course"];
   $lab = $_POST["new_lab"];
-
   // echo $course;
   //
   // echo $lab;
-
-
   // $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
-
   //var_dump($_POST["new_course"]);
   $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
     VALUES (\"$login_session\", \"$course\", \"$lab\");";
@@ -26,10 +20,7 @@ if (isset($_POST["submit"])) {
     // echo $db->error;
 }
 
-
-
 // ----------------TIMETABLE INFORMATION: ------------------
-
 
 // ---------------ALL EVENTS AND COURSES----------------
 // This part of code requests all events
@@ -73,7 +64,6 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
  // print_r($courses_array);
  // echo '</pre>';
 
-
  // ----------------LABS------------------
   // Like above, but for LABS not courses.
  $sqlGetLab = "SELECT DISTINCT lab  FROM CourseEvents";
@@ -87,11 +77,49 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 // ------------ END OF PHP ----------------
 ?>
 
-
 <!--All of the HTML and css files were created using templates from colorlib, namely:
     Login Form v2 - https://colorlib.com/wp/template/login-form-v2/
     Contact Form v9 - https://colorlib.com/wp/template/contact-form-v9/-->
 <?php error_reporting(E_ERROR); ?>
+
+<!--  ------------------addEvent.php -->
+<?php
+include("session.php");
+
+// responsible for adding the event
+if (isset($_POST["submit"])) {
+
+
+  $name=$_POST["name"];
+  $description=$_POST["description"];
+  $startDate=$_POST["startDate"];
+  $startTime=$_POST["startTime"];
+  $endDate=$_POST["endDate"];
+  $endTime=$_POST["endTime"];
+
+  $space = " ";
+  $start = $startDate.$space.$startTime;
+  $end = $endDate.$space.$endTime;
+
+  $sqlAddEvent= "INSERT INTO Events (startTime, endTime, name, description)
+    VALUES (\"$start\", \"$end\", \"$name\", \"$description\");";
+
+    //echo $sqlAddEvent;
+
+    $db->query($sqlAddEvent);
+    echo $db->error;
+
+
+    $sqlAssign = "INSERT into HasEvent (username, eventID)
+    VALUES(\"$login_session\", (SELECT MAX(eventID) FROM Events) )";
+
+
+    $db->query($sqlAssign);
+    echo $db->error;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lan="en">
 <head>
@@ -115,6 +143,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
 $fetchedInvite = $conn->query($sqlQuery);
 ?>
+
+
 <body>
   <div class="limiter">
     <div class="navbar">
@@ -157,26 +187,24 @@ $fetchedInvite = $conn->query($sqlQuery);
     </div>
   </div>
 
-  
+  <div class="container-table100">
+    <!-- <div class="week"> -->
+      <?php
+        // try {
+        //   $week = $_GET['week'];
+        // } catch (Exception $e) {}
+        // $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
+        // $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
+        // $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
+        // $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
 
-    <div class="container-table100">
-      <!-- <div class="week"> -->
-        <?php
-          // try {
-          //   $week = $_GET['week'];
-          // } catch (Exception $e) {}
-          // $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
-          // $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
-          // $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
-          // $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
-
-          // $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
-          // echo $thisWeek;
-        ?>
+        // $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+        // echo $thisWeek;
+      ?>
       <!-- </div> -->
-      <div class="logo">
-        <img src = "Logo.png">
-      </div>
+    <div class="logo">
+      <img src = "Logo.png">
+    </div>
 
       <!-- LHS Button -->
       <div class="btn-container" ,align="left">
@@ -186,9 +214,6 @@ $fetchedInvite = $conn->query($sqlQuery);
 				<div class="btn1">
           <a href="#popup2">CREATE EVENT</a>
 			  </div>
-			  <!-- <div class="btn2">
-          <button onclick="window.location.href = '/g34904ps/team/Kenny_Test/addCourses.php';" class="btn">ADD COURSE</button>
-			  </div> -->
 			</div>
 
       <!-- POPUP1 -->
@@ -262,33 +287,30 @@ $fetchedInvite = $conn->query($sqlQuery);
           <a class="close" href="#">&times;</a>
 
           <form method=POST>
+            <!-- Name input box-->
+            Name of the event: <input id = "name" name="name">
+            <!-- DESCRIPTION input box-->
+            Description: <input id = "desc" name="description">
+            <!-- Start datepicker input box-->
+            <p>From: <input type="text"name="startDate" id="startDate">
+            <input type="text"name="startTime" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+            <!-- function to assign this timepicker, and change the format to a desired one -->
+            <script>
+            $(function() {
+              $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
+            });
+            </script>
+            <!-- End datepicker window box -->
+            <p>To: <input type="text"name="endDate" id="endDate"><input type="text" name="endTime" id="endTime" class="time ui-timepicker-input" autocomplete="off"/></p>
+            <!-- the function -->
+            <script>
+            $(function() {
+              $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
+            });
+            </script>
 
-          <!-- Name input box-->
-          Name of the event: <input id = "name" name="name">
-          <!-- DESCRIPTION input box-->
-          Description: <input id = "desc" name="description">
-
-          <!-- Start datepicker input box-->
-          <p>From: <input type="text"name="startDate" id="startDate">
-          <input type="text"name="startTime" id="startTime" class="time ui-timepicker-input" autocomplete="off"/></p>
-
-          <!-- function to assign this timepicker, and change the format to a desired one -->
-          <script>
-          $(function() {
-            $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
-          });
-          </script>
-          <!-- End datepicker window box -->
-          <p>To: <input type="text"name="endDate" id="endDate"><input type="text" name="endTime" id="endTime" class="time ui-timepicker-input" autocomplete="off"/></p>
-          <!-- the function -->
-          <script>
-          $(function() {
-            $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
-          });
-          </script>
-
-          <!-- Button to submit -->
-          <button name="submit">Click to add to your timetable!</button>
+            <!-- Button to submit -->
+            <button name="submit">Click to add to your timetable!</button>
           </form>
         </div>
       </div>
