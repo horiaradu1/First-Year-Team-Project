@@ -326,7 +326,7 @@ $fetchedInvite = $conn->query($sqlQuery);
             <!-- End datepicker window box -->
             <p>To: 
               <input type="text" name="endDate" id="endDate" placeholder="END DATE">
-              <input type="text" name="endTime" id="endTime" placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
+              <input type="text" name="endTime" id="endTime" placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off" style="z-index: 9999"/>
             </p>
             <!-- the function -->
             <script>
