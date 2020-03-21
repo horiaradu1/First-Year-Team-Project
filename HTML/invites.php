@@ -37,7 +37,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
           <br></br>
           <div class = "wrap-message">
           <span class="text">
-            <h1 style="text-align: center; font-style:bold;">You do not have any invites yet :O</h1>
+            <h1 style="text-align: center; font-style:bold;">You do not have any invites :O</h1>
             <div class="w3-section">
             
     </div>
