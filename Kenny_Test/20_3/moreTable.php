@@ -82,7 +82,7 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
     Contact Form v9 - https://colorlib.com/wp/template/contact-form-v9/-->
 <?php error_reporting(E_ERROR); ?>
 
-<!--  ------------------addEvent.php -->
+<!--  ------------------ADDEVENT.php -->
 <?php
 include("session.php");
 
@@ -236,35 +236,37 @@ $fetchedInvite = $conn->query($sqlQuery);
       <!-- POPUP1 -->
       <div id="popup1" class="overlay">
         <div class="popup1 form1" style= "height: 520px;">
-          <!-- selection box for all courses -->
-          <h1><b>Course Selector</b></h1>
-          <a class="close" href="#">&times;</a>
-          <!-- Selector 1: -->
-          <div><label for="sel">Course: </label><br></div>
-          <div class="custom-select">
-            <select id = "sel" name="new_course">
-              <option selected>Select course</option>
-              <?php foreach ($courses_array as $val) { ?>
-                  <option id = "dropdown" value="<?php echo $val["name"]; ?>">
-                  <?php echo $val["name"]; ?>
+          <form method=POST>
+            <!-- selection box for all courses -->
+            <h1><b>Course Selector</b></h1>
+            <a class="close" href="#">&times;</a>
+            <!-- Selector 1: -->
+            <div><label for="sel">Course: </label><br></div>
+            <div class="custom-select">
+              <select id = "sel" name="new_course">
+                <option selected>Select course</option>
+                <?php foreach ($courses_array as $val) { ?>
+                    <option id = "dropdown" value="<?php echo $val["name"]; ?>">
+                    <?php echo $val["name"]; ?>
+                  </option>
+                <?php } ?>
+              </select>
+            </div>
+            <!-- Selector 2: -->
+            <div><label for="sel2">Lab Session: </label><br></div>
+            <div class="custom-select">
+              <select id = "sel2" name="new_lab">
+                <option>Select your lab</option>
+                <?php foreach ($lab_array as $val) { ?>
+                <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
+                <?php echo $val["lab"]; ?>
                 </option>
-              <?php } ?>
-            </select>
-          </div>
-          <!-- Selector 2: -->
-          <div><label for="sel2">Lab Session: </label><br></div>
-          <div class="custom-select">
-            <select id = "sel2" name="new_lab">
-              <option>Select your lab</option>
-              <?php foreach ($lab_array as $val) { ?>
-              <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
-              <?php echo $val["lab"]; ?>
-              </option>
-              <?php } ?>
-            </select>
-          </div>
-          <!-- button which sends selected course and lab events to data base -->
-          <button name="submit">Summit</button>
+                <?php } ?>
+              </select>
+            </div>
+            <!-- button which sends selected course and lab events to data base -->
+            <button name="submit">Submit</button>
+          </form>
 
           <!-- JavaScript  -->
           <script>
