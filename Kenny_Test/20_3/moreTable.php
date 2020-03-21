@@ -233,7 +233,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 			  </div>
 			</div>
 
-      <!-- POPUP1 -->
+      <!-- POPUP1_Create Course-->
       <div id="popup1" class="overlay">
         <div class="popup1 form1" style= "height: 520px;">
           <form method=POST>
@@ -298,7 +298,7 @@ $fetchedInvite = $conn->query($sqlQuery);
         </div>
       </div> 
     
-      <!-- POPUP2 -->
+      <!-- POPUP2_Create Event -->
       <div id="popup2" class="overlay">
         <div class="popup2 form2" style= "height: 660px;">
           <!-- selection box for all courses -->
@@ -316,13 +316,13 @@ $fetchedInvite = $conn->query($sqlQuery);
               <input type="text" name="startDate" id="startDate" placeholder="START DATE">
               <input type="text" name="startTime" id="startTime" placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
             </p>
+            
             <!-- function to assign this timepicker, and change the format to a desired one -->
             <script>
             $(function() {
               $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
             });
             </script>
-
             <!-- End datepicker window box -->
             <p style="font-size:18px;">To: 
               <input type="text" name="endDate" id="endDate" placeholder="END DATE">
@@ -336,7 +336,7 @@ $fetchedInvite = $conn->query($sqlQuery);
             </script>
 
             <!-- Button to submit -->
-            <button name="submit">Summit</button>
+            <button name="submit">Submit</button>
           </form>
         </div>
       </div>
