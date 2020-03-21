@@ -56,20 +56,17 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
         } 
 
         else {
-            if (in_array($_POST['item'], $items)) {
-
-			}
-			else {
-				echo $_POST['item'];
+            
 			$items[] = $_POST['item'];
-			}
+			
         }
 
     }
     if(isset($_POST['items']) && is_array($_POST['items'])) {
         foreach($_POST['items'] as $item) {
             $items[] = $item;
-        }
+		}
+	array_unique($items);
     }
 }
 ?>
