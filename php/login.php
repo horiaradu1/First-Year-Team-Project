@@ -136,7 +136,6 @@
 			</div>
 		<div class="move-useless-text">
 			<span class="useless-text">
-			<br></br>
 
 			TimeOnTable is a time management tool.
 
