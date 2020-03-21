@@ -57,7 +57,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 
         else {
             
-			$items[] = $_POST['item'];
+			$items[] = strtoupper($_POST['item']);
 			
         }
 
