@@ -56,10 +56,11 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
         } 
 
         else {
-            if (in_array($input, $items)) {
+            if (in_array($_POST['item'], $items)) {
 
 			}
 			else {
+				echo $_POST['item'];
 			$items[] = $_POST['item'];
 			}
         }
