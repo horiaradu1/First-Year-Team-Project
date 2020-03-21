@@ -66,7 +66,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
         foreach($_POST['items'] as $item) {
             $items[] = $item;
 		}
-	array_unique($items);
+	$items = array_unique($items);
     }
 }
 ?>
