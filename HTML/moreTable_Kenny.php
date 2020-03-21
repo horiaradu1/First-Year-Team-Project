@@ -125,7 +125,7 @@ if (isset($_POST["submit"])) {
   <title>TIMEonTABLE - Timetable</title>
   <meta charset = "UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="moreTable.css">
+  <link rel="stylesheet" type="text/css" href="moreTable_Kenny.css">
   <link rel = "icon" href =
 "https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
     type = "image/x-icon">
@@ -166,7 +166,7 @@ $fetchedInvite = $conn->query($sqlQuery);
   <div class="limiter">
     <div class="navbar">
       <div class = "picture">
-      <a href="moreTable.php">Home</a>
+      <a href="moreTable_Kenny.php">Home</a>
     </div>
     <div class = "picture">
       <a href="meet.php">Meeting</a>
@@ -343,11 +343,11 @@ $fetchedInvite = $conn->query($sqlQuery);
 
 
       <div class="before">
-        <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
+        <a href="/g34904ps/team/HTML/moreTable_Kenny.php?week=<?php $week -= 1; echo $week; ?>" class="previous round">&#8249;</a>
       </div>
 
       <div class="after">
-        <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week += 2; echo $week; ?> " class="previous round">&#8250;</a>
+        <a href="/g34904ps/team/HTML/moreTable_Kenny.php?week=<?php $week += 2; echo $week; ?> " class="previous round">&#8250;</a>
       </div>
       <div class="wrap-table100">
         <div class="table100 ver1 m-b-110">
