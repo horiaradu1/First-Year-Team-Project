@@ -136,19 +136,6 @@
 			</div>
 		<div class="move-useless-text">
 			<span class="useless-text">
-
-			TimeOnTable is a time management tool.
-			<br>
-			Main features:
-			<br>
-			View your timetable – Login with your username and password to see your personal timetable.
-			<br>
-			Add courses to your timetable – Use the course selector to choose courses and lab groups. This will add the relevant course events to your timetable.
-			<br>
-			Create personal events – Create your own events and add these to your timetable.
-			<br>
-			Meeting planner – Compare timetables to find the optimal meeting time and create an event for the meeting.
-
 			</span>
 		</div>
 		</div>

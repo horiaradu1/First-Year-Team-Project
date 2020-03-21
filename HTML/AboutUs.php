@@ -51,7 +51,18 @@ $fetchedInvite = $conn->query($sqlQuery);
     </span>
     <div class = "wrap-text">
       <span class="text">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      TimeOnTable is a time management tool.
+			<br>
+			Main features:
+			<br>
+			View your timetable – Login with your username and password to see your personal timetable.
+			<br>
+			Add courses to your timetable – Use the course selector to choose courses and lab groups. This will add the relevant course events to your timetable.
+			<br>
+			Create personal events – Create your own events and add these to your timetable.
+			<br>
+			Meeting planner – Compare timetables to find the optimal meeting time and create an event for the meeting.
+
       </span>
     </div>
 
