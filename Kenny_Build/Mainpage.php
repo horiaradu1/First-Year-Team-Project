@@ -231,7 +231,7 @@
 
     <div class="row text-center">
       <div class="col-md-1 offset-md-1 pink">
-        <i class="fas fa-arrow-circle-left-4x"></i>
+        <i class="fas fa-arrow-alt-circle-left fa-4x"></i>
       </div>
       <div class="col-md-4 pink">
         <button class="btn btn-info btn-lg">CREATE COURSE</button>
@@ -240,7 +240,7 @@
         <button class="btn btn-info btn-lg">CREATE EVENT</button>
       </div>
       <div class="col-md-1 pink">
-      <i class="fas fa-arrow-circle-right-4x"></i>
+        <i class="fas fa-arrow-alt-circle-right fa-4x"></i>
       </div>
     </div>
 
