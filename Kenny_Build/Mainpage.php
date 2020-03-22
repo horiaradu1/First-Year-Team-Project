@@ -1,80 +1,80 @@
 <?php
-include("session.php");
-// responsible for adding the courses from course selector
-if (isset($_POST["submit"])) {
+  include("session.php");
+  // responsible for adding the courses from course selector
+  if (isset($_POST["submit"])) {
 
-  // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
-  $course = $_POST["new_course"];
-  $lab = $_POST["new_lab"];
-  // echo $course;
-  //
-  // echo $lab;
-  // $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
-  //var_dump($_POST["new_course"]);
-  $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
-    VALUES (\"$login_session\", \"$course\", \"$lab\");";
+    // $course = mysqli_real_escape_string($db, $_POST["new_course"]);
+    $course = $_POST["new_course"];
+    $lab = $_POST["new_lab"];
+    // echo $course;
+    //
+    // echo $lab;
+    // $lab = mysqli_real_escape_string($db, $_POST["new_lab"]);
+    //var_dump($_POST["new_course"]);
+    $sqlAddCourse = "INSERT INTO HasCourse (username, course, lab)
+      VALUES (\"$login_session\", \"$course\", \"$lab\");";
 
-    // echo $sqlAddCourse;
+      // echo $sqlAddCourse;
 
-    $db->query($sqlAddCourse);
-    // echo $db->error;
-}
+      $db->query($sqlAddCourse);
+      // echo $db->error;
+  }
 
-// ----------------TIMETABLE INFORMATION: ------------------
+  // ----------------TIMETABLE INFORMATION: ------------------
 
-// ---------------ALL EVENTS AND COURSES----------------
-// This part of code requests all events
-$sqlGetEvents = "SELECT * FROM Events
-    WHERE eventID in
-  (SELECT eventID FROM HasEvent WHERE username = \"$login_session\")";
+  // ---------------ALL EVENTS AND COURSES----------------
+  // This part of code requests all events
+  $sqlGetEvents = "SELECT * FROM Events
+      WHERE eventID in
+    (SELECT eventID FROM HasEvent WHERE username = \"$login_session\")";
 
-// saving the result of the query (actual information) into a variable
-$resultEvents = mysqli_query($db, $sqlGetEvents);
+  // saving the result of the query (actual information) into a variable
+  $resultEvents = mysqli_query($db, $sqlGetEvents);
 
-// Selecting all COURSES.
-$sqlGetCoursesEvents="SELECT * FROM CourseEvents
-  WHERE name in
-  (SELECT course FROM HasCourse WHERE username = \"$login_session\")";
+  // Selecting all COURSES.
+  $sqlGetCoursesEvents="SELECT * FROM CourseEvents
+    WHERE name in
+    (SELECT course FROM HasCourse WHERE username = \"$login_session\")";
 
-  // saving the result of that query to a variable
-$resultCoursesEvents = mysqli_query($db, $sqlGetCoursesEvents);
+    // saving the result of that query to a variable
+  $resultCoursesEvents = mysqli_query($db, $sqlGetCoursesEvents);
 
-// creating array data types in php.
-$data_array = array();
+  // creating array data types in php.
+  $data_array = array();
 
-while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
-  array_push($data_array, $row);
-}
-while($x = mysqli_fetch_array($resultCoursesEvents, MYSQLI_ASSOC)){
-  array_push($data_array, $x);
-}
+  while($row = mysqli_fetch_array($resultEvents, MYSQLI_ASSOC)){
+    array_push($data_array, $row);
+  }
+  while($x = mysqli_fetch_array($resultCoursesEvents, MYSQLI_ASSOC)){
+    array_push($data_array, $x);
+  }
 
-// ----------------COURSES------------------
-// Selecting all different courses, save the result to an array (like above)
-$sqlGetCourses = "SELECT DISTINCT name  FROM CourseEvents";
-$resultCourses = mysqli_query($db, $sqlGetCourses);
-$courses_array = array();
+  // ----------------COURSES------------------
+  // Selecting all different courses, save the result to an array (like above)
+  $sqlGetCourses = "SELECT DISTINCT name  FROM CourseEvents";
+  $resultCourses = mysqli_query($db, $sqlGetCourses);
+  $courses_array = array();
 
-while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
-  array_push($courses_array, $c);
-}
+  while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
+    array_push($courses_array, $c);
+  }
 
- // if you want to check the prevwie of the array in a nicely formated way
- // echo '<pre>';
- // print_r($courses_array);
- // echo '</pre>';
+  // if you want to check the prevwie of the array in a nicely formated way
+  // echo '<pre>';
+  // print_r($courses_array);
+  // echo '</pre>';
 
- // ----------------LABS------------------
-  // Like above, but for LABS not courses.
- $sqlGetLab = "SELECT DISTINCT lab  FROM CourseEvents";
- $resultLab = mysqli_query($db, $sqlGetLab);
- $lab_array = array();
+  // ----------------LABS------------------
+    // Like above, but for LABS not courses.
+  $sqlGetLab = "SELECT DISTINCT lab  FROM CourseEvents";
+  $resultLab = mysqli_query($db, $sqlGetLab);
+  $lab_array = array();
 
- while($c = mysqli_fetch_array($resultLab, MYSQLI_ASSOC)){
-   array_push($lab_array, $c);
- }
+  while($c = mysqli_fetch_array($resultLab, MYSQLI_ASSOC)){
+    array_push($lab_array, $c);
+  }
 
-// ------------ END OF PHP ----------------
+  // ------------ END OF PHP ----------------
 ?>
 
 <!--All of the HTML and css files were created using templates from colorlib, namely:
@@ -84,67 +84,51 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 
 <!--  ------------------ADDEVENT.php -->
 <?php
-include("session.php");
+  include("session.php");
 
-// responsible for adding the event
-if (isset($_POST["submit"])) {
+  // responsible for adding the event
+  if (isset($_POST["submit"])) {
 
-  $name=$_POST["name"];
-  $description=$_POST["description"];
-  $startDate=$_POST["startDate"];
-  $startTime=$_POST["startTime"];
-  $endDate=$_POST["endDate"];
-  $endTime=$_POST["endTime"];
+    $name=$_POST["name"];
+    $description=$_POST["description"];
+    $startDate=$_POST["startDate"];
+    $startTime=$_POST["startTime"];
+    $endDate=$_POST["endDate"];
+    $endTime=$_POST["endTime"];
 
-  $space = " ";
-  $start = $startDate.$space.$startTime;
-  $end = $endDate.$space.$endTime;
+    $space = " ";
+    $start = $startDate.$space.$startTime;
+    $end = $endDate.$space.$endTime;
 
-  $sqlAddEvent= "INSERT INTO Events (startTime, endTime, name, description)
-    VALUES (\"$start\", \"$end\", \"$name\", \"$description\");";
+    $sqlAddEvent= "INSERT INTO Events (startTime, endTime, name, description)
+      VALUES (\"$start\", \"$end\", \"$name\", \"$description\");";
 
-    //echo $sqlAddEvent;
+      //echo $sqlAddEvent;
 
-    $db->query($sqlAddEvent);
-    echo $db->error;
-
-
-    $sqlAssign = "INSERT into HasEvent (username, eventID)
-    VALUES(\"$login_session\", (SELECT MAX(eventID) FROM Events) )";
+      $db->query($sqlAddEvent);
+      echo $db->error;
 
 
-    $db->query($sqlAssign);
-    echo $db->error;
-}
+      $sqlAssign = "INSERT into HasEvent (username, eventID)
+      VALUES(\"$login_session\", (SELECT MAX(eventID) FROM Events) )";
+
+
+      $db->query($sqlAssign);
+      echo $db->error;
+  }
 ?>
 
 <?php
-include("session.php"); 
-$servername = "dbhost.cs.man.ac.uk";
-$username = "g63968ef";
-$password = "database";
-$dbname = "2019_comp10120_y4";
+  include("session.php"); 
+  $servername = "dbhost.cs.man.ac.uk";
+  $username = "g63968ef";
+  $password = "database";
+  $dbname = "2019_comp10120_y4";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
-$fetchedInvite = $conn->query($sqlQuery);
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+  $fetchedInvite = $conn->query($sqlQuery);
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -160,9 +144,7 @@ $fetchedInvite = $conn->query($sqlQuery);
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="mainpage.css">
-  <link rel = "icon" href =
-"https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
-    type = "image/x-icon">
+  <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -179,12 +161,11 @@ $fetchedInvite = $conn->query($sqlQuery);
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <script>
-  $( function() {
-    $( "#startDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
-    $( "#endDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
-  } );
+    $( function() {
+      $( "#startDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
+      $( "#endDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
+    } );
   </script>
-
   <title>TimeonTable</title>
 </head>
 
@@ -245,7 +226,22 @@ $fetchedInvite = $conn->query($sqlQuery);
   </nav>
 
   <div class="container">
-    <h1 class="text-center display-4">Timetable</h1>
+    <h1 class="text-center display-4">Timetable
+    <a>
+              <?php
+                try {
+                  $week = $_GET['week'];
+                } catch (Exception $e) {}
+                $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
+                $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
+                $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
+                $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
+
+                $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+                echo $thisWeek;
+              ?>
+            </a>
+    </h1>
     <div class="row justify-content-between align-items-center">
       <button class="col-5 btn btn-info btn-lg">CREATE COURSE</button>
       <button class="col-5 btn btn-info btn-lg">CREATE EVENT</button>
