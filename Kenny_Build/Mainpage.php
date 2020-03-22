@@ -207,21 +207,19 @@
   </nav>
 
   <div class="container">
-    <h1 class="text-center display-4">Timetable
-    <a>
-              <?php
-                try {
-                  $week = $_GET['week'];
-                } catch (Exception $e) {}
-                $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
-                $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
-                $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
-                $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
+    <h1 class="text-center display-4"><a>
+      <?php
+        try {
+          $week = $_GET['week'];
+        } catch (Exception $e) {}
+        $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
+        $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
+        $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
+        $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
 
-                $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
-                echo $thisWeek;
-              ?>
-            </a>
+        $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
+        echo $thisWeek;
+      ?></a>
     </h1>
     <div class="row justify-content-between align-items-center">
       <button class="col-5 btn btn-info btn-lg">CREATE COURSE</button>
