@@ -240,7 +240,9 @@
         <button class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</button>
       </div>
       <div class="col-md-1">
+        <span style="color: #023858;">
         <i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i>
+        </span>
       </div>
     </div>
 
