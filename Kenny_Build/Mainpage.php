@@ -306,7 +306,7 @@
     </div> 
     <!-- POPUP2_Create Event -->
     <div id="popup2" class="overlay">
-      <div class="popup2 form2" style= "height: 660px;">
+      <div class="popup2 form2" style= "height: 700px;">
         <!-- selection box for all courses -->
         <h1><b>Add Event</b></h1>
         <a class="close" href="#">&times;</a>
@@ -318,7 +318,7 @@
           <input type="text" placeholder="DESCRIPTION" id = "desc" name="description"/>
 
           <!-- Start datepicker input box-->
-          <p style="font-size:18px;">From: 
+          <p style="font-size:24px;">From: 
             <input type="text" name="startDate" id="startDate" placeholder="START DATE">
             <input type="text" name="startTime" id="startTime" placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
           </p>
@@ -330,7 +330,7 @@
           });
           </script>
           <!-- End datepicker window box -->
-          <p style="font-size:18px;">To: 
+          <p style="font-size:24px;">To: 
             <input type="text" name="endDate" id="endDate" placeholder="END DATE">
             <input type="text" name="endTime" id="endTime" placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
           </p>
@@ -342,7 +342,7 @@
           </script>
 
           <!-- Button to submit -->
-          <button name="submit">Submit</button>
+          <button name="submit" style="border-radius: 6px;">Submit</button>
         </form>
       </div>
     </div>
