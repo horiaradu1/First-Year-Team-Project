@@ -221,7 +221,7 @@
         echo $thisWeek;
       ?></a>
     </h1>
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-8 col-md-offset-2 justify-content-between align-items-center">
         <div class="col-6">
           <button class="btn btn-info btn-lg">CREATE COURSE</button>
@@ -230,7 +230,11 @@
           <button class="btn btn-info btn-lg">>CREATE EVENT</button>
         </div>
       </div>
-      <div class="col-1">123</div>
+    
+    </div> -->
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
     </div>
 
     <div class="row text-center">
