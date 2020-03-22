@@ -229,7 +229,7 @@
       ?></a>
     </h1>
 
-    <div class="row text-center">
+    <div class="row text-center" style="padding-top: 10px">
       <div class="col-md-1 offset-md-1">
         <i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i>
       </div>
