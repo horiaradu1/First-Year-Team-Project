@@ -57,14 +57,14 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 
         else {
             
-			$items[] = strtoupper($_POST['item']);
+			$items[] = ($_POST['item']);
 			
         }
 
     }
     if(isset($_POST['items']) && is_array($_POST['items'])) {
         foreach($_POST['items'] as $item) {
-            $items[] = strtoupper($item);
+            $items[] = ($item);
 		}
 	$items = array_unique($items);
     }
