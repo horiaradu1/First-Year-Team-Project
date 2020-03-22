@@ -222,12 +222,13 @@
       ?></a>
     </h1>
     <div class="row">
-      <div class="col-1 col-md-offset-1">123</div>
-      <div class="col-8 justify-content-between align-items-center">
-
-        <button class="col-5 btn btn-info btn-lg">CREATE COURSE</button>
-        <button class="col-5 btn btn-info btn-lg">CREATE EVENT</button>
- 
+      <div class="col-md-8 col-md-offset-2 justify-content-between align-items-center">
+        <div class="col-6">
+          <button class="btn btn-info btn-lg">CREATE COURSE</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-info btn-lg">>CREATE EVENT</button>
+        </div>
       </div>
       <div class="col-1">123</div>
     </div>
@@ -271,10 +272,10 @@
           <table data-vertable="ver1" >
           <tbody>
 
-          <?php
-
+          
 //--------------------------------------------------------------------------------------------
 //Display Timetable of $username
+          <?php
 
               function hours_between($date1, $date2) {
                 $date1 = strtotime($date1);
@@ -455,7 +456,7 @@
 
 //----------------------------------------------------------------------------------
 
-                ?>
+          ?>
 
 
 
