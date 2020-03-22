@@ -363,3 +363,6 @@ th, td {
   background-color: #8ab0db;
   color: #fff;
 }
+.bg-dark {
+  background-color: #336fb2 !important;
+}
