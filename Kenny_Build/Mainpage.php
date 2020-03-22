@@ -234,10 +234,10 @@
           <a class="custom-arrow" href="/g34904ps/team/Kenny_Build/Mainpage.php?week=<?php $week -= 1; echo $week; ?>" class="previous round"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
       </div>
       <div class="col-md-4">
-        <a href='#popup1' class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</a>
+        <a href="#popup1" class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</a>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</button>
+        <a href="#popup2" class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</a>
       </div>
       <div class="col-md-1">
         <!-- <span style="color: #023858;"> -->
@@ -310,7 +310,48 @@
         </script>
       </div>
     </div> 
-    
+    <!-- POPUP2_Create Event -->
+    <div id="popup2" class="overlay">
+      <div class="popup2 form2" style= "height: 660px;">
+        <!-- selection box for all courses -->
+        <h1><b>Add Event</b></h1>
+        <a class="close" href="#">&times;</a>
+
+        <form method=POST>
+          <!-- NAME input box-->
+          <input type="text" placeholder="NAME" id = "name" name="name"/>
+          <!-- DESCRIPTION input box-->
+          <input type="text" placeholder="DESCRIPTION" id = "desc" name="description"/>
+
+          <!-- Start datepicker input box-->
+          <p style="font-size:18px;">From: 
+            <input type="text" name="startDate" id="startDate" placeholder="START DATE">
+            <input type="text" name="startTime" id="startTime" placeholder="START TIME" class="time ui-timepicker-input" autocomplete="off"/>
+          </p>
+          
+          <!-- function to assign this timepicker, and change the format to a desired one -->
+          <script>
+          $(function() {
+            $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
+          });
+          </script>
+          <!-- End datepicker window box -->
+          <p style="font-size:18px;">To: 
+            <input type="text" name="endDate" id="endDate" placeholder="END DATE">
+            <input type="text" name="endTime" id="endTime" placeholder="END TIME" class="time ui-timepicker-input" autocomplete="off"/>
+          </p>
+          <!-- the function -->
+          <script>
+          $(function() {
+            $('#endTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60});
+          });
+          </script>
+
+          <!-- Button to submit -->
+          <button name="submit">Submit</button>
+        </form>
+      </div>
+    </div>
 
     <div class="row text-center">
       <div class="col-1"></div>
