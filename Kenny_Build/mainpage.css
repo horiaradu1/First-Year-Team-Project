@@ -6,7 +6,7 @@ body{
 }
 
 .btn-info{
-	background-color: #007bff ;
+	background-color: #007bff !important;
 }
 
 .btn-info:hover {
