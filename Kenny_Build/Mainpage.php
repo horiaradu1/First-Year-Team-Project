@@ -242,9 +242,9 @@
         <button class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</button>
       </div>
       <div class="col-md-1">
-        <span style="color: #023858;">
+        <!-- <span style="color: #023858;"> -->
         <a href="/g34904ps/team/Kenny_Build/Mainpage.php?week=<?php $week += 2; echo $week; ?> " class="previous round"><i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i></a>
-        </span>
+        <!-- </span> -->
       </div>
     </div>
 
