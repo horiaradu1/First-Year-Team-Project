@@ -306,7 +306,7 @@
     </div> 
     <!-- POPUP2_Create Event -->
     <div id="popup2" class="overlay">
-      <div class="popup2 form2" style= "height: 700px;">
+      <div class="popup2 form2" style= "height: 710px;">
         <!-- selection box for all courses -->
         <h1><b>Add Event</b></h1>
         <a class="close" href="#">&times;</a>

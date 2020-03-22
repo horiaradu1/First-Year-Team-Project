@@ -148,7 +148,7 @@ label {
   transition: all 0.3 ease;
   cursor: pointer;
   position: relative;
-  top: 40px;
+  top: 53px;
 }
 
 .popup1 button:hover,.form button:active,.form button:focus {
