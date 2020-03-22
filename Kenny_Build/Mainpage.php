@@ -233,10 +233,10 @@
       <div class="col-md-1 offset-md-1">
         <i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-5">
         <button class="btn btn-info btn-lg align-items-center">CREATE COURSE</button>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-5">
         <button class="btn btn-info btn-lg align-items-center">CREATE EVENT</button>
       </div>
       <div class="col-md-1">
