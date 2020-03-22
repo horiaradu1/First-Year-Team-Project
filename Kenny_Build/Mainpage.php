@@ -234,7 +234,7 @@
           <a class="custom-arrow" href="/g34904ps/team/Kenny_Build/Mainpage.php?week=<?php $week -= 1; echo $week; ?>" class="previous round"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
       </div>
       <div class="col-md-4">
-        <a href='#popup1' class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</button>
+        <a href='#popup1' class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</a>
       </div>
       <div class="col-md-4">
         <button class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</button>
