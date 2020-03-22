@@ -231,7 +231,9 @@
 
     <div class="row text-center" style="padding-top: 10px">
       <div class="col-md-1 offset-md-1">
-        <i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i>
+        <span style="color: #023858;">
+          <i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i>
+        </span>
       </div>
       <div class="col-md-4">
         <button class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</button>
@@ -241,7 +243,7 @@
       </div>
       <div class="col-md-1">
         <span style="color: #023858;">
-        <i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i>
+          <i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i>
         </span>
       </div>
     </div>
