@@ -223,11 +223,17 @@
     </h1>
 
     <div class="row justify-content-around">
+      <div class="col-2">
+        awdwa
+      </div>
       <div class="col-4">
         <button class="btn btn-info btn-lg">CREATE COURSE</button>
       </div>
       <div class="col-4">
-        <button class="btn btn-info btn-lg">>CREATE EVENT</button>
+        <button class="btn btn-info btn-lg">CREATE EVENT</button>
+      </div>
+      <div class="col-2">
+        awawdwada
       </div>
     </div>
   
