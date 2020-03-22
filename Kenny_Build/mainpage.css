@@ -6,7 +6,7 @@ body{
 }
 
 .btn-info.custom-btn {
-	background-color: rgb(9, 36, 109);
+	background-color: rgb(9, 36, 109) !important;
 	border-color: #000;
 }
 .wrap-table100 {
