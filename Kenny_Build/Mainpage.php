@@ -225,8 +225,8 @@
       <div class="col-1"></div>
       <div class="col-10 justify-content-between align-items-center">
 
-        <button class="col-4 col-md-offset-2 btn btn-info btn-lg">CREATE COURSE</button>
-        <button class="col-4 btn btn-info btn-lg">CREATE EVENT</button>
+        <button class="col-6 btn btn-info btn-lg">CREATE COURSE</button>
+        <button class="col-6 btn btn-info btn-lg">CREATE EVENT</button>
  
       </div>
       <div class="col-1"></div>
