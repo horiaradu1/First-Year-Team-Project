@@ -230,16 +230,16 @@
     </h1>
 
     <div class="row text-center">
-      <div class="col-md-2 col-md-offset-1 pink">
+      <div class="col-md-1 col-md-offset-1 pink">
         bbbbb
       </div>
-      <div class="col-4 pink">
+      <div class="col-md-4 pink">
         <button class="btn btn-info btn-lg">CREATE COURSE</button>
       </div>
-      <div class="col-4 pink">
+      <div class="col-md-4 pink">
         <button class="btn btn-info btn-lg">CREATE EVENT</button>
       </div>
-      <div class="col-2 pink">
+      <div class="col-md-1 pink">
         ccccc
       </div>
     </div>
