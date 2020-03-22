@@ -234,7 +234,7 @@
           <a class="custom-arrow" href="/g34904ps/team/Kenny_Build/Mainpage.php?week=<?php $week -= 1; echo $week; ?>" class="previous round"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</button>
+        <a href='#popup1' class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</button>
       </div>
       <div class="col-md-4">
         <button class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</button>
@@ -246,6 +246,71 @@
       </div>
     </div>
 
+    <!-- POPUP1_Create Course-->
+    <div id="popup1" class="overlay">
+      <div class="popup1 form1" style= "height: 520px;">
+        <form method=POST>
+          <!-- selection box for all courses -->
+          <h1><b>Course Selector</b></h1>
+          <a class="close" href="#">&times;</a>
+          <!-- Selector 1: -->
+          <div><label for="sel">Course: </label><br></div>
+          <div class="custom-select">
+            <select id = "sel" name="new_course">
+              <option selected>Select course</option>
+              <?php foreach ($courses_array as $val) { ?>
+                  <option id = "dropdown" value="<?php echo $val["name"]; ?>">
+                  <?php echo $val["name"]; ?>
+                </option>
+              <?php } ?>
+            </select>
+          </div>
+          <!-- Selector 2: -->
+          <div><label for="sel2">Lab Session: </label><br></div>
+          <div class="custom-select">
+            <select id = "sel2" name="new_lab">
+              <option>Select your lab</option>
+              <?php foreach ($lab_array as $val) { ?>
+              <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
+              <?php echo $val["lab"]; ?>
+              </option>
+              <?php } ?>
+            </select>
+          </div>
+          <!-- button which sends selected course and lab events to data base -->
+          <button name="submit">Submit</button>
+        </form>
+
+        <!-- JavaScript  -->
+        <script>
+        function addEvent(){
+                var ddl = document.getElementById("dropdown");
+                var selectedValue = ddl.options[ddl.selectedIndex].value;
+          if (selectedValue == "Select course")
+          {
+          alert("Please select a card type");
+          }
+          else{
+          }
+        }
+        // turn it to json and encode from json
+        var b = JSON.parse('<?php echo json_encode($data_array); ?>');
+        // displaying/hiding events
+        var myBool = true;
+        function myFunction() {
+          if(myBool){
+          document.getElementById("timetable").classList.remove("hidden");
+          myBool = false;
+          }
+          else{
+            document.getElementById("timetable").classList.add("hidden");
+            myBool = true;
+          }
+        }
+        </script>
+      </div>
+    </div> 
+    
 
     <div class="row text-center">
       <div class="col-1"></div>
