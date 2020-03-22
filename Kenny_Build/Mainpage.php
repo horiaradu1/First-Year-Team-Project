@@ -249,7 +249,7 @@
           <a class="close" href="#">&times;</a>
           <!-- Selector 1: -->
           <div><label for="sel">Course: </label><br></div>
-          <div >
+          <div>
             <select id = "sel" name="new_course" class="form-control">
               <option>Select course</option>
               <?php foreach ($courses_array as $val) { ?>
@@ -261,8 +261,8 @@
           </div>
           <!-- Selector 2: -->
           <div><label for="sel2">Lab Session: </label><br></div>
-          <div class="custom-select">
-            <select id = "sel2" name="new_lab">
+          <div>
+            <select id = "sel2" name="new_lab" class="form-control">
               <option>Select your lab</option>
               <?php foreach ($lab_array as $val) { ?>
               <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
