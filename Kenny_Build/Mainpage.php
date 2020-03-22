@@ -167,6 +167,13 @@
     } );
   </script>
   <title>TimeonTable</title>
+
+  <style type="text/css">
+  .pink{
+    background: pink;
+    border: 1px solid;
+  }
+  </style>
 </head>
 
 <body>
@@ -223,16 +230,16 @@
     </h1>
 
     <div class="row">
-      <div class="col-md-1 col-md-offset-1">
-        aaaaa
+      <div class="col-md-1 col-md-offset-1 pink">
+        bbbbb
       </div>
-      <div class="col-4">
+      <div class="col-4 pink">
         <button class="btn btn-info btn-lg">CREATE COURSE</button>
       </div>
-      <div class="col-4">
+      <div class="col-4 pink">
         <button class="btn btn-info btn-lg">CREATE EVENT</button>
       </div>
-      <div class="col-2">
+      <div class="col-2 pink">
         awawdwada
       </div>
     </div>
