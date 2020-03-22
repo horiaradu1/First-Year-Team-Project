@@ -9,6 +9,12 @@ body{
 	background-color: #007bff !important;
 }
 
+.btn-info:hover, .btn-info:focus, .btn-info:active {
+  color: #fff;
+  background-color: #00b3db;
+  border-color: #285e8e; /*set the color you want here*/
+}
+
 .wrap-table100 {
   width: 100%;
 }
