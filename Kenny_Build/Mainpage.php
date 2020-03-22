@@ -193,7 +193,7 @@
             <a class="nav-link" href="AboutUs.php">About Us</a>
           </li>
           <li class="nav-item">
-            <a>Welcome, <?php echo($login_session) ?>!</a>
+            <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
           </li>
 
           <li class="nav-item">
@@ -208,6 +208,7 @@
   </nav>
 
   <div class="container">
+    <!-- DATE -->
     <h1 class="text-center display-4"><a>
       <?php
         try {
@@ -223,6 +224,7 @@
       ?></a>
     </h1>
 
+    <!-- BUTTON -->
     <div class="row text-center" style="padding-top: 10px">
       <div class="col-md-1 offset-md-1">
           <a class="custom-arrow" href="/g34904ps/team/Kenny_Build/Mainpage.php?week=<?php $week -= 1; echo $week; ?>" class="previous round"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
@@ -347,6 +349,7 @@
       </div>
     </div>
 
+    <!-- TABLE -->
     <div class="row text-center">
       <div class="col-1"></div>
       <div class="col-10">
