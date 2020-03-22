@@ -167,13 +167,7 @@
     } );
   </script>
   <title>TimeonTable</title>
-
-  <style type="text/css">
-  .pink{
-    background: pink;
-    border: 1px solid;
-  }
-  </style>
+>
 </head>
 
 <body>
@@ -255,9 +249,9 @@
           <a class="close" href="#">&times;</a>
           <!-- Selector 1: -->
           <div><label for="sel">Course: </label><br></div>
-          <div class="custom-select">
+          <div>
             <select id = "sel" name="new_course">
-              <option selected>Select course</option>
+              <option>Select course</option>
               <?php foreach ($courses_array as $val) { ?>
                   <option id = "dropdown" value="<?php echo $val["name"]; ?>">
                   <?php echo $val["name"]; ?>
@@ -267,7 +261,7 @@
           </div>
           <!-- Selector 2: -->
           <div><label for="sel2">Lab Session: </label><br></div>
-          <div class="custom-select">
+          <div>
             <select id = "sel2" name="new_lab">
               <option>Select your lab</option>
               <?php foreach ($lab_array as $val) { ?>
@@ -384,10 +378,11 @@
           <tbody>
 
           
-//--------------------------------------------------------------------------------------------
-//Display Timetable of $username
-          <?php
 
+          <?php
+          //--------------------------------------------------------------------------------------------
+
+            //Display Timetable of $username
               function hours_between($date1, $date2) {
                 $date1 = strtotime($date1);
                 $date2 = strtotime($date2);
@@ -565,7 +560,7 @@
                     </tr>
                 <?php }
 
-//----------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------
 
           ?>
 
