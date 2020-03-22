@@ -272,7 +272,7 @@
             </select>
           </div>
           <!-- button which sends selected course and lab events to data base -->
-          <button name="submit" style="border-radius: 2px;">Submit</button>
+          <button name="submit" style="border-radius: 5px;">Submit</button>
         </form>
 
         <!-- JavaScript  -->
