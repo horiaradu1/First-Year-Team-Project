@@ -171,7 +171,35 @@
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+<link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
+	<link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
+<div class="navbar">
+      <div class = "picture">
+      <a href="moreTable.php">Home</a>
+       <!-- connect to the login -->
+    </div>
+    <div class = "picture">
+      <a href="meet.php">Meeting</a>
+       <!-- connect to the login -->
+    </div>
+  <div class="text100">
+      <a href="logout.php">Sign out</a>
+       <!-- connect to the login -->
+    </div>
+    <div class="text100">
+        <a><?php echo($login_session) ?></a>
+    </div>
+    <div class="text100">
+      <a href="ContactForm.php">Contact Us</a>
+    </div>
+    <div class="text100">
+      <a href="AboutUs.php">About Us</a>
+    </div>
+    <div class="text100">
+      <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
+    </div>
+    </div>
+  <!-- <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="Mainpage.html"><i class="far fa-clock"></i> TimeOnTable   </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -190,7 +218,7 @@
         
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
+            <a class="nav-link" href="#">Welcome, <?php //echo($login_session) ?>!</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="AboutUs.php">About Us</a>
@@ -204,7 +232,7 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <div class="container">
     <!-- DATE -->
