@@ -6,8 +6,11 @@ body{
 }
 
 .btn-info{
-	background-color: rgb(10, 22, 54) !important;
+	background-color: #023858 !important;
+}
 
+.fa-arrow-alt-circle-right{
+  color: #023858 ;
 }
 .wrap-table100 {
   width: 100%;
