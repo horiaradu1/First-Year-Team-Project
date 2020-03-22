@@ -222,10 +222,14 @@
       ?></a>
     </h1>
     <div class="row">
-      <div class="col-10.col-offset-1 justify-content-between align-items-center">
-        <button class="col-4.col-offset-1 btn btn-info btn-lg">CREATE COURSE</button>
+      <div class="col-1"></div>
+      <div class="col-10 justify-content-between align-items-center">
+        <div class="col-2"></div>
+        <button class="col-4 btn btn-info btn-lg">CREATE COURSE</button>
         <button class="col-4 btn btn-info btn-lg">CREATE EVENT</button>
+        <div class="col-2"></div>
       </div>
+      <div class="col-1"></div>
     </div>
 
     <div class="row text-center">
