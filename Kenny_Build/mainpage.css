@@ -246,7 +246,7 @@ th, td {
 }
 .column100 {
 	width: 13%;
-  padding-left: 25px;
+  padding-left: 4px !important;
 }
 .column100.column1 {
 	width: 10%;
@@ -324,7 +324,7 @@ th, td {
 /*==================================================================
 [ Ver1 ]*/
 .scroll{
-  height: 550px;
+  height: 55vh;;
   overflow-y: scroll;
 }
 .table100{
