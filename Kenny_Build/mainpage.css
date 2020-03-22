@@ -9,6 +9,9 @@ body{
 	background-color: #007bff ;
 }
 
+.btn-info:hover {
+  background-color: red !important;
+}
 /* .btn-info:hover, .btn-info:focus, .btn-info:active {
   color: #fff;
   background-color: #00b3db;
