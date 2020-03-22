@@ -222,9 +222,9 @@
       ?></a>
     </h1>
 
-    <div class="row ">
-      <div class="col-2">
-        awdwa
+    <div class="row">
+      <div class="col-1 col-offset-1">
+        aaaaa
       </div>
       <div class="col-4">
         <button class="btn btn-info btn-lg">CREATE COURSE</button>
