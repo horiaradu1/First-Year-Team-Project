@@ -180,22 +180,21 @@
       
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="meet.php">Meeting Planner</a>
-          </li>
-        </ul>
-        
-        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="Mainpage.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="AboutUs.php">About Us</a>
+            <a class="nav-link" href="meet.php">Meeting Planner <span class="sr-only">(current)</span></a>
           </li>
+        </ul>
+        
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.php">About Us</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="ContactForm.php">Contact</i></a>
           </li>
