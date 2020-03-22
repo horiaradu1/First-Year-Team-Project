@@ -230,7 +230,7 @@
     </h1>
 
     <div class="row text-center">
-      <div class="col-md-1 col-md-offset-1 pink">
+      <div class="col-md-1 offset-md-1 pink">
         bbbbb
       </div>
       <div class="col-md-4 pink">
