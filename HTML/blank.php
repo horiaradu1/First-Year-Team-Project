@@ -81,6 +81,7 @@ $sqlAssign = "INSERT into Inbox (username, eventID)
 
     $db->query($sqlAssign);
     echo $db->error;
+  }
 }
 header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.php");
 
