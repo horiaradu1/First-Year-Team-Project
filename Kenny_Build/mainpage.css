@@ -6,12 +6,9 @@ body{
 }
 
 .btn-info{
-	background-color: #045a8d !important;
+	background-color: #007bff !important;
 }
 
-.a .custom-arrow{
-  background-color: white !important;
-}
 .wrap-table100 {
   width: 100%;
 }
