@@ -240,7 +240,7 @@
         <button class="btn btn-info btn-lg">CREATE EVENT</button>
       </div>
       <div class="col-2 pink">
-        awawdwada
+        ccccc
       </div>
     </div>
   
