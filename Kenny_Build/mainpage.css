@@ -366,3 +366,11 @@ th, td {
 .bg-dark {
   background-color: #336fb2 !important;
 }
+
+.btn-block {
+  max-height: 5vw !important;
+}
+
+.btn-group-lg > .btn, .btn-lg {
+  padding: 1.5vw !important;
+}
