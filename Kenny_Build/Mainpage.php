@@ -231,7 +231,7 @@
 
     <div class="row text-center">
       <div class="col-md-1 offset-md-1 pink">
-        bbbbb
+      <i class="fas fa-camera fa-5x"></i>
       </div>
       <div class="col-md-4 pink">
         <button class="btn btn-info btn-lg">CREATE COURSE</button>
@@ -240,13 +240,10 @@
         <button class="btn btn-info btn-lg">CREATE EVENT</button>
       </div>
       <div class="col-md-1 pink">
-        ccccc
+      <i class="fas fa-camera fa-5x"></i>
       </div>
     </div>
-  
-    <div class="row">
-      <div class="col-md-6 offset-md-3 pink">.col-md-6 .col-md-offset-3</div>
-    </div>
+
 
     <div class="row text-center">
       <div class="col-1"></div>
