@@ -10,17 +10,8 @@ body{
 }
 
 .btn-info:hover {
-  background-color: red !important;
+  background-color: rgb(25, 88, 182) !important;
 }
-
-.a {
-  color: orange !important;
-}
-
-.a:hover{
-  color: purple !important;
-}
-
 
 .wrap-table100 {
   width: 100%;
