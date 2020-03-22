@@ -14,11 +14,11 @@ body{
 }
 
 .a {
-  color: orange;
+  color: orange !important;
 }
 
 .a:hover{
-  color: purple;
+  color: purple !important;
 }
 
 
