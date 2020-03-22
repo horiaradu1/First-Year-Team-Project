@@ -132,6 +132,7 @@ th, td {
   font-size: larger;
   font-style: inherit;
   font-weight: revert;
+  background-color: #132f57;
 }
 .column100.MediumSeaGreen{
   background-color: MediumSeaGreen;
