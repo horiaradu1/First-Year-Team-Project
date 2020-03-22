@@ -10,7 +10,7 @@ body{
 }
 
 .a .custom-arrow{
-  background-color: white ;
+  background-color: white !important;
 }
 .wrap-table100 {
   width: 100%;
