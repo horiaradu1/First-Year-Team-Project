@@ -231,9 +231,7 @@
 
     <div class="row text-center" style="padding-top: 10px">
       <div class="col-md-1 offset-md-1">
-        <span style="color: #023858;">
           <a href="/g34904ps/team/Kenny_Build/Mainpage.php?week=<?php $week -= 1; echo $week; ?>" class="previous round"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
-        </span>
       </div>
       <div class="col-md-4">
         <button class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</button>
