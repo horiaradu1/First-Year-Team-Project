@@ -80,30 +80,40 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 }
 ?>
 <body>
-	<div class="limiter">
-		<div class="navbar">
-      <div class = "picture">
-      <a href="moreTable.php">Home</a>
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="Mainpage.html"><i class="far fa-clock"></i> TimeOnTable   </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Mainpage.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="meet.php">Meeting Planner<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.php">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ContactForm.php">Contact</i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.php">Sign Out</i></a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class = "picture">
-      <a href="meet.php">Meeting</a>
-    </div>
-  <div class="text100">
-      <a href = "logout.php">Sign Out</a>
-	</div>
-	<div class="text100">
-        <a><?php echo($login_session) ?></a>
-    </div>
-    <div class="text100">
-      <a href="ContactForm.php">Contact Us</a>
-    </div>
-    <div class="text100">
-      <a href="AboutUs.php">About Us</a>
-    </div>
-	<div class="text100">
-      <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
-    </div>
-	</div>
+  </nav>
 
 				<div class="logo" align="left">
 					<img src = "Logo.png">
