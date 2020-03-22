@@ -178,7 +178,11 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+      <?php 
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+      $fetchedInvite = $conn->query($sqlQuery);
+      ?>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -192,6 +196,9 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="AboutUs.php">About Us</a>
