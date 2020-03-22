@@ -60,7 +60,7 @@ if (isset($_POST["submit"])) {
     $db->query($sqlAddEvent);
     echo $db->error;
 
-if (in_array($login_session, $arrayPeople)) {
+if (in_array(strtoupper($login_session), $arrayPeople)) {
     $sqlAssign = "INSERT into HasEvent (username, eventID)
     VALUES(\"$login_session\", (SELECT MAX(eventID) FROM Events) )";
 
