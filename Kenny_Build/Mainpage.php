@@ -191,25 +191,6 @@
           <li class="nav-item">
             <a class="nav-link" href="AboutUs.php">About Us</a>
           </li>
-
-          <!-- Date -->
-          <li>
-            <a>
-              <?php
-                try {
-                  $week = $_GET['week'];
-                } catch (Exception $e) {}
-                $sMonth = date('F',time()+( 1+(7*$week) - date('w'))*24*3600);
-                $eMonth = date('F',time()+( 7+(7*$week) - date('w'))*24*3600);
-                $sDay = date('d',time()+( 1+(7*$week) - date('w'))*24*3600); //date('d');
-                $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
-
-                $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
-                echo $thisWeek;
-              ?>
-            </a>
-          </li> 
-
           <li class="nav-item">
             <a>Welcome, <?php echo($login_session) ?>!</a>
           </li>
