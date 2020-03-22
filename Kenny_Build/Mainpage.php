@@ -232,7 +232,8 @@
     <div class="row text-center" style="padding-top: 10px">
       <div class="col-md-1 offset-md-1">
         <span style="color: #023858;">
-          <i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i>
+        <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week -= 1; echo $week; ?>" class="previous round"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
+          
         </span>
       </div>
       <div class="col-md-4">
