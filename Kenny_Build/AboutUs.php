@@ -5,7 +5,31 @@
   <meta charset = "UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
-	<link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
+  <link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="mainpage.css">
+  <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- add from addEvent -->
+  <!-- timepicker -->
+  <link rel="stylesheet" type="text/css" href="jquery-timepicker/jquery.timepicker.css">
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery-timepicker/jquery.timepicker.min.js"></script>
+
+  <!-- date picker -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
 </head>
 <?php
 include("session.php"); 
@@ -19,32 +43,40 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
 $fetchedInvite = $conn->query($sqlQuery);
 ?>
 <body>
-    <div class="navbar">
-      <div class = "picture">
-      <a href="moreTable.php">Home</a>
-       <!-- connect to the login -->
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="Mainpage.html"><i class="far fa-clock"></i> TimeOnTable   </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Mainpage.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="meet.php">Meeting Planner<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.php">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ContactForm.php">Contact</i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.php">Sign Out</i></a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class = "picture">
-      <a href="meet.php">Meeting</a>
-       <!-- connect to the login -->
-    </div>
-  <div class="text100">
-      <a href="logout.php">Sign out</a>
-       <!-- connect to the login -->
-    </div>
-    <div class="text100">
-        <a><?php echo($login_session) ?></a>
-    </div>
-    <div class="text100">
-      <a href="ContactForm.php">Contact Us</a>
-    </div>
-    <div class="text100">
-      <a href="AboutUs.php">About Us</a>
-    </div>
-    <div class="text100">
-      <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
-    </div>
-    </div>
+  </nav>
       <div class="container">
     <span class="title">
       WHO ARE WE?
