@@ -227,7 +227,7 @@
     <!-- BUTTON -->
     <div class="row text-center" style="padding-top: 10px">
       <div class="col-md-1 offset-md-1">
-          <a href="/g34904ps/team/Kenny_Build/Mainpage.php?week=<?php $week -= 1; echo $week; ?>"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
+          <a href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week -= 1; echo $week; ?>"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
       </div>
       <div class="col-md-4">
         <a href="#popup1" class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</a>
@@ -237,7 +237,7 @@
       </div>
       <div class="col-md-1">
         <span style="color: #023858;"> 
-          <a href="/g34904ps/team/Kenny_Build/Mainpage.php?week=<?php $week += 2; echo $week; ?>"><i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i></a>
+          <a href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week += 2; echo $week; ?>"><i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i></a>
         </span>
       </div>
     </div>
