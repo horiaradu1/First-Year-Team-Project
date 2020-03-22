@@ -237,14 +237,6 @@
       </div>
     </div>
   
-    <div class="row text-center">
-      <!-- <div class="col-1"><i class="far fa-arrow-alt-circle-left"></i></div> -->
-      <div class="col-10">
-        
-      </div>
-
-      <!-- <div class="col-1"><i class="far fa-arrow-alt-circle-right"></i></div> -->
-    </div>
 
     <div class="row text-center">
       <div class="col-1"></div>
