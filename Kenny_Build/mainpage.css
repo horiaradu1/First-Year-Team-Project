@@ -5,6 +5,10 @@ body{
   background-position: center;
 }
 
+.btn-info.custom-btn {
+	background-color: rgb(9, 36, 109);
+	/* border-color: #000; */
+}
 .wrap-table100 {
   width: 100%;
 }

@@ -234,10 +234,10 @@
         <i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</button>
+        <button class="btn btn-info btn-lg btn-block custom-btn align-items-center">CREATE COURSE</button>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</button>
+        <button class="btn btn-info btn-lg btn-block custom-btn align-items-center">CREATE EVENT</button>
       </div>
       <div class="col-md-1">
         <i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i>
