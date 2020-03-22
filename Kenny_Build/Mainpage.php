@@ -222,7 +222,7 @@
       ?></a>
     </h1>
 
-    <div class="row justify-content-around">
+    <div class="row justify-content-between ">
       <div class="col-2">
         awdwa
       </div>
