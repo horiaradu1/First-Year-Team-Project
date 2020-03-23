@@ -212,7 +212,7 @@ function createMeetingListCourses($listUsernames) {
     //     echo $number;
     // }
 
-    //print_r($planList);
+    print_r($planList);
 }
 ////////////
 
