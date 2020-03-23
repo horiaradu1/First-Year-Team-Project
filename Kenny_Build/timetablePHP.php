@@ -189,6 +189,7 @@ function createMeetingListCourses($listUsernames) {
 
             $timeTillEvent = hours_between($timeToday, $row["startTime"]);
             $timeTillEventDays = $timeTillEvent/24;
+            echo $timeTillEventDays;
             $lengthEvent = hours_between($row["startTime"], $row["endTime"]);
             
 
