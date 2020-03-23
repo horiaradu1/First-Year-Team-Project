@@ -14,6 +14,14 @@ body{
   background-color: #6dc7ff !important;
 }
 
+.btn-infoX{
+	color: #132f57 !important;
+}
+
+.btn-infoX:hover {
+  color: #6dc7ff !important;
+}
+
 .wrap-table100 {
   width: 100%;
 }
