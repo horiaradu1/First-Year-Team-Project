@@ -44,7 +44,7 @@
 </body>
 <br></br>
 <?php
-error_reporting(E_ERROR);
+//error_reporting(E_ERROR);
 
 $servername = "dbhost.cs.man.ac.uk";
 $username = "g63968ef";
