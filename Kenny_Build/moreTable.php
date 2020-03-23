@@ -150,7 +150,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <link rel = "stylesheet" type = "text/css" href = "meet.css">
+  
   <!-- add from addEvent -->
   <!-- timepicker -->
   <link rel="stylesheet" type="text/css" href="jquery-timepicker/jquery.timepicker.css">
@@ -162,7 +162,7 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+  <link rel = "stylesheet" type = "text/css" href = "meet.css">
   <script>
     $( function() {
       $( "#startDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
