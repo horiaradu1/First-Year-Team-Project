@@ -11,7 +11,7 @@ body{
 }
 
 .btn-info:hover {
-  background-color: #2965b8 !important;
+  background-color: #6dc7ff !important;
 }
 
 .wrap-table100 {
@@ -21,6 +21,10 @@ body{
 .row {
   margin-right: 0 !important;
   margin-left: 0 !important;
+}
+
+a {
+  color: #132f57 !important;
 }
 
 /* Popupppp */
