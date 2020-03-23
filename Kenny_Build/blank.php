@@ -81,7 +81,7 @@ $sqlAssign = "INSERT into Inbox (username, eventID)
     $db->query($sqlAssign);
     echo $db->error;
 }
-header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites2.php");
+header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/Kenny_Build/invites2.php");
 
 
 
@@ -222,11 +222,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 						
 					</div>
 
-					<div class="wrap-input100 validate-input">
-            <p style="text-align: center;">Start time: </p>
-                    <input type="text"name="startTime" id="startTime" value="<?php echo $hourToShow ?>" class="time ui-timepicker-input" autocomplete="off" required />
-                    <script>
-                    $(function() {
+					<div class="wrap-input100 validate-input">backg
                     $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
                     });
                     </script>

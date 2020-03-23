@@ -7,11 +7,13 @@ body{
 }
 
 .btn-info{
-	background-color: #132f57 !important;
+  background-color: #132f57 !important;
+  border-color: white !important;
 }
 
 .btn-info:hover {
   background-color: #6dc7ff !important;
+  border-color: white !important;
 }
 
 .btn-infoX{
