@@ -1,5 +1,5 @@
 <?php
-  include("session.php"); 
+  include("session.php");
   $servername = "dbhost.cs.man.ac.uk";
   $username = "g63968ef";
   $password = "database";
@@ -21,12 +21,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" type="text/css" href="aboutus_final.css">
-  
+
   <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
 
-  
+
   <title>AboutUs</title>
 </head>
 <body>
@@ -36,7 +36,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <?php 
+      <?php
       $conn = new mysqli($servername, $username, $password, $dbname);
       $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
       $fetchedInvite = $conn->query($sqlQuery);
@@ -47,7 +47,7 @@
             <a class="nav-link" href="meet.php">Meeting Planner<span class="sr-only">(current)</span></a>
           </li>
         </ul>
-        
+
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
@@ -75,8 +75,8 @@
         <h1 class="display-3">About Us</h1>
       </div>
     </div>
-  </div>  
-  
+  </div>
+
   <!-- ROW1 -->
   <div class="containerX">
     <div class="row">
@@ -101,7 +101,7 @@
           <img class="card-img-top" src="laura3.jpg" style="opacity: 0.9">
           <div class="card-body">
             <h5 class="card-title">Laura Justesen <img src="denmark.png"></h5>
-            
+
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@
           <img class="card-img-top" src="horia6.jpg" style="opacity: 0.9">
           <div class="card-body">
             <h5 class="card-title">Horia Radu <img src="romania.png"></h5>
-            
+
 
           </div>
         </div>
@@ -139,12 +139,19 @@
         <div class="card">
           <img class="card-img-top" src="patryk7.jpg" style="opacity: 0.9">
           <div class="card-body">
-            <h5 class="card-title">Patryk Sipowicz <img src="poland.png"></h5>
+            <h5 class="card-title">Patryk Sipowicz <img src="poland.png"> <br>
+              Hi! In this project I was mainly responsible for php, sql and
+               jquery. This project was a great way to get to know people and build strong working ethic.
+               Special thanks to Eirik, Ellias and Harry for all the help!<br>
+               Besides this project and Computer Science, my main passion in
+               life is Brazilian Jiu Jitus - I have been training this martial
+               art for 7 years, recently advancing to the rank of purple belt.
+            </h5>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+
 </body>
 </html>
