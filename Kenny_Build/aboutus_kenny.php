@@ -74,22 +74,22 @@
   </div>
 
   <div class="row">
-    <div class="col-3">
+    <div class="col-lg-3">
       <div class="thumbnail">
         <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
       </div>
     </div>
-    <div class="col-3">
+    <div class="col-lg-3">
       <div class="thumbnail">
         <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
       </div>
     </div>
-    <div class="col-3">
+    <div class="col-lg-3">
       <div class="thumbnail">
         <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
       </div>
     </div>
-    <div class="col-3">
+    <div class="col-lg-3">
       <div class="thumbnail">
         <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
       </div>
