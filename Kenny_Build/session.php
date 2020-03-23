@@ -11,7 +11,7 @@
    $login_session = $row['username'];
 
    if(!isset($_SESSION['login_user'])){
-      header("location:https://web.cs.manchester.ac.uk/g34904ps/Kenny_Build/php/login.php");
+      header("location:https://web.cs.manchester.ac.uk/g34904ps/Kenny_Build/login.php");
       die();
    }
 ?>
