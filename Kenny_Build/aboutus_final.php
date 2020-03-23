@@ -1,3 +1,15 @@
+<?php
+  include("session.php"); 
+  $servername = "dbhost.cs.man.ac.uk";
+  $username = "g63968ef";
+  $password = "database";
+  $dbname = "2019_comp10120_y4";
+
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+  $fetchedInvite = $conn->query($sqlQuery);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="pattern.css">
+  <link rel="stylesheet" type="text/css" href="aboutus_final.css.css">
 
   <title>AboutUs</title>
 </head>
@@ -20,11 +32,11 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- <?php 
+      <?php 
         $conn = new mysqli($servername, $username, $password, $dbname);
         $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
         $fetchedInvite = $conn->query($sqlQuery);
-      ?> -->
+      ?>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -34,10 +46,10 @@
         
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Welcome, !</a>
+            <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
           </li>
           <li class="nav-item active">
-            <!-- <a class="nav-link" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a> -->
+            <a class="nav-link" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="AboutUs.php">About Us</a>
