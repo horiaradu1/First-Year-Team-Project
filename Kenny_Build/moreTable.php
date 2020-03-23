@@ -232,7 +232,7 @@
         $eDay = date('d',time()+( 7+(7*$week) - date('w'))*24*3600);
 
         $thisWeek = ($sDay . " " . $sMonth . " - " . $eDay . " " . $eMonth);
-        //echo $thisWeek;
+        echo $thisWeek;
       ?></a>
     </h1>
 
