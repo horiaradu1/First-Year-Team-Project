@@ -76,4 +76,17 @@ list-style-type: none;
 .navbar {
   font-family: Ariel, Helvetica, sans-serif;
   font-weight: bold;
+  overflow: hidden;
+  background-color: #336fb2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  max-height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 1rem;
 }
