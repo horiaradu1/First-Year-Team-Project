@@ -43,6 +43,17 @@
     </div>
 </body>
 <br></br>
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+
 <?php
 //error_reporting(E_ERROR);
 
@@ -182,6 +193,7 @@ function createMeetingListCourses($listUsernames) {
             
 
             if ((0 <= $timeTillEventDays) && ($timeTillEventDays <= 7)) {
+                echo "nerd";
                 $day = intdiv($timeTillEvent, 24);
                 $hours = $timeTillEvent % 24;
                 //$hours = $hours - 6; // starting schedule from 6 am
@@ -224,11 +236,7 @@ function createMeetingListCourses($listUsernames) {
 //print_r($items);
 createMeetingList($items);
 createMeetingListCourses($items);
-?>
-<br>
-<br>
-<br>
-<?php
+
 
 echo "-";
 print_r($planList);
