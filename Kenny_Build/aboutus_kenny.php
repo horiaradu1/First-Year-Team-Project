@@ -68,5 +68,12 @@
       </div>
     </div>
   </nav>
+
+  <div class="row">
+    <div class="jumbotron" style="padding-top:10px;">
+      <p>TimeonTable Team</p>
+    </div>
+  </div>
+
 </body>
 </html>
