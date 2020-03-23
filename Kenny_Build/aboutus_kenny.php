@@ -73,5 +73,52 @@
     </div>
   </div>
 
+  <div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+    </div>
 </body>
 </html>
