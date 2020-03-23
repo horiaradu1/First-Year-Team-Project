@@ -74,6 +74,7 @@ list-style-type: none;
 }
 
 .navbar {
+  display: flex;
   font-family: Ariel, Helvetica, sans-serif;
   font-weight: bold;
   overflow: hidden;
