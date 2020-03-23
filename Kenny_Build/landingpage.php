@@ -39,21 +39,12 @@
       ?>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-          <a class="nav-link" href="moreTable.php">Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
+          <!-- <li class="nav-item active">
             <a class="nav-link" href="meet.php">Meeting Planner<span class="sr-only">(current)</span></a>
-          </li>
+          </li> -->
         </ul>
         
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
-          </li>
           <li class="nav-item active">
             <a class="nav-link" href="AboutUs.php">About Us</a>
           </li>
@@ -61,7 +52,10 @@
             <a class="nav-link" href="ContactForm.php">Contact</i></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="logout.php">Sign Out</i></a>
+            <a class="nav-link" href="logout.php">Sign Up</i></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="logout.php">Login</i></a>
           </li>
         </ul>
       </div>
