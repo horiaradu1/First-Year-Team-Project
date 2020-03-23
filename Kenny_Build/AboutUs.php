@@ -68,11 +68,11 @@
         </ul>
       </div>
 
-    <div class="jumbotron">
+    <div class=" row jumbotron">
       <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> TimeOnTable</h1>
       <p>Group Project</p>
     </div>
-
+<!-- 
     <div class="photo_container1">
     <div>
       <img src = "kenny2.jpg" class="photo">
@@ -89,9 +89,9 @@
       </span>
     </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="photo_container2">
+  <!-- <div class="photo_container2">
   <div>
     <img src = "yoana4.jpg" class="photo">
   </div>
@@ -198,7 +198,7 @@
   </span>
 </div>
 </div>
-</div>
+</div> -->
 
     </div>
   </div>
