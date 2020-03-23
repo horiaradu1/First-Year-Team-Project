@@ -84,14 +84,9 @@
     Login Form v2 - https://colorlib.com/wp/template/login-form-v2/
     Contact Form v9 - https://colorlib.com/wp/template/contact-form-v9/-->
 
-<<<<<<< HEAD
-<<<<<<< HEAD:Kenny_Build/Mainpage.php
 
-=======
 <?php //error_reporting(E_ERROR); ?>
->>>>>>> 397940c83cdcabca339648e4e62d8228b398ae64:Kenny_Build/moreTable.php
-=======
->>>>>>> f46482c016742d6c4ce9b89bd0410a41ea0c8e54
+
 
 <!--  ------------------ADDEVENT.php -->
 <?php
