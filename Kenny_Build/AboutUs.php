@@ -21,7 +21,7 @@
     <!-- add icon link -->
     <link rel = "icon" href ="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">]
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontawesome_css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fontawesome_css/all.css">
     <link rel="stylesheet" href="mainpage.css">
     <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
