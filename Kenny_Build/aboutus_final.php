@@ -75,7 +75,7 @@
     <div class="row">
       <div class="col-lg-3">
         <div class="card">
-          <img class="card-img-top" src="eirik1.jpg" style="opacity: 1">
+          <img class="card-img-top" src="eirik1.jpg" style="opacity: 0.9">
           <div class="card-body">
             <h5 class="card-title">Eirik Fladmark <img src="norway.png"></h5>
           </div>
@@ -83,7 +83,7 @@
       </div>
       <div class="col-lg-3">
         <div class="card">
-          <img class="card-img-top" src="kenny2.jpg"  style="opacity: 0.8">
+          <img class="card-img-top" src="kenny2.jpg"  style="opacity: 0.9">
           <div class="card-body">
             <h5 class="card-title">Kenny Cheng <img src="hong-kong.png"></h5>
           </div>
@@ -91,7 +91,7 @@
       </div>
       <div class="col-lg-3">
         <div class="card">
-          <img class="card-img-top" src="laura3.jpg" style="opacity: 0.8">
+          <img class="card-img-top" src="laura3.jpg" style="opacity: 0.9">
           <div class="card-body">
             <h5 class="card-title">Laura Justesen <img src="denmark.png"></h5>
             
@@ -100,7 +100,7 @@
       </div>
       <div class="col-lg-3">
         <div class="card">
-          <img class="card-img-top" src="yoana4.jpg" style="opacity: 0.8">
+          <img class="card-img-top" src="yoana4.jpg" style="opacity: 0.9">
           <div class="card-body">
             <h5 class="card-title">Yoana Kaneva <img src="bulgaria.png"></h5>
           </div>
@@ -112,7 +112,7 @@
     <div class="row" style="padding-top: 20px;">
       <div class="col-lg-3">
         <div class="card">
-          <img class="card-img-top" src="sorana5.jpg" style="opacity: 0.8">
+          <img class="card-img-top" src="sorana5.jpg" style="opacity: 0.9">
           <div class="card-body">
             <h5 class="card-title">Sorana Ojog <img src="romania.png"></h5>
           </div>
@@ -120,7 +120,7 @@
       </div>
       <div class="col-lg-3">
         <div class="card">
-          <img class="card-img-top" src="horia6.jpg" style="opacity: 0.8">
+          <img class="card-img-top" src="horia6.jpg" style="opacity: 0.9">
           <div class="card-body">
             <h5 class="card-title">Horia Radu <img src="romania.png"></h5>
             
@@ -130,7 +130,7 @@
       </div>
       <div class="col-lg-3">
         <div class="card">
-          <img class="card-img-top" src="patryk7.jpg" style="opacity: 0.8">
+          <img class="card-img-top" src="patryk7.jpg" style="opacity: 0.9">
           <div class="card-body">
             <h5 class="card-title">Patryk Sipowicz <img src="poland.png"></h5>
           </div>
