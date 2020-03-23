@@ -13,17 +13,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>TIMEonTABLE - About Us</title>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset = "utf-8" />
-  <!-- add icon link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="aboutus_kenny.css">
   <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
   <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
+  <title>TIMEonTABLE - About Us</title>
 </head>
 
 <body>
@@ -66,35 +65,82 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="jumbotron" style="padding-top:10px;">
-      <h1>TimeonTable Team</h1>
-      <p>123</p>
+  <div class="container" id="header">
+    <div class="jumbotron text-center">
+      <div id="content">
+        <h1 class="display-3">About Us</h1>
+      </div>
     </div>
+  </div>  
   
-
+  <!-- ROW1 -->
+  <div class="container">
     <div class="row">
       <div class="col-lg-3">
-        <div class="thumbnail">
-          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        <div class="card">
+          <img class="card-img-top" src="eirik1.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Eirik Fladmark <img src="norway.png" alt=""></h5>
+          </div>
         </div>
       </div>
       <div class="col-lg-3">
-        <div class="thumbnail">
-          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        <div class="card">
+          <img class="card-img-top" src="kenny2.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Kenny Cheng <img src="hong-kong.png" alt=""></h5>
+          </div>
         </div>
       </div>
       <div class="col-lg-3">
-        <div class="thumbnail">
-          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        <div class="card">
+          <img class="card-img-top" src="laura3.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Laura Justesen <img src="denmark.png" alt=""></h5>
+            
+          </div>
         </div>
       </div>
       <div class="col-lg-3">
-        <div class="thumbnail">
-          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        <div class="card">
+          <img class="card-img-top" src="yoana4.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Yoana Kaneva <img src="bulgaria.png" alt=""></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW2 -->
+    <div class="row" style="padding-top: 20px;">
+      <div class="col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="sorana5.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Sorana Ojog <img src="romania.png" alt=""></h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="horia6.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Horia Radu <img src="romania.png" alt=""></h5>
+            
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="patryk7.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Patryk Sipowicz <img src="poland.png" alt=""></h5>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
 </body>
 </html>
