@@ -221,7 +221,7 @@
 
   <div class="container">
     <!-- DATE -->
-    <h1 class="text-center display-4"><a>
+    <h1 class="text-center display-4" style="color: white;"><a>
       <?php
         try {
           $week = $_GET['week'];
