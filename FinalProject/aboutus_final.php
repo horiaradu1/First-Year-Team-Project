@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR);
   include("session.php"); 
   $servername = "dbhost.cs.man.ac.uk";
   $username = "g63968ef";
