@@ -72,7 +72,7 @@
     </div>
   </nav>
 
-  <div class="container" id="header">
+  <div class="containerX" id="header">
     <div class="jumbotron text-center">
       <div id="content">
         <h1 class="display-3">About Us</h1>
@@ -81,7 +81,7 @@
   </div>  
   
   <!-- ROW1 -->
-  <div class="container">
+  <div class="containerX">
     <div class="row">
       <div class="col-lg-3">
         <div class="card">
