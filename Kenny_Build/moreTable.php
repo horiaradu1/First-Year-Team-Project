@@ -248,8 +248,8 @@
         <a href="#popup2" class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</a>
       </div>
       <div class="col-md-1">
-        <span style="color: #132f57;"> 
-          <a href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week += 2; echo $week; ?>"><i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i></a>
+        <span> 
+          <a style="color: #132f57;" href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week += 2; echo $week; ?>"><i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i></a>
         </span>
       </div>
     </div>
