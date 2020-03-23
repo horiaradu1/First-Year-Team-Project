@@ -16,6 +16,10 @@ body{
   border-color: white !important;
 }
 
+.col-md-1 {
+  margin-top: 1% !important;
+}
+
 .btn-infoX{
 	color: #132f57 !important;
 }
