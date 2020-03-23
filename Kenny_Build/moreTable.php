@@ -238,7 +238,7 @@
           <a href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week -= 1; echo $week; ?>"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
       </div>
       <div class="col-md-4">
-        <a href="#popup1" class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</a>
+        <a href="#popup1" class="btn btn-info btn-lg btn-block align-items-center">ADD COURSE</a>
       </div>
       <div class="col-md-4">
         <a href="#popup2" class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</a>
