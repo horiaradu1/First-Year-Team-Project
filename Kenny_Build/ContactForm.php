@@ -60,6 +60,9 @@ $fetchedInvite = $conn->query($sqlQuery);
             <a class="nav-link" href="aboutus_final.php">About Us</a>
           </li>
           <li class="nav-item active">
+            <a class="nav-link" href="ContactForm.php">Contact</i></a>
+          </li>
+          <li class="nav-item active">
             <a class="nav-link" href="logout.php">Sign Out</i></a>
           </li>
         </ul>
