@@ -4,6 +4,8 @@
 	<title>TIMEonTABLE - Contact form</title>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet" type = "text/css" href = "contactForm.css">
+  <link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
         <link rel = "stylesheet" type = "text/css" href = "meet.css">
         <link rel = "icon" href =
 "https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
@@ -14,8 +16,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="mainpage.css">
   <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
-  <link rel = "stylesheet" type = "text/css" href = "contactForm.css">
-  <link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
 	<!-- <link rel = "icon" type = "image/png" href = "Logo.png"> -->
 </head>
 <?php
