@@ -57,3 +57,19 @@ body{
   padding-left: 0%;
   padding-right: 0%;
 }
+
+ul, li {
+  margin: 0px;
+  list-style-type: none;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  font-family: Ariel, Helvetica, sans-serif;
+  font-weight: bold;
+}
