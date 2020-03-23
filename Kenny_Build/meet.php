@@ -154,7 +154,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
 								</div>
 							</div>
 						</form>
-					<form action="/g34904ps/team/HTML/timetablePHP.php?title=<?php if (isset($_POST['title'])) echo $_POST['title']; else echo "Undefined"?>" method=post>	
+					<form action="/g34904ps/team/Kenny_Build/timetablePHP.php?title=<?php if (isset($_POST['title'])) echo $_POST['title']; else echo "Undefined"?>" method=post>	
 						<input type='hidden' name='items' value="<?php echo htmlentities(serialize($items));?>" />			
 							<div class="container-login100-form-btn <?php if (count($items) == 0) echo "disabled"; ?> send">
 								<div class="wrap-login100-form-btn">
