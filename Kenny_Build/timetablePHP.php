@@ -116,7 +116,7 @@ function createMeetingList($listUsernames) {
 
     $result = $conn->query("SELECT * FROM HasEvent");
     foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
-        if (in_array($row["username"], $listUsernames)) {
+        if (in_array(strtoupper($row["username"]), $listUsernames)) {
             array_push($listOfEvents, $row["eventID"]);
         }
     }
@@ -168,7 +168,7 @@ function createMeetingListCourses($listUsernames) {
     $result = $conn->query("SELECT * FROM HasCourse");
     foreach($result->fetch_all(MYSQLI_ASSOC) as $row) {
         //$userLab = "SELECT lab FROM HasCourse WHERE "
-        if (in_array($row["username"], $listUsernames)) {
+        if (in_array(strtoupper($row["username"]), $listUsernames)) {
             // echo $row["Username"] . "<br>";
             array_push($listOfCourses, $row["course"]);
             array_push($listLab, $row["lab"]);
