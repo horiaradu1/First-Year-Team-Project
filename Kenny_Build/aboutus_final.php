@@ -77,7 +77,7 @@
         <div class="card">
           <img class="card-img-top" src="eirik1.jpg">
           <div class="card-body">
-            <h5 class="card-title">Eirik Fladmark <img src="norway.png" alt=""></h5>
+            <h5 class="card-title">Eirik Fladmark <img src="norway.png" style="opacity: 1"></h5>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@
         <div class="card">
           <img class="card-img-top" src="kenny2.jpg">
           <div class="card-body">
-            <h5 class="card-title">Kenny Cheng <img src="hong-kong.png" alt=""></h5>
+            <h5 class="card-title">Kenny Cheng <img src="hong-kong.png" style="opacity: 0.8"></h5>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
         <div class="card">
           <img class="card-img-top" src="laura3.jpg">
           <div class="card-body">
-            <h5 class="card-title">Laura Justesen <img src="denmark.png" alt=""></h5>
+            <h5 class="card-title">Laura Justesen <img src="denmark.png" style="opacity: 0.8"></h5>
             
           </div>
         </div>
@@ -102,7 +102,7 @@
         <div class="card">
           <img class="card-img-top" src="yoana4.jpg">
           <div class="card-body">
-            <h5 class="card-title">Yoana Kaneva <img src="bulgaria.png" alt=""></h5>
+            <h5 class="card-title">Yoana Kaneva <img src="bulgaria.png" style="opacity: 0.8"></h5>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@
         <div class="card">
           <img class="card-img-top" src="sorana5.jpg">
           <div class="card-body">
-            <h5 class="card-title">Sorana Ojog <img src="romania.png" alt=""></h5>
+            <h5 class="card-title">Sorana Ojog <img src="romania.png" style="opacity: 0.8"></h5>
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@
         <div class="card">
           <img class="card-img-top" src="horia6.jpg">
           <div class="card-body">
-            <h5 class="card-title">Horia Radu <img src="romania.png" alt=""></h5>
+            <h5 class="card-title">Horia Radu <img src="romania.png" style="opacity: 0.8"></h5>
             
 
           </div>
@@ -132,7 +132,7 @@
         <div class="card">
           <img class="card-img-top" src="patryk7.jpg">
           <div class="card-body">
-            <h5 class="card-title">Patryk Sipowicz <img src="poland.png" alt=""></h5>
+            <h5 class="card-title">Patryk Sipowicz <img src="poland.png" style="opacity: 0.8"></h5>
           </div>
         </div>
       </div>
