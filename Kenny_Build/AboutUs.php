@@ -69,7 +69,7 @@
       </div>
   </nav>
 
-  <div class=" row jumbotron">
+  <div class="row container jumbotron">
     <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> TimeOnTable</h1>
     <p>Group Project</p>
   </div>
