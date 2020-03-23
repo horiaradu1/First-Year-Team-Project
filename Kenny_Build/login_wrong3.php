@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel = "stylesheet" type = "text/css" href = "LoginPage.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
 	<!-- <link rel = "icon" type = "image/png" href = "Logo.png"> -->
 	<style>
@@ -17,38 +16,6 @@
  	  font-family: Ariel, Helvetica, sans-serif;
  	  font-size: 15px;
   }
-	.navbar {
-		font-family: Ariel, Helvetica, sans-serif;
-		font-weight: bold;
-	  overflow: hidden;
-	  background-color: #336fb2;
-	  position: fixed; /* Set the navbar to fixed position */
-	  top: 0; /* Position the navbar at the top of the page */
-	  width: 100%; /* Full width */
-	  z-index: 2;
-		max-height: 50px;
-	}
-
-	/* Links inside the navbar */
-	.navbar a {
-	  /*float: left;*/
-	  display: block;
-	  color: #f2f2f2;
-	  text-align: center;
-	  padding: 14px 16px;
-	  text-decoration: none;
-	}
-
-	/* Change background on mouse-over */
-	.navbar a:hover {
-	  background: #5a9de9;
-	}
-	.picture{
-		float:left;
-	}
-	.text100{
-		float: right;
-	}
 	</style>
 </head>
 <body>
@@ -62,12 +29,12 @@
 
 	      $myusername = mysqli_real_escape_string($db,$_POST['username']);
 
-	      $sql = "SELECT * FROM Users WHERE username = '$myusername'";
+	      $sql = "SELECT * FROM Users WHERE Username = '$myusername'";
 	      $result = mysqli_query($db,$sql);
 	      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-	      if (!password_verify($_POST['password'], $row['hash'])) {
-	        header("location: login_wrong.php");
+	      if (!password_verify($_POST['password'], $row['Hash'])) {
+	        header("location: RegistrationPage_1.php");
 	      }
 
 	      // If result matched $myusername and $mypassword, table row must be 1 row
@@ -75,30 +42,20 @@
 	         echo "loged in";
 	         $_SESSION['login_user'] = $myusername;
 
-	         header("location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/moreTable.php");
+	         header("location: welcome.php");
 				 }
 	   }
 	?>
 	<div class="limiter">
-		<!-- <div class="navbar">
-			<div class = "picture">
-			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/moreTable.php">Home</a>
-		</div>
-		<div class = "picture">
-			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/meet.php">Meeting</a>
-		</div>
-	<div class="text100">
-				<a href = "https://web.cs.manchester.ac.uk/g34904ps/team/HTML/RegistrationPage_1.php">Register</a>
-		</div>
-		<div class="text100">
-			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/ContactForm.php">Contact Us</a>
-		</div>
-		<div class="text100">
-			<a href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/AboutUs.php">About Us</a>
-		</div>
-		</div> -->
 		<div class="container-login100">
-
+			<div class="contact-us-button-contain">
+				<div class="contact-us-button-wrap">
+					<div class="contact-us-button"></div>
+					<button class="contact-us">
+						Contact us
+					</button>
+				</div>
+			</div>
 			<div class="logo" >
 				<img src = "Logo.png">
 			</div>
@@ -134,7 +91,7 @@
 								Don’t have an account?
 							</span>
 
-							<a class="txt2" href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/RegistrationPage_1.php">
+							<a class="txt2" href="/HTML/RegistrationPage_1.php">
 								Sign Up
 							</a>
 						</div>
@@ -142,7 +99,7 @@
 			</div>
 		<div class="move-useless-text">
 			<span class="useless-text">
-				Example text
+				
 			</span>
 		</div>
 		</div>
