@@ -61,6 +61,10 @@ body{
 ul, li {
   margin: 0px;
   list-style-type: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+list-style-type: none;
 }
 
 * {
