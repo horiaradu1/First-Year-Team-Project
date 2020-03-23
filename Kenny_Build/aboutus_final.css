@@ -58,9 +58,10 @@ body{
   padding-right: 0%;
 }
 .containerX {
-  max-width: 70vw;
+  max-width: 55vw;
   padding-left: 0%;
   padding-right: 0%;
+  margin-left: 22.5vw;
 }
 ul, li {
   margin: 0px;
