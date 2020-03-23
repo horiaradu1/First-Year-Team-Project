@@ -205,10 +205,10 @@
         
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active>
-            <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
+            <a class="nav-link" style="padding: 0px;" href="#">Welcome, <?php echo($login_session) ?>!</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" style="padding: 0px;" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
+            <a class="nav-link" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="AboutUs.php">About Us</a>
