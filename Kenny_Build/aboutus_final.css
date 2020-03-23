@@ -39,3 +39,15 @@ body{
 	filter: blur(4px);
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
 }
+
+.navbar {
+	font-family: Ariel, Helvetica, sans-serif;
+	font-weight: bold;
+  overflow: hidden;
+  background-color: #336fb2;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 2;
+	max-height: 50px;
+}
