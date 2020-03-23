@@ -128,7 +128,7 @@
 								Don’t have an account?
 							</span>
 
-							<a class="txt2" href="https://web.cs.manchester.ac.uk/g34904ps/team/HTML/RegistrationPage_1.php">
+							<a class="txt2" href="https://web.cs.manchester.ac.uk/g34904ps/team/Kenny_Build/RegistrationPage_1.php">
 								Sign Up
 							</a>
 						</div>
