@@ -68,7 +68,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
                 $sqlRemoveInvite= "DELETE FROM Inbox WHERE username = " . "'" . $login_session . "' " . "AND eventID = " . "'" . $id . "'";
                 $db->query($sqlRemoveInvite);
-                header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites.php");
+                header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/Kenny_Build/invites.php");
                 
                 
               }
@@ -76,7 +76,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
               {
                 $sqlRemoveInvite= "DELETE FROM Inbox WHERE username = " . "'" . $login_session . "' " . "AND eventID = " . "'" . $id . "'";
                 $db->query($sqlRemoveInvite);
-                header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/invites.php");
+                header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/Kenny_Build/invites.php");
               }
               else {
               ?>

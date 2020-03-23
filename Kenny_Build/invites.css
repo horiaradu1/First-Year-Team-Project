@@ -506,7 +506,7 @@ textarea:-ms-input-placeholder { color: #adadad;}
   width: 20%;
   left: 40%;
   position: relative;
-  bottom: -50px;
+  bottom: 30px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
