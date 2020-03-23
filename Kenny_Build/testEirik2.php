@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset = "utf-8" />
         <!-- add icon link -->
-        <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
         <link rel = "icon" href =
 "https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
         type = "image/x-icon">
@@ -16,6 +15,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="mainpage.css">
   <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
+  <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
+
 <?php
 include("session.php"); 
 $servername = "dbhost.cs.man.ac.uk";
