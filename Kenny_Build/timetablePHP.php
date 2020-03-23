@@ -174,10 +174,8 @@ function createMeetingListCourses($listUsernames) {
             array_push($listLab, $row["lab"]);
         }
     }
-    echo "virkelig";
     foreach($listOfCourses as $event) {
         // foreach($listUsernames as $user) {
-        echo "Hei";
         // }
         $lab = $listLab[$pointer];
         
@@ -189,12 +187,10 @@ function createMeetingListCourses($listUsernames) {
 
             $timeTillEvent = hours_between($timeToday, $row["startTime"]);
             $timeTillEventDays = $timeTillEvent/24;
-            echo $timeTillEventDays;
             $lengthEvent = hours_between($row["startTime"], $row["endTime"]);
             
 
             if ((0 <= $timeTillEventDays) && ($timeTillEventDays <= 7)) {
-                echo "nerd";
                 $day = intdiv($timeTillEvent, 24);
                 $hours = $timeTillEvent % 24;
                 //$hours = $hours - 6; // starting schedule from 6 am
@@ -238,9 +234,6 @@ function createMeetingListCourses($listUsernames) {
 createMeetingList($items);
 createMeetingListCourses($items);
 
-
-echo "-";
-print_r($planList);
 
 ?>
 
