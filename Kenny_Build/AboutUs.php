@@ -67,14 +67,16 @@
           </li>
         </ul>
       </div>
+    </div>
+  </nav>
   
-
-    <div class="row jumbotron">
+  <div class="container">
+    <div class="jumbotron">
       <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> TimeOnTable</h1>
       <p>Group Project</p>
     </div>
-
-  </nav>
+  </div>
+=
 <!-- 
     <div class="photo_container1">
     <div>
