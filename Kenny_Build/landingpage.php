@@ -52,10 +52,10 @@
             <a class="nav-link" href="ContactForm.php">Contact</i></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="logout.php">Sign Up</i></a>
+            <a class="nav-link" href="logout.php">Sign Up<i class="fas fa-user-plus"></i></i></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="logout.php">Login</i></a>
+            <a class="nav-link" href="logout.php">Sign In<i class="fas fa-sign-in-alt"></i></i></a>
           </li>
         </ul>
       </div>
