@@ -75,7 +75,7 @@
 	         echo "loged in";
 	         $_SESSION['login_user'] = $myusername;
 
-	         header("location: https://web.cs.manchester.ac.uk/g34904ps/team/HTML/moreTable.php");
+	         header("location: https://web.cs.manchester.ac.uk/g34904ps/team/FinalProject/moreTable.php");
 				 }
 	   }
 	?>
