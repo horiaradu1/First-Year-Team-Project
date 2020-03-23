@@ -1,14 +1,4 @@
-<?php
-  include("session.php"); 
-  $servername = "dbhost.cs.man.ac.uk";
-  $username = "g63968ef";
-  $password = "database";
-  $dbname = "2019_comp10120_y4";
 
-  $conn = new mysqli($servername, $username, $password, $dbname);
-  $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
-  $fetchedInvite = $conn->query($sqlQuery);
-?>
 
 <!DOCTYPE html>
 <html lang="en">
