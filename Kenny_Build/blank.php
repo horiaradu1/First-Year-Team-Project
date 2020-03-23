@@ -60,7 +60,7 @@ if (isset($_POST["submit"])) {
     $db->query($sqlAddEvent);
     echo $db->error;
 
-if (in_array($login_session, $arrayPeople)) {
+if (in_array(strtoupper($login_session), $arrayPeople)) {
     $sqlAssign = "INSERT into HasEvent (username, eventID)
     VALUES(\"$login_session\", (SELECT MAX(eventID) FROM Events) )";
 
@@ -74,12 +74,14 @@ if (in_array($login_session, $arrayPeople)) {
 }
 
 foreach ($arrayPeople as $person) {
+  if ($person != strtoupper($login_session)) {
 $sqlAssign = "INSERT into Inbox (username, eventID)
     VALUES(\"$person\", (SELECT MAX(eventID) FROM Events) )";
 
 
     $db->query($sqlAssign);
     echo $db->error;
+  }
 }
 header("Location: https://web.cs.manchester.ac.uk/g34904ps/team/Kenny_Build/invites2.php");
 
