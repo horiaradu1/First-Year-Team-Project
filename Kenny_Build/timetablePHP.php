@@ -224,6 +224,12 @@ function createMeetingListCourses($listUsernames) {
 //print_r($items);
 createMeetingList($items);
 createMeetingListCourses($items);
+?>
+<br>
+<br>
+<br>
+<?php
+
 echo "-";
 print_r($planList);
 
