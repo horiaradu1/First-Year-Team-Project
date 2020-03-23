@@ -2,21 +2,11 @@
 <html lang="en">
 <head>
   <title>TIMEonTABLE - About Us</title>
-	<meta charset="UTF-8">
+  <meta charset = "UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset = "utf-8" />
-        <!-- add icon link -->
-        <link rel = "icon" href =
-"https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
-        type = "image/x-icon">
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <link rel="stylesheet" href="mainpage.css">
-  <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
   <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
-
+	<link rel = "icon" type = "image/x-icon" href = "https://images.gr-assets.com/users/1582104594p8/110300593.jpg">
+</head>
 <?php
 include("session.php"); 
 $servername = "dbhost.cs.man.ac.uk";
@@ -29,47 +19,32 @@ $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_sessio
 $fetchedInvite = $conn->query($sqlQuery);
 ?>
 <body>
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="Mainpage.html"><i class="far fa-clock"></i> TimeOnTable   </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <?php 
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
-      $fetchedInvite = $conn->query($sqlQuery);
-      ?>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-          <a class="nav-link" href="moreTable.php">Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="meet.php">Meeting Planner<span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-        
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="AboutUs.php">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="ContactForm.php">Contact</i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logout.php">Sign Out</i></a>
-          </li>
-        </ul>
-      </div>
+    <div class="navbar">
+      <div class = "picture">
+      <a href="moreTable.php">Home</a>
+       <!-- connect to the login -->
     </div>
-  </nav>
+    <div class = "picture">
+      <a href="meet.php">Meeting</a>
+       <!-- connect to the login -->
+    </div>
+  <div class="text100">
+      <a href="logout.php">Sign out</a>
+       <!-- connect to the login -->
+    </div>
+    <div class="text100">
+        <a><?php echo($login_session) ?></a>
+    </div>
+    <div class="text100">
+      <a href="ContactForm.php">Contact Us</a>
+    </div>
+    <div class="text100">
+      <a href="AboutUs.php">About Us</a>
+    </div>
+    <div class="text100">
+      <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
+    </div>
+    </div>
       <div class="containerX">
     <span class="title">
       WHO ARE WE?

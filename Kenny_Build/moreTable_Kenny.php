@@ -80,7 +80,6 @@ while($c = mysqli_fetch_array($resultCourses, MYSQLI_ASSOC)){
 <!--All of the HTML and css files were created using templates from colorlib, namely:
     Login Form v2 - https://colorlib.com/wp/template/login-form-v2/
     Contact Form v9 - https://colorlib.com/wp/template/contact-form-v9/-->
-<?php error_reporting(E_ERROR); ?>
 
 <!--  ------------------ADDEVENT.php -->
 <?php
@@ -203,6 +202,12 @@ $fetchedInvite = $conn->query($sqlQuery);
       <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
     </div>
   </div>
+
+
+
+
+
+
 
   <div class="container-table100">
     <!-- <div class="week"> -->
@@ -347,7 +352,7 @@ $fetchedInvite = $conn->query($sqlQuery);
       </div>
 
       <div class="after">
-        <a href="/g34904ps/team/HTML/moreTable.php?week=<?php $week += 2; echo $week; ?> " class="previous round">&#8250;</a>
+          
       </div>
       <div class="wrap-table100">
         <div class="table100 ver1 m-b-110">
@@ -361,10 +366,11 @@ $fetchedInvite = $conn->query($sqlQuery);
                 <th class="column100 column6" data-column="column6">Thursday</th>
                 <th class="column100 column7" data-column="column7">Friday</th>
                 <th class="column100 column8" data-column="column8">Saturday</th>
-                  <th class="column100 column2" data-column="column2">Sunday</th>
+                <th class="column100 column2" data-column="column2">Sunday</th>
               </tr>
             </thead>
           </table>
+          
           <div class="scroll">
             <table data-vertable="ver1" >
             <tbody>

@@ -75,7 +75,6 @@
   while($c = mysqli_fetch_array($resultLab, MYSQLI_ASSOC)){
     array_push($lab_array, $c);
   }
-
   // ------------ END OF PHP ----------------
 ?>
 
@@ -131,11 +130,6 @@
   $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
   $fetchedInvite = $conn->query($sqlQuery);
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">

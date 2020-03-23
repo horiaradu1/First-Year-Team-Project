@@ -1,9 +1,8 @@
 body{
-  padding-top:6vw;
+  padding-top:60px;
   background: url(https://images.unsplash.com/photo-1566041510639-8d95a2490bfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=626&q=80);
   background-size: cover;
   background-position: center;
-  background-image: url("backgroundTT.jpg") !important; 
 }
 
 .btn-info{
@@ -16,11 +15,6 @@ body{
 
 .wrap-table100 {
   width: 100%;
-}
-
-.row {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
 }
 
 /* Popupppp */
@@ -194,7 +188,6 @@ label {
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 10px;
 }
 .form2 input {
   font-family: "Roboto", sans-serif;
@@ -247,7 +240,7 @@ th, td {
 }
 .column100 {
 	width: 13%;
-  padding-left: 4px !important;
+  padding-left: 25px;
 }
 .column100.column1 {
 	width: 10%;
@@ -325,7 +318,7 @@ th, td {
 /*==================================================================
 [ Ver1 ]*/
 .scroll{
-  height: 55vh;;
+  height: 550px;
   overflow-y: scroll;
 }
 .table100{
@@ -362,24 +355,4 @@ th, td {
 .table100.ver1 .row100 td:hover {
   background-color: #8ab0db;
   color: #fff;
-}
-.bg-dark {
-  background-color: #336fb2 !important;
-}
-
-.btn-block {
-  max-height: 5vw !important;
-}
-
-.btn-group-lg > .btn, .btn-lg {
-  padding: 1.5vw !important;
-}
-.text-center {
-  padding-top: 0px !important;
-}
-
-.container {
-  max-width: 100vw;
-  padding-left: 0%;
-  padding-right: 0%;
 }
