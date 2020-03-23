@@ -1,6 +1,7 @@
 <?php error_reporting(E_ERROR); ?>
 
 <?php
+  error_reporting(E_ERROR);
   include("session.php");
   // responsible for adding the courses from course selector
   if (isset($_POST["submit"])) {
@@ -83,11 +84,14 @@
     Login Form v2 - https://colorlib.com/wp/template/login-form-v2/
     Contact Form v9 - https://colorlib.com/wp/template/contact-form-v9/-->
 
+<<<<<<< HEAD
 <<<<<<< HEAD:Kenny_Build/Mainpage.php
 
 =======
 <?php //error_reporting(E_ERROR); ?>
 >>>>>>> 397940c83cdcabca339648e4e62d8228b398ae64:Kenny_Build/moreTable.php
+=======
+>>>>>>> f46482c016742d6c4ce9b89bd0410a41ea0c8e54
 
 <!--  ------------------ADDEVENT.php -->
 <?php
@@ -147,15 +151,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel = "stylesheet" type = "text/css" href = "meet.css">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/fontawesome_css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/fontawesome_css/all.css">
   <link rel="stylesheet" href="mainpage.css">
   <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+  <link rel = "stylesheet" type = "text/css" href = "meet.css">
   <!-- add from addEvent -->
   <!-- timepicker -->
   <link rel="stylesheet" type="text/css" href="jquery-timepicker/jquery.timepicker.css">
@@ -195,25 +203,25 @@
           <li class="nav-item active">
           <a class="nav-link" href="moreTable.php">Home<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="meet.php">Meeting Planner<span class="sr-only">(current)</span></a>
           </li>
         </ul>
         
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <li class="nav-item active>
             <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="AboutUs.php">About Us</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="ContactForm.php">Contact</i></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="logout.php">Sign Out</i></a>
           </li>
         </ul>
@@ -244,7 +252,7 @@
           <a href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week -= 1; echo $week; ?>"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
       </div>
       <div class="col-md-4">
-        <a href="#popup1" class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</a>
+        <a href="#popup1" class="btn btn-info btn-lg btn-block align-items-center">ADD COURSE</a>
       </div>
       <div class="col-md-4">
         <a href="#popup2" class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</a>
