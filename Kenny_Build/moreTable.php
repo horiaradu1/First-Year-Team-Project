@@ -239,7 +239,7 @@
     <!-- BUTTON -->
     <div class="row text-center" style="padding-top: 10px">
       <div class="col-md-1 offset-md-1">
-          <a class="btn-infoX" href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week -= 1; echo $week; ?>"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
+          <a class="btn-infoX" style="margin-top:1%;" href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week -= 1; echo $week; ?>"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
       </div>
       <div class="col-md-4">
         <a href="#popup1" class="btn btn-info btn-lg btn-block align-items-center">ADD COURSE</a>
@@ -249,7 +249,7 @@
       </div>
       <div class="col-md-1">
         <span> 
-          <a class="btn-infoX" href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week += 2; echo $week; ?>"><i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i></a>
+          <a class="btn-infoX" style="margin-top:1%;" href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week += 2; echo $week; ?>"><i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i></a>
         </span>
       </div>
     </div>
