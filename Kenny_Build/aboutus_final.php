@@ -22,7 +22,6 @@
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="aboutus_final.css.css">
-
   <title>AboutUs</title>
 </head>
 <body>
@@ -50,9 +49,6 @@
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="AboutUs.php">About Us</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="ContactForm.php">Contact</i></a>
