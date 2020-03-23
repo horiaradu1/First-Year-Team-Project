@@ -20,7 +20,7 @@ p {
 img{
   width: 10vw;
 }
-.container{
+.containerX{
   width: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -178,7 +178,7 @@ img{
 }
 .photo_container6{
 	position: relative;
-	bottom: 2%;
+  bottom: 2%;
 	right: 25%;
 	text-align: center;
 }

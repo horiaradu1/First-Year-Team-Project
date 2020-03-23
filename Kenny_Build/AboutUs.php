@@ -45,7 +45,7 @@ $fetchedInvite = $conn->query($sqlQuery);
       <a href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
     </div>
     </div>
-      <div class="container">
+      <div class="containerX">
     <span class="title">
       WHO ARE WE?
     </span>

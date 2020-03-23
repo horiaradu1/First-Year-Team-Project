@@ -70,7 +70,7 @@ $fetchedInvite = $conn->query($sqlQuery);
       </div>
     </div>
   </nav>
-      <div class="container">
+      <div class="containerX">
     <span class="title">
       WHO ARE WE?
     </span>
