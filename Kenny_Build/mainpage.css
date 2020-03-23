@@ -41,6 +41,10 @@ body{
   opacity: 1;
 }
 
+.display-4 {
+  padding-bottom: 30px !important;
+}
+
 .popup1 {
   margin: 80px auto;
   padding: 20px;
