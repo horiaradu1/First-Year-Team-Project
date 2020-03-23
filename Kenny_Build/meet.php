@@ -107,7 +107,7 @@ if('POST' === $_SERVER['REQUEST_METHOD']) {
             <a class="nav-link" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="AboutUs.php">About Us</a>
+            <a class="nav-link" href="aboutus_final.php">About Us</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="ContactForm.php">Contact</i></a>
