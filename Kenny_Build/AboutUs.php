@@ -1,3 +1,16 @@
+<?php
+  include("session.php"); 
+  $servername = "dbhost.cs.man.ac.uk";
+  $username = "g63968ef";
+  $password = "database";
+  $dbname = "2019_comp10120_y4";
+
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+  $fetchedInvite = $conn->query($sqlQuery);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,51 +18,37 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset = "utf-8" />
-        <!-- add icon link -->
-        <link rel = "icon" href =
-"https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
-        type = "image/x-icon">
+    <!-- add icon link -->
+    <link rel = "icon" href ="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">]
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontawesome_css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/fontawesome_css/all.css">
+    <link rel="stylesheet" href="mainpage.css">
+    <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
+    <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
+</head>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <link rel="stylesheet" href="mainpage.css">
-  <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
-  <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
-
-<?php
-include("session.php"); 
-$servername = "dbhost.cs.man.ac.uk";
-$username = "g63968ef";
-$password = "database";
-$dbname = "2019_comp10120_y4";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
-$fetchedInvite = $conn->query($sqlQuery);
-?>
 <body>
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="Mainpage.html"><i class="far fa-clock"></i> TimeOnTable   </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <?php 
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
-      $fetchedInvite = $conn->query($sqlQuery);
-      ?>
+        <?php 
+          $conn = new mysqli($servername, $username, $password, $dbname);
+          $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+          $fetchedInvite = $conn->query($sqlQuery);
+        ?>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-          <a class="nav-link" href="moreTable.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="moreTable.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="meet.php">Meeting Planner<span class="sr-only">(current)</span></a>
           </li>
         </ul>
-        
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
@@ -68,16 +67,10 @@ $fetchedInvite = $conn->query($sqlQuery);
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
-      <div class="containerX">
-    <span class="title">
-      WHO ARE WE?
-    </span>
-    <div class = "wrap-text">
-      <span class="text">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </span>
+
+    <div class="jumbotron">
+      <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> TimeOnTable</h1>
+      <p>Group Project</p>
     </div>
 
     <div class="photo_container1">
