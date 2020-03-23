@@ -90,7 +90,7 @@ $fetchedInvite = $conn->query($sqlQuery);
 
       <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
         <textarea class="input100" name="message" placeholder="Your Message"  required></textarea>
-        <span class="focus-input100"></span>
+        <span class="focus-input100X"></span>
       </div>
 
       <div class="container-contact100-form-btn">
