@@ -20,9 +20,9 @@
 	<meta charset = "utf-8" />
     <!-- add icon link -->
     <link rel = "icon" href ="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">]
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/fontawesome_css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="mainpage.css">
     <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
     <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
@@ -67,12 +67,14 @@
           </li>
         </ul>
       </div>
+  </nav>
 
-    <div class="jumbotron">
-      <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> TimeOnTable</h1>
-      <p>Group Project</p>
-    </div>
+  <div class=" row jumbotron">
+    <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> TimeOnTable</h1>
+    <p>Group Project</p>
+  </div>
 
+<!-- 
     <div class="photo_container1">
     <div>
       <img src = "kenny2.jpg" class="photo">
@@ -89,9 +91,9 @@
       </span>
     </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="photo_container2">
+  <!-- <div class="photo_container2">
   <div>
     <img src = "yoana4.jpg" class="photo">
   </div>
@@ -198,7 +200,7 @@
   </span>
 </div>
 </div>
-</div>
+</div> -->
 
     </div>
   </div>
