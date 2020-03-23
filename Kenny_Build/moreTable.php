@@ -80,7 +80,7 @@
 <!--All of the HTML and css files were created using templates from colorlib, namely:
     Login Form v2 - https://colorlib.com/wp/template/login-form-v2/
     Contact Form v9 - https://colorlib.com/wp/template/contact-form-v9/-->
-<?php error_reporting(E_ERROR); ?>
+<?php //error_reporting(E_ERROR); ?>
 
 <!--  ------------------ADDEVENT.php -->
 <?php
