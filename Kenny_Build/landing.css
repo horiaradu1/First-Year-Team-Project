@@ -6,6 +6,9 @@ body{
   color: white;
 }
 
+.bg-dark{
+  background-color: #336fb2 !important;
+}
 html{
   height: 100%;
 }
