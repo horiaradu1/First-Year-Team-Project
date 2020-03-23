@@ -1,7 +1,6 @@
 <?php error_reporting(E_ERROR); ?>
 
 <?php
-  error_reporting(E_ERROR);
   include("session.php");
   // responsible for adding the courses from course selector
   if (isset($_POST["submit"])) {
@@ -76,16 +75,12 @@
   while($c = mysqli_fetch_array($resultLab, MYSQLI_ASSOC)){
     array_push($lab_array, $c);
   }
-
   // ------------ END OF PHP ----------------
 ?>
 
 <!--All of the HTML and css files were created using templates from colorlib, namely:
     Login Form v2 - https://colorlib.com/wp/template/login-form-v2/
     Contact Form v9 - https://colorlib.com/wp/template/contact-form-v9/-->
-
-
-<?php //error_reporting(E_ERROR); ?>
 
 
 <!--  ------------------ADDEVENT.php -->
@@ -136,29 +131,19 @@
   $fetchedInvite = $conn->query($sqlQuery);
 ?>
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel = "stylesheet" type = "text/css" href = "meet.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/fontawesome_css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/fontawesome_css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="mainpage.css">
   <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  
   <!-- add from addEvent -->
   <!-- timepicker -->
   <link rel="stylesheet" type="text/css" href="jquery-timepicker/jquery.timepicker.css">
@@ -170,7 +155,7 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <link rel = "stylesheet" type = "text/css" href = "meet.css">
+
   <script>
     $( function() {
       $( "#startDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
@@ -188,35 +173,28 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <?php 
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
-      $fetchedInvite = $conn->query($sqlQuery);
-      ?>
+      
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-          <a class="nav-link" href="moreTable.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="Mainpage.html">Home<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="meet.php">Meeting Planner<span class="sr-only">(current)</span></a>
           </li>
         </ul>
         
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active>
+          <li class="nav-item">
             <a class="nav-link" href="#">Welcome, <?php echo($login_session) ?>!</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" style="padding: 0px;" href="invites.php">Inbox(<?php if ($fetchedInvite->num_rows < 10) {echo $fetchedInvite->num_rows;} else {echo "+9";} ?>)</a>
-          </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="AboutUs.php">About Us</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="ContactForm.php">Contact</i></a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="logout.php">Sign Out</i></a>
           </li>
         </ul>
@@ -244,17 +222,17 @@
     <!-- BUTTON -->
     <div class="row text-center" style="padding-top: 10px">
       <div class="col-md-1 offset-md-1">
-          <a href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week -= 1; echo $week; ?>"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
+          <a href="/g34904ps/team/Kenny_Build/Mainpage.php?week=<?php $week -= 1; echo $week; ?>"><i class="fas fa-arrow-alt-circle-left fa-3x align-items-center"></i></a>
       </div>
       <div class="col-md-4">
-        <a href="#popup1" class="btn btn-info btn-lg btn-block align-items-center">ADD COURSE</a>
+        <a href="#popup1" class="btn btn-info btn-lg btn-block align-items-center">CREATE COURSE</a>
       </div>
       <div class="col-md-4">
         <a href="#popup2" class="btn btn-info btn-lg btn-block align-items-center">CREATE EVENT</a>
       </div>
       <div class="col-md-1">
         <span style="color: #023858;"> 
-          <a href="/g34904ps/team/Kenny_Build/moreTable.php?week=<?php $week += 2; echo $week; ?>"><i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i></a>
+          <a href="/g34904ps/team/Kenny_Build/Mainpage.php?week=<?php $week += 2; echo $week; ?>"><i class="fas fa-arrow-alt-circle-right fa-3x align-items-center"></i></a>
         </span>
       </div>
     </div>
@@ -284,9 +262,9 @@
             <select id = "sel2" name="new_lab" class="form-control form-control-lg">
               <option>Select your lab</option>
               <?php foreach ($lab_array as $val) { ?>
-                <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
-                <?php echo $val["lab"]; ?>
-                </option>
+              <option id = "dropdown2" value="<?php echo $val["lab"]; ?>">
+              <?php echo $val["lab"]; ?>
+              </option>
               <?php } ?>
             </select>
           </div>
@@ -401,6 +379,7 @@
 
           <?php
           //--------------------------------------------------------------------------------------------
+
             //Display Timetable of $username
               function hours_between($date1, $date2) {
                 $date1 = strtotime($date1);
@@ -409,6 +388,7 @@
                 $hoursBetween = $diff/3600;
                 return $hoursBetween;
               }
+
                 $servername = "dbhost.cs.man.ac.uk";
                 $username = "g63968ef";
                 $password = "database";
