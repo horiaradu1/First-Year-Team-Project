@@ -72,12 +72,12 @@
   
   <div class="container">
     <div class="jumbotron">
-      <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> TimeOnTable</h1>
+      <h1 class="display-4"></span> TimeOnTable</h1>
       <p>Group Project</p>
     </div>
   </div>
 
-  
+
 
 <!-- 
     <div class="photo_container1">
