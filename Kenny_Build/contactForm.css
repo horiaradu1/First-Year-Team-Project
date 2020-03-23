@@ -125,10 +125,13 @@ img {
   pointer-events: none;
 }
 .wrap-contact {
-  width: 800px;
+  width: 40vw;
+  left: 30vw;
+  min-width: 600px;
+  max-width: 800px;
 	position: relative;
 	right: 180px;
-	top: 50px;
+	top: 0px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
