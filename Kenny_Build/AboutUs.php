@@ -76,7 +76,9 @@
       <p>Group Project</p>
     </div>
   </div>
-=
+
+  
+
 <!-- 
     <div class="photo_container1">
     <div>
