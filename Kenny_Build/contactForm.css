@@ -157,11 +157,11 @@ img {
   padding-bottom: 34px;
 }
 .wrap-input100 {
-  width: 100%;
-  position: relative;
-  background-color: #fff;
-  border-radius: 20px;
-  margin-bottom: 30px;
+  width: 100% !important;
+  position: relative !important;
+  background-color: #fff !important;
+  border-radius: 20px !important;
+  margin-bottom: 30px !important;
 }
 
 .input100 {
