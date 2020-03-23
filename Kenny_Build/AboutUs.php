@@ -20,9 +20,9 @@
 	<meta charset = "utf-8" />
     <!-- add icon link -->
     <link rel = "icon" href ="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">]
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/fontawesome_css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/fontawesome_css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome_css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fontawesome_css/all.css">
     <link rel="stylesheet" href="mainpage.css">
     <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
     <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
