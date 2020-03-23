@@ -1,16 +1,3 @@
-<?php
-  include("session.php"); 
-  $servername = "dbhost.cs.man.ac.uk";
-  $username = "g63968ef";
-  $password = "database";
-  $dbname = "2019_comp10120_y4";
-
-  $conn = new mysqli($servername, $username, $password, $dbname);
-  $sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
-  $fetchedInvite = $conn->query($sqlQuery);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,25 +5,33 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset = "utf-8" />
-    <!-- Bootstrap 4.0.0 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type = "text/css" href = "AboutUs.css">
-    
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    
-</head>
+        <!-- add icon link -->
+        <link rel = "icon" href =
+"https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
+        type = "image/x-icon">
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="mainpage.css">
+  <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
+  <link rel = "stylesheet" type = "text/css" href = "AboutUs.css">
+
+<?php
+include("session.php"); 
+$servername = "dbhost.cs.man.ac.uk";
+$username = "g63968ef";
+$password = "database";
+$dbname = "2019_comp10120_y4";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+$sqlQuery = "SELECT eventID FROM Inbox WHERE username = " . "'" . ($login_session) . "'";
+$fetchedInvite = $conn->query($sqlQuery);
+?>
 <body>
-  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" style="margin-right: 0rem;" href="moreTable.php"><i class="far fa-clock"></i> TimeOnTable   </a>
+      <a class="navbar-brand" href="Mainpage.html"><i class="far fa-clock"></i> TimeOnTable   </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -47,6 +42,9 @@
       ?>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+          <a class="nav-link" href="moreTable.php">Home<span class="sr-only">(current)</span></a>
+          </li>
           <li class="nav-item active">
             <a class="nav-link" href="meet.php">Meeting Planner<span class="sr-only">(current)</span></a>
           </li>
@@ -72,17 +70,16 @@
       </div>
     </div>
   </nav>
-  
-  <div class="container">
-    <div class="jumbotron">
-      <h1 class="display-4"></span> TimeOnTable</h1>
-      <p>Write something!</p>
+      <div class="containerX">
+    <span class="title">
+      WHO ARE WE?
+    </span>
+    <div class = "wrap-text">
+      <span class="text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </span>
     </div>
-  </div>
 
-
-
-<!-- 
     <div class="photo_container1">
     <div>
       <img src = "kenny2.jpg" class="photo">
@@ -99,9 +96,9 @@
       </span>
     </div>
     </div>
-  </div> -->
+  </div>
 
-  <!-- <div class="photo_container2">
+  <div class="photo_container2">
   <div>
     <img src = "yoana4.jpg" class="photo">
   </div>
@@ -208,7 +205,7 @@
   </span>
 </div>
 </div>
-</div> -->
+</div>
 
     </div>
   </div>
