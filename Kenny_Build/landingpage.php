@@ -46,16 +46,16 @@
         
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="AboutUs.php">About Us</a>
+            <a class="nav-link" href="AboutUs.php">About Us <i class="fas fa-user-friends"></i></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="ContactForm.php">Contact</i></a>
+            <a class="nav-link" href="ContactForm.php">Contact <i class="fas fa-address-book"></i></i></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="logout.php">Sign Up<i class="fas fa-user-plus"></i></i></a>
+            <a class="nav-link" href="logout.php">Sign Up <i class="fas fa-user-plus"></i></i></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="logout.php">Sign In<i class="fas fa-sign-in-alt"></i></i></a>
+            <a class="nav-link" href="logout.php">Sign In <i class="fas fa-sign-in-alt"></i></i></a>
           </li>
         </ul>
       </div>
