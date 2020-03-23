@@ -71,29 +71,30 @@
       <h1>TimeonTable Team</h1>
       <p>123</p>
     </div>
-  </div>
+  
 
-  <div class="row">
-    <div class="col-lg-3">
-      <div class="thumbnail">
-        <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="thumbnail">
+          <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
+        </div>
       </div>
     </div>
-    <div class="col-lg-3">
-      <div class="thumbnail">
-        <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
-      </div>
-    </div>
-    <div class="col-lg-3">
-      <div class="thumbnail">
-        <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
-      </div>
-    </div>
-    <div class="col-lg-3">
-      <div class="thumbnail">
-        <img src="https://source.unsplash.com/ZMZHcvIVgbg/300x300">
-      </div>
-    </div>
-   </div>
+  </div>
 </body>
 </html>
