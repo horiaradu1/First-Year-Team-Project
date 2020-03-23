@@ -80,7 +80,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
               }
               else {
               ?>
-              <div class = "wrap-text">
+              <div class = "wrap-textX">
               <span class="text">
                   <h4 style="text-align: center; text-decoration: underline;"><?php echo $event[2] ?></h4>
                   <h5 style="text-align: center; font-style: italic; color: #2B547E;"><?php echo $event[0] . " to " . $event[1]?></h5>

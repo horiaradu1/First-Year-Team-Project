@@ -534,6 +534,24 @@ textarea:-ms-input-placeholder { color: #adadad;}
   width: 20%;
   left: 40%;
   position: relative;
+  bottom: -50px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 35px 1px 25px 30px;
+  min-width: 390px;
+
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrap-textX{
+  width: 20%;
+  left: 40%;
+  position: relative;
   bottom: 30px;
   background: #fff;
   border-radius: 10px;
