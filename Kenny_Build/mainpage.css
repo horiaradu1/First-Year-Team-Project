@@ -265,7 +265,7 @@ th, td {
 	border: 2px solid #daeaef;
 }
 .column100 {
-	width: 13%;
+	width: 13% !important;
   padding-left: 4px !important;
 }
 .column100.column1 {
@@ -334,6 +334,7 @@ th, td {
 .row100.head th {
   padding-top: 24px;
   padding-bottom: 20px;
+  width: 12.95%;
 	/*padding-left: -20px;*/
 }
 .row100 td {
