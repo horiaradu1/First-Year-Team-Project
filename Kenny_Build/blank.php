@@ -100,8 +100,6 @@ $fetchedInvite = $conn->query($sqlQuery);
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Create event</title>
 
-  <?php ///////////////////////////// ?>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel = "stylesheet" type = "text/css" href = "blank.css">
@@ -110,31 +108,7 @@ $fetchedInvite = $conn->query($sqlQuery);
         <link rel = "icon" href =
 "https://images.gr-assets.com/users/1582104594p8/110300593.jpg"
         type = "image/x-icon">
-	<!-- <link rel = "icon" type = "image/png" href = "Logo.png"> -->
-	<!-- <style>
-	.error{
-	 color: #e3503b;
-	 font-family: Ariel, Helvetica, sans-serif;
-	 font-size: 15px;
-	 /*position: absolute;*/
-	 display: block;
-	 width: 100%;
-	 height: 15px;
-	 /*top: 0;
-	 left: 0;*/
-	}
-	.message{
-	 color: #e3503b;
-	}
-	.logo{
-		align: center;
-		position: relative;
-		top: -350px;
-		right: 550px;
-	}
-    </style> -->
-    
-    <?php ///////////////////////////// ?>
+
 
   <!-- timepicker -->
   <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -224,7 +198,11 @@ $fetchedInvite = $conn->query($sqlQuery);
 						
 					</div>
 
-					<div class="wrap-input100 validate-input">backg
+					<div class="wrap-input100 validate-input">
+            <p style="text-align: center;">Start time: </p>
+                    <input type="text"name="startTime" id="startTime" value="<?php echo $hourToShow ?>" class="time ui-timepicker-input" autocomplete="off" required />
+                    <script>
+                    $(function() {
                     $('#startTime').timepicker({ 'timeFormat': 'H:i:s', 'scrollDefault': 'now', 'step' : 60 });
                     });
                     </script>
