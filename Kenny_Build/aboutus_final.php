@@ -20,7 +20,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="mainpage.css">
   <link rel="stylesheet" type="text/css" href="aboutus_final.css">
   <link rel = "icon" href="https://images.gr-assets.com/users/1582104594p8/110300593.jpg" type = "image/x-icon">
 
@@ -30,7 +29,7 @@
 </head>
 <body>
   <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
-    <div class="container">
+    <div class="containerX">
       <a class="navbar-brand" href="moreTable.php"><i class="far fa-clock"></i> TimeOnTable   </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
