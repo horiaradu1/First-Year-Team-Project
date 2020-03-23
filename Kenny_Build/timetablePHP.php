@@ -212,7 +212,7 @@ function createMeetingListCourses($listUsernames) {
     //     echo $number;
     // }
 
-    print_r($planList);
+    //print_r($planList);
 }
 ////////////
 
@@ -223,7 +223,9 @@ function createMeetingListCourses($listUsernames) {
 
 //print_r($items);
 createMeetingList($items);
-createMeetingListCourses($items)
+createMeetingListCourses($items);
+echo "-";
+print_r($planList);
 
 ?>
 
