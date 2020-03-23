@@ -80,12 +80,12 @@ $fetchedInvite = $conn->query($sqlQuery);
 
       <div class="wrap-input100 validate-input" data-validate="Please enter your name">
         <input class="input100" type="text" name="name" placeholder="Full Name"  required>
-        <span class="focus-input100"></span>
+        <span class="focus-input100Y"></span>
       </div>
 
       <div class="wrap-input100 validate-input" data-validate="Please enter your name">
         <input class="input100" type="text" name="email" placeholder="Email"  required>
-        <span class="focus-input100"></span>
+        <span class="focus-input100Y"></span>
       </div>
 
       <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
