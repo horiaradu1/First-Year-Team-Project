@@ -440,6 +440,7 @@
                       $listOfCourses = array();
                       $listOfLabs = array();
                       $classStyle = "column100 column2"; //BASIC STYLE FOR EMPTY BOXES
+                      $A = "A";
 
                       $result1 = $conn->query("SELECT eventID FROM HasEvent WHERE username = '" . $username . "';");
                       foreach($result1->fetch_all(MYSQLI_ASSOC) as $row) {
@@ -501,7 +502,7 @@
                         }
                       
                       foreach($listOfCourses as $ids) {
-                          $sqlQuery3 = ("SELECT startTime, endTime, name, description FROM CourseEvents WHERE name = '" . $ids . "' AND  lab = 'A' ;");
+                          $sqlQuery3 = ("SELECT startTime, endTime, name, description FROM CourseEvents WHERE name = '" . $ids . "' AND  lab = '" . $A . "' ;");
                           $fetchedEvent3 = $conn->query($sqlQuery3);
 
                           foreach($fetchedEvent3>fetch_all(MYSQLI_ASSOC) as $row) {
