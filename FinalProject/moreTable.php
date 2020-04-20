@@ -501,50 +501,50 @@
                         }
                       
                       foreach($listOfCourses as $ids) {
-                        $sqlQuery2 = ("SELECT startTime, endTime, name, description FROM CourseEvents WHERE name = '" . $ids . "' AND  lab = 'A' ;");
-                        $fetchedEvent3 = $conn->query($sqlQuery2);
+                          $sqlQuery3 = ("SELECT startTime, endTime, name, description FROM CourseEvents WHERE name = '" . $ids . "' AND  lab = 'A' ;");
+                          $fetchedEvent3 = $conn->query($sqlQuery3);
 
-                        foreach($fetchedEvent3>fetch_all(MYSQLI_ASSOC) as $row) {
-                          $timeTillEventStart = hours_between($monday, $row["startTime"]);
-                          $timeTillEventHoursStart = $timeTillEventStart%24;
-                          $timeTillEventDaysStart = $timeTillEventStart/24;
-                          $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
-                          $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
-                          $timeTillEventEnd = hours_between($monday, $row["endTime"]);
-                          $timeTillEventHoursEnd = $timeTillEventEnd%24;
-                          $timeTillEventDaysEnd = $timeTillEventEnd/24;
-                          $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
-                          $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
+                          foreach($fetchedEvent3>fetch_all(MYSQLI_ASSOC) as $row) {
+                            $timeTillEventStart = hours_between($monday, $row["startTime"]);
+                            $timeTillEventHoursStart = $timeTillEventStart%24;
+                            $timeTillEventDaysStart = $timeTillEventStart/24;
+                            $timeTillEventHoursStart = (int)$timeTillEventHoursStart;
+                            $timeTillEventDaysStart = (int)$timeTillEventDaysStart;
+                            $timeTillEventEnd = hours_between($monday, $row["endTime"]);
+                            $timeTillEventHoursEnd = $timeTillEventEnd%24;
+                            $timeTillEventDaysEnd = $timeTillEventEnd/24;
+                            $timeTillEventHoursEnd = (int)$timeTillEventHoursEnd;
+                            $timeTillEventDaysEnd = (int)$timeTillEventDaysEnd;
 
-                        if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
-                          //$event = "$event" . $row["name"] . "\n (" . $row["description"] . ")";
-                          if ($event == NULL){
-                            $event = $row["name"] . "\n (" . $row["description"] . ") ";
-                          }
-                          else {
-                            $event = "$event and" . $row["name"] . "\n (" . $row["description"] . ") ";
-                            $conflict = true;
-                          }
-                          if ($row["name"] == "COMP11120"){
-                            $classStyle = "column100 green";
-                          }elseif ($row["name"] == "COMP11212"){
-                            $classStyle = "column100 red";
-                          }elseif ($row["name"] == "COMP13212"){
-                            $classStyle = "column100 blue";
-                          }elseif ($row["name"] == "COMP15212"){
-                            $classStyle = "column100 pink";
-                          }elseif ($row["name"] == "COMP16412"){
-                            $classStyle = "column100 purple";
-                          }elseif ($row["name"] == "COMP1PASS"){
-                            $classStyle = "column100 orange";
-                          }elseif ($row["name"] == "COMP10120"){
-                            $classStyle = "column100 bluegreen";
-                          }else $classStyle = "column100 darkblue";
-                          //CHANGE COLOURS HERE IF YOU WANT
-                          //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
+                          if ($timeTillEventHoursStart <= $i && $timeTillEventDaysStart <= $j && $timeTillEventHoursEnd > $i && $timeTillEventDaysEnd >= $j){
+                            //$event = "$event" . $row["name"] . "\n (" . $row["description"] . ")";
+                            if ($event == NULL){
+                              $event = $row["name"] . "\n (" . $row["description"] . ") ";
+                            }
+                            else {
+                              $event = "$event and" . $row["name"] . "\n (" . $row["description"] . ") ";
+                              $conflict = true;
+                            }
+                            if ($row["name"] == "COMP11120"){
+                              $classStyle = "column100 green";
+                            }elseif ($row["name"] == "COMP11212"){
+                              $classStyle = "column100 red";
+                            }elseif ($row["name"] == "COMP13212"){
+                              $classStyle = "column100 blue";
+                            }elseif ($row["name"] == "COMP15212"){
+                              $classStyle = "column100 pink";
+                            }elseif ($row["name"] == "COMP16412"){
+                              $classStyle = "column100 purple";
+                            }elseif ($row["name"] == "COMP1PASS"){
+                              $classStyle = "column100 orange";
+                            }elseif ($row["name"] == "COMP10120"){
+                              $classStyle = "column100 bluegreen";
+                            }else $classStyle = "column100 darkblue";
+                            //CHANGE COLOURS HERE IF YOU WANT
+                            //MAYBE INSERT POPUP WITH EVENT DESCRIPTION AND TIME
+                            }
                           }
                         }
-                      }
 
                       foreach($listOfEventIDs as $ids) {
                         $sqlQuery1 = "SELECT startTime, endTime, name FROM Events WHERE eventID = " . $ids;
