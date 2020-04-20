@@ -501,11 +501,13 @@
                           }
                         }
                       
-                      foreach($listOfCourses as $ids) {
-                          $sqlQuery3 = ("SELECT startTime, endTime, name, description FROM CourseEvents WHERE name = '" . $ids . "' AND  lab = '" . $A . "' ;");
-                          $fetchedEvent3 = $conn->query($sqlQuery3);
+                        foreach($listOfCourses as $ids) {
+                          
+                            $sqlQuery2 = ("SELECT startTime, endTime, name, description FROM CourseEvents WHERE name = '" . $ids . "' AND  lab = '" . $A ."';");
+                            $fetchedEvent2 = $conn->query($sqlQuery2);
+                          
 
-                          foreach($fetchedEvent3>fetch_all(MYSQLI_ASSOC) as $row) {
+                          foreach($fetchedEvent2->fetch_all(MYSQLI_ASSOC) as $row) {
                             $timeTillEventStart = hours_between($monday, $row["startTime"]);
                             $timeTillEventHoursStart = $timeTillEventStart%24;
                             $timeTillEventDaysStart = $timeTillEventStart/24;
